@@ -4,8 +4,8 @@
         "title": "Lead Tech | Certified Scrum Master",
         "location": "Nantes, France",
         "bio": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical teams at Capgemini while maintaining active involvement in code development and architectural decisions.",
-        "resume": "../assets/resumes/Hamza_Elyoubi_CV.pdf",
-        "profileImage": "../assets/images/profile.jpg",
+        "resume": "assets/resumes/Hamza_Elyoubi_CV.pdf",
+        "profileImage": "assets/images/profile.jpg",
         "certifications": [
             "Professional Scrum Master I (PSM1)",
             "SOFTWARE ENGINEER LO CERTIFICATION",
