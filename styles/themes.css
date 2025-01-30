@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #00abf0;
+    --bg-color: #0a0a0a;
+    --text-color: #ededed;
+    --secondary-bg: #1a1a1a;
+    --nav-bg: rgba(10, 10, 10, 0.95);
+}
+
+[data-theme="light"] {
+    --primary-color: #007bff;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --secondary-bg: #ffffff;
+    --nav-bg: rgba(248, 249, 250, 0.95);
+}
