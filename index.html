@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Elyoubi - Portfolio</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Empty favicon -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Hamza Elyoubi's professional portfolio showcasing skills, experience, and projects.">
+    <meta name="keywords" content="Hamza Elyoubi, Portfolio, Software Engineer, Full-Stack Developer">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <!-- Content loaded by JavaScript -->
+    </nav>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- GitHub Copilot Credit -->
+    <div id="copilot-credit" class="copilot-credit">
+        <img src="assets/icons/githubcopilot_icon.png" alt="GitHub Copilot" class="copilot-icon">
+        <span>Developed with the help of GitHub Copilot</span>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <!-- Sections will be loaded dynamically -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="container">
+        <!-- Content loaded by JavaScript -->
+    </footer>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        <p>&copy; 2025 Hamza Elyoubi. All rights reserved.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Fix for local file CORS issue
+        window.addEventListener('DOMContentLoaded', () => {
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            iframe.contentWindow.Promise = Promise;
+        });
+    </script>
+    <script type="module">
+        import { initializePortfolio } from './scripts/dataLoader.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initializePortfolio();
+        });
+    </script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/formHandler.js"></script>
+</body>
+</html>
