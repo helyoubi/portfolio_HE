@@ -83,6 +83,7 @@ body {
 
 .hero-content {
     max-width: 600px;
+    position: relative;
 }
 
 .hero-content h1 {
@@ -135,6 +136,50 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* Top Right Buttons Container */
+.top-right-buttons {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1100; /* Ensure it is above the navbar */
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+/* Language Switcher */
+.language-switcher {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.language-switcher:hover {
+    background: darken(var(--primary-color), 10%);
 }
 
 /* Timeline Section */
@@ -305,34 +350,18 @@ body {
     border-color: darken(var(--primary-color), 10%);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s;
-    z-index: 1100; /* Ensure it is above the navbar */
-}
-
-.theme-toggle:hover {
-    background: darken(var(--primary-color), 10%);
+/* Last Update Section */
+.last-update {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--text-color);
 }
 
 /* GitHub Copilot Credit */
 .copilot-credit {
     position: fixed;
     top: 1rem;
-    right: 5rem;
+    right: 10rem; /* Move it more to the left */
     background: var(--secondary-bg);
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -368,5 +397,30 @@ body {
 
     .hero {
         padding: 100px 5% 50px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-btn {
+        margin-bottom: 1rem;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+    }
+
+    .timeline-item::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

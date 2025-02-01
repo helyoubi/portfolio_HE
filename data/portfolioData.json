@@ -1,97 +1,197 @@
 {
     "personalInfo": {
-        "name": "Hamza Elyoubi",
-        "title": "Lead Tech | Certified Scrum Master",
+        "name": {
+            "en" : "Hi, I'm Hamza Elyoubi",
+            "fr" : "Salut, je suis Hamza Elyoubi"
+        },
+        "title": {
+            "en": "Lead Tech | Certified Scrum Master",
+            "fr": "Lead Tech | Scrum Master Certifié"
+        },
         "location": "Nantes, France",
-        "bio": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical teams at Capgemini while maintaining active involvement in code development and architectural decisions.",
+        "bio": {
+            "en": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical teams at Capgemini while maintaining active involvement in code development and architectural decisions.",
+            "fr": "Leader technique avec plus de 7 ans d'expérience en développement full-stack. Scrum Master certifié (PSM1) spécialisé dans les écosystèmes Java, le leadership d'équipe et les solutions basées sur l'IA. Actuellement, je dirige des équipes techniques chez Capgemini tout en restant activement impliqué dans le développement de code et les décisions architecturales."
+        },
         "resume": "assets/resumes/Hamza_Elyoubi_CV.pdf",
         "profileImage": "assets/images/profile.jpg",
-        "certifications": [
-            "Professional Scrum Master I (PSM1)",
-            "SOFTWARE ENGINEER LO CERTIFICATION",
-            "Green IT ESSENTIALS CERTIFICATION",
-            "Big Data & Analytics (Cisco)",
-            "Connecting Things (IoT - Cisco)"
+        "certifications": {
+            "en": [
+                "Professional Scrum Master I (PSM1)",
+                "SOFTWARE ENGINEER LO CERTIFICATION",
+                "Green IT ESSENTIALS CERTIFICATION",
+                "Big Data & Analytics (Cisco)",
+                "Connecting Things (IoT - Cisco)"
+            ],
+            "fr": [
+                "Scrum Master Professionnel I (PSM1)",
+                "CERTIFICATION INGÉNIEUR LOGICIEL LO",
+                "CERTIFICATION ESSENTIELLE EN IT VERT",
+                "Big Data & Analytics (Cisco)",
+                "Connecting Things (IoT - Cisco)"
+            ]
+        }
+    },
+    "experience": {
+        "en": [
+            {
+                "company": "Capgemini",
+                "positions": [
+                    {
+                        "title": "Lead Tech",
+                        "duration": "Oct 2022 - Present",
+                        "achievements": [
+                            "Technical leadership for development teams",
+                            "Technical architecture design and code reviews",
+                            "Technical interviews and team mentoring",
+                            "Project estimation and continuous integration"
+                        ]
+                    },
+                    {
+                        "title": "Software Engineer",
+                        "duration": "Oct 2019 - Oct 2022",
+                        "achievements": [
+                            "Full-stack development of enterprise solutions",
+                            "New team member onboarding and mentoring",
+                            "Ticket evolution management and anomaly resolution"
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "DATA SYSCOM",
+                "position": "Java Developer",
+                "duration": "Sept 2018 - Sept 2019",
+                "achievements": [
+                    "JavaFX interface development for SCOPIOM software",
+                    "EJB3.0 to REST architecture migration using Jersey",
+                    "Professionalization contract management"
+                ]
+            },
+            {
+                "company": "FRC Nouvelle Aquitaine",
+                "position": "FullStack Java Developer",
+                "duration": "Oct 2017 - Sept 2018",
+                "achievements": [
+                    "JavaEE/Primefaces data analysis platform development",
+                    "Central database management for regional sampling data"
+                ]
+            },
+            {
+                "company": "BMA Biarritz School",
+                "position": "FullStack Web Developer",
+                "duration": "Oct 2016 - Jun 2017",
+                "achievements": [
+                    "Joomla-based triathlon registration system development",
+                    "Online payment integration and real-time ranking system"
+                ]
+            }
+        ],
+        "fr": [
+            {
+                "company": "Capgemini",
+                "positions": [
+                    {
+                        "title": "Lead Tech",
+                        "duration": "Oct 2022 - Présent",
+                        "achievements": [
+                            "Leadership technique pour les équipes de développement",
+                            "Conception d'architecture technique et revues de code",
+                            "Entretiens techniques et mentorat d'équipe",
+                            "Estimation de projet et intégration continue"
+                        ]
+                    },
+                    {
+                        "title": "Ingénieur Logiciel",
+                        "duration": "Oct 2019 - Oct 2022",
+                        "achievements": [
+                            "Développement full-stack de solutions d'entreprise",
+                            "Intégration et mentorat des nouveaux membres de l'équipe",
+                            "Gestion de l'évolution des tickets et résolution des anomalies"
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "DATA SYSCOM",
+                "position": "Développeur Java",
+                "duration": "Sept 2018 - Sept 2019",
+                "achievements": [
+                    "Développement d'interface JavaFX pour le logiciel SCOPIOM",
+                    "Migration de l'architecture EJB3.0 vers REST en utilisant Jersey",
+                    "Gestion des contrats de professionnalisation"
+                ]
+            },
+            {
+                "company": "FRC Nouvelle Aquitaine",
+                "position": "Développeur FullStack Java",
+                "duration": "Oct 2017 - Sept 2018",
+                "achievements": [
+                    "Développement de plateforme d'analyse de données JavaEE/Primefaces",
+                    "Gestion de la base de données centrale pour les données d'échantillonnage régional"
+                ]
+            },
+            {
+                "company": "BMA Biarritz School",
+                "position": "Développeur Web FullStack",
+                "duration": "Oct 2016 - Jun 2017",
+                "achievements": [
+                    "Développement de système d'inscription au triathlon basé sur Joomla",
+                    "Intégration de paiement en ligne et système de classement en temps réel"
+                ]
+            }
         ]
     },
-    "experience": [
-        {
-            "company": "Capgemini",
-            "positions": [
-                {
-                    "title": "Lead Tech",
-                    "duration": "Oct 2022 - Present",
-                    "achievements": [
-                        "Technical leadership for development teams",
-                        "Technical architecture design and code reviews",
-                        "Technical interviews and team mentoring",
-                        "Project estimation and continuous integration"
-                    ]
-                },
-                {
-                    "title": "Software Engineer",
-                    "duration": "Oct 2019 - Oct 2022",
-                    "achievements": [
-                        "Full-stack development of enterprise solutions",
-                        "New team member onboarding and mentoring",
-                        "Ticket evolution management and anomaly resolution"
-                    ]
-                }
-            ]
-        },
-        {
-            "company": "DATA SYSCOM",
-            "position": "D�veloppeur Java",
-            "duration": "Sept 2018 - Sept 2019",
-            "achievements": [
-                "JavaFX interface development for SCOPIOM software",
-                "EJB3.0 to REST architecture migration using Jersey",
-                "Professionalization contract management"
-            ]
-        },
-        {
-            "company": "FRC Nouvelle Aquitaine",
-            "position": "D�veloppeur FullStack Java",
-            "duration": "Oct 2017 - Sept 2018",
-            "achievements": [
-                "JavaEE/Primefaces data analysis platform development",
-                "Central database management for regional sampling data"
-            ]
-        },
-        {
-            "company": "BMA Biarritz School",
-            "position": "D�veloppeur web FullStack",
-            "duration": "Oct 2016 - Jun 2017",
-            "achievements": [
-                "Joomla-based triathlon registration system development",
-                "Online payment integration and real-time ranking system"
-            ]
-        }
-    ],
-    "education": [
-        {
-            "institution": "Capgemini Institut",
-            "degrees": [
-                "D�cryptez et anticipez les tendances technologiques",
-                "Ma�trisez l'urbanisation de vos architectures digitales"
-            ]
-        },
-        {
-            "institution": "Universit� de Pau et des Pays de l'Adour",
-            "degrees": [
-                "Master 2 Industry 4.0",
-                "Master 1 SIGLIS",
-                "Licence LAOSI"
-            ]
-        },
-        {
-            "institution": "ISTA NTIC Settat",
-            "degrees": [
-                "Licence professionnelle en Base de donn�es et technologie web",
-                "Dipl�me de techniques de d�veloppement informatique"
-            ]
-        }
-    ],
+    "education": {
+        "en": [
+            {
+                "institution": "Capgemini Institut",
+                "degrees": [
+                    "Understand and anticipate technological trends",
+                    "Master the urbanization of your digital architectures"
+                ]
+            },
+            {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "Master 2 Industry 4.0",
+                    "Master 1 SIGLIS",
+                    "Licence LAOSI"
+                ]
+            },
+            {
+                "institution": "ISTA NTIC Settat",
+                "degrees": [
+                    "Professional License in Database and Web Technology",
+                    "Diploma in Computer Development Techniques"
+                ]
+            }
+        ],
+        "fr": [
+            {
+                "institution": "Capgemini Institut",
+                "degrees": [
+                    "Décryptez et anticipez les tendances technologiques",
+                    "Maîtrisez l'urbanisation de vos architectures digitales"
+                ]
+            },
+            {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "Master 2 Industrie 4.0",
+                    "Master 1 SIGLIS",
+                    "Licence LAOSI"
+                ]
+            },
+            {
+                "institution": "ISTA NTIC Settat",
+                "degrees": [
+                    "Licence professionnelle en Base de données et technologie web",
+                    "Diplôme de techniques de développement informatique"
+                ]
+            }
+        ]
+    },
     "technicalExpertise": {
         "languages": ["Java", "JavaScript", "SQL", "HTML/CSS", "PL/SQL"],
         "frameworks": ["Spring Boot", "JavaEE", "Hibernate", "PrimeFaces", "Jakarta EE"],
@@ -99,39 +199,75 @@
         "architectures": ["Microservices", "REST APIs", "SOAP", "CI/CD"],
         "methodologies": ["Agile Scrum", "Software Craftsmanship", "UML"]
     },
-    "projects": [
-        {
-            "title": "Gen AI Platform",
-            "description": "Enterprise AI solution development using TensorFlow and React",
-            "technologies": ["Java", "React", "TensorFlow", "Microservices"]
-        },
-        {
-            "title": "SCOPIOM Modernization",
-            "description": "Legacy system migration to REST architecture",
-            "technologies": ["JavaFX", "Jersey", "REST", "EJB3.0"]
-        },
-        {
-            "title": "Regional Data Analysis Platform",
-            "description": "JavaEE-based data visualization system for Nouvelle-Aquitaine region",
-            "technologies": ["JavaEE", "PrimeFaces", "MySQL", "JavaScript"]
-        }
-    ],
+    "projects": {
+        "en": [
+            {
+                "title": "Gen AI Platform",
+                "description": "Enterprise AI solution development using TensorFlow and React",
+                "technologies": ["Java", "React", "TensorFlow", "Microservices"]
+            },
+            {
+                "title": "SCOPIOM Modernization",
+                "description": "Legacy system migration to REST architecture",
+                "technologies": ["JavaFX", "Jersey", "REST", "EJB3.0"]
+            },
+            {
+                "title": "Regional Data Analysis Platform",
+                "description": "JavaEE-based data visualization system for Nouvelle-Aquitaine region",
+                "technologies": ["JavaEE", "PrimeFaces", "MySQL", "JavaScript"]
+            }
+        ],
+        "fr": [
+            {
+                "title": "Plateforme Gen AI",
+                "description": "Développement de solution AI d'entreprise utilisant TensorFlow et React",
+                "technologies": ["Java", "React", "TensorFlow", "Microservices"]
+            },
+            {
+                "title": "Modernisation de SCOPIOM",
+                "description": "Migration du système hérité vers une architecture REST",
+                "technologies": ["JavaFX", "Jersey", "REST", "EJB3.0"]
+            },
+            {
+                "title": "Plateforme d'analyse de données régionales",
+                "description": "Système de visualisation de données basé sur JavaEE pour la région Nouvelle-Aquitaine",
+                "technologies": ["JavaEE", "PrimeFaces", "MySQL", "JavaScript"]
+            }
+        ]
+    },
     "languages": [
         {"name": "French", "level": "Native"},
         {"name": "Arabic", "level": "Native"},
         {"name": "English", "level": "Professional"}
     ],
-    "softSkills": [
-        "Technical Leadership",
-        "Team Mentoring",
-        "Agile Project Management",
-        "Cross-functional Collaboration",
-        "Technical Evangelism"
-    ],
-    "achievements": [
-        "PSM1 Certified Scrum Master",
-        "Led migration of 3 major legacy systems to modern architectures",
-        "Mentored 15+ junior developers to senior roles",
-        "Implemented CI/CD pipelines reducing deployment time by 40%"
-    ]
+    "softSkills": {
+        "en": [
+            "Technical Leadership",
+            "Team Mentoring",
+            "Agile Project Management",
+            "Cross-functional Collaboration",
+            "Technical Evangelism"
+        ],
+        "fr": [
+            "Leadership Technique",
+            "Mentorat d'équipe",
+            "Gestion de projet Agile",
+            "Collaboration interfonctionnelle",
+            "Évangélisation technique"
+        ]
+    },
+    "achievements": {
+        "en": [
+            "PSM1 Certified Scrum Master",
+            "Led migration of 3 major legacy systems to modern architectures",
+            "Mentored 15+ junior developers to senior roles",
+            "Implemented CI/CD pipelines reducing deployment time by 40%"
+        ],
+        "fr": [
+            "Scrum Master Certifié PSM1",
+            "Dirigé la migration de 3 systèmes hérités majeurs vers des architectures modernes",
+            "Mentoré plus de 15 développeurs juniors vers des rôles seniors",
+            "Mise en place de pipelines CI/CD réduisant le temps de déploiement de 40%"
+        ]
+    }
 }

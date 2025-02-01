@@ -12,21 +12,28 @@ export async function loadPortfolioData() {
     }
 }
 
-export async function initializePortfolio() {
+export async function initializePortfolio(language = 'fr') {
     const data = await loadPortfolioData();
     if (!data) return;
+
+    const personalInfo = data.personalInfo;
+    const experience = data.experience[language];
+    const education = data.education[language];
+    const projects = data.projects[language];
+    const softSkills = data.softSkills[language];
+    const achievements = data.achievements[language];
 
     // Main Content
     document.getElementById('main-content').innerHTML = `
         <section id="home" class="hero">
             <div class="hero-content">
-                <img src="${data.personalInfo.profileImage}" alt="${data.personalInfo.name}" class="profile-img">
-                <h1>Hi, I'm <span>${data.personalInfo.name}</span></h1>
-                <h3>${data.personalInfo.title}</h3>
-                <p>${data.personalInfo.bio}</p>
+                <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
+                <h1><span>${personalInfo.name[language]}</span></h1>
+                <h3>${personalInfo.title[language]}</h3>
+                <p>${personalInfo.bio[language]}</p>
                 <div class="cta-container">
                     <a href="#contact" class="cta-btn">Get in Touch</a>
-                    <a href="${data.personalInfo.resume}" download class="cta-btn download-btn">
+                    <a href="${personalInfo.resume}" download class="cta-btn download-btn">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
@@ -36,7 +43,7 @@ export async function initializePortfolio() {
         <section id="experience">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
-                ${data.experience.map((exp, index) => `
+                ${experience.map((exp, index) => `
                     <div class="timeline-item ${index % 2 === 0 ? 'left' : 'right'}">
                         <h3>${exp.positions ? exp.positions.map(pos => pos.title).join(', ') : exp.position}</h3>
                         <h4>${exp.company}</h4>
@@ -120,7 +127,7 @@ export async function initializePortfolio() {
         <section id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
-                ${data.projects.map(project => `
+                ${projects.map(project => `
                     <div class="project-card">
                         <h3>${project.title}</h3>
                         <p>${project.description}</p>
@@ -161,4 +168,21 @@ export async function initializePortfolio() {
             </form>
         </section>
     `;
+
+    // Set last update date and time
+    const lastUpdateElement = document.getElementById('last-update');
+    if (lastUpdateElement) {
+        const lastUpdateDate = new Date(document.lastModified);
+        lastUpdateElement.innerHTML = `Last updated: ${lastUpdateDate.toLocaleDateString()} ${lastUpdateDate.toLocaleTimeString()}`;
+    }
+
+    // Language switcher functionality
+    const languageSwitcher = document.getElementById('languageSwitcher');
+    if (languageSwitcher) {
+        languageSwitcher.textContent = language === 'fr' ? 'EN' : 'FR';
+        languageSwitcher.onclick = () => {
+            const newLanguage = language === 'fr' ? 'en' : 'fr';
+            initializePortfolio(newLanguage);
+        };
+    }
 }
