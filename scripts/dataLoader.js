@@ -54,6 +54,18 @@ export async function initializePortfolio(language = 'fr') {
             </div>
         </section>
 
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                ${education.map(edu => `
+                    <div class="education-card">
+                        <h3>${edu.institution}</h3>
+                        <p>${edu.degrees.join(', ')}</p>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+
         <section id="skills">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
@@ -118,6 +130,20 @@ export async function initializePortfolio(language = 'fr') {
                         <h3>${methodology}</h3>
                         <div class="skill-icon">
                             <i class="fas fa-project-diagram"></i>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+
+        <section id="softSkills">
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="skills-container">
+                ${softSkills.map(skill => `
+                    <div class="skill-card">
+                        <h3>${skill}</h3>
+                        <div class="skill-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
                     </div>
                 `).join('')}

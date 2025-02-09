@@ -10,8 +10,8 @@
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical teams at Capgemini while maintaining active involvement in code development and architectural decisions.",
-            "fr": "Leader technique avec plus de 7 ans d'expérience en développement full-stack. Scrum Master certifié (PSM1) spécialisé dans les écosystèmes Java, le leadership d'équipe et les solutions basées sur l'IA. Actuellement, je dirige des équipes techniques chez Capgemini tout en restant activement impliqué dans le développement de code et les décisions architecturales."
+            "en": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical team at Capgemini while maintaining active involvement in code development.",
+            "fr": "Leader technique avec plus de 7 ans d'expérience en développement full-stack. Scrum Master certifié (PSM1) spécialisé dans les écosystèmes Java, le leadership d'équipe et les solutions basées sur l'IA. Actuellement, Teach lead dans mon équipe chez Capgemini tout en restant activement impliqué dans le développement de code."
         },
         "resume": "assets/resumes/Hamza_Elyoubi_CV.pdf",
         "profileImage": "assets/images/profile.jpg",
@@ -38,7 +38,7 @@
                 "company": "Capgemini",
                 "positions": [
                     {
-                        "title": "Lead Tech",
+                        "title": "Lead Software Engineer",
                         "duration": "Oct 2022 - Present",
                         "achievements": [
                             "Technical leadership for development teams",
@@ -92,7 +92,7 @@
                 "company": "Capgemini",
                 "positions": [
                     {
-                        "title": "Lead Tech",
+                        "title": "Lead Software Engineer",
                         "duration": "Oct 2022 - Présent",
                         "achievements": [
                             "Leadership technique pour les équipes de développement",
@@ -102,12 +102,10 @@
                         ]
                     },
                     {
-                        "title": "Ingénieur Logiciel",
+                        "title": "Ingénieur logiciels",
                         "duration": "Oct 2019 - Oct 2022",
                         "achievements": [
-                            "Développement full-stack de solutions d'entreprise",
-                            "Intégration et mentorat des nouveaux membres de l'équipe",
-                            "Gestion de l'évolution des tickets et résolution des anomalies"
+                            "Mon rôle consiste à concevoir et à développer des tickets d'évolutions et à résoudre les anomalies dans le cadre de projets informatiques. En plus de cela, j'assure un soutien actif pour les nouveaux membres de l'équipe projet, en les accompagnant dans leur intégration. Je suis également en charge de chiffrer les lots d'évolutions qui doivent être développés par l'équipe de développement, tout en veillant au suivi des livraisons et en fournissant un reporting régulier pour assurer une transparence et une communication optimale entre toutes les parties prenantes."
                         ]
                     }
                 ]
@@ -117,27 +115,29 @@
                 "position": "Développeur Java",
                 "duration": "Sept 2018 - Sept 2019",
                 "achievements": [
-                    "Développement d'interface JavaFX pour le logiciel SCOPIOM",
-                    "Migration de l'architecture EJB3.0 vers REST en utilisant Jersey",
-                    "Gestion des contrats de professionnalisation"
+                    "Développement d'interfaces dynamique pour SCOPIOM en JavaFX",
+                    "Migration de l'API de communication client/Serveur EJB3.0 vers une architecture REST avec Jersey",
+                    "En contrat de professionnalisation"
                 ]
             },
             {
                 "company": "FRC Nouvelle Aquitaine",
-                "position": "Développeur FullStack Java",
+                "position": "Développeur fullstack Java",
                 "duration": "Oct 2017 - Sept 2018",
                 "achievements": [
-                    "Développement de plateforme d'analyse de données JavaEE/Primefaces",
-                    "Gestion de la base de données centrale pour les données d'échantillonnage régional"
+                    "Gestion d'une base de données centrale",
+                    "Développement d'une plateforme dynamique en JavaEE/Primefaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
+                    "En contrat de professionnalisation"
                 ]
             },
             {
                 "company": "BMA Biarritz School",
-                "position": "Développeur Web FullStack",
+                "position": "Développeur web FullStack",
                 "duration": "Oct 2016 - Jun 2017",
                 "achievements": [
                     "Développement de système d'inscription au triathlon basé sur Joomla",
-                    "Intégration de paiement en ligne et système de classement en temps réel"
+                    "Intégration de paiement en ligne et système de classement en temps réel",
+                    "Freelance/Stage"
                 ]
             }
         ]
@@ -145,49 +145,119 @@
     "education": {
         "en": [
             {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "Master 2 Industry 4.0, Computer Engineering",
+                    "2018 - 2019",
+                    "Courses in English"
+                ]
+            },
+            {
                 "institution": "Capgemini Institut",
                 "degrees": [
-                    "Understand and anticipate technological trends",
-                    "Master the urbanization of your digital architectures"
+                    "Urbanization of IS and Digital Architectures, Digital Architecture",
+                    "June 2022 - June 2022"
+                ]
+            },
+            {
+                "institution": "L’institut spécialisé de technologie appliquée NTIC",
+                "degrees": [
+                    "OffShoring Training, Java EE Designer",
+                    "2012 - 2013"
                 ]
             },
             {
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
-                    "Master 2 Industry 4.0",
-                    "Master 1 SIGLIS",
-                    "Licence LAOSI"
+                    "Master 1 Information Systems for Industrial Logistics and Services Engineering (SIGLIS), Computer Science / Logistics",
+                    "2017 - 2018"
                 ]
             },
             {
-                "institution": "ISTA NTIC Settat",
+                "institution": "Institut spécialisé de technologie appliquée NTIC",
                 "degrees": [
-                    "Professional License in Database and Web Technology",
-                    "Diploma in Computer Development Techniques"
+                    "Diploma in Computer Development Techniques",
+                    "2010 - 2012"
+                ]
+            },
+            {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "L3 Logistics, Operational Activities and Information Systems (LAOSI), Computer Science / Logistics / Operations Research",
+                    "2016 - 2017"
+                ]
+            },
+            {
+                "institution": "Lycée scientifique Galileo",
+                "degrees": [
+                    "Baccalaureate in Life and Earth Sciences",
+                    "2009 - 2010"
+                ]
+            },
+            {
+                "institution": "Faculté des sciences et techniques Settat",
+                "degrees": [
+                    "Professional University Degree in Database and Web Technology",
+                    "2015 - 2016"
                 ]
             }
         ],
         "fr": [
             {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "Master 2 Industrie 4.0, Ingénierie informatique",
+                    "2018 - 2019",
+                    "Formation en anglais"
+                ]
+            },
+            {
                 "institution": "Capgemini Institut",
                 "degrees": [
-                    "Décryptez et anticipez les tendances technologiques",
-                    "Maîtrisez l'urbanisation de vos architectures digitales"
+                    "Urbanisation du SI et architectures digitales, Architecture digitale",
+                    "Juin 2022 - Juin 2022"
+                ]
+            },
+            {
+                "institution": "L’institut spécialisé de technologie appliquée NTIC",
+                "degrees": [
+                    "Formation OffShoring, Concepteur Réalisateur Java EE",
+                    "2012 - 2013"
                 ]
             },
             {
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
-                    "Master 2 Industrie 4.0",
-                    "Master 1 SIGLIS",
-                    "Licence LAOSI"
+                    "Master 1 Systèmes Informatiques pour le Génie de la Logistique Industrielle et des Services (SIGLIS), Informatique / Logistique",
+                    "2017 - 2018"
                 ]
             },
             {
-                "institution": "ISTA NTIC Settat",
+                "institution": "Institut spécialisé de technologie appliquée NTIC",
                 "degrees": [
-                    "Licence professionnelle en Base de données et technologie web",
-                    "Diplôme de techniques de développement informatique"
+                    "Diplôme de techniques de développement informatique",
+                    "2010 - 2012"
+                ]
+            },
+            {
+                "institution": "Université de Pau et des Pays de l'Adour",
+                "degrees": [
+                    "L3 Parcours logistique, activités opérationnelles et systèmes d'information (LAOSI), Informatique / Logistique / Recherche opérationnelle",
+                    "2016 - 2017"
+                ]
+            },
+            {
+                "institution": "Lycée scientifique Galileo",
+                "degrees": [
+                    "Baccalauréat sciences de la vie et de la terre",
+                    "2009 - 2010"
+                ]
+            },
+            {
+                "institution": "Faculté des sciences et techniques Settat",
+                "degrees": [
+                    "Licence universitaire professionnel en Base de données et technologie web",
+                    "2015 - 2016"
                 ]
             }
         ]

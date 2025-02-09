@@ -163,6 +163,10 @@ body {
     transition: background 0.3s;
 }
 
+.theme-toggle i {
+    font-size: 1.5rem;
+}
+
 .theme-toggle:hover {
     background: darken(var(--primary-color), 10%);
 }
@@ -172,10 +176,19 @@ body {
     background: var(--primary-color);
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+.language-switcher img {
+    width: 24px;
+    height: 24px;
 }
 
 .language-switcher:hover {
@@ -303,6 +316,23 @@ body {
 }
 
 .language-card {
+    flex: 1 1 calc(50% - 1rem);
+    background: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem; /* Add space between sections */
+}
+
+.education-card {
     flex: 1 1 calc(50% - 1rem);
     background: var(--secondary-bg);
     padding: 1rem;
