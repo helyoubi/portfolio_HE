@@ -233,6 +233,22 @@ body {
     left: 55%;
 }
 
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 10px; /* Move the separator to the left */
+    }
+
+    .timeline-item {
+        width: calc(100% - 40px); /* Adjust width to fit within the container */
+        left: 20px; /* Center the items */
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 20px; /* Center the items */
+    }
+}
+
 /* Center section titles */
 .section-title {
     text-align: center;
