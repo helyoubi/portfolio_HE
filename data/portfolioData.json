@@ -263,10 +263,10 @@
         ]
     },
     "technicalExpertise": {
-        "languages": ["Java", "JavaScript", "SQL", "HTML/CSS", "PL/SQL"],
-        "frameworks": ["Spring Boot", "JavaEE", "Hibernate", "PrimeFaces", "Jakarta EE"],
+        "languages": ["Java", "JavaScript", "SQL", "HTML/CSS"],
+        "frameworks": ["Spring Boot", "Hibernate", "PrimeFaces", "Jakarta EE"],
         "tools": ["Git", "Maven", "IntelliJ", "Eclipse", "GitLab"],
-        "architectures": ["Microservices", "REST APIs", "SOAP", "CI/CD"],
+        "architectures": ["Microservices", "REST APIs", "SOAP"],
         "methodologies": ["Agile Scrum", "Software Craftsmanship", "UML"]
     },
     "projects": {
@@ -315,15 +315,13 @@
             "Technical Leadership",
             "Team Mentoring",
             "Agile Project Management",
-            "Cross-functional Collaboration",
-            "Technical Evangelism"
+            "Cross-functional Collaboration"
         ],
         "fr": [
             "Leadership Technique",
             "Mentorat d'équipe",
             "Gestion de projet Agile",
-            "Collaboration interfonctionnelle",
-            "Évangélisation technique"
+            "Collaboration interfonctionnelle"
         ]
     },
     "achievements": {
