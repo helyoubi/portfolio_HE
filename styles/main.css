@@ -174,7 +174,6 @@ body {
 /* Language Switcher */
 .language-switcher {
     background: var(--primary-color);
-    color: #fff;
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -184,11 +183,13 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: background 0.3s;
+    overflow: hidden; /* Ensure the flag fits perfectly */
 }
 
 .language-switcher img {
     width: 24px;
     height: 24px;
+    object-fit: cover;
 }
 
 .language-switcher:hover {

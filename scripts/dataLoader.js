@@ -205,7 +205,8 @@ export async function initializePortfolio(language = 'fr') {
     // Language switcher functionality
     const languageSwitcher = document.getElementById('languageSwitcher');
     if (languageSwitcher) {
-        languageSwitcher.textContent = language === 'fr' ? 'EN' : 'FR';
+        // Set the flag based on the current language
+        languageSwitcher.innerHTML = `<img src="assets/icons/${language === 'fr' ? 'en' : 'fr'}.png" alt="${language === 'fr' ? 'English' : 'French'} Flag">`;
         languageSwitcher.onclick = () => {
             const newLanguage = language === 'fr' ? 'en' : 'fr';
             initializePortfolio(newLanguage);
