@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Elyoubi - Portfolio</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Empty favicon -->
     <link rel="stylesheet" href="styles/main.css">
@@ -28,12 +28,12 @@
     <!-- Theme Toggle and Language Switcher Container -->
     <div class="top-right-buttons">
         <!-- Theme Toggle -->
-        <button class="theme-toggle" id="themeToggle">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
             <i class="fas fa-moon"></i>
         </button>
 
         <!-- Language Switcher -->
-        <button class="language-switcher" id="languageSwitcher">
+        <button class="language-switcher" id="languageSwitcher" aria-label="Switch Language">
             <img src="assets/icons/fr.png" alt="French Flag" onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
         </button>
     </div>
@@ -64,6 +64,11 @@
         <p>&copy; 2025 Hamza Elyoubi. All rights reserved.</p>
     </div>
 
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
     <script>
         // Fix for local file CORS issue
@@ -73,6 +78,17 @@
             document.body.appendChild(iframe);
             iframe.contentWindow.Promise = Promise;
         });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
     </script>
     <script type="module">
         import { initializePortfolio } from './scripts/dataLoader.js';
