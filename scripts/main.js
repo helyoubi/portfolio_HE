@@ -14,6 +14,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Scroll-to-Top Button
+    const scrollToTop = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTop.classList.add('show');
+        } else {
+            scrollToTop.classList.remove('show');
+        }
+    });
+
+    scrollToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll('.section');
+    const revealSections = () => {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealSections);
+    revealSections(); // Trigger on load
+
     // Load GitHub Copilot credit
     const copilotCredit = document.getElementById('copilot-credit');
     if (copilotCredit) {
