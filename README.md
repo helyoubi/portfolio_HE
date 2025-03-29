@@ -1,6 +1,6 @@
 # Hamza Elyoubi - Portfolio
 
-Welcome to my professional portfolio! This project showcases my skills, experience, and projects as a Lead Tech and Certified Scrum Master. The portfolio is built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages.
+Welcome to my professional portfolio! This project showcases my skills, experience, and projects as a Lead Tech. The portfolio is built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages.
 
 ## Table of Contents
 
