@@ -27,7 +27,9 @@ export async function initializePortfolio(language = 'fr') {
     document.getElementById('main-content').innerHTML = `
         <section id="home" class="hero">
             <div class="hero-content">
-                <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
+                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
+                    <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
+                </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <h3>${personalInfo.title[language]}</h3>
                 <p>${personalInfo.bio[language]}</p>

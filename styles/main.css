@@ -111,6 +111,22 @@ body {
     object-fit: cover;
 }
 
+/* Profile Image Hover Effect */
+.hero-content a {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-content a:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 4px 10px rgba(0, 171, 240, 0.5); /* Add a glowing shadow */
+}
+
+.hero-content a:hover .profile-img {
+    border: 2px solid var(--primary-color); /* Add a border to the image */
+    transition: border 0.3s ease;
+}
+
 .cta-container {
     display: flex;
     gap: 1rem;
