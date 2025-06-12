@@ -42,6 +42,27 @@ export async function initializePortfolio(language = 'fr') {
             </div>
         </section>
 
+        <section id="certifications" class="section visible">
+            <h2 class="section-title">${language === 'fr' ? 'Certifications' : 'Certifications'}</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="assets/icons/github-copilot.png" alt="GitHub Copilot Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/githubcopilot_icon.png';">
+                    <h3>${language === 'fr' ? 'Certification GitHub Copilot' : 'GitHub Copilot Certification'}</h3>
+                    <p>${language === 'fr' ? 'Certifié par le programme de certification GitHub Copilot.' : 'Certified by GitHub Copilot Certification Program.'}</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/l1_sofo.png" alt="SE L1 Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
+                    <h3>${language === 'fr' ? 'SE L1' : 'SE L1'}</h3>
+                    <p>${language === 'fr' ? 'Certifié Ingénierie Logicielle Niveau 1.' : 'Software Engineering Level 1 Certified.'}</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/psm1.png" alt="PSM I Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
+                    <h3>${language === 'fr' ? 'PSM I' : 'PSM I'}</h3>
+                    <p>${language === 'fr' ? 'Professional Scrum Master I (PSM I) certifié par Scrum.org.' : 'Professional Scrum Master I (PSM I) Certified by Scrum.org.'}</p>
+                </div>
+            </div>
+        </section>
+
         <section id="experience">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
