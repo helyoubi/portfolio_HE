@@ -99,22 +99,8 @@ export async function initializePortfolio(language = 'fr') {
 
         <section id="trainings">
             <h2 class="section-title">${language === 'fr' ? 'Formations & e-learning' : 'Professional Trainings & e-learning'}</h2>
-            <div class="education-container">
-                ${data.trainings[language].sort((a, b) => {
-                    // Extract year for sorting (descending)
-                    const getYear = str => {
-                        const match = str.match(/(\d{4})/g);
-                        return match ? Math.max(...match.map(Number)) : 0;
-                    };
-                    return getYear(b.date) - getYear(a.date);
-                }).map(training => `
-                    <div class="education-card">
-                        <h3>${training.institution}</h3>
-                        <p>${training.title}</p>
-                        <span style='font-size:0.95em;opacity:0.8;'>${training.date}</span>
-                        ${training.badgeUrl && training.badgeImg ? `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer"><img src="${training.badgeImg}" alt="Pluralsight Badge" style="width:80px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;"></a>` : ''}
-                    </div>
-                `).join('')}
+            <div class="education-container" id="trainings-container">
+                ${renderTrainings(data.trainings[language], 1, 3)}
             </div>
         </section>
 
@@ -232,6 +218,51 @@ export async function initializePortfolio(language = 'fr') {
             </form>
         </section>
     `;
+
+    // Helper for pagination
+    function renderTrainings(trainings, page = 1, perPage = 3) {
+        const total = trainings.length;
+        const totalPages = Math.ceil(total / perPage);
+        const start = (page - 1) * perPage;
+        const end = start + perPage;
+        const currentTrainings = trainings.slice(start, end);
+
+        let html = currentTrainings.map(training => `
+            <div class="education-card">
+                <h3>${training.institution}</h3>
+                <p>${training.title}</p>
+                <span style='font-size:0.95em;opacity:0.8;'>${training.date}</span>
+                ${training.badgeUrl && training.badgeImg ? `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer"><img src="${training.badgeImg}" alt="Pluralsight Badge" style="width:80px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;"></a>` : ''}
+            </div>
+        `).join('');
+
+        // Pagination controls
+        html += `
+            <div class="pagination-controls">
+                <button id="prevTrainings" ${page === 1 ? 'disabled' : ''}>&laquo; Prev</button>
+                <span>Page ${page} of ${totalPages}</span>
+                <button id="nextTrainings" ${page === totalPages ? 'disabled' : ''}>Next &raquo;</button>
+            </div>
+        `;
+        return html;
+    }
+
+    // Add this after setting innerHTML to enable pagination
+    setTimeout(() => {
+        const trainingsContainer = document.getElementById('trainings-container');
+        let currentPage = 1;
+        const updateTrainings = (page) => {
+            trainingsContainer.innerHTML = renderTrainings(data.trainings[language], page, 3);
+            addPaginationListeners();
+        };
+        function addPaginationListeners() {
+            const prevBtn = document.getElementById('prevTrainings');
+            const nextBtn = document.getElementById('nextTrainings');
+            if (prevBtn) prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; updateTrainings(currentPage); } };
+            if (nextBtn) nextBtn.onclick = () => { if (currentPage < Math.ceil(data.trainings[language].length / 3)) { currentPage++; updateTrainings(currentPage); } };
+        }
+        addPaginationListeners();
+    }, 0);
 
     // Set last update date and time
     const lastUpdateElement = document.getElementById('last-update');
