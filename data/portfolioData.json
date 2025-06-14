@@ -252,13 +252,41 @@
                 "institution": "Capgemini Institut",
                 "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
                 "date": "June 2022"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "GitHub Copilot Administration and Deployment",
+                "date": "May 24, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/8ee67fe3-45fd-4ac1-a852-ef96ea6aa508",
+                "badgeImg": "assets/e-learning/pluralsightpluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Prompt Engineering for Improved Performance",
+                "date": " April 26, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/5770fa68-39e5-4263-8739-f1374e3e9240",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             }
         ],
         "fr": [
             {
                 "institution": "Capgemini Institut",
-                "title": "Urbanisation du SI et architectures digitales, Architecture digitale",
-                "date": "Juin 2022"
+                "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
+                "date": "June 2022"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "GitHub Copilot Administration and Deployment",
+                "date": "May 24, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/8ee67fe3-45fd-4ac1-a852-ef96ea6aa508",
+                "badgeImg": "assets/e-learning/pluralsightpluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Prompt Engineering for Improved Performance",
+                "date": " April 26, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/5770fa68-39e5-4263-8739-f1374e3e9240",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             }
         ]
     },
