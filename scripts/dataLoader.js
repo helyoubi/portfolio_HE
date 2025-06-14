@@ -32,6 +32,7 @@ export async function initializePortfolio(language = 'fr') {
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <h3>${personalInfo.title[language]}</h3>
+                <p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote ? personalInfo.titleNote[language] : ''}</p>
                 <p>${personalInfo.bio[language]}</p>
                 <div class="cta-container">
                     <a href="#contact" class="cta-btn">Get in Touch</a>
@@ -78,12 +79,39 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="education">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Éducation' : 'Education'}</h2>
             <div class="education-container">
-                ${education.map(edu => `
+                ${education.sort((a, b) => {
+                    // Extract years for sorting (descending)
+                    const getYear = str => {
+                        const match = str.match(/(\d{4})/g);
+                        return match ? Math.max(...match.map(Number)) : 0;
+                    };
+                    return getYear(b.degrees.join(' ')) - getYear(a.degrees.join(' '));
+                }).map(edu => `
                     <div class="education-card">
                         <h3>${edu.institution}</h3>
                         <p>${edu.degrees.join(', ')}</p>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+
+        <section id="trainings">
+            <h2 class="section-title">${language === 'fr' ? 'Formations & e-learning' : 'Professional Trainings & e-learning'}</h2>
+            <div class="education-container">
+                ${data.trainings[language].sort((a, b) => {
+                    // Extract year for sorting (descending)
+                    const getYear = str => {
+                        const match = str.match(/(\d{4})/g);
+                        return match ? Math.max(...match.map(Number)) : 0;
+                    };
+                    return getYear(b.date) - getYear(a.date);
+                }).map(training => `
+                    <div class="education-card">
+                        <h3>${training.institution}</h3>
+                        <p>${training.title}</p>
+                        <span style='font-size:0.95em;opacity:0.8;'>${training.date}</span>
                     </div>
                 `).join('')}
             </div>
@@ -139,20 +167,6 @@ export async function initializePortfolio(language = 'fr') {
                         <h3>${architecture}</h3>
                         <div class="skill-icon">
                             <i class="fas fa-network-wired"></i>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        </section>
-
-        <section id="methodologies">
-            <h2 class="section-title">Methodologies</h2>
-            <div class="skills-container">
-                ${data.technicalExpertise.methodologies.map(methodology => `
-                    <div class="skill-card">
-                        <h3>${methodology}</h3>
-                        <div class="skill-icon">
-                            <i class="fas fa-project-diagram"></i>
                         </div>
                     </div>
                 `).join('')}

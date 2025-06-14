@@ -109,22 +109,31 @@ body {
     height: 200px; /* Adjust the size as needed */
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 0 3px var(--primary-color); /* subtle border effect */
+    transition: box-shadow 0.3s, border 0.3s;
+    border: none !important;
+    background: transparent !important;
 }
 
 /* Profile Image Hover Effect */
 .hero-content a {
     display: inline-block;
+    border-radius: 50%;
+    overflow: visible;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
 }
 
 .hero-content a:hover {
     transform: scale(1.1); /* Slightly enlarge the image */
-    box-shadow: 0 4px 10px rgba(0, 171, 240, 0.5); /* Add a glowing shadow */
+    box-shadow: none;
 }
 
 .hero-content a:hover .profile-img {
-    border: 2px solid var(--primary-color); /* Add a border to the image */
-    transition: border 0.3s ease;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: 0 0 0 8px var(--primary-color), 0 4px 20px rgba(0, 171, 240, 0.5);
+    /* No rectangle, just a glowing circular effect */
 }
 
 .cta-container {

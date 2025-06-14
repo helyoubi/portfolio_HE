@@ -5,13 +5,17 @@
             "fr" : "Salut, je suis Hamza Elyoubi"
         },
         "title": {
-            "en": "Lead Tech | Certified Scrum Master",
-            "fr": "Lead Tech | Scrum Master Certifié"
+            "en": "Tech Lead L1* | 7+ years of experience | Java & GenAI",
+            "fr": "Tech Lead L1* | 7+ ans d'expérience | Java & GenAI"
+        },
+        "titleNote": {
+            "en": "*L1: Software Engineer L1 (confirmed) certification from Capgemini.",
+            "fr": "*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini."
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Technical Leader with 7+ years experience in full-stack development. Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently leading technical team at Capgemini while maintaining active involvement in code development.",
-            "fr": "Leader technique avec plus de 7 ans d'expérience en développement full-stack. Scrum Master certifié (PSM1) spécialisé dans les écosystèmes Java, le leadership d'équipe et les solutions basées sur l'IA. Actuellement, Teach lead dans mon équipe chez Capgemini tout en restant activement impliqué dans le développement de code."
+            "en": "Tech Lead at Capgemini, combining strong Java expertise with technical team support. Actively involved in coding, code reviews, and mentoring, I also contribute as a GenAI Champion within my project.",
+            "fr": "Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet."
         },
         "resume": "assets/resumes/Hamza_Elyoubi_CV.pdf",
         "profileImage": "assets/images/profile.jpg",
@@ -36,26 +40,23 @@
         "en": [
             {
                 "company": "Capgemini",
-                "positions": [
-                    {
-                        "title": "Lead Software Engineer",
-                        "duration": "Oct 2022 - Present",
-                        "achievements": [
-                            "Technical leadership for development teams",
-                            "Technical architecture design and code reviews",
-                            "Technical interviews and team mentoring",
-                            "Project estimation and continuous integration"
-                        ]
-                    },
-                    {
-                        "title": "Software Engineer",
-                        "duration": "Oct 2019 - Oct 2022",
-                        "achievements": [
-                            "Full-stack development of enterprise solutions",
-                            "New team member onboarding and mentoring",
-                            "Ticket evolution management and anomaly resolution"
-                        ]
-                    }
+                "position": "Lead Software Engineer",
+                "duration": "Oct 2022 - Present",
+                "achievements": [
+                    "Technical leadership for development teams",
+                    "Technical architecture design and code reviews",
+                    "Technical interviews and team mentoring",
+                    "Project estimation and continuous integration"
+                ]
+            },
+            {
+                "company": "Capgemini",
+                "position": "Software Engineer",
+                "duration": "Oct 2019 - Oct 2022",
+                "achievements": [
+                    "Full-stack development of enterprise solutions",
+                    "New team member onboarding and mentoring",
+                    "Ticket evolution management and anomaly resolution"
                 ]
             },
             {
@@ -90,24 +91,21 @@
         "fr": [
             {
                 "company": "Capgemini",
-                "positions": [
-                    {
-                        "title": "Lead Software Engineer",
-                        "duration": "Oct 2022 - Présent",
-                        "achievements": [
-                            "Leadership technique pour les équipes de développement",
-                            "Conception d'architecture technique et revues de code",
-                            "Entretiens techniques et mentorat d'équipe",
-                            "Estimation de projet et intégration continue"
-                        ]
-                    },
-                    {
-                        "title": "Ingénieur logiciels",
-                        "duration": "Oct 2019 - Oct 2022",
-                        "achievements": [
-                            "Mon rôle consiste à concevoir et à développer des tickets d'évolutions et à résoudre les anomalies dans le cadre de projets informatiques. En plus de cela, j'assure un soutien actif pour les nouveaux membres de l'équipe projet, en les accompagnant dans leur intégration. Je suis également en charge de chiffrer les lots d'évolutions qui doivent être développés par l'équipe de développement, tout en veillant au suivi des livraisons et en fournissant un reporting régulier pour assurer une transparence et une communication optimale entre toutes les parties prenantes."
-                        ]
-                    }
+                "position": "Lead Software Engineer",
+                "duration": "Oct 2022 - Présent",
+                "achievements": [
+                    "Leadership technique pour les équipes de développement",
+                    "Conception d'architecture technique et revues de code",
+                    "Entretiens techniques et mentorat d'équipe",
+                    "Estimation de projet et intégration continue"
+                ]
+            },
+            {
+                "company": "Capgemini",
+                "position": "Ingénieur logiciels",
+                "duration": "Oct 2019 - Oct 2022",
+                "achievements": [
+                    "Mon rôle consiste à concevoir et à développer des tickets d'évolutions et à résoudre les anomalies dans le cadre de projets informatiques. En plus de cela, j'assure un soutien actif pour les nouveaux membres de l'équipe projet, en les accompagnant dans leur intégration. Je suis également en charge de chiffrer les lots d'évolutions qui doivent être développés par l'équipe de développement, tout en veillant au suivi des livraisons et en fournissant un reporting régulier pour assurer une transparence et une communication optimale entre toutes les parties prenantes."
                 ]
             },
             {
@@ -150,13 +148,6 @@
                     "Master 2 Industry 4.0, Computer Engineering",
                     "2018 - 2019",
                     "Courses in English"
-                ]
-            },
-            {
-                "institution": "Capgemini Institut",
-                "degrees": [
-                    "Urbanization of IS and Digital Architectures, Digital Architecture",
-                    "June 2022 - June 2022"
                 ]
             },
             {
@@ -212,13 +203,6 @@
                 ]
             },
             {
-                "institution": "Capgemini Institut",
-                "degrees": [
-                    "Urbanisation du SI et architectures digitales, Architecture digitale",
-                    "Juin 2022 - Juin 2022"
-                ]
-            },
-            {
                 "institution": "L’institut spécialisé de technologie appliquée NTIC",
                 "degrees": [
                     "Formation OffShoring, Concepteur Réalisateur Java EE",
@@ -259,6 +243,22 @@
                     "Licence universitaire professionnel en Base de données et technologie web",
                     "2015 - 2016"
                 ]
+            }
+        ]
+    },
+    "trainings": {
+        "en": [
+            {
+                "institution": "Capgemini Institut",
+                "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
+                "date": "June 2022"
+            }
+        ],
+        "fr": [
+            {
+                "institution": "Capgemini Institut",
+                "title": "Urbanisation du SI et architectures digitales, Architecture digitale",
+                "date": "Juin 2022"
             }
         ]
     },
