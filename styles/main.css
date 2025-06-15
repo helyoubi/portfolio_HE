@@ -577,15 +577,22 @@ body {
 }
 
 .training-card img {
-    margin-top: auto;
-    margin-bottom: 0.5rem;
-    align-self: center;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    object-fit: contain;
     background: #222;
     border-radius: 8px;
     border: 2px solid #333;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     padding: 6px;
-    max-width: 70px;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    align-self: center;
+    display: block;
 }
 
 [data-theme="light"] .training-card img {
