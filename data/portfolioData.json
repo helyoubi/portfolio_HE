@@ -263,6 +263,27 @@
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
+                "institution": "Pluralsight",
+                "title": "Angular Fundamentals",
+                "date": "April 18, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/de8e9860-a07a-4de9-9900-64f4fa51b637",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Prompt Engineering Best Practices",
+                "date": "April 12, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/63120945-adb5-4184-b4b8-1660d50e38db",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Angular: The Big Picture",
+                "date": "February 23, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/dc043abe-a627-4347-bba4-ec18217fc4c4",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
                 "institution": "Capgemini Institut",
                 "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
                 "date": "June 2022"
@@ -281,6 +302,27 @@
                 "title": "Prompt Engineering for Improved Performance",
                 "date": "April 26, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/5770fa68-39e5-4263-8739-f1374e3e9240",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Angular Fundamentals",
+                "date": "April 18, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/de8e9860-a07a-4de9-9900-64f4fa51b637",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Prompt Engineering Best Practices",
+                "date": "April 12, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/63120945-adb5-4184-b4b8-1660d50e38db",
+                "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
+            },
+            {
+                "institution": "Pluralsight",
+                "title": "Angular: The Big Picture",
+                "date": "February 23, 2025",
+                "badgeUrl": "https://app.pluralsight.com/achievements/share/dc043abe-a627-4347-bba4-ec18217fc4c4",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
