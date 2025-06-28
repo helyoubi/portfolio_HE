@@ -1,20 +1,40 @@
 // dataLoader.js
+
+const ITEMS_PER_PAGE_TRAININGS = 3; // Configuration for items per page
+
 export async function loadPortfolioData() {
     try {
         const response = await fetch('data/portfolioData.json');
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         return await response.json();
     } catch (error) {
         console.error('Failed to load portfolio data:', error);
-        return null;
+        throw error; // Re-throw the error to be caught by the caller
     }
 }
 
 export async function initializePortfolio(language = 'fr') {
-    const data = await loadPortfolioData();
-    if (!data) return;
+    let data;
+    try {
+        data = await loadPortfolioData();
+    } catch (error) {
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            mainContent.innerHTML = `
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Error</h1>
+                        <p>Failed to load portfolio data. Please try again later.</p>
+                    </div>
+                </section>
+            `;
+        }
+        return; // Stop execution if data loading failed
+    }
+
+    if (!data) return; // Should not happen if error handling is correct, but as a safeguard.
 
     const personalInfo = data.personalInfo;
     const experience = data.experience[language];
@@ -100,7 +120,7 @@ export async function initializePortfolio(language = 'fr') {
         <section id="trainings">
             <h2 class="section-title">${language === 'fr' ? 'Formations & e-learning' : 'Professional Trainings & e-learning'}</h2>
             <div class="education-container" id="trainings-container">
-                ${renderTrainings(data.trainings[language], 1, 3)}
+                ${renderTrainings(data.trainings[language], 1, ITEMS_PER_PAGE_TRAININGS)}
             </div>
         </section>
 
@@ -220,7 +240,7 @@ export async function initializePortfolio(language = 'fr') {
     `;
 
     // Helper for pagination
-    function renderTrainings(trainings, page = 1, perPage = 3) {
+    function renderTrainings(trainings, page = 1, perPage = ITEMS_PER_PAGE_TRAININGS) {
         const total = trainings.length;
         const totalPages = Math.ceil(total / perPage);
         const start = (page - 1) * perPage;
@@ -252,14 +272,14 @@ export async function initializePortfolio(language = 'fr') {
         const trainingsContainer = document.getElementById('trainings-container');
         let currentPage = 1;
         const updateTrainings = (page) => {
-            trainingsContainer.innerHTML = renderTrainings(data.trainings[language], page, 3);
+            trainingsContainer.innerHTML = renderTrainings(data.trainings[language], page, ITEMS_PER_PAGE_TRAININGS);
             addPaginationListeners();
         };
         function addPaginationListeners() {
             const prevBtn = document.getElementById('prevTrainings');
             const nextBtn = document.getElementById('nextTrainings');
             if (prevBtn) prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; updateTrainings(currentPage); } };
-            if (nextBtn) nextBtn.onclick = () => { if (currentPage < Math.ceil(data.trainings[language].length / 3)) { currentPage++; updateTrainings(currentPage); } };
+            if (nextBtn) nextBtn.onclick = () => { if (currentPage < Math.ceil(data.trainings[language].length / ITEMS_PER_PAGE_TRAININGS)) { currentPage++; updateTrainings(currentPage); } };
         }
         addPaginationListeners();
     }, 0);
@@ -275,10 +295,11 @@ export async function initializePortfolio(language = 'fr') {
     const languageSwitcher = document.getElementById('languageSwitcher');
     if (languageSwitcher) {
         // Set the flag based on the current language
-        languageSwitcher.innerHTML = `<img src="assets/icons/${language === 'fr' ? 'en' : 'fr'}.png" alt="${language === 'fr' ? 'English' : 'French'} Flag">`;
+        const nextLanguage = language === 'fr' ? 'en' : 'fr';
+        const nextLanguageText = language === 'fr' ? 'English' : 'French';
+        languageSwitcher.innerHTML = `<img src="assets/icons/${nextLanguage}.png" alt="Switch to ${nextLanguageText}">`;
         languageSwitcher.onclick = () => {
-            const newLanguage = language === 'fr' ? 'en' : 'fr';
-            initializePortfolio(newLanguage);
+            initializePortfolio(nextLanguage);
         };
     }
 }

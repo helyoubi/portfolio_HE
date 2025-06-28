@@ -50,4 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>Developed with the help of GitHub Copilot</span>
         `;
     }
+
+    // Set current year in footer
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
 });
