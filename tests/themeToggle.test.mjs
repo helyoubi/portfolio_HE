@@ -1,4 +1,4 @@
-// themeToggle.test.js
+// themeToggle.test.mjs
 // Tests for themeToggle.js
 //
 // Test 1: Should set theme from localStorage

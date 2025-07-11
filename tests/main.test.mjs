@@ -1,4 +1,4 @@
-// main.test.js
+// main.test.mjs
 // Tests for main.js
 //
 // Test 1: Should show scroll-to-top button when scrolled

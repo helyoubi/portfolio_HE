@@ -1,4 +1,4 @@
-// formHandler.test.js
+// formHandler.test.mjs
 // Tests for formHandler.js
 //
 // Test 1: Should show success alert on successful submit

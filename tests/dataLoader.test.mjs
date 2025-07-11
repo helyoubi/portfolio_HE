@@ -1,4 +1,4 @@
-// dataLoader.test.js
+// dataLoader.test.mjs
 // Tests for dataLoader.js
 //
 // Test 1: Should return null on fetch error
