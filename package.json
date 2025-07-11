@@ -10,9 +10,6 @@
     "jest-environment-jsdom": "^30.0.4"
   },
   "jest": {
-    "testEnvironment": "jsdom",
-    "extensionsToTreatAsEsm": [
-      ".mjs"
-    ]
+    "testEnvironment": "jsdom"
   }
 }
