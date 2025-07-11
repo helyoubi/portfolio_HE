@@ -22,7 +22,7 @@ describe('formHandler.js', () => {
 
   test('should show success alert on successful submit', async () => {
     // Simulates a successful form submission and expects a success alert
-    require('../scripts/formHandler.js');
+    await import('../scripts/formHandler.js');
     const form = document.getElementById('contactForm');
     const event = new Event('submit');
     form.dispatchEvent(event);
@@ -33,7 +33,7 @@ describe('formHandler.js', () => {
   test('should show error alert on failed submit', async () => {
     // Simulates a failed form submission and expects an error alert
     global.fetch = jest.fn(() => Promise.resolve({ ok: false }));
-    require('../scripts/formHandler.js');
+    await import('../scripts/formHandler.js');
     const form = document.getElementById('contactForm');
     const event = new Event('submit');
     form.dispatchEvent(event);

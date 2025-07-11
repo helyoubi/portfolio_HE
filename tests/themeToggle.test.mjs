@@ -7,6 +7,7 @@
 // Test 2: Should toggle theme on button click
 //   - Simulates clicking the theme toggle button and expects the theme to change.
 
+import { jest } from '@jest/globals';
 import { initializeThemeToggle } from '../scripts/themeToggle.js';
 
 describe('themeToggle.js', () => {

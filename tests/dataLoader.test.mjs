@@ -7,6 +7,7 @@
 // Test 2: Should return data on success
 //   - Simulates a successful fetch and expects loadPortfolioData to return the data.
 
+import { jest } from '@jest/globals';
 import { loadPortfolioData } from '../scripts/dataLoader.js';
 
 describe('dataLoader.js', () => {

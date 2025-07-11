@@ -39,9 +39,9 @@ describe('main.js', () => {
     expect(scrollToTop.classList.contains('show')).toBe(false);
   });
 
-  test('should update copilot credit', () => {
+  test('should update copilot credit', async () => {
     // Checks that the Copilot credit is updated in the DOM
-    require('../scripts/main.js');
+    await import('../scripts/main.js');
     const copilotCredit = document.getElementById('copilot-credit');
     expect(copilotCredit.innerHTML).toContain('GitHub Copilot');
   });
