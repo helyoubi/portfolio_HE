@@ -249,6 +249,13 @@
     "trainings": {
         "en": [
             {
+                "institution": "Capgemini Institut",
+                "title": "Android, develop mobile applications",
+                "date": "July 04, 2025",
+                "badgeUrl": "assets/e-learning/capgemini/certificat_ELYOUBI Hamza_04_07_2025.pdf",
+                "badgeImg": "assets/e-learning/capgemini/cap.png"
+            },
+            {
                 "institution": "Pluralsight",
                 "title": "GitHub Copilot Administration and Deployment",
                 "date": "May 24, 2025",
@@ -369,93 +376,100 @@
         ],
         "fr": [
             {
+                "institution": "Capgemini Institut",
+                "title": "Android, développer des applications pour mobiles",
+                "date": "Juillet 04, 2025",
+                "badgeUrl": "assets/e-learning/capgemini/certificat_ELYOUBI Hamza_04_07_2025.pdf",
+                "badgeImg": "assets/e-learning/capgemini/cap.png"
+            },
+            {
                 "institution": "Pluralsight",
                 "title": "GitHub Copilot Administration and Deployment",
-                "date": "May 24, 2025",
+                "date": "Mai 24, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/8ee67fe3-45fd-4ac1-a852-ef96ea6aa508",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Prompt Engineering for Improved Performance",
-                "date": "April 26, 2025",
+                "date": "Avril 26, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/5770fa68-39e5-4263-8739-f1374e3e9240",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Angular Fundamentals",
-                "date": "April 18, 2025",
+                "date": "Avril 18, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/de8e9860-a07a-4de9-9900-64f4fa51b637",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Prompt Engineering Best Practices",
-                "date": "April 12, 2025",
+                "date": "Avril 12, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/63120945-adb5-4184-b4b8-1660d50e38db",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "What Is Angular?",
-                "date": "February 19, 2025",
+                "date": "Février 19, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/538f122d-ee3a-4f80-bbc7-17db0e21a6a6",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Getting Started on Prompt Engineering with Generative AI",
-                "date": "January 25, 2025",
+                "date": "Janvier 25, 2025",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/479f99da-f872-4afd-a993-42923ef5f791",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Unit Testing Fundamentals",
-                "date": "August 1, 2024",
+                "date": "1 Août, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/6d88a39e-57a8-41a6-8928-4c97138f9e06",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Application Analysis with SonarQube",
-                "date": "July 14, 2024",
+                "date": "14 Juillet, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/f168345b-5160-44ef-8b83-25b736978bff",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Code Review: Best Practices",
-                "date": "July 14, 2024",
+                "date": "14 Juillet, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/d5eaea7b-911b-4d1f-b6e7-32f7d0c099a8",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Git: The Big Picture",
-                "date": "July 12, 2024",
+                "date": "12 Juillet, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/e2c9bc99-06d9-4cd6-bac9-058a89d46016",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Java: Writing Readable and Maintainable Code",
-                "date": "July 11, 2024",
+                "date": "11 Juillet, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/d1d087a3-a59a-4b60-a06c-fe0fcb42f32a",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "GitHub Copilot Fundamentals: AI Paired Programming",
-                "date": "June 4, 2024",
+                "date": "4 Juin, 2024",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/94db2707-2081-4499-ab29-4f06a42912b2",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
             {
                 "institution": "Pluralsight",
                 "title": "Modern Java: The Big Picture",
-                "date": "March 15, 2021",
+                "date": "15 Mars, 2021",
                 "badgeUrl": "https://app.pluralsight.com/achievements/share/46ded322-d99d-4d53-8f23-305a3f173495",
                 "badgeImg": "assets/e-learning/pluralsight/pluralsight.png"
             },
