@@ -23,9 +23,34 @@ export async function initializePortfolio(language = 'fr') {
     const softSkills = data.softSkills[language];
     const achievements = data.achievements[language];
 
+    // Create Navbar
+    const navbar = document.getElementById('navbar');
+    const navLinks = [
+        { id: 'home', title: 'Home' },
+        { id: 'certifications', title: 'Certifications' },
+        { id: 'experience', title: 'Experience' },
+        { id: 'education', title: 'Education' },
+        { id: 'trainings', title: 'Trainings' },
+        { id: 'skills', title: 'Skills' },
+        { id: 'frameworks', title: 'Frameworks' },
+        { id: 'tools', title: 'Tools' },
+        { id: 'architectures', title: 'Architectures' },
+        { id: 'softSkills', title: 'Soft Skills' },
+        { id: 'projects', title: 'Projects' },
+        { id: 'languages', title: 'Languages' },
+        { id: 'contact', title: 'Contact' }
+    ];
+
+    navbar.innerHTML = `
+        <a href="#home" class="logo" data-tab="home"><span>${personalInfo.name[language]}</span></a>
+        <div class="nav-links">
+            ${navLinks.map(link => `<a href="#${link.id}" data-tab="${link.id}" class="nav-link ${link.id === 'home' ? 'active' : ''}">${link.title}</a>`).join('')}
+        </div>
+    `;
+
     // Main Content
     document.getElementById('main-content').innerHTML = `
-        <section id="home" class="hero">
+        <section id="home" class="hero active">
             <div class="hero-content">
                 <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
                     <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
@@ -35,7 +60,7 @@ export async function initializePortfolio(language = 'fr') {
                 <p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote ? personalInfo.titleNote[language] : ''}</p>
                 <p>${personalInfo.bio[language]}</p>
                 <div class="cta-container">
-                    <a href="#contact" class="cta-btn">Get in Touch</a>
+                    <a href="#contact" class="cta-btn" data-tab="contact">Get in Touch</a>
                     <a href="${personalInfo.resume}" download class="cta-btn download-btn">
                         <i class="fas fa-download"></i> Download CV
                     </a>
@@ -43,7 +68,7 @@ export async function initializePortfolio(language = 'fr') {
             </div>
         </section>
 
-        <section id="certifications" class="section visible">
+        <section id="certifications" class="section">
             <h2 class="section-title">${language === 'fr' ? 'Certifications' : 'Certifications'}</h2>
             <div class="skills-container">
                 <div class="skill-card">
@@ -281,4 +306,30 @@ export async function initializePortfolio(language = 'fr') {
             initializePortfolio(newLanguage);
         };
     }
+
+    // Tab switching logic
+    const tabLinks = document.querySelectorAll('.nav-link, .logo, .cta-btn[data-tab]');
+    const sections = document.querySelectorAll('#main-content > section, #main-content > .hero');
+
+    tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabId = link.dataset.tab;
+            if (!tabId) return;
+
+            // Deactivate all links in nav
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+
+            // Activate the correct link in nav-links
+            const activeLinkInNav = document.querySelector(`.nav-links a[data-tab=${tabId}]`);
+            if (activeLinkInNav) {
+                activeLinkInNav.classList.add('active');
+            }
+
+            // Update active section
+            sections.forEach(section => {
+                section.classList.toggle('active', section.id === tabId);
+            });
+        });
+    });
 }

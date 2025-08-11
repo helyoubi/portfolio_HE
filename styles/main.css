@@ -72,6 +72,16 @@ body {
     width: 100%;
 }
 
+.nav-links a {
+    padding: 0.5rem 0; /* Add some padding for the background */
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(0, 171, 240, 0.1); /* A subtle highlight */
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -475,14 +485,23 @@ body {
     color: var(--text-color);
 }
 
-/* Section Animations */
-.section {
+/* Section Display Logic */
+#main-content > .section,
+#main-content > .hero {
+    display: none;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.visible {
+#main-content > .section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#main-content > .hero.active {
+    display: flex;
     opacity: 1;
     transform: translateY(0);
 }
