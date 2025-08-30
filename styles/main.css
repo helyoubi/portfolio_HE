@@ -100,10 +100,16 @@ body {
         width: 250px;
         left: -250px;
         z-index: 2000; /* Same as hamburger menu to ensure proper layering */
+        overflow-y: auto; /* Enable vertical scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-links {
+        padding-bottom: 50px; /* Add extra padding at bottom for easier scrolling */
     }
 }
 
@@ -113,17 +119,13 @@ body {
 
 .nav-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px 10px 20px;
     border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
 }
 
-.nav-header h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin: 0;
-}
+/* Navigation title removed */
 
 .close-btn {
     background: none;

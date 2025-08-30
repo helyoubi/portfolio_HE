@@ -100,12 +100,7 @@ export function initializeHamburgerMenu() {
 
 // Update navigation titles based on language
 export function updateNavigationLanguage(language) {
-    const navTitle = document.getElementById('navTitle');
     const navLinks = document.querySelectorAll('.nav-links a');
-    
-    if (navTitle) {
-        navTitle.textContent = language === 'fr' ? 'Navigation' : 'Navigation';
-    }
     
     // Update navigation link texts
     const translations = {
