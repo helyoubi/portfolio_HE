@@ -75,3 +75,4 @@ This is a **static portfolio website** built with vanilla HTML, CSS, and JavaScr
 - Language switching updates all content dynamically
 - Service worker caches assets for offline functionality
 - All external links use `target="_blank" rel="noopener noreferrer"`
+- Use Context7 to check up-to-date docs when needed for implementing new libraries or frameworks, or adding features.
