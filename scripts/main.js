@@ -1,6 +1,6 @@
 // main.js
-import { initializeThemeToggle } from './themeToggle.js';
-import { initializeHamburgerMenu } from './hamburgerMenu.js';
+import { initializeThemeToggle } from './themeToggle.js?v=2025080830';
+import { initializeHamburgerMenu } from './hamburgerMenu.js?v=2025080830';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
@@ -53,3 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
+
+// Function to re-initialize dynamic elements
+export function reinitializeDynamicElements() {
+    initializeThemeToggle();
+    initializeHamburgerMenu();
+}

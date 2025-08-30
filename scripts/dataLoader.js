@@ -1,5 +1,5 @@
 // dataLoader.js
-import { updateNavigationLanguage } from './hamburgerMenu.js';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=2025080830';
 
 export async function loadPortfolioData() {
     try {
@@ -99,12 +99,7 @@ export async function initializePortfolio(language = 'fr') {
             </div>
         </section>
 
-        <section id="trainings">
-            <h2 class="section-title">${language === 'fr' ? 'Formations & e-learning' : 'Professional Trainings & e-learning'}</h2>
-            <div class="education-container" id="trainings-container">
-                ${renderTrainings(data.trainings[language], 1, 3)}
-            </div>
-        </section>
+        <!-- Trainings section moved to separate page: trainings.html -->
 
         <section id="skills">
             <h2 class="section-title">Technical Skills</h2>
@@ -176,18 +171,7 @@ export async function initializePortfolio(language = 'fr') {
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-container">
-                ${projects.map(project => `
-                    <div class="project-card">
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
-                    </div>
-                `).join('')}
-            </div>
-        </section>
+        <!-- Projects section moved to separate page: projects.html -->
 
         <section id="languages">
             <h2 class="section-title">Languages</h2>

@@ -30,6 +30,8 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 8px;
     transition: all 0.3s ease;
+    display: block !important; /* Force visibility */
+    opacity: 1 !important; /* Force visibility */
 }
 
 /* Mobile responsive adjustments for hamburger menu */
@@ -795,9 +797,7 @@ body {
         flex: 1 1 calc(100% - 1rem);
     }
 
-    .navbar {
-        padding: 1rem 5%;
-    }
+    /* Navbar removed - using hamburger menu only */
 
     .hero {
         padding: 100px 5% 50px;
