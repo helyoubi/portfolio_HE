@@ -1,4 +1,6 @@
 // dataLoader.js
+import { updateNavigationLanguage } from './hamburgerMenu.js';
+
 export async function loadPortfolioData() {
     try {
         const response = await fetch('data/portfolioData.json');
@@ -281,4 +283,7 @@ export async function initializePortfolio(language = 'fr') {
             initializePortfolio(newLanguage);
         };
     }
+    
+    // Update navigation language
+    updateNavigationLanguage(language);
 }

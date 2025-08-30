@@ -1,8 +1,10 @@
 // main.js
 import { initializeThemeToggle } from './themeToggle.js';
+import { initializeHamburgerMenu } from './hamburgerMenu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
+    initializeHamburgerMenu();
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
