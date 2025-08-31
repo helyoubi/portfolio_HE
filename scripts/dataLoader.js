@@ -36,12 +36,6 @@ export async function initializePortfolio(language = 'fr') {
                 <h3>${personalInfo.title[language]}</h3>
                 <p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote ? personalInfo.titleNote[language] : ''}</p>
                 <p>${personalInfo.bio[language]}</p>
-                <div class="cta-container">
-                    <a href="#contact" class="cta-btn">Get in Touch</a>
-                    <a href="${personalInfo.resume}" download class="cta-btn download-btn">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
             </div>
         </section>
 

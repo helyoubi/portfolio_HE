@@ -255,11 +255,7 @@ body {
     /* No rectangle, just a glowing circular effect */
 }
 
-.cta-container {
-    display: flex;
-    gap: 1rem;
-}
-
+/* Button Styles */
 .cta-btn {
     padding: 0.75rem 1.5rem;
     background: var(--primary-color);
@@ -268,18 +264,13 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1rem;
+    cursor: pointer;
     transition: background 0.3s, transform 0.3s;
 }
 
 .cta-btn:hover {
     background: darken(var(--primary-color), 10%);
     transform: translateY(-3px);
-}
-
-.download-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 /* Top Right Buttons Container */
@@ -491,6 +482,16 @@ body {
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+.project-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project-card p {
@@ -803,14 +804,6 @@ body {
         padding: 100px 5% 50px;
     }
 
-    .cta-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta-btn {
-        margin-bottom: 1rem;
-    }
 
     .timeline-item {
         width: 100%;

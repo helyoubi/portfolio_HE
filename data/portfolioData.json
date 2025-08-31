@@ -506,36 +506,48 @@
     "projects": {
         "en": [
             {
-                "title": "Gen AI Platform",
-                "description": "Enterprise AI solution development using TensorFlow and React",
-                "technologies": ["Java", "React", "TensorFlow", "Microservices"]
+                "title": "Jebna",
+                "description": "Confidential project - Presentation available privately.",
+                "technologies": ["Flutter (Dart)", "Supabase"],
+                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/Jebna/jebna_app_icon.png"
             },
             {
-                "title": "SCOPIOM Modernization",
-                "description": "Legacy system migration to REST architecture",
-                "technologies": ["JavaFX", "Jersey", "REST", "EJB3.0"]
+                "title": "Absence Tracker",
+                "description": "Employee absence management system with real-time tracking, reporting and automated notifications",
+                "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
+                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
             },
             {
-                "title": "Regional Data Analysis Platform",
-                "description": "JavaEE-based data visualization system for Nouvelle-Aquitaine region",
-                "technologies": ["JavaEE", "PrimeFaces", "MySQL", "JavaScript"]
+                "title": "RiftSword",
+                "description": "React web application that generates random challenges for League of Legends players. The app supports both single-player and duo mode challenges across different categories (Fun, Tryhard, Troll)",
+                "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
+                "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/RiftSword/app_RR_icon.png"
             }
         ],
         "fr": [
             {
-                "title": "Plateforme Gen AI",
-                "description": "Développement de solution AI d'entreprise utilisant TensorFlow et React",
-                "technologies": ["Java", "React", "TensorFlow", "Microservices"]
+                "title": "Jebna",
+                "description": "Projet confidentiel - Présentation possible en privé.",
+                "technologies": ["Flutter (Dart)", "Supabase"],
+                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/Jebna/jebna_app_icon.png"
             },
             {
-                "title": "Modernisation de SCOPIOM",
-                "description": "Migration du système hérité vers une architecture REST",
-                "technologies": ["JavaFX", "Jersey", "REST", "EJB3.0"]
+                "title": "Absence Tracker",
+                "description": "Système de gestion des absences d'employés avec suivi en temps réel, reporting et notifications automatisées",
+                "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
+                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
             },
             {
-                "title": "Plateforme d'analyse de données régionales",
-                "description": "Système de visualisation de données basé sur JavaEE pour la région Nouvelle-Aquitaine",
-                "technologies": ["JavaEE", "PrimeFaces", "MySQL", "JavaScript"]
+                "title": "RiftSword",
+                "description": "Application web React qui génère des défis aléatoires pour les joueurs de League of Legends. L'application prend en charge les défis en mode solo et duo dans différentes catégories (Fun, Tryhard, Troll)",
+                "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
+                "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "image": "data/projects/RiftSword/app_RR_icon.png"
             }
         ]
     },

@@ -96,8 +96,10 @@ function renderAllProjects(projects) {
     return projects.map(project => `
         <div class="project-card">
             <h3>${project.title}</h3>
+            ${project.image ? `<img src="${project.image}" alt="${project.title} Logo" class="project-image">` : ''}
             <p>${project.description}</p>
             <p><strong>${project.technologies ? 'Technologies:' : 'Technologies:'}</strong> ${project.technologies ? project.technologies.join(', ') : ''}</p>
+            <p><strong>${project.AIAssistant ? 'AI Assistant:' : 'AI Assistant:'}</strong> ${project.AIAssistant ? project.AIAssistant.join(', ') : ''}</p>
             ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link">Voir le projet</a>` : ''}
         </div>
     `).join('');
