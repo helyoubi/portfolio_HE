@@ -54,8 +54,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Function to re-initialize dynamic elements
-export function reinitializeDynamicElements() {
-    initializeThemeToggle();
-    initializeHamburgerMenu();
-}

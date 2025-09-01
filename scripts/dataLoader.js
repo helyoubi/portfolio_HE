@@ -61,7 +61,7 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="experience">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience'}</h2>
             <div class="timeline">
                 ${experience.map((exp, index) => `
                     <div class="timeline-item ${index % 2 === 0 ? 'left' : 'right'}">
@@ -96,7 +96,7 @@ export async function initializePortfolio(language = 'fr') {
         <!-- Trainings section moved to separate page: trainings.html -->
 
         <section id="skills">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Compétences Techniques' : 'Technical Skills'}</h2>
             <div class="skills-container">
                 ${data.technicalExpertise.languages.map(skill => `
                     <div class="skill-card">
@@ -110,7 +110,7 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="frameworks">
-            <h2 class="section-title">Frameworks</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Frameworks' : 'Frameworks'}</h2>
             <div class="skills-container">
                 ${data.technicalExpertise.frameworks.map(framework => `
                     <div class="skill-card">
@@ -124,7 +124,7 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="tools">
-            <h2 class="section-title">Tools</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Outils' : 'Tools'}</h2>
             <div class="skills-container">
                 ${data.technicalExpertise.tools.map(tool => `
                     <div class="skill-card">
@@ -138,7 +138,7 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="architectures">
-            <h2 class="section-title">Architectures</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Architectures' : 'Architectures'}</h2>
             <div class="skills-container">
                 ${data.technicalExpertise.architectures.map(architecture => `
                     <div class="skill-card">
@@ -152,7 +152,7 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="softSkills">
-            <h2 class="section-title">Soft Skills</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Compétences Transversales' : 'Soft Skills'}</h2>
             <div class="skills-container">
                 ${softSkills.map(skill => `
                     <div class="skill-card">
@@ -168,7 +168,7 @@ export async function initializePortfolio(language = 'fr') {
         <!-- Projects section moved to separate page: projects.html -->
 
         <section id="languages">
-            <h2 class="section-title">Languages</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Langues' : 'Languages'}</h2>
             <div class="languages-container">
                 ${data.languages.map(language => `
                     <div class="language-card">
@@ -180,21 +180,21 @@ export async function initializePortfolio(language = 'fr') {
         </section>
 
         <section id="contact" class="contact">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">${language === 'fr' ? 'Contactez-moi' : 'Get in Touch'}</h2>
             <form id="contactForm" action="https://formspree.io/f/mpwqdrdd" method="POST">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">${language === 'fr' ? 'Nom' : 'Name'}</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">${language === 'fr' ? 'Email' : 'Email'}</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
+                    <label for="message">${language === 'fr' ? 'Message' : 'Message'}</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="cta-btn">Send Message</button>
+                <button type="submit" class="cta-btn">${language === 'fr' ? 'Envoyer le message' : 'Send Message'}</button>
             </form>
         </section>
     `;
@@ -248,7 +248,8 @@ export async function initializePortfolio(language = 'fr') {
     const lastUpdateElement = document.getElementById('last-update');
     if (lastUpdateElement) {
         const lastUpdateDate = new Date(document.lastModified);
-        lastUpdateElement.innerHTML = `Last updated: ${lastUpdateDate.toLocaleDateString()} ${lastUpdateDate.toLocaleTimeString()}`;
+        const text = language === 'fr' ? 'Dernière mise à jour:' : 'Last updated:';
+        lastUpdateElement.innerHTML = `${text} ${lastUpdateDate.toLocaleDateString()} ${lastUpdateDate.toLocaleTimeString()}`;
     }
 
     // Language switcher functionality

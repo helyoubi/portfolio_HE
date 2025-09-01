@@ -1,78 +1,161 @@
-// hamburgerMenu.js
+// hamburgerMenu.js - Simplified robust version
+let isInitialized = false;
+let currentHandlers = {
+    toggle: null,
+    close: null,
+    outsideClick: null,
+    escapeKey: null
+};
+
 export function initializeHamburgerMenu() {
+    console.log('Initializing hamburger menu...');
+    
+    if (isInitialized) {
+        console.log('Hamburger menu already initialized, skipping');
+        return;
+    }
+    
+    // Clean up any existing handlers
+    cleanupEventListeners();
+    
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupHamburgerMenu);
+    } else {
+        setupHamburgerMenu();
+    }
+}
+
+function cleanupEventListeners() {
+    if (currentHandlers.toggle) {
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        if (hamburgerMenu) {
+            hamburgerMenu.removeEventListener('click', currentHandlers.toggle);
+        }
+    }
+    
+    if (currentHandlers.close) {
+        const closeMenu = document.getElementById('closeMenu');
+        if (closeMenu) {
+            closeMenu.removeEventListener('click', currentHandlers.close);
+        }
+    }
+    
+    if (currentHandlers.outsideClick) {
+        document.removeEventListener('click', currentHandlers.outsideClick);
+    }
+    
+    if (currentHandlers.escapeKey) {
+        document.removeEventListener('keydown', currentHandlers.escapeKey);
+    }
+    
+    // Reset handlers
+    currentHandlers = {
+        toggle: null,
+        close: null,
+        outsideClick: null,
+        escapeKey: null
+    };
+}
+
+function setupHamburgerMenu() {
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const navMenu = document.getElementById('navMenu');
     const closeMenu = document.getElementById('closeMenu');
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Check if all required elements exist
+    console.log('Elements found:', { 
+        hamburgerMenu: !!hamburgerMenu, 
+        navMenu: !!navMenu, 
+        closeMenu: !!closeMenu,
+        navLinksCount: navLinks.length
+    });
+
     if (!hamburgerMenu || !navMenu || !closeMenu) {
-        console.warn('Hamburger menu elements not found, retrying in 100ms...');
-        
-        // Retry mechanism - try again after DOM is fully loaded
-        setTimeout(() => {
-            const retryElements = {
-                hamburgerMenu: document.getElementById('hamburgerMenu'),
-                navMenu: document.getElementById('navMenu'),
-                closeMenu: document.getElementById('closeMenu')
-            };
-            
-            if (retryElements.hamburgerMenu && retryElements.navMenu && retryElements.closeMenu) {
-                console.log('Hamburger menu elements found on retry, initializing...');
-                initializeHamburgerMenuWithElements(retryElements.hamburgerMenu, retryElements.navMenu, retryElements.closeMenu);
-            } else {
-                console.error('Hamburger menu elements still not found after retry');
-            }
-        }, 100);
+        console.error('Required hamburger menu elements not found');
         return;
     }
 
-    initializeHamburgerMenuWithElements(hamburgerMenu, navMenu, closeMenu);
-}
-
-function initializeHamburgerMenuWithElements(hamburgerMenu, navMenu, closeMenu) {
-    console.log('Initializing hamburger menu with elements...');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    // Toggle menu function
-    function toggleMenu() {
-        hamburgerMenu.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    // Menu manipulation functions
+    function openMenu() {
+        console.log('Opening menu');
+        hamburgerMenu.classList.add('active');
+        navMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
-    // Close menu function
-    function closeMenuFunction() {
+    function closeMenuAction() {
+        console.log('Closing menu');
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
         document.body.style.overflow = '';
     }
 
-    // Event listeners
-    hamburgerMenu.addEventListener('click', toggleMenu);
-    closeMenu.addEventListener('click', closeMenuFunction);
+    function toggleMenu() {
+        console.log('Toggling menu');
+        const isActive = navMenu.classList.contains('active');
+        if (isActive) {
+            closeMenuAction();
+        } else {
+            openMenu();
+        }
+    }
 
-    // Close menu when clicking on nav links
+    // Create event handlers
+    currentHandlers.toggle = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    };
+
+    currentHandlers.close = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenuAction();
+    };
+
+    currentHandlers.outsideClick = function(e) {
+        if (!navMenu.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+            if (navMenu.classList.contains('active')) {
+                closeMenuAction();
+            }
+        }
+    };
+
+    currentHandlers.escapeKey = function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenuAction();
+        }
+    };
+
+    // Attach event listeners
+    hamburgerMenu.addEventListener('click', currentHandlers.toggle);
+    closeMenu.addEventListener('click', currentHandlers.close);
+    document.addEventListener('click', currentHandlers.outsideClick);
+    document.addEventListener('keydown', currentHandlers.escapeKey);
+
+    console.log('Event listeners attached successfully');
+    
+    // Mark as initialized
+    isInitialized = true;
+
+    // Handle navigation links
     if (navLinks && navLinks.length > 0) {
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
                 
-                // Check if it's a page navigation (.html files) or section navigation (starts with #)
                 if (href && href.includes('.html')) {
-                    // Page navigation - let the browser handle it naturally
-                    closeMenuFunction();
-                    return;
+                    // Page navigation - close menu
+                    closeMenuAction();
                 } else if (href && href.startsWith('#')) {
-                    // Section navigation - prevent default and scroll
+                    // Section navigation - handle smooth scroll
                     e.preventDefault();
                     
-                    // Wait a bit for content to be loaded if needed
                     setTimeout(() => {
-                        // Smooth scroll to section
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
-                            const headerOffset = 80; // Account for any fixed headers
+                            const headerOffset = 80;
                             const elementPosition = targetElement.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                             
@@ -84,36 +167,19 @@ function initializeHamburgerMenuWithElements(hamburgerMenu, navMenu, closeMenu) 
                             console.warn(`Section ${href} not found`);
                         }
                         
-                        // Close menu after navigation
-                        closeMenuFunction();
+                        closeMenuAction();
                         
                         // Update active link
-                        if (navLinks) {
-                            navLinks.forEach(navLink => navLink.classList.remove('active'));
-                            link.classList.add('active');
-                        }
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        link.classList.add('active');
                     }, 100);
                 } else if (href && href.startsWith('/')) {
-                    // Handle root navigation
-                    closeMenuFunction();
+                    // Root navigation
+                    closeMenuAction();
                 }
             });
         });
     }
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-            closeMenuFunction();
-        }
-    });
-
-    // Close menu with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            closeMenuFunction();
-        }
-    });
 
     // Update active link based on scroll position
     function updateActiveLink() {
@@ -141,9 +207,7 @@ function initializeHamburgerMenuWithElements(hamburgerMenu, navMenu, closeMenu) 
 
     // Update active link on scroll
     window.addEventListener('scroll', updateActiveLink);
-    
-    // Initial active link update
-    updateActiveLink();
+    updateActiveLink(); // Initial update
 }
 
 // Update navigation titles based on language
