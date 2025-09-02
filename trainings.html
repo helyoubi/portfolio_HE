@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/main.css?v=2025080830">
     <link rel="stylesheet" href="styles/themes.css?v=2025080830">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="description" content="Formations professionnelles et e-learning de Hamza Elyoubi">
     <meta name="keywords" content="Hamza Elyoubi, Formations, e-learning, Certifications, Développement professionnel">
     <!-- Google Analytics -->
@@ -39,19 +39,19 @@
             <button class="close-btn" id="closeMenu">&times;</button>
         </div>
         <ul class="nav-links">
-            <li><a href="/" data-section="home">Accueil</a></li>
-            <li><a href="/#certifications" data-section="certifications">Certifications</a></li>
-            <li><a href="/#experience" data-section="experience">Expérience Professionnelle</a></li>
-            <li><a href="/#education" data-section="education">Éducation</a></li>
+            <li><a href="./index.html" data-section="home">Accueil</a></li>
+            <li><a href="./index.html#certifications" data-section="certifications">Certifications</a></li>
+            <li><a href="./index.html#experience" data-section="experience">Expérience Professionnelle</a></li>
+            <li><a href="./index.html#education" data-section="education">Éducation</a></li>
             <li><a href="trainings.html" data-section="trainings" class="active">Formations</a></li>
-            <li><a href="/#skills" data-section="skills">Compétences Techniques</a></li>
-            <li><a href="/#frameworks" data-section="frameworks">Frameworks</a></li>
-            <li><a href="/#tools" data-section="tools">Outils</a></li>
-            <li><a href="/#architectures" data-section="architectures">Architectures</a></li>
-            <li><a href="/#softSkills" data-section="softSkills">Compétences Transversales</a></li>
+            <li><a href="./index.html#skills" data-section="skills">Compétences Techniques</a></li>
+            <li><a href="./index.html#frameworks" data-section="frameworks">Frameworks</a></li>
+            <li><a href="./index.html#tools" data-section="tools">Outils</a></li>
+            <li><a href="./index.html#architectures" data-section="architectures">Architectures</a></li>
+            <li><a href="./index.html#softSkills" data-section="softSkills">Compétences Transversales</a></li>
             <li><a href="projects.html" data-section="projects">Projets</a></li>
-            <li><a href="/#languages" data-section="languages">Langues</a></li>
-            <li><a href="/#contact" data-section="contact">Contact</a></li>
+            <li><a href="./index.html#languages" data-section="languages">Langues</a></li>
+            <li><a href="./index.html#contact" data-section="contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -130,7 +130,7 @@
     </script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('./sw.js')
                 .then(registration => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 })
