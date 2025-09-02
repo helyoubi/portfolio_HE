@@ -3,7 +3,12 @@ import { loadPortfolioData } from './dataLoader.js';
 import { updateNavigationLanguage } from './hamburgerMenu.js';
 
 // Load trainings page
-export async function loadTrainingsPage(language = 'fr') {
+export async function loadTrainingsPage(language) {
+    // Import language manager to get current language if not provided
+    if (!language) {
+        const { getCurrentLanguage } = await import('./languageManager.js');
+        language = getCurrentLanguage();
+    }
     const data = await loadPortfolioData();
     if (!data) return;
 
@@ -41,7 +46,12 @@ export async function loadTrainingsPage(language = 'fr') {
 }
 
 // Load projects page
-export async function loadProjectsPage(language = 'fr') {
+export async function loadProjectsPage(language) {
+    // Import language manager to get current language if not provided
+    if (!language) {
+        const { getCurrentLanguage } = await import('./languageManager.js');
+        language = getCurrentLanguage();
+    }
     const data = await loadPortfolioData();
     if (!data) return;
 
@@ -153,19 +163,15 @@ function updateLastModified(language = 'fr') {
 
 // Setup language switcher for specific pages
 function setupLanguageSwitcher(currentLanguage, pageType) {
-    const languageSwitcher = document.getElementById('languageSwitcher');
-    if (languageSwitcher) {
-        // Set the flag based on the current language
-        languageSwitcher.innerHTML = `<img src="assets/icons/${currentLanguage === 'fr' ? 'en' : 'fr'}.png" alt="${currentLanguage === 'fr' ? 'English' : 'French'} Flag">`;
-        languageSwitcher.onclick = () => {
-            const newLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
+    import('./languageManager.js').then(({ initializeLanguageSwitcher }) => {
+        initializeLanguageSwitcher((newLanguage) => {
             if (pageType === 'trainings') {
                 loadTrainingsPage(newLanguage);
             } else if (pageType === 'projects') {
                 loadProjectsPage(newLanguage);
             }
-        };
-    }
+        });
+    });
 }
 
 // Function to remove all CTA buttons from the page

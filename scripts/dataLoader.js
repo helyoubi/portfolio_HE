@@ -14,7 +14,12 @@ export async function loadPortfolioData() {
     }
 }
 
-export async function initializePortfolio(language = 'fr') {
+export async function initializePortfolio(language) {
+    // Import language manager to get current language if not provided
+    if (!language) {
+        const { getCurrentLanguage } = await import('./languageManager.js');
+        language = getCurrentLanguage();
+    }
     const data = await loadPortfolioData();
     if (!data) return;
 
@@ -252,16 +257,16 @@ export async function initializePortfolio(language = 'fr') {
         lastUpdateElement.innerHTML = `${text} ${lastUpdateDate.toLocaleDateString()} ${lastUpdateDate.toLocaleTimeString()}`;
     }
 
-    // Language switcher functionality
-    const languageSwitcher = document.getElementById('languageSwitcher');
-    if (languageSwitcher) {
-        // Set the flag based on the current language
-        languageSwitcher.innerHTML = `<img src="assets/icons/${language === 'fr' ? 'en' : 'fr'}.png" alt="${language === 'fr' ? 'English' : 'French'} Flag">`;
-        languageSwitcher.onclick = () => {
-            const newLanguage = language === 'fr' ? 'en' : 'fr';
+    // Language switcher functionality - use the new language manager
+    import('./languageManager.js').then(({ initializeLanguageSwitcher, setCurrentLanguage }) => {
+        // Set current language in localStorage
+        setCurrentLanguage(language);
+        
+        // Initialize language switcher
+        initializeLanguageSwitcher((newLanguage) => {
             initializePortfolio(newLanguage);
-        };
-    }
+        });
+    });
     
     // Update navigation language
     updateNavigationLanguage(language);
