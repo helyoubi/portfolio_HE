@@ -81,6 +81,11 @@ body {
     transform: translateY(-7.5px) rotate(-45deg);
 }
 
+/* Hide hamburger menu when nav menu is active */
+.hamburger-menu.active {
+    display: none;
+}
+
 /* Navigation Menu */
 .nav-menu {
     position: fixed;
