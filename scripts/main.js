@@ -6,13 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
     initializeHamburgerMenu();
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scroll - only for anchor links that are not navigation menu links
+    document.querySelectorAll('a[href^="#"]:not(.nav-links a)').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
