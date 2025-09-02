@@ -164,11 +164,6 @@ function setupHamburgerMenu() {
                                 top: offsetPosition,
                                 behavior: 'smooth'
                             });
-                            
-                            // Update URL without changing page, keeping the base path
-                            const currentPath = window.location.pathname;
-                            const newUrl = currentPath + href;
-                            window.history.pushState(null, null, newUrl);
                         } else {
                             console.warn(`Section ${href} not found`);
                         }
@@ -214,23 +209,6 @@ function setupHamburgerMenu() {
     // Update active link on scroll
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink(); // Initial update
-    
-    // Handle browser navigation (back/forward buttons)
-    window.addEventListener('popstate', () => {
-        if (window.location.hash) {
-            const targetElement = document.querySelector(window.location.hash);
-            if (targetElement) {
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
 }
 
 // Update navigation titles based on language
