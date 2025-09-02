@@ -21,17 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll-to-Top Button
     const scrollToTop = document.getElementById('scrollToTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTop.classList.add('show');
-        } else {
-            scrollToTop.classList.remove('show');
-        }
-    });
+    if (scrollToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('show');
+            } else {
+                scrollToTop.classList.remove('show');
+            }
+        });
 
-    scrollToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // Reveal sections on scroll
     const sections = document.querySelectorAll('.section');
