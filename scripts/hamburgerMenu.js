@@ -11,6 +11,11 @@ export function initializeHamburgerMenu() {
         return;
     }
 
+    // Nettoyer l'état au chargement (au cas où il resterait des classes active)
+    hamburgerMenu.classList.remove('active');
+    navMenu.classList.remove('active');
+    document.body.style.overflow = '';
+
     // Ouvrir le menu
     function openMenu() {
         hamburgerMenu.classList.add('active');
@@ -43,6 +48,15 @@ export function initializeHamburgerMenu() {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenuAction();
         }
+    });
+
+    // Fermer le menu quand on clique sur les liens de navigation
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Fermer le menu après un petit délai pour permettre à la navigation de commencer
+            setTimeout(closeMenuAction, 100);
+        });
     });
 
     console.log('Simple hamburger menu initialized');
