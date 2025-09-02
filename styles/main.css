@@ -83,7 +83,9 @@ body {
 
 /* Hide hamburger menu when nav menu is active */
 .hamburger-menu.active {
-    display: none;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Navigation Menu */
