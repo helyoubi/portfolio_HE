@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/main.css?v=2025080830">
     <link rel="stylesheet" href="styles/themes.css?v=2025080830">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- <link rel="manifest" href="./manifest.json"> -->
+    <link rel="manifest" href="manifest.json">
     <meta name="description" content="Formations professionnelles et e-learning de Hamza Elyoubi">
     <meta name="keywords" content="Hamza Elyoubi, Formations, e-learning, Certifications, Développement professionnel">
     <!-- Google Analytics -->
@@ -128,10 +128,9 @@
             iframe.contentWindow.Promise = Promise;
         });
     </script>
-    <!-- Service Worker disabled on sub-pages to avoid path issues -->
-    <!-- <script>
+    <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js')
+            navigator.serviceWorker.register('sw.js')
                 .then(registration => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 })
@@ -139,7 +138,7 @@
                     console.error('Service Worker registration failed:', error);
                 });
         }
-    </script> -->
+    </script>
     <script type="module" src="scripts/main.js?v=2025080830"></script>
     <script type="module">
         import { loadTrainingsPage } from './scripts/pageLoader.js?v=2025080830';
