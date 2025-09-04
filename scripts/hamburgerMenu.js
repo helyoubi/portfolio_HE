@@ -4,9 +4,8 @@ export function initializeHamburgerMenu() {
     
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const navMenu = document.getElementById('navMenu');
-    const closeMenu = document.getElementById('closeMenu');
 
-    if (!hamburgerMenu || !navMenu || !closeMenu) {
+    if (!hamburgerMenu || !navMenu) {
         console.error('Menu elements not found');
         return;
     }
@@ -30,9 +29,14 @@ export function initializeHamburgerMenu() {
         document.body.style.overflow = '';
     }
 
-    // Événements
-    hamburgerMenu.addEventListener('click', openMenu);
-    closeMenu.addEventListener('click', closeMenuAction);
+    // Événements - le hamburger ouvre ET ferme le menu
+    hamburgerMenu.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            closeMenuAction();
+        } else {
+            openMenu();
+        }
+    });
     
     // Fermer le menu en cliquant en dehors
     document.addEventListener('click', (e) => {

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/main.css?v=2025080830">
     <link rel="stylesheet" href="styles/themes.css?v=2025080830">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="manifest" href="manifest.json">
     <meta name="description" content="Hamza Elyoubi's professional portfolio showcasing skills, experience, and projects.">
     <meta name="keywords" content="Hamza Elyoubi, Portfolio, Software Engineer, Full-Stack Developer">
     <!-- Google Analytics -->
@@ -35,9 +34,6 @@
 
     <!-- Navigation Menu -->
     <nav class="nav-menu" id="navMenu">
-        <div class="nav-header">
-            <button class="close-btn" id="closeMenu">&times;</button>
-        </div>
         <ul class="nav-links">
             <li><a href="index.html#home" data-section="home" class="active">Accueil</a></li>
             <li><a href="index.html#certifications" data-section="certifications">Certifications</a></li>
@@ -54,8 +50,6 @@
             <li><a href="index.html#contact" data-section="contact">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Navigation removed - using hamburger menu only -->
 
     <!-- Theme Toggle and Language Switcher Container -->
     <div class="top-right-buttons">
@@ -110,17 +104,6 @@
             document.body.appendChild(iframe);
             iframe.contentWindow.Promise = Promise;
         });
-    </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(registration => {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                })
-                .catch(error => {
-                    console.error('Service Worker registration failed:', error);
-                });
-        }
     </script>
     <script type="module">
         import { initializePortfolio } from './scripts/dataLoader.js?v=2025080830';

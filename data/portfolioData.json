@@ -343,7 +343,8 @@
                 "institution": "Capgemini Institut",
                 "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
                 "date": "June 2022",
-                "badgeImg": "assets/e-learning/cap.png"
+                "badgeUrl": "https://www.institut.capgemini.fr/formation/urbanisation-du-si-et-architectures-techniques-reussir-sa-transformation/",
+                "badgeImg": "assets/e-learning/capgemini/cap.png"
             },
             {
                 "institution": "Pluralsight",
@@ -354,24 +355,24 @@
             },
             {
                 "institution": "LinkedIn Learning",
-                "title": "Découvrir l'IA générative",
+                "title": "Discover Generative AI",
                 "date": "Apr. 29, 2024",
-                "badgeUrl": "assets/e-learning/CertificatDaccomplissement_Decouvrir lIA generative.pdf",
-                "badgeImg": "assets/e-learning/linkdinLogo.png"
+                "badgeUrl": "assets/e-learning/linkdin/CertificatDaccomplissement_Decouvrir lIA generative.pdf",
+                "badgeImg": "assets/e-learning/linkdin/linkdinLogo.png"
             },
             {
                 "institution": "Capgemini Institut",
-                "title": "Décryptez et anticipez les tendances technologiques",
+                "title": "Decrypt and anticipate technological trends",
                 "date": "July, 2023",
                 "badgeUrl": "https://www.institut.capgemini.fr/formation/decryptez-et-anticipez-les-tendances-de-linformatique-et-du-numerique/",
-                "badgeImg": "assets/e-learning/cap.png"
+                "badgeImg": "assets/e-learning/capgemini/cap.png"
             },
             {
                 "institution": "Capgemini Institut",
                 "title": "Maîtrisez l'urbanisation de vos architectures digitaless",
                 "date": "May, 2022",
                 "badgeUrl": "https://www.institut.capgemini.fr/formation/urbanisation-du-si-et-architectures-techniques-reussir-sa-transformation/",
-                "badgeImg": "assets/e-learning/cap.png"
+                "badgeImg": "assets/e-learning/capgemini/cap.png"
             }
         ],
         "fr": [
