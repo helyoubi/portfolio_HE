@@ -81,11 +81,9 @@ body {
     transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Hide hamburger menu when nav menu is active */
+/* Keep hamburger menu visible when nav menu is active - just transform the icon */
 .hamburger-menu.active {
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+    /* Don't hide the hamburger menu - users need it to close the nav */
 }
 
 /* Navigation Menu */
