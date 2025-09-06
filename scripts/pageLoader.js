@@ -1,6 +1,7 @@
 // pageLoader.js
 import { loadPortfolioData } from './dataLoader.js';
 import { updateNavigationLanguage } from './hamburgerMenu.js';
+import { modalManager } from './modalManager.js';
 
 // Load trainings page
 export async function loadTrainingsPage(language) {
@@ -128,25 +129,30 @@ function renderAllProjects(projects, language = 'fr') {
         'fr': {
             technologies: 'Technologies:',
             aiAssistant: 'Assistant IA:',
-            viewProject: 'Voir le projet'
+            viewProject: 'Voir le projet',
+            viewDetails: 'Voir détails'
         },
         'en': {
             technologies: 'Technologies:',
             aiAssistant: 'AI Assistant:',
-            viewProject: 'View project'
+            viewProject: 'View project',
+            viewDetails: 'View Details'
         }
     };
     
     const t = translations[language];
     
-    return projects.map(project => `
+    return projects.map((project, index) => `
         <div class="project-card">
             <h3>${project.title}</h3>
             ${project.image ? `<img src="${project.image}" alt="${project.title} Logo" class="project-image">` : ''}
             <p>${project.description}</p>
-            <p><strong>${t.technologies}</strong> ${project.technologies ? project.technologies.join(', ') : ''}</p>
-            <p><strong>${t.aiAssistant}</strong> ${project.AIAssistant ? project.AIAssistant.join(', ') : ''}</p>
-            ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link">${t.viewProject}</a>` : ''}
+            <button class="view-details-btn" 
+                    data-project-index="${index}" 
+                    data-language="${language}"
+                    onclick="window.openProjectModal(${index}, '${language}')">
+                ${t.viewDetails}
+            </button>
         </div>
     `).join('');
 }
@@ -279,3 +285,26 @@ function updatePageMeta(language, pageType) {
         sectionTitle.textContent = pageTranslations.sectionTitle;
     }
 }
+
+// Global function to open project modal
+window.openProjectModal = async function(projectIndex, language) {
+    console.log('Opening modal for project', projectIndex, 'language', language);
+    try {
+        const data = await loadPortfolioData();
+        if (!data || !data.projects || !data.projects[language]) {
+            console.error('Project data not found');
+            return;
+        }
+
+        const project = data.projects[language][projectIndex];
+        if (!project) {
+            console.error(`Project at index ${projectIndex} not found`);
+            return;
+        }
+
+        console.log('Project data:', project);
+        modalManager.openModal(project, language);
+    } catch (error) {
+        console.error('Error opening project modal:', error);
+    }
+};

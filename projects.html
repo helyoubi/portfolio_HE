@@ -8,8 +8,8 @@
     <meta http-equiv="Expires" content="0">
     <title>Projets - Hamza Elyoubi</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Empty favicon -->
-    <link rel="stylesheet" href="styles/main.css?v=2025080830">
-    <link rel="stylesheet" href="styles/themes.css?v=2025080830">
+    <link rel="stylesheet" href="styles/main.css?v=2025090610">
+    <link rel="stylesheet" href="styles/themes.css?v=2025090609">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="description" content="Projets et réalisations de Hamza Elyoubi">
     <meta name="keywords" content="Hamza Elyoubi, Projets, Développement, Portfolio, Réalisations">
@@ -114,6 +114,90 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Project Details Modal -->
+    <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 id="modal-title">Project Details</h2>
+                <button class="modal-close" type="button" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </header>
+            <div class="modal-body" id="modal-description">
+                <div class="project-details-content">
+                    <!-- Project Image -->
+                    <div class="modal-project-image" id="modal-project-image">
+                        <!-- Image will be populated dynamically -->
+                    </div>
+                    
+                    <!-- Project Description -->
+                    <div class="modal-project-description">
+                        <p id="modal-project-desc">Project description will appear here</p>
+                    </div>
+                    
+                    <!-- Technologies -->
+                    <div class="modal-project-technologies">
+                        <h4 id="modal-technologies-title">Technologies:</h4>
+                        <div class="technologies-list" id="modal-technologies-list">
+                            <!-- Technologies will be populated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- AI Assistant -->
+                    <div class="modal-project-ai">
+                        <h4 id="modal-ai-title">AI Assistant:</h4>
+                        <div class="ai-list" id="modal-ai-list">
+                            <!-- AI tools will be populated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Project Link -->
+                    <div class="modal-project-link" id="modal-project-link-container" style="display: none;">
+                        <h4 id="modal-link-title">Project Link:</h4>
+                        <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span id="modal-link-text">Visit Project</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Project Gallery -->
+                    <div class="modal-project-gallery" id="modal-project-gallery-container" style="display: none;">
+                        <h4 id="modal-gallery-title">Project Gallery:</h4>
+                        <div class="project-gallery" id="modal-gallery">
+                            <!-- Gallery items will be populated dynamically -->
+                        </div>
+                        <div class="gallery-controls" id="gallery-controls" style="display: none;">
+                            <button class="gallery-btn gallery-prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="gallery-dots" id="gallery-dots"></div>
+                            <button class="gallery-btn gallery-next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Lightbox -->
+    <dialog id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="lightbox-counter" class="lightbox-counter">1 / 3</div>
+        </div>
+    </dialog>
+
     <!-- Scripts -->
     <script>
         // Fix for local file CORS issue
@@ -126,7 +210,8 @@
     </script>
     <script type="module" src="scripts/main.js?v=2025080830"></script>
     <script type="module">
-        import { loadProjectsPage } from './scripts/pageLoader.js?v=2025080830';
+        import { loadProjectsPage } from './scripts/pageLoader.js?v=2025090609';
+        
         document.addEventListener('DOMContentLoaded', () => {
             loadProjectsPage();
         });

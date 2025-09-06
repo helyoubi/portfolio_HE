@@ -511,21 +511,39 @@
                 "description": "Confidential project - Presentation available privately.",
                 "technologies": ["Flutter (Dart)", "Supabase"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/Jebna/jebna_app_icon.png"
+                "image": "data/projects/Jebna/jebna_app_icon.png",
+                "link": "https://jebna-app.com",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=1",
+                    "https://picsum.photos/600/400?random=2", 
+                    "https://picsum.photos/600/400?random=3"
+                ]
             },
             {
                 "title": "Absence Tracker",
                 "description": "Employee absence management system with real-time tracking, reporting and automated notifications",
                 "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
+                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
+                "link": "https://absence-tracker.demo.com",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=4",
+                    "https://picsum.photos/600/400?random=5",
+                    "https://picsum.photos/600/400?random=6"
+                ]
             },
             {
                 "title": "RiftSword",
                 "description": "React web application that generates random challenges for League of Legends players. The app supports both single-player and duo mode challenges across different categories (Fun, Tryhard, Troll)",
                 "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
                 "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/RiftSword/app_RR_icon.png"
+                "image": "data/projects/RiftSword/app_RR_icon.png",
+                "link": "https://riftsword.vercel.app",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=7",
+                    "https://picsum.photos/600/400?random=8",
+                    "https://picsum.photos/600/400?random=9"
+                ]
             }
         ],
         "fr": [
@@ -534,21 +552,39 @@
                 "description": "Projet confidentiel - Présentation possible en privé.",
                 "technologies": ["Flutter (Dart)", "Supabase"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/Jebna/jebna_app_icon.png"
+                "image": "data/projects/Jebna/jebna_app_icon.png",
+                "link": "https://jebna-app.com",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=1",
+                    "https://picsum.photos/600/400?random=2", 
+                    "https://picsum.photos/600/400?random=3"
+                ]
             },
             {
                 "title": "Absence Tracker",
                 "description": "Système de gestion des absences d'employés avec suivi en temps réel, reporting et notifications automatisées",
                 "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
+                "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
+                "link": "https://absence-tracker.demo.com",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=4",
+                    "https://picsum.photos/600/400?random=5",
+                    "https://picsum.photos/600/400?random=6"
+                ]
             },
             {
                 "title": "RiftSword",
                 "description": "Application web React qui génère des défis aléatoires pour les joueurs de League of Legends. L'application prend en charge les défis en mode solo et duo dans différentes catégories (Fun, Tryhard, Troll)",
                 "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
                 "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/RiftSword/app_RR_icon.png"
+                "image": "data/projects/RiftSword/app_RR_icon.png",
+                "link": "https://riftsword.vercel.app",
+                "gallery": [
+                    "https://picsum.photos/600/400?random=7",
+                    "https://picsum.photos/600/400?random=8",
+                    "https://picsum.photos/600/400?random=9"
+                ]
             }
         ]
     },

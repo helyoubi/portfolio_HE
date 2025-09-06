@@ -1,0 +1,124 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e7]:
+    - list [ref=e8]:
+      - listitem [ref=e9]:
+        - link "Accueil" [ref=e10] [cursor=pointer]:
+          - /url: index.html#home
+      - listitem [ref=e11]:
+        - link "Certifications" [ref=e12] [cursor=pointer]:
+          - /url: index.html#certifications
+      - listitem [ref=e13]:
+        - link "Expérience Professionnelle" [ref=e14] [cursor=pointer]:
+          - /url: index.html#experience
+      - listitem [ref=e15]:
+        - link "Éducation" [ref=e16] [cursor=pointer]:
+          - /url: index.html#education
+      - listitem [ref=e17]:
+        - link "Formations" [ref=e18] [cursor=pointer]:
+          - /url: trainings.html
+      - listitem [ref=e19]:
+        - link "Compétences Techniques" [ref=e20] [cursor=pointer]:
+          - /url: index.html#skills
+      - listitem [ref=e21]:
+        - link "Frameworks" [ref=e22] [cursor=pointer]:
+          - /url: index.html#frameworks
+      - listitem [ref=e23]:
+        - link "Outils" [ref=e24] [cursor=pointer]:
+          - /url: index.html#tools
+      - listitem [ref=e25]:
+        - link "Architectures" [ref=e26] [cursor=pointer]:
+          - /url: index.html#architectures
+      - listitem [ref=e27]:
+        - link "Compétences Transversales" [ref=e28] [cursor=pointer]:
+          - /url: index.html#softSkills
+      - listitem [ref=e29]:
+        - link "Projets" [ref=e30] [cursor=pointer]:
+          - /url: projects.html
+      - listitem [ref=e31]:
+        - link "Langues" [ref=e32] [cursor=pointer]:
+          - /url: index.html#languages
+      - listitem
+  - generic [ref=e33]:
+    - button "Toggle Theme" [ref=e34] [cursor=pointer]:
+      - generic [ref=e35] [cursor=pointer]: 
+    - button "Switch Language" [ref=e36] [cursor=pointer]:
+      - img "English Flag" [ref=e37] [cursor=pointer]
+  - generic [ref=e38]:
+    - img "GitHub Copilot" [ref=e39]
+    - generic [ref=e40]: Developed with the help of GitHub Copilot
+  - main [ref=e41]:
+    - generic [ref=e43]:
+      - link "Hamza Elyoubi" [ref=e44] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/hamza-elyoubi/
+        - img "Hamza Elyoubi" [ref=e45] [cursor=pointer]
+      - heading "Salut, je suis Hamza Elyoubi" [level=1] [ref=e46]:
+        - generic [ref=e47]: Salut, je suis Hamza Elyoubi
+      - heading "Tech Lead L1* | 7+ ans d'expérience | Java & GenAI" [level=3] [ref=e48]
+      - paragraph [ref=e49]: "*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini."
+      - paragraph [ref=e50]: Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet.
+    - generic [ref=e51]:
+      - heading "Projets" [level=2] [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading "Jebna" [level=3] [ref=e55]
+          - img "Jebna Logo" [ref=e56]
+          - paragraph [ref=e57]: Projet confidentiel - Présentation possible en privé.
+          - paragraph [ref=e58]:
+            - strong [ref=e59]: "Technologies:"
+            - text: Flutter (Dart), Supabase
+          - paragraph [ref=e60]:
+            - strong [ref=e61]: "Assistant IA:"
+            - text: rocket.new, Claude Code (Claude Sonnet 4), Sora, ChatGPT
+          - button "Voir détails" [ref=e62] [cursor=pointer]
+        - generic [ref=e63]:
+          - heading "Absence Tracker" [level=3] [ref=e64]
+          - img "Absence Tracker Logo" [ref=e65]
+          - paragraph [ref=e66]: Système de gestion des absences d'employés avec suivi en temps réel, reporting et notifications automatisées
+          - paragraph [ref=e67]:
+            - strong [ref=e68]: "Technologies:"
+            - text: React (TypeScript), JavaScript, Tailwind CSS
+          - paragraph [ref=e69]:
+            - strong [ref=e70]: "Assistant IA:"
+            - text: rocket.new, Claude Code (Claude Sonnet 4), Sora, ChatGPT
+          - button "Voir détails" [ref=e71] [cursor=pointer]
+        - generic [ref=e72]:
+          - heading "RiftSword" [level=3] [ref=e73]
+          - img "RiftSword Logo" [ref=e74]
+          - paragraph [ref=e75]: Application web React qui génère des défis aléatoires pour les joueurs de League of Legends. L'application prend en charge les défis en mode solo et duo dans différentes catégories (Fun, Tryhard, Troll)
+          - paragraph [ref=e76]:
+            - strong [ref=e77]: "Technologies:"
+            - text: React 18 (TypeScript), CSS, Vite, Radix UI primitives, Tailwind CSS
+          - paragraph [ref=e78]:
+            - strong [ref=e79]: "Assistant IA:"
+            - text: lovable.dev, Claude Code (Claude Sonnet 4), Sora, ChatGPT
+          - button "Voir détails" [ref=e80] [cursor=pointer]
+  - generic [ref=e81]: "Dernière mise à jour: 9/5/2025 2:40:27 PM"
+  - contentinfo
+  - paragraph [ref=e83]: © 2025 Hamza Elyoubi. All rights reserved.
+  - button "Scroll to Top" [ref=e84] [cursor=pointer]:
+    - generic [ref=e85] [cursor=pointer]: 
+  - dialog "Détails du projet - Jebna" [ref=e86]:
+    - generic [ref=e87]:
+      - banner [ref=e88]:
+        - heading "Détails du projet - Jebna" [level=2] [ref=e89]
+        - text: 
+      - generic [ref=e91]:
+        - img "Jebna" [ref=e93]
+        - paragraph [ref=e95]: Projet confidentiel - Présentation possible en privé.
+        - generic [ref=e96]:
+          - heading "Technologies :" [level=4] [ref=e97]
+          - generic [ref=e98]:
+            - generic [ref=e99]: Flutter (Dart)
+            - generic [ref=e100]: Supabase
+        - generic [ref=e101]:
+          - heading "Assistant IA :" [level=4] [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]: rocket.new
+            - generic [ref=e105]: Claude Code (Claude Sonnet 4)
+            - generic [ref=e106]: Sora
+            - generic [ref=e107]: ChatGPT
+        - text:   
+```
