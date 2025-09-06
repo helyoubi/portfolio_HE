@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="cache-bust" content="20250906T172">
+    <meta name="cache-bust" content="20250906T204">
     <title>Projets - Hamza Elyoubi</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Empty favicon -->
-    <link rel="stylesheet" href="styles/main.css?v=20250906T172">
-    <link rel="stylesheet" href="styles/themes.css?v=20250906T172">
+    <link rel="stylesheet" href="styles/main.css?v=20250906T204">
+    <link rel="stylesheet" href="styles/themes.css?v=20250906T204">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="description" content="Projets et réalisations de Hamza Elyoubi">
     <meta name="keywords" content="Hamza Elyoubi, Projets, Développement, Portfolio, Réalisations">
@@ -18,11 +19,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
     </script>
 </head>
+
 <body>
     <!-- Hamburger Menu -->
     <div class="hamburger-menu" id="hamburgerMenu">
@@ -61,7 +63,8 @@
 
         <!-- Language Switcher -->
         <button class="language-switcher" id="languageSwitcher" aria-label="Switch Language">
-            <img src="assets/icons/fr.png" alt="French Flag" onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
+            <img src="assets/icons/fr.png" alt="French Flag"
+                onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
         </button>
     </div>
 
@@ -81,8 +84,11 @@
                 </a>
                 <h1><span id="personalName">Salut, je suis Hamza Elyoubi</span></h1>
                 <h3 id="personalTitle">Tech Lead L1* | 7+ ans d'expérience | Java & GenAI</h3>
-                <p id="titleNote" class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini.</p>
-                <p id="personalBio">Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet.</p>
+                <p id="titleNote" class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">*L1 :
+                    Certification Ingénieur Logiciel L1 (confirmé) de Capgemini.</p>
+                <p id="personalBio">Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes
+                    techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis
+                    également engagé sur les sujets GenAI en tant que référent projet.</p>
             </div>
         </section>
 
@@ -130,12 +136,12 @@
                     <div class="modal-project-image" id="modal-project-image">
                         <!-- Image will be populated dynamically -->
                     </div>
-                    
+
                     <!-- Project Description -->
                     <div class="modal-project-description">
                         <p id="modal-project-desc">Project description will appear here</p>
                     </div>
-                    
+
                     <!-- Technologies -->
                     <div class="modal-project-technologies">
                         <h4 id="modal-technologies-title">Technologies:</h4>
@@ -143,7 +149,7 @@
                             <!-- Technologies will be populated dynamically -->
                         </div>
                     </div>
-                    
+
                     <!-- AI Assistant -->
                     <div class="modal-project-ai">
                         <h4 id="modal-ai-title">AI Assistant:</h4>
@@ -151,16 +157,17 @@
                             <!-- AI tools will be populated dynamically -->
                         </div>
                     </div>
-                    
+
                     <!-- Project Link -->
                     <div class="modal-project-link" id="modal-project-link-container" style="display: none;">
                         <h4 id="modal-link-title">Project Link:</h4>
-                        <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                        <a id="modal-project-link" href="#" target="_blank" rel="noopener noreferrer"
+                            class="project-link-btn">
                             <i class="fas fa-external-link-alt"></i>
                             <span id="modal-link-text">Visit Project</span>
                         </a>
                     </div>
-                    
+
                     <!-- Project Gallery -->
                     <div class="modal-project-gallery" id="modal-project-gallery-container" style="display: none;">
                         <h4 id="modal-gallery-title">Project Gallery:</h4>
@@ -209,14 +216,15 @@
             iframe.contentWindow.Promise = Promise;
         });
     </script>
-    <script type="module" src="scripts/main.js?v=20250906T172"></script>
+    <script type="module" src="scripts/main.js?v=20250906T204"></script>
     <script type="module">
-        import { loadProjectsPage } from './scripts/pageLoader.js?v=20250906T172';
-        
+        import { loadProjectsPage } from './scripts/pageLoader.js?v=20250906T204';
+
         document.addEventListener('DOMContentLoaded', () => {
             loadProjectsPage();
         });
     </script>
-    <script type="module" src="scripts/formHandler.js?v=20250906T172"></script>
+    <script type="module" src="scripts/formHandler.js?v=20250906T204"></script>
 </body>
+
 </html>

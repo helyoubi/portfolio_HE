@@ -27,7 +27,7 @@ filesToUpdate.forEach(file => {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Update version parameters in all occurrences
-        content = content.replace(/\?v=[\d]+/g, `?v=${newVersion}`);
+        content = content.replace(/\?v=[\w\d]+/g, `?v=${newVersion}`);
         
         // Update service worker cache name
         if (file === 'sw.js') {

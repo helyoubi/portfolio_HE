@@ -1029,6 +1029,24 @@ button[id*="close"],
     display: none !important;
 }
 
+/* Ensure modal gallery container is completely hidden when modal is not active */
+.modal-project-gallery {
+    display: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    visibility: hidden !important;
+}
+
+/* Only show when modal is open */
+.project-modal[open] .modal-project-gallery {
+    display: block !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    visibility: visible !important;
+}
+
 .modal-project-gallery .project-gallery::-webkit-scrollbar {
     height: 8px;
 }
@@ -1235,6 +1253,16 @@ body.modal-open {
 }
 
 /* ==================== LIGHTBOX STYLES ==================== */
+
+/* Hide lightbox completely when not open */
+.lightbox:not([open]) {
+    display: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
 
 .lightbox {
     border: none;

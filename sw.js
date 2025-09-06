@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v20250906T172';
+const CACHE_NAME = 'portfolio-cache-v20250906T204';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
