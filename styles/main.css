@@ -1035,8 +1035,8 @@ button[id*="close"],
     visibility: hidden !important;
 }
 
-/* Only show when modal is open */
-.project-modal[open] .modal-project-gallery {
+/* Only show when modal is open - updated for div-based modal */
+.project-modal[style*="display: flex"] .modal-project-gallery {
     display: block !important;
     position: static !important;
     top: auto !important;
@@ -1256,8 +1256,8 @@ body {
 
 /* ==================== LIGHTBOX STYLES ==================== */
 
-/* Hide lightbox completely when not open */
-.lightbox:not([open]) {
+/* Hide lightbox completely when not open - updated for div-based lightbox */
+.lightbox[style*="display: none"] {
     display: none !important;
     position: absolute !important;
     top: -9999px !important;
