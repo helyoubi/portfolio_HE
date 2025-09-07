@@ -798,8 +798,21 @@ button[id*="close"],
 
 /* ==================== PROJECT MODAL STYLES ==================== */
 
-/* Modal Base Styles */
+/* Modal Base Styles - converted to div modal */
 .project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2500;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.project-modal .modal-content {
     max-width: min(90vw, 800px);
     max-height: 90vh;
     margin: auto;
@@ -812,7 +825,6 @@ button[id*="close"],
     color: var(--text-color);
     scrollbar-width: thin;
     scrollbar-color: var(--accent-color) var(--bg-color);
-    z-index: 2500;
 }
 
 .project-modal::-webkit-scrollbar {
@@ -828,22 +840,7 @@ button[id*="close"],
     border-radius: 4px;
 }
 
-/* Backdrop styling */
-.project-modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 2499;
-}
-
-/* Animation for opening */
-.project-modal[open] {
-    animation: modal-appear 0.3s ease-out;
-}
-
-/* Animation for closing */
-.project-modal.closing {
-    animation: modal-disappear 0.3s ease-out;
-}
+/* Removed dialog-specific styles */
 
 @keyframes modal-appear {
     from {
@@ -1270,23 +1267,22 @@ body {
 }
 
 .lightbox {
-    border: none;
-    padding: 0;
-    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
-    margin: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 3000;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.lightbox::backdrop {
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(15px);
-}
+/* Removed lightbox backdrop - using div instead */
 
 .lightbox-content {
     position: relative;

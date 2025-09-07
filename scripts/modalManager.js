@@ -64,7 +64,7 @@ export class ModalManager {
             if (e.key === 'Escape' && this.activeModal) {
                 this.closeModal();
             }
-            if (e.key === 'Escape' && this.lightbox && this.lightbox.open) {
+            if (e.key === 'Escape' && this.lightbox && this.lightbox.style.display === 'flex') {
                 this.closeLightbox();
             }
         });
@@ -74,7 +74,7 @@ export class ModalManager {
 
         // Handle backdrop clicks
         this.modal.addEventListener('click', (e) => {
-            if (e.target === this.modal) {
+            if (e.target === this.modal || e.target.classList.contains('modal-backdrop')) {
                 this.closeModal();
             }
         });
@@ -115,8 +115,8 @@ export class ModalManager {
         // Populate modal with project data
         this.populateModal(projectData);
 
-        // Show modal
-        this.modal.showModal();
+        // Show modal (using div instead of dialog)
+        this.modal.style.display = 'flex';
         this.activeModal = 'project-modal';
 
         // Simple body scroll prevention
@@ -132,8 +132,8 @@ export class ModalManager {
     closeModal() {
         if (!this.activeModal) return;
 
-        // Ultra simple approach - no animations, immediate action
-        this.modal.close();
+        // Ultra simple approach - hide div modal
+        this.modal.style.display = 'none';
         this.activeModal = null;
         
         // Restore body immediately
@@ -414,14 +414,14 @@ export class ModalManager {
 
         // Close lightbox on backdrop click
         this.lightbox.addEventListener('click', (e) => {
-            if (e.target === this.lightbox) {
+            if (e.target === this.lightbox || e.target.classList.contains('lightbox-backdrop')) {
                 this.closeLightbox();
             }
         });
 
         // Handle arrow keys
         document.addEventListener('keydown', (e) => {
-            if (this.lightbox && this.lightbox.open) {
+            if (this.lightbox && this.lightbox.style.display === 'flex') {
                 if (e.key === 'ArrowLeft') {
                     this.previousImage();
                 } else if (e.key === 'ArrowRight') {
@@ -440,15 +440,15 @@ export class ModalManager {
         this.currentImageIndex = imageIndex;
         this.displayLightboxImage();
         
-        // Use showModal() to put lightbox in top layer
-        this.lightbox.showModal();
+        // Show lightbox div
+        this.lightbox.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
 
     closeLightbox() {
         if (!this.lightbox) return;
         
-        this.lightbox.close();
+        this.lightbox.style.display = 'none';
         
         // Force body scroll restoration on mobile
         document.body.style.overflow = '';
