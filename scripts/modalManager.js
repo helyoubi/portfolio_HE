@@ -68,6 +68,16 @@ export class ModalManager {
             }
         });
 
+        // Handle browser back button on mobile
+        window.addEventListener('popstate', (e) => {
+            if (this.activeModal) {
+                this.closeModal();
+                // Prevent default back behavior when modal is open
+                e.preventDefault();
+                return false;
+            }
+        });
+
         // Handle backdrop clicks
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
@@ -140,7 +150,18 @@ export class ModalManager {
             }
 
             this.activeModal = null;
+            
+            // Force body scroll restoration on mobile
             document.body.classList.remove('modal-open');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.height = '';
+            document.body.style.width = '';
+            
+            // Force scroll restoration on mobile
+            if (window.scrollY !== undefined) {
+                window.scrollTo(0, window.scrollY);
+            }
         }, 300);
     }
 
@@ -440,7 +461,17 @@ export class ModalManager {
         if (!this.lightbox) return;
         
         this.lightbox.close();
+        
+        // Force body scroll restoration on mobile
         document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.height = '';
+        document.body.style.width = '';
+        
+        // Force scroll restoration on mobile
+        if (window.scrollY !== undefined) {
+            window.scrollTo(0, window.scrollY);
+        }
     }
 
     displayLightboxImage() {
