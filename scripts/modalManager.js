@@ -8,6 +8,7 @@ export class ModalManager {
         this.lightbox = null;
         this.currentImages = [];
         this.currentImageIndex = 0;
+        this.scrollPosition = 0;
         this.translations = {
             'fr': {
                 projectDetails: 'Détails du projet',
@@ -68,15 +69,8 @@ export class ModalManager {
             }
         });
 
-        // Handle browser back button on mobile
-        window.addEventListener('popstate', (e) => {
-            if (this.activeModal) {
-                this.closeModal();
-                // Prevent default back behavior when modal is open
-                e.preventDefault();
-                return false;
-            }
-        });
+        // Handle browser back button on mobile - let browser handle it naturally
+        // Removed cancel event to avoid conflicts
 
         // Handle backdrop clicks
         this.modal.addEventListener('click', (e) => {
@@ -112,6 +106,9 @@ export class ModalManager {
             this.getCurrentLanguage();
         }
 
+        // Store current scroll position (simplified)
+        this.scrollPosition = window.pageYOffset;
+
         // Store current focus
         this.focusBeforeModal = document.activeElement;
 
@@ -122,7 +119,7 @@ export class ModalManager {
         this.modal.showModal();
         this.activeModal = 'project-modal';
 
-        // Add body class to prevent scrolling
+        // Simple body scroll prevention
         document.body.classList.add('modal-open');
 
         // Focus on close button
@@ -135,34 +132,25 @@ export class ModalManager {
     closeModal() {
         if (!this.activeModal) return;
 
-        // Add closing animation
-        this.modal.classList.add('closing');
+        // Ultra simple approach - no animations, immediate action
+        this.modal.close();
+        this.activeModal = null;
         
-        // Wait for animation before actually closing
-        setTimeout(() => {
-            this.modal.close();
-            this.modal.classList.remove('closing');
-            
-            // Restore focus
-            if (this.focusBeforeModal) {
-                this.focusBeforeModal.focus();
-                this.focusBeforeModal = null;
-            }
-
-            this.activeModal = null;
-            
-            // Force body scroll restoration on mobile
-            document.body.classList.remove('modal-open');
-            document.body.style.overflow = '';
-            document.body.style.position = '';
-            document.body.style.height = '';
-            document.body.style.width = '';
-            
-            // Force scroll restoration on mobile
-            if (window.scrollY !== undefined) {
-                window.scrollTo(0, window.scrollY);
-            }
-        }, 300);
+        // Restore body immediately
+        document.body.className = document.body.className.replace('modal-open', '');
+        document.body.removeAttribute('style');
+        document.documentElement.removeAttribute('style');
+        
+        // Restore scroll position
+        if (this.scrollPosition !== undefined) {
+            window.scrollTo(0, this.scrollPosition);
+        }
+        
+        // Restore focus
+        if (this.focusBeforeModal) {
+            this.focusBeforeModal.focus();
+            this.focusBeforeModal = null;
+        }
     }
 
     populateModal(projectData) {

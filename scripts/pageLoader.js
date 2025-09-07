@@ -44,6 +44,14 @@ export async function loadTrainingsPage(language) {
     
     // Setup language switcher
     setupLanguageSwitcher(language, 'trainings');
+    
+    // Auto-scroll to trainings section
+    setTimeout(() => {
+        const trainingsSection = document.getElementById('trainings');
+        if (trainingsSection) {
+            trainingsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
 }
 
 // Load projects page
@@ -87,6 +95,14 @@ export async function loadProjectsPage(language) {
     
     // Setup language switcher
     setupLanguageSwitcher(language, 'projects');
+    
+    // Auto-scroll to projects section
+    setTimeout(() => {
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
 }
 
 // Update personal information in hero section
