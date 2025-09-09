@@ -17,7 +17,8 @@ export class ModalManager {
                 projectLink: 'Lien du projet :',
                 projectGallery: 'Galerie du projet :',
                 visitProject: 'Visiter le projet',
-                closeModal: 'Fermer la modale'
+                closeModal: 'Fermer la modale',
+                close: 'Fermer'
             },
             'en': {
                 projectDetails: 'Project Details',
@@ -26,7 +27,8 @@ export class ModalManager {
                 projectLink: 'Project Link:',
                 projectGallery: 'Project Gallery:',
                 visitProject: 'Visit Project',
-                closeModal: 'Close modal'
+                closeModal: 'Close modal',
+                close: 'Close'
             }
         };
         // Initialize after DOM is ready
@@ -55,6 +57,13 @@ export class ModalManager {
         const closeButton = this.modal.querySelector('.modal-close');
         if (closeButton) {
             closeButton.addEventListener('click', () => {
+                this.closeModal();
+            });
+        }
+
+        const newCloseButton = this.modal.querySelector('.modal-action-btn');
+        if (newCloseButton) {
+            newCloseButton.addEventListener('click', () => {
                 this.closeModal();
             });
         }
@@ -187,6 +196,11 @@ export class ModalManager {
         const closeButton = this.modal.querySelector('.modal-close');
         if (closeButton) {
             closeButton.setAttribute('aria-label', t.closeModal);
+        }
+
+        const newCloseButton = this.modal.querySelector('.modal-action-btn');
+        if (newCloseButton) {
+            newCloseButton.textContent = t.close;
         }
     }
 
