@@ -115,6 +115,12 @@ button[id*="close"],
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         padding-top: 70px; /* Extra space for mobile hamburger */
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100); /* Support pour mobile */
+        max-height: 100vh;
+        max-height: calc(var(--vh, 1vh) * 100);
+        position: fixed;
+        top: 0;
     }
     
     .nav-menu.active {
@@ -122,7 +128,15 @@ button[id*="close"],
     }
     
     .nav-links {
-        padding: 5px 0 50px 0;
+        padding: 5px 0 150px 0; /* Beaucoup plus d'espace en bas */
+        min-height: calc(100vh - 150px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        flex-shrink: 0;
+        margin-bottom: 5px;
     }
 }
 
