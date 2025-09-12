@@ -941,7 +941,7 @@ button[id*="close"],
 
 .modal-action-btn {
     padding: 0.75rem 1.5rem;
-    background: var(--accent-color);
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -955,10 +955,11 @@ button[id*="close"],
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    min-width: 120px;
 }
 
 .modal-action-btn:hover {
-    background: var(--accent-color-hover);
+    background: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     color: white;
@@ -1293,7 +1294,7 @@ body {
         font-size: 1rem;
         font-weight: 500;
         border-radius: 5px;
-        background: var(--accent-color);
+        background: var(--primary-color);
         color: white;
         border: none;
         cursor: pointer;
@@ -1304,10 +1305,11 @@ body {
         justify-content: center;
         gap: 0.5rem;
         text-decoration: none;
+        min-width: 140px;
     }
 
     .modal-action-btn:hover {
-        background: var(--accent-color-hover);
+        background: var(--accent-color);
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         color: white;
