@@ -928,13 +928,15 @@ button[id*="close"],
     flex: 1;
     overflow-y: auto;
     padding: 1.5rem;
+    min-height: 0; /* Important pour le flexbox */
 }
 
 .modal-footer {
     flex-shrink: 0;
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 2rem 1.5rem; /* Plus d'espace en bas */
+    margin-top: 1rem; /* Espace fixe */
     border-top: 1px solid var(--border-color);
     background: var(--secondary-bg);
 }
@@ -970,6 +972,7 @@ button[id*="close"],
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding-bottom: 1rem; /* Espace en bas du contenu */
 }
 
 .modal-project-image {
@@ -1274,12 +1277,13 @@ body {
         padding: 1rem;
         overflow-y: auto;
         flex: 1;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
+        min-height: 0; /* Important pour le flexbox */
     }
 
     .modal-footer {
-        padding: 1.5rem 1rem;
-        margin-top: auto;
+        padding: 1.5rem 1rem 2rem 1rem; /* Plus d'espace en bas */
+        margin-top: 1rem; /* Espace fixe au lieu de auto */
         border-top: 2px solid rgba(255, 255, 255, 0.2);
         justify-content: center;
         background: var(--secondary-bg);
@@ -1328,6 +1332,7 @@ body {
 
     .project-details-content {
         gap: 1rem;
+        padding-bottom: 1rem; /* Espace en bas du contenu */
     }
 
     .modal-project-description p {
