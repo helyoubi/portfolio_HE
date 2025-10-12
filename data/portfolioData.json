@@ -540,9 +540,9 @@
                 "image": "data/projects/RiftSword/app_RR_icon.png",
                 "link": "https://riftsword.vercel.app",
                 "gallery": [
-                    "https://picsum.photos/600/400?random=7",
-                    "https://picsum.photos/600/400?random=8",
-                    "https://picsum.photos/600/400?random=9"
+                    "data/projects/RiftSword/app_RR_icon.png",
+                    "data/projects/RiftSword/capture_rs1.png",
+                    "data/projects/RiftSword/capture_rs2.png"
                 ]
             }
         ],
@@ -581,9 +581,9 @@
                 "image": "data/projects/RiftSword/app_RR_icon.png",
                 "link": "https://riftsword.vercel.app",
                 "gallery": [
-                    "https://picsum.photos/600/400?random=7",
-                    "https://picsum.photos/600/400?random=8",
-                    "https://picsum.photos/600/400?random=9"
+                    "data/projects/RiftSword/app_RR_icon.png",
+                    "data/projects/RiftSword/capture_rs1.png",
+                    "data/projects/RiftSword/capture_rs2.png"
                 ]
             }
         ]
@@ -620,5 +620,115 @@
             "Mentoré plus de 15 développeurs juniors vers des rôles seniors",
             "Mise en place de pipelines CI/CD réduisant le temps de déploiement de 40%"
         ]
+    },
+    "howto": {
+        "en": {
+            "github-copilot": {
+                "title": "GitHub Copilot in SDLC",
+                "subtitle": "How I Use GitHub Copilot in the Software Development Lifecycle",
+                "sections": [
+                    {
+                        "heading": "Environment Setup & Context Management",
+                        "content": "I begin every project by establishing a robust AI context foundation:\n\n- **Chat Mode Configuration**: I utilize advanced chat modes (such as \"Beast Mode,\" now natively integrated by Microsoft) to enable more comprehensive AI interactions\n- **Project Context File**: I maintain a `copilot-instructions.md` file at the project root, which serves as the single source of truth for:\n  - Project overview and objectives\n  - Technology stack with specific versions\n  - Code examples demonstrating preferred patterns\n  - Architectural guidelines and best practices\n  - Team conventions and coding standards\n\nThis context file ensures that Copilot's suggestions remain aligned with project requirements and team expectations throughout the development cycle."
+                    },
+                    {
+                        "heading": "Mode-Based Workflow Strategy",
+                        "content": "I adapt my interaction mode based on the task at hand:\n\n**ASK Mode**: For exploratory and analytical work\n- Understanding existing codebase architecture\n- Exploring design alternatives and patterns\n- Investigating technical decisions and trade-offs\n- Clarifying implementation approaches before coding\n\n**Agent Mode**: For active feature development\n- Implementing new functionality\n- Refactoring existing code\n- Writing comprehensive test suites\n- Generating boilerplate and repetitive code"
+                    },
+                    {
+                        "heading": "Feature-Driven Prompt Engineering",
+                        "content": "When developing new features, I follow a structured prompting methodology:\n\n1. **One Feature, One Prompt**: I create dedicated, focused prompts for each feature to prevent context contamination and hallucinations (as recommended by Microsoft and OpenAI guidelines)\n\n2. **Contextual File Provision**: I explicitly reference relevant files to ensure consistent implementations:\n   - Front-end components (`.jsp`, `.properties`, UI frameworks)\n   - Back-end logic (`.java`, `.xml`, configuration files)\n   - Existing similar implementations as reference patterns\n\n3. **Precision Prompting**: I craft detailed, constraint-driven prompts following this template:\n   ```\n   \"Implement feature X in microservice Y using interface Z.jsp and service W.java.\n   Apply the following constraints:\n   - [Constraint 1: e.g., Use existing authentication pattern]\n   - [Constraint 2: e.g., Follow repository pattern from class B.java, method methodName()]\n   - [Constraint 3: e.g., Include input validation and error handling]\n\n   Reference implementation: class B.java, method exampleMethod() for similar logic.\"\n   ```"
+                    },
+                    {
+                        "heading": "Version Control Best Practices",
+                        "content": "To maintain code integrity and minimize conflicts:\n\n- **Atomic Commits**: I commit immediately after completing and validating each functional feature\n- **Progressive Development**: I never mix multiple features in a single development session\n- **AI-Assisted Commits**: I leverage Copilot's commit message generation, ensuring descriptive and conventional commit formats\n- **Pull Request Automation**: Copilot assists in generating comprehensive PR descriptions, including changes summary, testing notes, and reviewer guidance"
+                    },
+                    {
+                        "heading": "Advanced Capabilities: MCPs & Automation",
+                        "content": "**Model Context Protocols (MCPs)**: I integrate specialized MCPs to enhance Copilot's capabilities:\n- **Context7 MCP**: For accessing the latest library documentation and API references\n- **PostgreSQL MCP**: For database schema awareness and query generation\n- **Custom MCPs**: Project-specific protocols for internal tools and APIs\n\n**Custom Slash Commands**: To accelerate repetitive tasks, I design custom commands:\n- `/generate_tests_cmd`: Generates unit tests following internal conventions and patterns\n- `/document_api`: Creates API documentation from code signatures\n- `/refactor_legacy`: Applies modern patterns to legacy code while maintaining functionality"
+                    },
+                    {
+                        "heading": "Legacy Code Integration",
+                        "content": "Working with established codebases requires special attention:\n\n- **@Workspace Integration**: I frequently reference the workspace context to ensure new code harmonizes with legacy systems\n- **Pattern Consistency**: I use existing code as reference templates for maintaining architectural consistency\n- **Incremental Modernization**: I balance AI suggestions with respect for proven legacy patterns"
+                    },
+                    {
+                        "heading": "Code Review & Quality Assurance",
+                        "content": "AI-generated code always undergoes rigorous validation:\n\n- **Manual Review**: Every AI suggestion is critically reviewed before acceptance\n- **Standards Compliance**: I verify adherence to company coding conventions, security policies, and performance requirements\n- **AI-Assisted Code Reviews**: Copilot helps identify potential issues, suggest improvements, and validate against best practices during PR reviews"
+                    },
+                    {
+                        "heading": "CI/CD Pipeline Automation",
+                        "content": "When appropriate, I leverage GitHub Actions integration:\n\n- **Automated Testing**: Set up test execution pipelines with Copilot's assistance\n- **Deployment Workflows**: Create deployment automation following infrastructure-as-code principles\n- **Quality Gates**: Implement automated code quality checks and security scanning"
+                    },
+                    {
+                        "heading": "Key Principles",
+                        "content": "1. **AI as Augmentation, Not Replacement**: Copilot accelerates development but human expertise guides architectural decisions\n2. **Context is King**: Rich, well-maintained context files produce better, more relevant suggestions\n3. **Validate Everything**: Never merge AI-generated code without thorough review and testing\n4. **Continuous Learning**: Regularly update instructions and patterns based on team feedback and evolving best practices\n5. **Atomic Progress**: Commit functional increments frequently to maintain project stability"
+                    }
+                ]
+            },
+            "claude-code": {
+                "title": "Claude Code in Development",
+                "subtitle": "Coming Soon",
+                "sections": [
+                    {
+                        "heading": "Overview",
+                        "content": "Documentation for Claude Code usage is coming soon. Stay tuned for insights on how I leverage Claude Code in my development workflow."
+                    }
+                ]
+            }
+        },
+        "fr": {
+            "github-copilot": {
+                "title": "GitHub Copilot dans le SDLC",
+                "subtitle": "Comment j'utilise GitHub Copilot dans le cycle de développement logiciel",
+                "sections": [
+                    {
+                        "heading": "Configuration de l'environnement et gestion du contexte",
+                        "content": "Je commence chaque projet en établissant une base de contexte IA robuste :\n\n- **Configuration du mode Chat** : J'utilise des modes de chat avancés (tels que \"Beast Mode\", désormais intégré nativement par Microsoft) pour permettre des interactions IA plus complètes\n- **Fichier de contexte projet** : Je maintiens un fichier `copilot-instructions.md` à la racine du projet, qui sert de source unique de vérité pour :\n  - Vue d'ensemble et objectifs du projet\n  - Stack technologique avec versions spécifiques\n  - Exemples de code démontrant les patterns préférés\n  - Directives architecturales et bonnes pratiques\n  - Conventions d'équipe et standards de codage\n\nCe fichier de contexte garantit que les suggestions de Copilot restent alignées avec les exigences du projet et les attentes de l'équipe tout au long du cycle de développement."
+                    },
+                    {
+                        "heading": "Stratégie de travail basée sur les modes",
+                        "content": "J'adapte mon mode d'interaction en fonction de la tâche :\n\n**Mode ASK** : Pour le travail exploratoire et analytique\n- Comprendre l'architecture de la base de code existante\n- Explorer les alternatives de conception et les patterns\n- Investiguer les décisions techniques et les compromis\n- Clarifier les approches d'implémentation avant le codage\n\n**Mode Agent** : Pour le développement actif de fonctionnalités\n- Implémenter de nouvelles fonctionnalités\n- Refactoriser le code existant\n- Écrire des suites de tests complètes\n- Générer du code répétitif et du boilerplate"
+                    },
+                    {
+                        "heading": "Ingénierie de prompts orientée fonctionnalités",
+                        "content": "Lors du développement de nouvelles fonctionnalités, je suis une méthodologie de prompting structurée :\n\n1. **Une fonctionnalité, un prompt** : Je crée des prompts dédiés et ciblés pour chaque fonctionnalité afin d'éviter la contamination du contexte et les hallucinations (comme recommandé par les directives Microsoft et OpenAI)\n\n2. **Fourniture de fichiers contextuels** : Je référence explicitement les fichiers pertinents pour garantir des implémentations cohérentes :\n   - Composants front-end (`.jsp`, `.properties`, frameworks UI)\n   - Logique back-end (`.java`, `.xml`, fichiers de configuration)\n   - Implémentations similaires existantes comme patterns de référence\n\n3. **Prompting de précision** : Je rédige des prompts détaillés et contraints suivant ce modèle :\n   ```\n   \"Implémenter la fonctionnalité X dans le microservice Y en utilisant l'interface Z.jsp et le service W.java.\n   Appliquer les contraintes suivantes :\n   - [Contrainte 1 : par ex., Utiliser le pattern d'authentification existant]\n   - [Contrainte 2 : par ex., Suivre le pattern repository de la classe B.java, méthode methodName()]\n   - [Contrainte 3 : par ex., Inclure la validation des entrées et la gestion des erreurs]\n\n   Implémentation de référence : classe B.java, méthode exampleMethod() pour une logique similaire.\"\n   ```"
+                    },
+                    {
+                        "heading": "Bonnes pratiques de contrôle de version",
+                        "content": "Pour maintenir l'intégrité du code et minimiser les conflits :\n\n- **Commits atomiques** : Je commite immédiatement après avoir complété et validé chaque fonctionnalité\n- **Développement progressif** : Je ne mélange jamais plusieurs fonctionnalités dans une seule session de développement\n- **Commits assistés par IA** : J'exploite la génération de messages de commit de Copilot, en garantissant des formats de commit descriptifs et conventionnels\n- **Automatisation des Pull Requests** : Copilot aide à générer des descriptions de PR complètes, incluant un résumé des changements, des notes de test et des conseils pour les reviewers"
+                    },
+                    {
+                        "heading": "Capacités avancées : MCPs et automatisation",
+                        "content": "**Model Context Protocols (MCPs)** : J'intègre des MCPs spécialisés pour améliorer les capacités de Copilot :\n- **MCP Context7** : Pour accéder aux dernières documentations de bibliothèques et références d'API\n- **MCP PostgreSQL** : Pour la connaissance des schémas de base de données et la génération de requêtes\n- **MCPs personnalisés** : Protocoles spécifiques au projet pour les outils et APIs internes\n\n**Commandes Slash personnalisées** : Pour accélérer les tâches répétitives, je conçois des commandes sur mesure :\n- `/generate_tests_cmd` : Génère des tests unitaires suivant les conventions et patterns internes\n- `/document_api` : Crée la documentation API à partir des signatures de code\n- `/refactor_legacy` : Applique des patterns modernes au code legacy tout en maintenant la fonctionnalité"
+                    },
+                    {
+                        "heading": "Intégration avec le code legacy",
+                        "content": "Travailler avec des bases de code établies nécessite une attention particulière :\n\n- **Intégration @Workspace** : Je référence fréquemment le contexte workspace pour assurer que le nouveau code s'harmonise avec les systèmes legacy\n- **Cohérence des patterns** : J'utilise le code existant comme modèles de référence pour maintenir la cohérence architecturale\n- **Modernisation incrémentale** : J'équilibre les suggestions IA avec le respect des patterns legacy éprouvés"
+                    },
+                    {
+                        "heading": "Revue de code et assurance qualité",
+                        "content": "Le code généré par IA subit toujours une validation rigoureuse :\n\n- **Revue manuelle** : Chaque suggestion IA est examinée de manière critique avant acceptation\n- **Conformité aux standards** : Je vérifie l'adhésion aux conventions de codage de l'entreprise, politiques de sécurité et exigences de performance\n- **Revues de code assistées par IA** : Copilot aide à identifier les problèmes potentiels, suggérer des améliorations et valider par rapport aux bonnes pratiques lors des revues de PR"
+                    },
+                    {
+                        "heading": "Automatisation du pipeline CI/CD",
+                        "content": "Lorsque approprié, j'exploite l'intégration GitHub Actions :\n\n- **Tests automatisés** : Configurer des pipelines d'exécution de tests avec l'assistance de Copilot\n- **Workflows de déploiement** : Créer l'automatisation de déploiement suivant les principes d'infrastructure-as-code\n- **Quality Gates** : Implémenter des vérifications automatiques de qualité de code et de scan de sécurité"
+                    },
+                    {
+                        "heading": "Principes clés",
+                        "content": "1. **L'IA comme augmentation, pas remplacement** : Copilot accélère le développement mais l'expertise humaine guide les décisions architecturales\n2. **Le contexte est roi** : Des fichiers de contexte riches et bien maintenus produisent de meilleures suggestions, plus pertinentes\n3. **Tout valider** : Ne jamais merger du code généré par IA sans revue et tests approfondis\n4. **Apprentissage continu** : Mettre à jour régulièrement les instructions et patterns basés sur les retours de l'équipe et l'évolution des bonnes pratiques\n5. **Progrès atomique** : Commiter fréquemment des incréments fonctionnels pour maintenir la stabilité du projet"
+                    }
+                ]
+            },
+            "claude-code": {
+                "title": "Claude Code en Développement",
+                "subtitle": "À venir prochainement",
+                "sections": [
+                    {
+                        "heading": "Aperçu",
+                        "content": "La documentation sur l'utilisation de Claude Code arrive bientôt. Restez à l'écoute pour découvrir comment j'exploite Claude Code dans mon flux de travail de développement."
+                    }
+                ]
+            }
+        }
     }
 }

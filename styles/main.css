@@ -1127,9 +1127,10 @@ button[id*="close"],
 .modal-project-gallery .gallery-image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
     cursor: pointer;
+    background-color: var(--card-bg);
 }
 
 .modal-project-gallery .gallery-image:hover {
@@ -1565,5 +1566,209 @@ body {
     .lightbox-close {
         top: -45px;
         right: -5px;
+    }
+}
+
+/* ==================== HOWTO PAGE STYLES ==================== */
+
+.howto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* HowTo Header */
+.howto-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.howto-header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.howto-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Tab Navigation */
+.howto-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.howto-tab {
+    background: var(--card-bg);
+    border: 2px solid transparent;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.howto-tab i {
+    font-size: 1.3rem;
+}
+
+.howto-tab:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.howto-tab.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Tab Content */
+.howto-content {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.howto-tab-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.howto-tab-title {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.howto-tab-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Sections */
+.howto-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.howto-section {
+    padding: 1.5rem;
+    background: var(--section-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.howto-section-heading {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.howto-section-content {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.howto-section-content p {
+    margin-bottom: 1rem;
+}
+
+.howto-section-content ul,
+.howto-section-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.howto-section-content li {
+    margin-bottom: 0.5rem;
+}
+
+.howto-section-content strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.howto-section-content code {
+    background: var(--code-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--code-text);
+}
+
+.howto-section-content pre {
+    background: var(--code-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.howto-section-content pre code {
+    background: none;
+    padding: 0;
+    display: block;
+    white-space: pre;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .howto-header h1 {
+        font-size: 2rem;
+    }
+
+    .howto-header p {
+        font-size: 1rem;
+    }
+
+    .howto-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .howto-tab {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .howto-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .howto-tab-title {
+        font-size: 1.6rem;
+    }
+
+    .howto-section {
+        padding: 1rem;
+    }
+
+    .howto-section-heading {
+        font-size: 1.2rem;
+    }
+
+    .howto-section-content {
+        font-size: 0.95rem;
     }
 }

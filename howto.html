@@ -7,13 +7,13 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="cache-bust" content="20251012T1735">
-    <title>Formations & e-learning - Hamza Elyoubi</title>
+    <title>HowTo - AI Development Guide - Hamza Elyoubi</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Empty favicon -->
     <link rel="stylesheet" href="styles/main.css?v=20251012T1735">
     <link rel="stylesheet" href="styles/themes.css?v=20251012T1735">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Formations professionnelles et e-learning de Hamza Elyoubi">
-    <meta name="keywords" content="Hamza Elyoubi, Formations, e-learning, Certifications, Développement professionnel">
+    <meta name="description" content="How I use AI tools like GitHub Copilot and Claude Code in software development">
+    <meta name="keywords" content="Hamza Elyoubi, GitHub Copilot, Claude Code, AI Development, GenAI, SDLC">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
@@ -40,7 +40,7 @@
             <li><a href="index.html#certifications" data-section="certifications">Certifications</a></li>
             <li><a href="index.html#experience" data-section="experience">Expérience Professionnelle</a></li>
             <li><a href="index.html#education" data-section="education">Éducation</a></li>
-            <li><a href="trainings.html" data-section="trainings" class="active">Formations</a></li>
+            <li><a href="trainings.html" data-section="trainings">Formations</a></li>
             <li><a href="index.html#skills" data-section="skills">Compétences Techniques</a></li>
             <li><a href="index.html#frameworks" data-section="frameworks">Frameworks</a></li>
             <li><a href="index.html#tools" data-section="tools">Outils</a></li>
@@ -48,7 +48,7 @@
             <li><a href="index.html#softSkills" data-section="softSkills">Compétences Transversales</a></li>
             <li><a href="projects.html" data-section="projects">Projets</a></li>
             <li><a href="index.html#languages" data-section="languages">Langues</a></li>
-            <li><a href="howto.html" data-section="howto">HowTo</a></li>
+            <li><a href="howto.html" data-section="howto" class="active">HowTo</a></li>
             <li><a href="index.html#contact" data-section="contact">Contact</a></li>
         </ul>
     </nav>
@@ -66,45 +66,36 @@
         </button>
     </div>
 
-    <!-- GitHub Copilot Credit -->
-    <div id="copilot-credit" class="copilot-credit">
-        <img src="assets/icons/githubcopilot_icon.png" alt="GitHub Copilot" class="copilot-icon">
-        <span>Developed with the help of GitHub Copilot</span>
-    </div>
-
     <!-- Main Content -->
-    <main id="main-content" class="container">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
-                    <img id="profileImage" src="assets/images/profile.jpg" alt="Hamza Elyoubi" class="profile-img">
-                </a>
-                <h1><span id="personalName">Salut, je suis Hamza Elyoubi</span></h1>
-                <h3 id="personalTitle">Tech Lead L1* | 7+ ans d'expérience | Java & GenAI</h3>
-                <p id="titleNote" class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini.</p>
-                <p id="personalBio">Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet.</p>
-            </div>
+    <main id="main-content" class="container howto-container">
+        <!-- Page Header -->
+        <section class="howto-header">
+            <h1 id="howto-main-title">HowTo: AI in Development</h1>
+            <p id="howto-main-subtitle">Discover how I leverage AI tools to enhance my development workflow</p>
         </section>
 
-        <!-- Trainings & E-learning Section -->
-        <section id="trainings" class="section">
-            <h2 class="section-title" id="trainingsTitle">Formations & e-learning</h2>
-            <div class="education-container" id="trainings-container">
-                <!-- Trainings will be loaded dynamically -->
-            </div>
-        </section>
+        <!-- Tab Navigation -->
+        <nav class="howto-tabs" id="howtoTabs">
+            <button class="howto-tab active" data-tab="github-copilot">
+                <i class="fab fa-github"></i>
+                <span>GitHub Copilot</span>
+            </button>
+            <button class="howto-tab" data-tab="claude-code">
+                <i class="fas fa-robot"></i>
+                <span>Claude Code</span>
+            </button>
+        </nav>
+
+        <!-- Tab Content Container -->
+        <div id="howtoContent" class="howto-content">
+            <!-- Content will be loaded dynamically -->
+        </div>
     </main>
 
     <!-- Last Update -->
     <div id="last-update" class="last-update">
         <!-- Last update date and time will be loaded dynamically -->
     </div>
-
-    <!-- Footer -->
-    <footer id="main-footer" class="container">
-        <!-- Content loaded by JavaScript -->
-    </footer>
 
     <!-- Copyright Section -->
     <div class="copyright">
@@ -117,22 +108,12 @@
     </button>
 
     <!-- Scripts -->
-    <script>
-        // Fix for local file CORS issue
-        window.addEventListener('DOMContentLoaded', () => {
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            iframe.contentWindow.Promise = Promise;
+    <script type="module">
+        import { initializeHowToPage } from './scripts/howtoLoader.js?v=20251012T1735';
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeHowToPage();
         });
     </script>
     <script type="module" src="scripts/main.js?v=20251012T1735"></script>
-    <script type="module">
-        import { loadTrainingsPage } from './scripts/pageLoader.js?v=20251012T1735';
-        document.addEventListener('DOMContentLoaded', () => {
-            loadTrainingsPage();
-        });
-    </script>
-    <script type="module" src="scripts/formHandler.js?v=20251012T1735"></script>
 </body>
 </html>

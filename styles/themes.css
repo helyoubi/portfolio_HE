@@ -2,14 +2,30 @@
     --primary-color: #00abf0;
     --bg-color: #0a0a0a;
     --text-color: #ededed;
+    --text-secondary: #a0a0a0;
     --secondary-bg: #1a1a1a;
     --nav-bg: rgba(10, 10, 10, 0.95);
+    --accent-color: #00abf0;
+    --card-bg: #1a1a1a;
+    --section-bg: #0f0f0f;
+    --border-color: #333;
+    --code-bg: #0d0d0d;
+    --code-text: #00ff88;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="light"] {
     --primary-color: #007bff;
     --bg-color: #f8f9fa;
     --text-color: #212529;
+    --text-secondary: #6c757d;
     --secondary-bg: #ffffff;
     --nav-bg: rgba(248, 249, 250, 0.95);
+    --accent-color: #007bff;
+    --card-bg: #ffffff;
+    --section-bg: #f1f3f5;
+    --border-color: #dee2e6;
+    --code-bg: #f4f4f4;
+    --code-text: #d63384;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

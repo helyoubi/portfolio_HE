@@ -10,24 +10,30 @@ export function setCurrentLanguage(language) {
 export function initializeLanguageSwitcher(onLanguageChange) {
     const languageSwitcher = document.getElementById('languageSwitcher');
     if (!languageSwitcher) return;
-    
-    const currentLanguage = getCurrentLanguage();
-    
-    // Mettre à jour l'icône du bouton
-    languageSwitcher.innerHTML = `<img src="assets/icons/${currentLanguage === 'fr' ? 'en' : 'fr'}.png" alt="${currentLanguage === 'fr' ? 'English' : 'French'} Flag">`;
-    
+
+    // Fonction pour mettre à jour l'icône
+    const updateIcon = () => {
+        const lang = getCurrentLanguage();
+        languageSwitcher.innerHTML = `<img src="assets/icons/${lang === 'fr' ? 'en' : 'fr'}.png" alt="${lang === 'fr' ? 'English' : 'French'} Flag">`;
+    };
+
+    // Mettre à jour l'icône au chargement
+    updateIcon();
+
     // Gérer le clic
     languageSwitcher.onclick = () => {
-        const newLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
+        // Récupérer la langue actuelle à chaque clic
+        const currentLang = getCurrentLanguage();
+        const newLanguage = currentLang === 'fr' ? 'en' : 'fr';
         setCurrentLanguage(newLanguage);
-        
+
         if (onLanguageChange) {
             onLanguageChange(newLanguage);
         }
-        
+
         // Mettre à jour l'icône
-        languageSwitcher.innerHTML = `<img src="assets/icons/${newLanguage === 'fr' ? 'en' : 'fr'}.png" alt="${newLanguage === 'fr' ? 'English' : 'French'} Flag">`;
+        updateIcon();
     };
-    
-    return currentLanguage;
+
+    return getCurrentLanguage();
 }

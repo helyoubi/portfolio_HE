@@ -71,7 +71,7 @@ export function updateNavigationLanguage(language) {
     const translations = {
         'fr': {
             'home': 'Accueil',
-            'certifications': 'Certifications', 
+            'certifications': 'Certifications',
             'experience': 'Expérience Professionnelle',
             'education': 'Éducation',
             'trainings': 'Formations',
@@ -82,12 +82,13 @@ export function updateNavigationLanguage(language) {
             'softSkills': 'Compétences Transversales',
             'projects': 'Projets',
             'languages': 'Langues',
+            'howto': 'HowTo',
             'contact': 'Contact'
         },
         'en': {
             'home': 'Home',
             'certifications': 'Certifications',
-            'experience': 'Professional Experience', 
+            'experience': 'Professional Experience',
             'education': 'Education',
             'trainings': 'Trainings',
             'skills': 'Technical Skills',
@@ -97,6 +98,7 @@ export function updateNavigationLanguage(language) {
             'softSkills': 'Soft Skills',
             'projects': 'Projects',
             'languages': 'Languages',
+            'howto': 'HowTo',
             'contact': 'Contact'
         }
     };
