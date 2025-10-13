@@ -39,6 +39,9 @@ export async function initializeHowToPage() {
         // Load last update
         loadLastUpdate(currentLanguage);
 
+        // Initialize scroll-to-top button
+        initializeScrollToTop();
+
     } catch (error) {
         console.error('Error initializing HowTo page:', error);
     }
@@ -183,4 +186,22 @@ function loadLastUpdate(language) {
     lastUpdateElement.innerHTML = `
         <p>${translations[language]} <span class="update-date">${formattedDate}</span></p>
     `;
+}
+
+// Initialize scroll-to-top button
+function initializeScrollToTop() {
+    const scrollToTop = document.getElementById('scrollToTop');
+    if (!scrollToTop) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTop.classList.add('show');
+        } else {
+            scrollToTop.classList.remove('show');
+        }
+    });
+
+    scrollToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }

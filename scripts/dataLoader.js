@@ -1,5 +1,5 @@
 // dataLoader.js
-import { updateNavigationLanguage } from './hamburgerMenu.js?v=202509061917';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=20251013T1119';
 
 export async function loadPortfolioData() {
     try {
