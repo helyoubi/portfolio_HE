@@ -256,7 +256,20 @@ export class ModalManager {
         if (projectData.link && projectData.link.trim() !== '') {
             if (linkContainer) linkContainer.style.display = 'block';
             if (titleElement) titleElement.textContent = translations.projectLink;
-            if (linkElement) linkElement.href = projectData.link;
+            if (linkElement) {
+                linkElement.href = projectData.link;
+
+                // Remove any existing click listener
+                const newLinkElement = linkElement.cloneNode(true);
+                linkElement.parentNode.replaceChild(newLinkElement, linkElement);
+
+                // Add explicit click handler to force opening in new tab
+                newLinkElement.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(projectData.link, '_blank', 'noopener,noreferrer');
+                });
+            }
             if (linkTextElement) linkTextElement.textContent = translations.visitProject;
         } else {
             if (linkContainer) linkContainer.style.display = 'none';
