@@ -1122,15 +1122,17 @@ button[id*="close"],
     scroll-snap-align: start;
     border-radius: 8px;
     overflow: hidden;
+    aspect-ratio: 3/2;
+    background-color: var(--card-bg);
 }
 
 .modal-project-gallery .gallery-image {
     width: 100%;
-    height: 200px;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
     cursor: pointer;
-    background-color: var(--card-bg);
 }
 
 .modal-project-gallery .gallery-image:hover {
@@ -1375,10 +1377,14 @@ body {
 
     .modal-project-gallery .gallery-item {
         flex: 0 0 250px;
+        aspect-ratio: 3/2;
     }
 
     .modal-project-gallery .gallery-image {
-        height: 150px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .project-link-btn {
