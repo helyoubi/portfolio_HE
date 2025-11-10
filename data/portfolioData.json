@@ -730,5 +730,51 @@
                 ]
             }
         }
+    },
+    "veille": {
+        "en": {
+            "title": "Tech Watch",
+            "subtitle": "Curated notes and resources for my ongoing technology watch",
+            "sections": [
+                {
+                    "heading": "My Tech Watch",
+                    "content": "As a Tech Lead passionate about the fast evolution of digital technologies and generative AI, I dedicate time every day to tech watch. It helps me stay up to date, understand market trends and anticipate changes in our profession.\n\nI read high-tech and developer news via RSS (aggregated with Feedly), follow trainings on Pluralsight and watch technical content on YouTube."
+                },
+                {
+                    "heading": "Watch Tools",
+                    "content": "Feedly is the core of my daily monitoring. I aggregate primary sources around software development, AI, cloud, and development best practices.\n\nI follow publications such as TechCrunch, The Verge, Medium (AI & Software Engineering), Dev.to and InfoQ.\n\nI also use YouTube to complement my watch with more practical video formats and follow channels like Fireship, Traversy Media, Micode, Unchained AI and Matt Wolfe for GenAI and modern frameworks."
+                },
+                {
+                    "heading": "Main Themes",
+                    "content": "Topics I monitor depending on missions and interests:\n\n- Generative AI & LLMs: continuously testing tools like Claude Code, GitHub Copilot, Mistral AI or Gemini CLI to understand strengths and limits.\n- Software architecture & best practices: code quality, CI/CD pipelines, automated testing, scalability.\n- Cloud trends & DevOps: evolutions in AWS, Azure, CI tools like Jenkins and SonarQube.\n- High-tech news: broader innovations beyond development."
+                },
+                {
+                    "heading": "Organization",
+                    "content": "I keep concise notes and action items:\n\n1. Read/Scan: capture the main idea and source link\n2. Summarize: one-paragraph summary and why it matters\n3. Action: add a personal task if relevant (experiment, share, integrate)\n4. Archive: move to long-term notes in Notion or GitHub gist"
+                }
+            ]
+        },
+        "fr": {
+            "title": "Ma veille technologique",
+            "subtitle": "Notes et ressources pour ma veille quotidienne",
+            "sections": [
+                {
+                    "heading": "Ma veille technologique",
+                    "content": "En tant que Tech Lead passionné par l'évolution rapide du numérique et de l'IA générative, je consacre chaque jour du temps à ma veille technologique. C'est pour moi un réflexe essentiel pour rester à jour, comprendre les tendances du marché et anticiper les changements dans nos métiers."
+                },
+                {
+                    "heading": "Mes outils de veille",
+                    "content": "Feedly : c'est la base de ma veille quotidienne.\n\nJ'y regroupe mes sources d'information principales autour du développement logiciel, de l'intelligence artificielle, du cloud, et des bonnes pratiques de développement.\n\nJ'y suis notamment des publications de sites comme TechCrunch, The Verge, Medium (sections AI et Software Engineering), Dev.to et InfoQ.\n\nYouTube : j'y complète ma veille avec des formats vidéo plus concrets et dynamiques.\n\nJe suis régulièrement des chaînes comme Fireship, Traversy Media, Micode, Unchained AI ou encore Matt Wolfe pour tout ce qui concerne la GenAI, le développement fullstack, les frameworks modernes et les nouveautés autour des LLM (Large Language Models)."
+                },
+                {
+                    "heading": "Thématiques principales",
+                    "content": "Ma veille couvre plusieurs axes selon mes missions et mes intérêts :\n\n- IA générative et LLM : je teste continuellement des outils comme Claude Code, GitHub Copilot, Mistral AI ou Gemini CLI pour comprendre leurs forces et limites.\n\n- Architecture logicielle et bonnes pratiques : tout ce qui touche à la qualité de code, aux pipelines CI/CD, aux tests automatisés ou à la scalabilité.\n\n- Tendances du cloud et DevOps : je reste attentif aux évolutions des environnements AWS, Azure, et aux outils d'intégration continue comme Jenkins et SonarQube.\n\n- Actualité high-tech : au-delà du développement, je m'intéresse aussi aux innovations des grands acteurs et aux impacts sociétaux et techniques."
+                },
+                {
+                    "heading": "Organisation",
+                    "content": "J'organise mes notes de la manière suivante :\n\n1. Lire/Scanner : capturer l'idée principale et le lien source.\n2. Résumer : un paragraphe synthétique et pourquoi c'est important.\n3. Action : si pertinent, ajouter une action personnelle (expérimenter, partager, intégrer).\n4. Archiver : déplacer dans les notes long terme (Notion ou Gist GitHub)."
+                }
+            ]
+        }
     }
 }

@@ -54,12 +54,33 @@ export function initializeHamburgerMenu() {
         }
     });
 
-    // Fermer le menu quand on clique sur les liens de navigation
+    // Fermer le menu quand on clique sur les liens de navigation (sauf les parents de sous-menus)
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            const parentLi = link.closest('.has-children');
+            // Si c'est le lien parent (ex: HowTo) avec href="#", ne pas fermer le menu ici
+            if (parentLi && link.getAttribute('href') === '#') {
+                // allow the parent click handler to toggle the submenu
+                return;
+            }
+
             // Fermer le menu après un petit délai pour permettre à la navigation de commencer
             setTimeout(closeMenuAction, 100);
+        });
+    });
+
+    // Toggle sub-menus when clicking the parent item (useful for mobile / burger menu)
+    const parentLinks = document.querySelectorAll('.nav-links .has-children > a');
+    parentLinks.forEach(pl => {
+        pl.addEventListener('click', (e) => {
+            // Only intercept if link is non-navigable (href="#")
+            if (pl.getAttribute('href') === '#') {
+                e.preventDefault();
+                const parent = pl.parentElement;
+                const isOpen = parent.classList.toggle('open');
+                pl.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
         });
     });
 
@@ -83,6 +104,8 @@ export function updateNavigationLanguage(language) {
             'projects': 'Projets',
             'languages': 'Langues',
             'howto': 'HowTo',
+            'howto-genai': 'GenAI pour le SDLC',
+            'howto-veille': 'Veille tech',
             'contact': 'Contact'
         },
         'en': {
@@ -99,6 +122,8 @@ export function updateNavigationLanguage(language) {
             'projects': 'Projects',
             'languages': 'Languages',
             'howto': 'HowTo',
+            'howto-genai': 'GenAI for SDLC',
+            'howto-veille': 'Tech Watch',
             'contact': 'Contact'
         }
     };

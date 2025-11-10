@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +13,19 @@
     <link rel="stylesheet" href="styles/main.css?v=20251013T1119">
     <link rel="stylesheet" href="styles/themes.css?v=20251013T1119">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Hamza Elyoubi's professional portfolio showcasing skills, experience, and projects.">
+    <meta name="description"
+        content="Hamza Elyoubi's professional portfolio showcasing skills, experience, and projects.">
     <meta name="keywords" content="Hamza Elyoubi, Portfolio, Software Engineer, Full-Stack Developer">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
     </script>
 </head>
+
 <body>
     <!-- Hamburger Menu -->
     <div class="hamburger-menu" id="hamburgerMenu">
@@ -48,7 +51,13 @@
             <li><a href="index.html#softSkills" data-section="softSkills">Compétences Transversales</a></li>
             <li><a href="projects.html" data-section="projects">Projets</a></li>
             <li><a href="index.html#languages" data-section="languages">Langues</a></li>
-            <li><a href="howto.html" data-section="howto">HowTo</a></li>
+            <li class="has-children">
+                <a href="#" data-section="howto" aria-haspopup="true" aria-expanded="false">HowTo</a>
+                <ul class="sub-menu">
+                    <li><a href="howto.html" data-section="howto-genai">GenAI for SDLC</a></li>
+                    <li><a href="veille.html" data-section="howto-veille">Veille tech</a></li>
+                </ul>
+            </li>
             <li><a href="index.html#contact" data-section="contact">Contact</a></li>
         </ul>
     </nav>
@@ -62,7 +71,8 @@
 
         <!-- Language Switcher -->
         <button class="language-switcher" id="languageSwitcher" aria-label="Switch Language">
-            <img src="assets/icons/fr.png" alt="French Flag" onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
+            <img src="assets/icons/fr.png" alt="French Flag"
+                onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
         </button>
     </div>
 
@@ -116,4 +126,5 @@
     <script type="module" src="scripts/main.js?v=20251013T1119"></script>
     <script type="module" src="scripts/formHandler.js?v=20251013T1119"></script>
 </body>
+
 </html>
