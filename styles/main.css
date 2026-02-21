@@ -761,43 +761,42 @@ button[id*="close"],
     .copilot-credit {
         position: fixed;
         top: 50%;
-        right: 10px;
-        /* Keep it fully inside the viewport */
+        right: 0;
         left: auto;
-        transform: translateY(-50%) rotate(90deg);
-        transform-origin: center right;
-        padding: 0.35rem 0.6rem;
+        transform: translateY(-50%);
+        padding: 0.8rem 0.4rem;
         font-size: 0.75rem;
         z-index: 1900;
-        /* Lower than hamburger menu but still visible */
         width: auto;
-        white-space: nowrap;
-        border-radius: 6px;
-        writing-mode: horizontal-tb;
+        height: max-content;
+        max-height: 80vh;
+        overflow: hidden;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        border-radius: 8px 0 0 8px;
         flex-direction: row;
-        min-width: max-content;
-        max-width: 160px;
+        align-items: center;
+        gap: 8px;
         transition: transform 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+        border-right: none;
     }
 
     .copilot-credit:hover {
-        transform: translateY(-50%) translateX(-5px) rotate(90deg);
-        /* Slide left slightly on hover */
+        transform: translateY(-50%) translateX(-5px);
     }
 
     .copilot-credit span {
-        display: inline;
-        white-space: nowrap;
+        display: inline-block;
+        white-space: normal;
         font-weight: 500;
+        text-align: center;
     }
 
     .copilot-icon {
         width: 20px !important;
         height: 20px !important;
         flex-shrink: 0;
-        transform: rotate(-90deg);
-        /* Counter-rotate the icon */
     }
 }
 
