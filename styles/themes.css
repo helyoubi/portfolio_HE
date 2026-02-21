@@ -1,31 +1,91 @@
 :root {
-    --primary-color: #00abf0;
-    --bg-color: #0a0a0a;
-    --text-color: #ededed;
-    --text-secondary: #a0a0a0;
-    --secondary-bg: #1a1a1a;
-    --nav-bg: rgba(10, 10, 10, 0.95);
-    --accent-color: #00abf0;
-    --card-bg: #1a1a1a;
-    --section-bg: #0f0f0f;
-    --border-color: #333;
-    --code-bg: #0d0d0d;
-    --code-text: #00ff88;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Primary Colors - Modern Indigo/Blue */
+    --primary-color: #6366f1;
+    /* Indigo 500 */
+    --primary-hover: #4f46e5;
+    /* Indigo 600 */
+    --primary-light: rgba(99, 102, 241, 0.1);
+
+    /* Dark Theme (Default) - Sleek Material Dark */
+    --bg-color: #0f1115;
+    /* Very dark grayish blue */
+    --secondary-bg: #1c1f26;
+    /* Slightly lighter surface */
+    --card-bg: #1c1f26;
+    --nav-bg: rgba(15, 17, 21, 0.85);
+    /* For glassmorphism */
+    --section-bg: #15181e;
+
+    /* Text Colors */
+    --text-color: #f8fafc;
+    /* Slate 50 */
+    --text-secondary: #94a3b8;
+    /* Slate 400 */
+
+    /* Borders & UI Elements */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.15);
+
+    /* Code Elements */
+    --code-bg: #1e1e1e;
+    --code-text: #10b981;
+    /* Emerald 500 */
+
+    /* Shadows - Material Elevation */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 15px rgba(99, 102, 241, 0.3);
+
+    /* Border Radiuses */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="light"] {
-    --primary-color: #007bff;
-    --bg-color: #f8f9fa;
-    --text-color: #212529;
-    --text-secondary: #6c757d;
+    /* Primary Colors - Keeps the same but slightly darker for contrast if needed, keeping it modern */
+    --primary-color: #4f46e5;
+    /* Indigo 600 */
+    --primary-hover: #4338ca;
+    /* Indigo 700 */
+    --primary-light: rgba(79, 70, 229, 0.1);
+
+    /* Light Theme */
+    --bg-color: #f8fafc;
+    /* Slate 50 */
     --secondary-bg: #ffffff;
-    --nav-bg: rgba(248, 249, 250, 0.95);
-    --accent-color: #007bff;
+    /* Surface */
     --card-bg: #ffffff;
-    --section-bg: #f1f3f5;
-    --border-color: #dee2e6;
-    --code-bg: #f4f4f4;
-    --code-text: #d63384;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --nav-bg: rgba(248, 250, 252, 0.85);
+    /* For glassmorphism */
+    --section-bg: #f1f5f9;
+    /* Slate 100 */
+
+    /* Text Colors */
+    --text-color: #0f172a;
+    /* Slate 900 */
+    --text-secondary: #475569;
+    /* Slate 600 */
+
+    /* Borders & UI Elements */
+    --border-color: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 0, 0, 0.15);
+
+    /* Code Elements */
+    --code-bg: #f1f5f9;
+    --code-text: #ec4899;
+    /* Pink 500 */
+
+    /* Shadows - Lighter Elevation */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 15px rgba(79, 70, 229, 0.2);
 }
