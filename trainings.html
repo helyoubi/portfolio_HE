@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
     </script>
 </head>
+
 <body>
     <!-- Hamburger Menu -->
     <div class="hamburger-menu" id="hamburgerMenu">
@@ -62,14 +64,16 @@
 
         <!-- Language Switcher -->
         <button class="language-switcher" id="languageSwitcher" aria-label="Switch Language">
-            <img src="assets/icons/fr.png" alt="French Flag" onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
+            <img src="assets/icons/fr.png" alt="French Flag"
+                onerror="this.src='assets/icons/placeholder.png'; this.alt='Flag Placeholder';">
         </button>
     </div>
 
-    <!-- GitHub Copilot Credit -->
+    <!-- GitHub Copilot and Claude Code Credit -->
     <div id="copilot-credit" class="copilot-credit">
         <img src="assets/icons/githubcopilot_icon.png" alt="GitHub Copilot" class="copilot-icon">
-        <span>Developed with the help of GitHub Copilot</span>
+        <img src="assets/icons/claude_code_icon.png" alt="Claude Code" class="copilot-icon">
+        <span>Developed with the help of GitHub Copilot & Claude Code</span>
     </div>
 
     <!-- Main Content -->
@@ -82,8 +86,11 @@
                 </a>
                 <h1><span id="personalName">Salut, je suis Hamza Elyoubi</span></h1>
                 <h3 id="personalTitle">Tech Lead L1* | 7+ ans d'expérience | Java & GenAI</h3>
-                <p id="titleNote" class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini.</p>
-                <p id="personalBio">Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet.</p>
+                <p id="titleNote" class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">*L1 :
+                    Certification Ingénieur Logiciel L1 (confirmé) de Capgemini.</p>
+                <p id="personalBio">Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes
+                    techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis
+                    également engagé sur les sujets GenAI en tant que référent projet.</p>
             </div>
         </section>
 
@@ -135,4 +142,5 @@
     </script>
     <script type="module" src="scripts/formHandler.js?v=20251013T1119"></script>
 </body>
+
 </html>
