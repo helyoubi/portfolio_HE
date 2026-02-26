@@ -39,7 +39,7 @@ export async function initializePortfolio(language) {
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <h3>${personalInfo.title[language]}</h3>
-                <p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote ? personalInfo.titleNote[language] : ''}</p>
+                ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
                 <p>${personalInfo.bio[language]}</p>
             </div>
         </section>

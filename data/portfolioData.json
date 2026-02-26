@@ -5,32 +5,30 @@
             "fr" : "Salut, je suis Hamza Elyoubi"
         },
         "title": {
-            "en": "Tech Lead L1* | 7+ years of experience | Java & GenAI",
-            "fr": "Tech Lead L1* | 7+ ans d'expérience | Java & GenAI"
-        },
-        "titleNote": {
-            "en": "*L1: Software Engineer L1 (confirmed) certification from Capgemini.",
-            "fr": "*L1 : Certification Ingénieur Logiciel L1 (confirmé) de Capgemini."
+            "en": "Senior Software Engineer & Tech Lead | 8+ years of experience",
+            "fr": "Ingénieur Logiciel Senior & Tech Lead | 8+ ans d'expérience"
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Tech Lead at Capgemini, combining strong Java expertise with technical team support. Actively involved in coding, code reviews, and mentoring, I also contribute as a GenAI Champion within my project.",
-            "fr": "Tech Lead chez Capgemini, je combine expertise Java et accompagnement des équipes techniques. Actif sur le développement, la revue de code et la montée en compétences, je suis également engagé sur les sujets GenAI en tant que référent projet."
+            "en": "Senior Software Engineer & Tech Lead at Capgemini with 8+ years of experience, I combine strong Java expertise with technical team leadership. Currently leading the CNAF project, I drive technical design, coordination, and quality. I also contribute as a GenAI Champion, promoting AI tools adoption within my team.",
+            "fr": "Ingénieur Logiciel Senior & Tech Lead chez Capgemini avec plus de 8 ans d'expérience, je combine expertise Java et leadership technique. Actuellement responsable du projet CNAF, j'assure la conception, la coordination et la qualité technique. Je suis également engagé sur les sujets GenAI en tant que GenAI Champion."
         },
-        "resume": "assets/resumes/Hamza_Elyoubi_CV.pdf",
+        "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
         "profileImage": "assets/images/profile.jpg",
         "certifications": {
             "en": [
+                "GitHub Copilot Certification",
+                "Software Engineer L1 Certification",
                 "Professional Scrum Master I (PSM1)",
-                "SOFTWARE ENGINEER LO CERTIFICATION",
-                "Green IT ESSENTIALS CERTIFICATION",
+                "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
                 "Connecting Things (IoT - Cisco)"
             ],
             "fr": [
+                "Certification GitHub Copilot",
+                "Certification Ingénieur Logiciel L1",
                 "Scrum Master Professionnel I (PSM1)",
-                "CERTIFICATION INGÉNIEUR LOGICIEL LO",
-                "CERTIFICATION ESSENTIELLE EN IT VERT",
+                "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
                 "Connecting Things (IoT - Cisco)"
             ]
@@ -40,13 +38,27 @@
         "en": [
             {
                 "company": "Capgemini",
-                "position": "Lead Software Engineer",
-                "duration": "Oct 2022 - Present",
+                "position": "Lead Tech — CNAF LOT4 MCP",
+                "duration": "2025 - Present",
                 "achievements": [
-                    "Technical leadership for development teams",
-                    "Technical architecture design and code reviews",
-                    "Technical interviews and team mentoring",
-                    "Project estimation and continuous integration"
+                    "Technical leadership for CNAF's MCP connection portal redesign project",
+                    "Development and implementation of components with technical documentation",
+                    "Daily stand-up facilitation, task assignment, and developer coaching",
+                    "Coordination with Business Analysts for functional requirements and Technical Detailed Specifications",
+                    "Client meeting presentations, code reviews, and software quality monitoring (Jenkins, SonarQube, CI/CD)",
+                    "Stack: Java 17, Angular 17, Spring Boot 3.3.2, Maven, Jenkins, SonarQube, GitLab, Jira"
+                ]
+            },
+            {
+                "company": "Capgemini",
+                "position": "Lead Tech — ASP",
+                "duration": "Oct 2022 - 2025",
+                "achievements": [
+                    "Technical support and problem resolution for the development team",
+                    "Coordination between development, QA, and functional teams",
+                    "Project estimation, technical design, and delivery tracking",
+                    "Code reviews and quality assurance",
+                    "Technical interviews and candidate qualification"
                 ]
             },
             {
@@ -54,88 +66,121 @@
                 "position": "Software Engineer",
                 "duration": "Oct 2019 - Oct 2022",
                 "achievements": [
-                    "Full-stack development of enterprise solutions",
-                    "New team member onboarding and mentoring",
-                    "Ticket evolution management and anomaly resolution"
+                    "Design and development of evolution tickets and anomaly resolution",
+                    "Active support and onboarding for new team members",
+                    "Lot sizing and delivery tracking",
+                    "Regular reporting for transparent communication between stakeholders"
                 ]
             },
             {
                 "company": "DATA SYSCOM",
-                "position": "Java Developer",
+                "position": "Java Developer (Apprenticeship)",
                 "duration": "Sept 2018 - Sept 2019",
                 "achievements": [
-                    "JavaFX interface development for SCOPIOM software",
-                    "EJB3.0 to REST architecture migration using Jersey",
-                    "Professionalization contract management"
+                    "Dynamic interface development for SCOPIOM software using JavaFX",
+                    "Migration of client/server API from EJB3.0 to REST architecture using Jersey"
                 ]
             },
             {
                 "company": "FRC Nouvelle Aquitaine",
-                "position": "FullStack Java Developer",
+                "position": "FullStack Java Developer (Apprenticeship)",
                 "duration": "Oct 2017 - Sept 2018",
                 "achievements": [
-                    "JavaEE/Primefaces data analysis platform development",
-                    "Central database management for regional sampling data"
+                    "Development of a dynamic JavaEE/PrimeFaces platform for regional sampling data analysis",
+                    "Central database management for the Nouvelle-Aquitaine region"
                 ]
             },
             {
                 "company": "BMA Biarritz School",
-                "position": "FullStack Web Developer",
+                "position": "FullStack Web Developer (Internship)",
                 "duration": "Oct 2016 - Jun 2017",
                 "achievements": [
-                    "Joomla-based triathlon registration system development",
+                    "Joomla-based triathlon online registration system development",
                     "Online payment integration and real-time ranking system"
+                ]
+            },
+            {
+                "company": "Alpha Bureau S.A.R.L",
+                "position": "IT Technician",
+                "duration": "2011 - 2013",
+                "achievements": [
+                    "System maintenance, troubleshooting, and technical support",
+                    "Hardware and software installation and configuration",
+                    "Data security management and backup procedures"
                 ]
             }
         ],
         "fr": [
             {
                 "company": "Capgemini",
-                "position": "Lead Software Engineer",
-                "duration": "Oct 2022 - Présent",
+                "position": "Lead Tech — CNAF LOT4 MCP",
+                "duration": "2025 - Présent",
                 "achievements": [
-                    "Leadership technique pour les équipes de développement",
-                    "Conception d'architecture technique et revues de code",
-                    "Entretiens techniques et mentorat d'équipe",
-                    "Estimation de projet et intégration continue"
+                    "Leadership technique du projet de refonte du portail de connexion MCP de la CNAF",
+                    "Développement et mise en place des composants avec documentation technique",
+                    "Animation des daily stand-ups, affectation des tâches et accompagnement des développeurs",
+                    "Coordination avec les Business Analysts pour les besoins fonctionnels et les Spécifications Techniques Détaillées",
+                    "Participation aux réunions client, revues de code et suivi de la qualité logicielle (Jenkins, SonarQube, CI/CD)",
+                    "Stack : Java 17, Angular 17, Spring Boot 3.3.2, Maven, Jenkins, SonarQube, GitLab, Jira"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Ingénieur logiciels",
+                "position": "Lead Tech — ASP",
+                "duration": "Oct 2022 - 2025",
+                "achievements": [
+                    "Support technique et résolution des problèmes de l'équipe de développement",
+                    "Animation des points dev/qualif/fonc et chiffrage des projets",
+                    "Suivi des livraisons et revues de code",
+                    "Entretiens techniques et qualification des candidats"
+                ]
+            },
+            {
+                "company": "Capgemini",
+                "position": "Ingénieur Logiciels",
                 "duration": "Oct 2019 - Oct 2022",
                 "achievements": [
-                    "Mon rôle consiste à concevoir et à développer des tickets d'évolutions et à résoudre les anomalies dans le cadre de projets informatiques. En plus de cela, j'assure un soutien actif pour les nouveaux membres de l'équipe projet, en les accompagnant dans leur intégration. Je suis également en charge de chiffrer les lots d'évolutions qui doivent être développés par l'équipe de développement, tout en veillant au suivi des livraisons et en fournissant un reporting régulier pour assurer une transparence et une communication optimale entre toutes les parties prenantes."
+                    "Conception et développement de tickets d'évolutions et résolution d'anomalies",
+                    "Accompagnement et intégration des nouveaux membres de l'équipe",
+                    "Chiffrage des lots d'évolutions et suivi des livraisons",
+                    "Reporting régulier pour une communication transparente entre les parties prenantes"
                 ]
             },
             {
                 "company": "DATA SYSCOM",
-                "position": "Développeur Java",
+                "position": "Développeur Java (Alternance)",
                 "duration": "Sept 2018 - Sept 2019",
                 "achievements": [
-                    "Développement d'interfaces dynamique pour SCOPIOM en JavaFX",
-                    "Migration de l'API de communication client/Serveur EJB3.0 vers une architecture REST avec Jersey",
-                    "En contrat de professionnalisation"
+                    "Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
+                    "Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
                 ]
             },
             {
                 "company": "FRC Nouvelle Aquitaine",
-                "position": "Développeur fullstack Java",
+                "position": "Développeur FullStack Java (Alternance)",
                 "duration": "Oct 2017 - Sept 2018",
                 "achievements": [
-                    "Gestion d'une base de données centrale",
-                    "Développement d'une plateforme dynamique en JavaEE/Primefaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
-                    "En contrat de professionnalisation"
+                    "Développement d'une plateforme dynamique en JavaEE/PrimeFaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
+                    "Gestion d'une base de données centrale pour la région"
                 ]
             },
             {
                 "company": "BMA Biarritz School",
-                "position": "Développeur web FullStack",
+                "position": "Développeur Web FullStack (Stage)",
                 "duration": "Oct 2016 - Jun 2017",
                 "achievements": [
-                    "Développement de système d'inscription au triathlon basé sur Joomla",
-                    "Intégration de paiement en ligne et système de classement en temps réel",
-                    "Freelance/Stage"
+                    "Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
+                    "Intégration du paiement en ligne et système de classement en temps réel"
+                ]
+            },
+            {
+                "company": "Alpha Bureau S.A.R.L",
+                "position": "Technicien Informatique",
+                "duration": "2011 - 2013",
+                "achievements": [
+                    "Maintenance et dépannage des systèmes informatiques",
+                    "Installation et configuration de matériels et logiciels",
+                    "Gestion de la sécurité des données et des sauvegardes"
                 ]
             }
         ]
@@ -362,16 +407,9 @@
             },
             {
                 "institution": "Capgemini Institut",
-                "title": "Decrypt and anticipate technological trends",
+                "title": "Decrypt and Anticipate Technological Trends",
                 "date": "July, 2023",
                 "badgeUrl": "https://www.institut.capgemini.fr/formation/decryptez-et-anticipez-les-tendances-de-linformatique-et-du-numerique/",
-                "badgeImg": "assets/e-learning/capgemini/cap.png"
-            },
-            {
-                "institution": "Capgemini Institut",
-                "title": "Maîtrisez l'urbanisation de vos architectures digitaless",
-                "date": "May, 2022",
-                "badgeUrl": "https://www.institut.capgemini.fr/formation/urbanisation-du-si-et-architectures-techniques-reussir-sa-transformation/",
                 "badgeImg": "assets/e-learning/capgemini/cap.png"
             }
         ],
@@ -490,7 +528,7 @@
             },
             {
                 "institution": "Capgemini Institut",
-                "title": "Maîtrisez l'urbanisation de vos architectures digitaless",
+                "title": "Maîtrisez l'urbanisation de vos architectures digitales",
                 "date": "Mai, 2022",
                 "badgeUrl": "https://www.institut.capgemini.fr/formation/urbanisation-du-si-et-architectures-techniques-reussir-sa-transformation/",
                 "badgeImg": "assets/e-learning/capgemini/cap.png"
@@ -499,8 +537,8 @@
     },
     "technicalExpertise": {
         "languages": ["Java", "JavaScript", "SQL", "HTML/CSS"],
-        "frameworks": ["Spring Boot", "Hibernate", "PrimeFaces", "Jakarta EE"],
-        "tools": ["Git", "Maven", "IntelliJ", "Eclipse", "GitLab"],
+        "frameworks": ["Spring Boot", "Hibernate", "Angular", "PrimeFaces", "Jakarta EE"],
+        "tools": ["Git", "Maven", "GitLab", "Jenkins", "SonarQube", "Jira", "Confluence", "IntelliJ", "Eclipse"],
         "architectures": ["Microservices", "REST APIs", "SOAP"],
         "methodologies": ["Agile Scrum", "Software Craftsmanship", "UML"]
     },
@@ -738,7 +776,7 @@
             "sections": [
                 {
                     "heading": "My Tech Watch",
-                    "content": "As a Tech Lead passionate about the fast evolution of digital technologies and generative AI, I dedicate time every day to tech watch. It helps me stay up to date, understand market trends and anticipate changes in our profession.\n\nI read high-tech and developer news via RSS (aggregated with Feedly), follow trainings on Pluralsight and watch technical content on YouTube."
+                    "content": "As a Senior Software Engineer & Tech Lead passionate about the fast evolution of digital technologies and generative AI, I dedicate time every day to tech watch. It helps me stay up to date, understand market trends and anticipate changes in our profession.\n\nI read high-tech and developer news via RSS (aggregated with Feedly), follow trainings on Pluralsight and watch technical content on YouTube."
                 },
                 {
                     "heading": "Watch Tools",
@@ -760,7 +798,7 @@
             "sections": [
                 {
                     "heading": "Ma veille technologique",
-                    "content": "En tant que Tech Lead passionné par l'évolution rapide du numérique et de l'IA générative, je consacre chaque jour du temps à ma veille technologique. C'est pour moi un réflexe essentiel pour rester à jour, comprendre les tendances du marché et anticiper les changements dans nos métiers."
+                    "content": "En tant qu'Ingénieur Logiciel Senior & Tech Lead passionné par l'évolution rapide du numérique et de l'IA générative, je consacre chaque jour du temps à ma veille technologique. C'est pour moi un réflexe essentiel pour rester à jour, comprendre les tendances du marché et anticiper les changements dans nos métiers."
                 },
                 {
                     "heading": "Mes outils de veille",
