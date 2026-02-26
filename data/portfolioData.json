@@ -10,8 +10,8 @@
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Senior Software Engineer & Tech Lead at Capgemini with 8+ years of experience, I combine strong Java expertise with technical team leadership. Currently leading the CNAF project, I drive technical design, coordination, and quality. I also contribute as a GenAI Champion, promoting AI tools adoption within my team.",
-            "fr": "Ingénieur Logiciel Senior & Tech Lead chez Capgemini avec plus de 8 ans d'expérience, je combine expertise Java et leadership technique. Actuellement responsable du projet CNAF, j'assure la conception, la coordination et la qualité technique. Je suis également engagé sur les sujets GenAI en tant que GenAI Champion."
+            "en": "Senior Software Engineer & Tech Lead at Capgemini with 8+ years of experience, I combine strong Java expertise with technical team leadership. I drive technical design, coordination, and quality across projects. I also contribute as a GenAI Champion, promoting AI tools adoption within my team.",
+            "fr": "Ingénieur Logiciel Senior & Tech Lead chez Capgemini avec plus de 8 ans d'expérience, je combine expertise Java et leadership technique. J'assure la conception, la coordination et la qualité technique sur les projets. Je suis également engagé sur les sujets GenAI en tant que GenAI Champion."
         },
         "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
         "profileImage": "assets/images/profile.jpg",
@@ -38,10 +38,10 @@
         "en": [
             {
                 "company": "Capgemini",
-                "position": "Lead Tech — CNAF LOT4 MCP",
+                "position": "Ingénieur Logiciel Senior - Tech Lead",
                 "duration": "2025 - Present",
                 "achievements": [
-                    "Technical leadership for CNAF's MCP connection portal redesign project",
+                    "Technical leadership of a large-scale portal redesign project",
                     "Development and implementation of components with technical documentation",
                     "Daily stand-up facilitation, task assignment, and developer coaching",
                     "Coordination with Business Analysts for functional requirements and Technical Detailed Specifications",
@@ -51,7 +51,7 @@
             },
             {
                 "company": "Capgemini",
-                "position": "Lead Tech — ASP",
+                "position": "Ingénieur Logiciel Senior - Tech Lead",
                 "duration": "Oct 2022 - 2025",
                 "achievements": [
                     "Technical support and problem resolution for the development team",
@@ -113,10 +113,10 @@
         "fr": [
             {
                 "company": "Capgemini",
-                "position": "Lead Tech — CNAF LOT4 MCP",
+                "position": "Ingénieur Logiciel Senior - Tech Lead",
                 "duration": "2025 - Présent",
                 "achievements": [
-                    "Leadership technique du projet de refonte du portail de connexion MCP de la CNAF",
+                    "Leadership technique d'un projet de refonte de portail à grande échelle",
                     "Développement et mise en place des composants avec documentation technique",
                     "Animation des daily stand-ups, affectation des tâches et accompagnement des développeurs",
                     "Coordination avec les Business Analysts pour les besoins fonctionnels et les Spécifications Techniques Détaillées",
@@ -126,7 +126,7 @@
             },
             {
                 "company": "Capgemini",
-                "position": "Lead Tech — ASP",
+                "position": "Ingénieur Logiciel Senior - Tech Lead",
                 "duration": "Oct 2022 - 2025",
                 "achievements": [
                     "Support technique et résolution des problèmes de l'équipe de développement",
