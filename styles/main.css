@@ -501,6 +501,15 @@ button[id*="close"],
     left: 55%;
 }
 
+.achievement {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.achievement:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     .timeline::after {
         left: 10px;

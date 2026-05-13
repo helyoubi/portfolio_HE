@@ -5,29 +5,31 @@
             "fr" : "Salut, je suis Hamza Elyoubi"
         },
         "title": {
-            "en": "Senior Software Engineer & Tech Lead | 8+ years of experience",
-            "fr": "Ingénieur Logiciel Senior & Tech Lead | 8+ ans d'expérience"
+            "en": "Senior Java Software Engineer | Tech Lead | GenAI Champion",
+            "fr": "Ingénieur Logiciel Senior Java | Tech Lead | GenAI Champion"
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Senior Software Engineer & Tech Lead at Capgemini with 8+ years of experience, I combine strong Java expertise with technical team leadership. I drive technical design, coordination, and quality across projects. I also contribute as a GenAI Champion, promoting AI tools adoption within my team.",
-            "fr": "Ingénieur Logiciel Senior & Tech Lead chez Capgemini avec plus de 8 ans d'expérience, je combine expertise Java et leadership technique. J'assure la conception, la coordination et la qualité technique sur les projets. Je suis également engagé sur les sujets GenAI en tant que GenAI Champion."
+            "en": "Senior Java Software Engineer & Tech Lead with 8+ years of experience, I specialize in backend architecture, Spring Boot ecosystems, and technical leadership. I drive technical design, coordination, and quality across complex projects while promoting GenAI adoption to enhance team productivity and software quality.",
+            "fr": "Ingénieur Logiciel Senior Java & Tech Lead avec plus de 8 ans d'expérience, je maîtrise l'architecture backend, l'écosystème Spring Boot et le leadership technique. J'assure la conception, la coordination et la qualité technique sur des projets complexes tout en promouvant l'adoption du GenAI pour améliorer la productivité et la qualité logicielle."
         },
         "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
         "profileImage": "assets/images/profile.jpg",
         "certifications": {
             "en": [
-                "GitHub Copilot Certification",
+                "GitHub Copilot Certification (2024)",
+                "Claude Code in Action (2025)",
+                "Professional Scrum Master I (PSM1) (2023)",
                 "Software Engineer L1 Certification",
-                "Professional Scrum Master I (PSM1)",
                 "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
                 "Connecting Things (IoT - Cisco)"
             ],
             "fr": [
-                "Certification GitHub Copilot",
+                "Certification GitHub Copilot (2024)",
+                "Claude Code in Action (2025)",
+                "Scrum Master Professionnel I (PSM1) (2023)",
                 "Certification Ingénieur Logiciel L1",
-                "Scrum Master Professionnel I (PSM1)",
                 "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
                 "Connecting Things (IoT - Cisco)"
@@ -38,47 +40,47 @@
         "en": [
             {
                 "company": "Capgemini",
-                "position": "Ingénieur Logiciel Senior - Tech Lead",
-                "duration": "2025 - Present",
+                "position": "Tech Lead Java",
+                "duration": "May 2026 - Present",
                 "achievements": [
-                    "Technical leadership of a large-scale portal redesign project",
-                    "Development and implementation of components with technical documentation",
-                    "Daily stand-up facilitation, task assignment, and developer coaching",
-                    "Coordination with Business Analysts for functional requirements and Technical Detailed Specifications",
-                    "Client meeting presentations, code reviews, and software quality monitoring (Jenkins, SonarQube, CI/CD)",
-                    "Stack: Java 17, Angular 17, Spring Boot 3.3.2, Maven, Jenkins, SonarQube, GitLab, Jira"
+                    "- Technical reference for MASA SINEMA large-scale animal traceability modernization program",
+                    "- Led transition to event-driven architecture to improve system scalability and resilience",
+                    "- Code reviews, technical specifications writing, and CI/CD supervision (Jenkins, SonarQube)",
+                    "- Conducted GitHub Copilot training and adoption sessions with development teams",
+                    "- Stack: Java 21, Quarkus, Kafka, Kubernetes"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Ingénieur Logiciel Senior - Tech Lead",
-                "duration": "Oct 2022 - 2025",
+                "position": "Tech Lead Java",
+                "duration": "August 2025 - May 2026",
                 "achievements": [
-                    "Technical support and problem resolution for the development team",
-                    "Coordination between development, QA, and functional teams",
-                    "Project estimation, technical design, and delivery tracking",
-                    "Code reviews and quality assurance",
-                    "Technical interviews and candidate qualification"
+                    "- Architectural decisions, coordination with client architects, and service continuity assurance",
+                    "- Complete technical design and development of backend/frontend portal redesign (from scratch)",
+                    "- Full-stack implementation with modern architecture patterns",
+                    "- Stack: Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Software Engineer",
-                "duration": "Oct 2019 - Oct 2022",
+                "position": "Tech Lead Java / Software Engineer",
+                "duration": "January 2022 - July 2025",
                 "achievements": [
-                    "Design and development of evolution tickets and anomaly resolution",
-                    "Active support and onboarding for new team members",
-                    "Lot sizing and delivery tracking",
-                    "Regular reporting for transparent communication between stakeholders"
+                    "- Technical leadership contributing to evolution and modernization of mission-critical high-volume applications",
+                    "- Team coaching and mentoring of 5 junior developers as technical tutor",
+                    "- GenAI reference on the department, responsible for adoption of development assistance tools (GitHub Copilot, Codestral)",
+                    "- Code reviews, technical specifications, and CI/CD pipeline supervision",
+                    "- Stack: Java 8, Hibernate, HTML/JS, Jenkins, Oracle, GIS"
                 ]
             },
+
             {
                 "company": "DATA SYSCOM",
                 "position": "Java Developer (Apprenticeship)",
                 "duration": "Sept 2018 - Sept 2019",
                 "achievements": [
-                    "Dynamic interface development for SCOPIOM software using JavaFX",
-                    "Migration of client/server API from EJB3.0 to REST architecture using Jersey"
+                    "- Dynamic interface development for SCOPIOM software using JavaFX",
+                    "- Migration of client/server API from EJB3.0 to REST architecture using Jersey"
                 ]
             },
             {
@@ -86,8 +88,8 @@
                 "position": "FullStack Java Developer (Apprenticeship)",
                 "duration": "Oct 2017 - Sept 2018",
                 "achievements": [
-                    "Development of a dynamic JavaEE/PrimeFaces platform for regional sampling data analysis",
-                    "Central database management for the Nouvelle-Aquitaine region"
+                    "- Development of a dynamic JavaEE/PrimeFaces platform for regional sampling data analysis",
+                    "- Central database management for the Nouvelle-Aquitaine region"
                 ]
             },
             {
@@ -95,8 +97,8 @@
                 "position": "FullStack Web Developer (Internship)",
                 "duration": "Oct 2016 - Jun 2017",
                 "achievements": [
-                    "Joomla-based triathlon online registration system development",
-                    "Online payment integration and real-time ranking system"
+                    "- Joomla-based triathlon online registration system development",
+                    "- Online payment integration and real-time ranking system"
                 ]
             },
             {
@@ -104,55 +106,56 @@
                 "position": "IT Technician",
                 "duration": "2011 - 2013",
                 "achievements": [
-                    "System maintenance, troubleshooting, and technical support",
-                    "Hardware and software installation and configuration",
-                    "Data security management and backup procedures"
+                    "- System maintenance, troubleshooting, and technical support",
+                    "- Hardware and software installation and configuration",
+                    "- Data security management and backup procedures"
                 ]
             }
         ],
         "fr": [
             {
                 "company": "Capgemini",
-                "position": "Ingénieur Logiciel Senior - Tech Lead",
-                "duration": "2025 - Présent",
+                "position": "Tech Lead Java",
+                "duration": "Mai 2026 - Présent",
                 "achievements": [
-                    "Leadership technique d'un projet de refonte de portail à grande échelle",
-                    "Développement et mise en place des composants avec documentation technique",
-                    "Animation des daily stand-ups, affectation des tâches et accompagnement des développeurs",
-                    "Coordination avec les Business Analysts pour les besoins fonctionnels et les Spécifications Techniques Détaillées",
-                    "Participation aux réunions client, revues de code et suivi de la qualité logicielle (Jenkins, SonarQube, CI/CD)",
-                    "Stack : Java 17, Angular 17, Spring Boot 3.3.2, Maven, Jenkins, SonarQube, GitLab, Jira"
+                    "- Référent technique du programme MASA SINEMA de modernisation de la traçabilité animale à grande échelle",
+                    "- Conduite de la transition vers une architecture événementielle pour améliorer la scalabilité et la résilience du système",
+                    "- Revues de code, rédaction des spécifications techniques et supervision CI/CD (Jenkins, SonarQube)",
+                    "- Animation de sessions de présentation et de formation autour de GitHub Copilot auprès des développeurs",
+                    "- Stack : Java 21, Quarkus, Kafka, Kubernetes"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Ingénieur Logiciel Senior - Tech Lead",
-                "duration": "Oct 2022 - 2025",
+                "position": "Tech Lead Java",
+                "duration": "Août 2025 - Mai 2026",
                 "achievements": [
-                    "Support technique et résolution des problèmes de l'équipe de développement",
-                    "Animation des points dev/qualif/fonc et chiffrage des projets",
-                    "Suivi des livraisons et revues de code",
-                    "Entretiens techniques et qualification des candidats"
+                    "- Prise de décisions d'architecture, coordination avec les architectes client et garantie de la continuité de service",
+                    "- Conception technique et développement complet de la refonte du portail de connexion backend/frontend développée from scratch",
+                    "- Implémentation full-stack avec des patterns d'architecture modernes",
+                    "- Stack : Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Ingénieur Logiciels",
-                "duration": "Oct 2019 - Oct 2022",
+                "position": "Tech Lead Java / Ingénieur Logiciels",
+                "duration": "Janvier 2022 - Juillet 2025",
                 "achievements": [
-                    "Conception et développement de tickets d'évolutions et résolution d'anomalies",
-                    "Accompagnement et intégration des nouveaux membres de l'équipe",
-                    "Chiffrage des lots d'évolutions et suivi des livraisons",
-                    "Reporting régulier pour une communication transparente entre les parties prenantes"
+                    "- Contribution à l'évolution et à la modernisation d'applications critiques à forte volumétrie dans un environnement à forte contrainte métier",
+                    "- Accompagnement et montée en compétences des développeurs de l'équipe et mentorat de 5 développeurs juniors en tant que tuteur",
+                    "- Référent GenAI sur le pôle, responsable de l'adoption des outils d'assistance au développement (GitHub Copilot, Codestral)",
+                    "- Réalisation de revues de code, rédaction des spécifications techniques et supervision des pipelines CI/CD",
+                    "- Stack : Java 8, Hibernate, HTML/JS, Jenkins, Oracle, SIG"
                 ]
             },
+
             {
                 "company": "DATA SYSCOM",
                 "position": "Développeur Java (Alternance)",
                 "duration": "Sept 2018 - Sept 2019",
                 "achievements": [
-                    "Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
-                    "Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
+                    "- Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
+                    "- Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
                 ]
             },
             {
@@ -160,8 +163,8 @@
                 "position": "Développeur FullStack Java (Alternance)",
                 "duration": "Oct 2017 - Sept 2018",
                 "achievements": [
-                    "Développement d'une plateforme dynamique en JavaEE/PrimeFaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
-                    "Gestion d'une base de données centrale pour la région"
+                    "- Développement d'une plateforme dynamique en JavaEE/PrimeFaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
+                    "- Gestion d'une base de données centrale pour la région"
                 ]
             },
             {
@@ -169,8 +172,8 @@
                 "position": "Développeur Web FullStack (Stage)",
                 "duration": "Oct 2016 - Jun 2017",
                 "achievements": [
-                    "Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
-                    "Intégration du paiement en ligne et système de classement en temps réel"
+                    "- Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
+                    "- Intégration du paiement en ligne et système de classement en temps réel"
                 ]
             },
             {
@@ -178,9 +181,9 @@
                 "position": "Technicien Informatique",
                 "duration": "2011 - 2013",
                 "achievements": [
-                    "Maintenance et dépannage des systèmes informatiques",
-                    "Installation et configuration de matériels et logiciels",
-                    "Gestion de la sécurité des données et des sauvegardes"
+                    "- Maintenance et dépannage des systèmes informatiques",
+                    "- Installation et configuration de matériels et logiciels",
+                    "- Gestion de la sécurité des données et des sauvegardes"
                 ]
             }
         ]
@@ -191,7 +194,7 @@
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
                     "Master 2 Industry 4.0, Computer Engineering",
-                    "2018 - 2019",
+                    "2020",
                     "Courses in English"
                 ]
             },
@@ -206,7 +209,7 @@
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
                     "Master 1 Information Systems for Industrial Logistics and Services Engineering (SIGLIS), Computer Science / Logistics",
-                    "2017 - 2018"
+                    "2018"
                 ]
             },
             {
@@ -243,7 +246,7 @@
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
                     "Master 2 Industrie 4.0, Ingénierie informatique",
-                    "2018 - 2019",
+                    "2020",
                     "Formation en anglais"
                 ]
             },
@@ -258,7 +261,7 @@
                 "institution": "Université de Pau et des Pays de l'Adour",
                 "degrees": [
                     "Master 1 Systèmes Informatiques pour le Génie de la Logistique Industrielle et des Services (SIGLIS), Informatique / Logistique",
-                    "2017 - 2018"
+                    "2018"
                 ]
             },
             {
@@ -537,10 +540,12 @@
     },
     "technicalExpertise": {
         "languages": ["Java", "JavaScript", "SQL", "HTML/CSS"],
-        "frameworks": ["Spring Boot", "Hibernate", "Angular", "PrimeFaces", "Jakarta EE"],
-        "tools": ["Git", "Maven", "GitLab", "Jenkins", "SonarQube", "Jira", "Confluence", "IntelliJ", "Eclipse"],
-        "architectures": ["Microservices", "REST APIs", "SOAP"],
-        "methodologies": ["Agile Scrum", "Software Craftsmanship", "UML"]
+        "frameworks": ["Spring Boot", "Quarkus", "Hibernate", "Angular", "PrimeFaces", "Jakarta EE"],
+        "tools": ["Git", "Maven", "GitLab", "Jenkins", "SonarQube", "Jira", "Confluence", "IntelliJ", "Eclipse", "Docker", "Kubernetes"],
+        "databases": ["PostgreSQL", "Oracle", "SQL"],
+        "messaging": ["Kafka"],
+        "architectures": ["Microservices", "Event-Driven Architecture", "REST APIs", "SOAP", "Clean Architecture", "DDD"],
+        "methodologies": ["Agile Scrum", "Software Craftsmanship", "TDD", "BDD", "UML"]
     },
     "projects": {
         "en": [

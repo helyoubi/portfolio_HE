@@ -73,7 +73,9 @@ export async function initializePortfolio(language) {
                         <h3>${exp.positions ? exp.positions.map(pos => pos.title).join(', ') : exp.position}</h3>
                         <h4>${exp.company}</h4>
                         <p class="duration">${exp.positions ? exp.positions.map(pos => pos.duration).join(', ') : exp.duration}</p>
-                        <p class="description">${exp.positions ? exp.positions.map(pos => pos.achievements.join(', ')).join(', ') : exp.achievements.join(', ')}</p>
+                        <div class="description">
+                            ${exp.positions ? exp.positions.map(pos => pos.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')).join('') : exp.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')}
+                        </div>
                     </div>
                 `).join('')}
             </div>
