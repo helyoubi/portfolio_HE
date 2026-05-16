@@ -213,22 +213,23 @@ export async function initializePortfolio(language) {
         const start = (page - 1) * perPage;
         const end = start + perPage;
         const currentTrainings = trainings.slice(start, end);
+        const isFr = language === 'fr';
 
         let html = currentTrainings.map(training => `
             <div class="education-card training-card">
                 <h3>${training.institution}</h3>
                 <p>${training.title}</p>
                 <span style='font-size:0.95em;opacity:0.8;'>${training.date || ''}</span>
-                ${training.badgeUrl && training.badgeImg ? `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer"><img src="${training.badgeImg}" alt="Pluralsight Badge" style="width:70px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;"></a>` : ''}
+                ${training.badgeUrl && training.badgeImg ? `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer"><img src="${training.badgeImg}" alt="Training Badge" style="width:70px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;"></a>` : ''}
             </div>
         `).join('');
 
         // Pagination controls
         html += `
             <div class="pagination-controls">
-                <button id="prevTrainings" ${page === 1 ? 'disabled' : ''}>&laquo; Prev</button>
-                <span>Page ${page} of ${totalPages}</span>
-                <button id="nextTrainings" ${page === totalPages ? 'disabled' : ''}>Next &raquo;</button>
+                <button id="prevTrainings" ${page === 1 ? 'disabled' : ''}>&laquo; ${isFr ? 'Préc.' : 'Prev'}</button>
+                <span>${isFr ? `Page ${page} sur ${totalPages}` : `Page ${page} of ${totalPages}`}</span>
+                <button id="nextTrainings" ${page === totalPages ? 'disabled' : ''}>${isFr ? 'Suiv.' : 'Next'} &raquo;</button>
             </div>
         `;
         return html;
