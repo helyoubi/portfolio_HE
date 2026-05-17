@@ -10,8 +10,8 @@
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Senior Java Software Engineer & Tech Lead with 8+ years of experience, I specialize in backend architecture, the Spring Boot ecosystem, and technical leadership. I drive technical design, coordination, and quality across complex projects while promoting GenAI adoption to enhance team productivity and software quality.",
-            "fr": "Ingénieur Logiciel Senior Java & Tech Lead avec plus de 8 ans d'expérience, je maîtrise l'architecture backend, l'écosystème Spring Boot et le leadership technique. J'assure la conception, la coordination et la qualité technique sur des projets complexes tout en promouvant l'adoption du GenAI pour améliorer la productivité et la qualité logicielle."
+            "en": "Java Tech Lead with 8+ years building resilient backend systems at scale. I currently drive the technical direction of MASA SINEMA at Capgemini — designing an event-driven architecture with Java 21, Quarkus, Kafka, and Kubernetes. As GenAI Champion for my department, I trained engineers on GitHub Copilot and Codestral, and mentored 15+ junior developers toward senior roles. I believe in shipping fast without breaking production — and in making teams faster through clean architecture and AI-assisted workflows.",
+            "fr": "Tech Lead Java passionné par les systèmes backend résilients à grande échelle. Aujourd'hui à la direction technique de MASA SINEMA chez Capgemini, je conçois une architecture event-driven avec Java 21, Quarkus, Kafka et Kubernetes. GenAI Champion de mon département, j'ai formé les équipes à GitHub Copilot et Codestral, et mentoré 15+ développeurs juniors vers des rôles seniors. 8+ ans à livrer vite sans casser la prod — et à rendre les équipes plus efficaces grâce à des architectures propres et des workflows assistés par IA."
         },
         "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
         "profileImage": "assets/images/profile.jpg",
@@ -551,8 +551,8 @@
         "en": [
             {
                 "title": "Jebna",
-                "description": "Confidential project - Presentation available privately.",
-                "technologies": ["Flutter (Dart)", "Supabase"],
+                "description": "Cross-platform mobile app (iOS/Android) built solo end-to-end. Flutter front-end on top of a Supabase backend (Auth, Row-Level Security, Postgres, Storage). Client-side state, offline-first sync, and push notifications. Closed-source — architecture walk-through available on request.",
+                "technologies": ["Flutter (Dart)", "Supabase", "Postgres", "Row-Level Security"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
                 "image": "data/projects/Jebna/jebna_app_icon.png",
                 "link": "https://jebna-app.com",
@@ -562,8 +562,8 @@
             },
             {
                 "title": "Absence Tracker",
-                "description": "Employee absence management system with real-time tracking, reporting and automated notifications",
-                "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
+                "description": "Web app to manage employee absences across teams — real-time tracking, calendar view, reporting dashboards, and automated email notifications. Built solo with a typed React/TypeScript front-end and a typed API contract end-to-end.",
+                "technologies": ["React (TypeScript)", "Tailwind CSS", "Vite"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
                 "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
                 "link": "",
@@ -588,8 +588,8 @@
         "fr": [
             {
                 "title": "Jebna",
-                "description": "Projet confidentiel - Présentation possible en privé.",
-                "technologies": ["Flutter (Dart)", "Supabase"],
+                "description": "App mobile cross-plateforme (iOS/Android) construite en solo de bout en bout. Front Flutter sur backend Supabase (Auth, Row-Level Security, Postgres, Storage). State management côté client, sync offline-first et notifications push. Code fermé — walk-through architectural sur demande.",
+                "technologies": ["Flutter (Dart)", "Supabase", "Postgres", "Row-Level Security"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
                 "image": "data/projects/Jebna/jebna_app_icon.png",
                 "link": "https://jebna-app.com",
@@ -599,8 +599,8 @@
             },
             {
                 "title": "Absence Tracker",
-                "description": "Système de gestion des absences d'employés avec suivi en temps réel, reporting et notifications automatisées",
-                "technologies": ["React (TypeScript)", "JavaScript", "Tailwind CSS"],
+                "description": "Application web de gestion des absences d'employés — suivi en temps réel, vue calendrier, dashboards de reporting et notifications email automatisées. Réalisé en solo avec un front typé React/TypeScript et un contrat d'API typé de bout en bout.",
+                "technologies": ["React (TypeScript)", "Tailwind CSS", "Vite"],
                 "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
                 "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
                 "link": "",

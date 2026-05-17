@@ -747,6 +747,52 @@ button[id*="close"],
     padding: 4rem 0;
 }
 
+.contact-channels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    max-width: 600px;
+}
+
+.contact-channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-channel:not(.contact-channel--static):hover {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.contact-channel--static {
+    cursor: default;
+    color: var(--text-secondary);
+}
+
+.contact-channel i {
+    font-size: 1.1rem;
+}
+
+.contact-form-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
 .contact form {
     max-width: 600px;
     margin: 0 auto;

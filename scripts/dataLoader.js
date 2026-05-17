@@ -202,6 +202,21 @@ export async function initializePortfolio(language) {
 
         <section id="contact" class="contact">
             <h2 class="section-title">${language === 'fr' ? 'Contactez-moi' : 'Get in Touch'}</h2>
+            <div class="contact-channels">
+                <a class="contact-channel" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a class="contact-channel" href="mailto:zikyoubi@gmail.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>zikyoubi@gmail.com</span>
+                </a>
+                <span class="contact-channel contact-channel--static">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>Nantes, France</span>
+                </span>
+            </div>
+            <p class="contact-form-intro">${language === 'fr' ? 'Ou via ce formulaire :' : 'Or use the form below:'}</p>
             <form id="contactForm" action="https://formspree.io/f/mpwqdrdd" method="POST">
                 <div class="form-group">
                     <label for="name">${language === 'fr' ? 'Nom' : 'Name'}</label>
