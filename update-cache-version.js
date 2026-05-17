@@ -14,8 +14,10 @@ console.log(`Updating cache version to: ${newVersion}`);
 // Files to update
 const filesToUpdate = [
     'index.html',
-    'projects.html', 
+    'projects.html',
     'trainings.html',
+    'howto.html',
+    'veille.html',
     'sw.js'
 ];
 
