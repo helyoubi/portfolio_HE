@@ -2,6 +2,41 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## ⚠️ Règle d'or — Consulter un agent d'instruction AVANT de coder
+
+Avant **toute génération ou modification de code**, lire l'agent d'instruction le plus pertinent dans le dossier [`docs/`](docs/) (index ci-dessous). Si plusieurs agents s'appliquent, lire chacun et combiner. En cas de conflit, ce fichier (`CLAUDE.md`) fait foi.
+
+### Index des agents (`docs/`)
+
+| Agent | À consulter quand on touche à… |
+|---|---|
+| [docs/content-data.md](docs/content-data.md) | `data/portfolioData.json`, contenu multilingue, projets, formations, veille |
+| [docs/ui-design.md](docs/ui-design.md) | Tout changement visuel, nouveau composant, refonte, animations |
+| [docs/theming.md](docs/theming.md) | Couleurs, variables CSS, mode dark/light, design tokens |
+| [docs/i18n.md](docs/i18n.md) | Traductions, switch FR/EN, libellés statiques ou dynamiques |
+| [docs/navigation.md](docs/navigation.md) | Menu, hamburger mobile, sous-menus, ancres, smooth scroll |
+| [docs/modal-gallery.md](docs/modal-gallery.md) | Modal projet, galerie d'images, lightbox, focus trap |
+| [docs/forms.md](docs/forms.md) | Formulaire de contact, validation, Formspree |
+| [docs/pwa-cache.md](docs/pwa-cache.md) | Service worker, manifest, cache busting `?v=...` |
+| [docs/accessibility.md](docs/accessibility.md) | ARIA, navigation clavier, contraste, lecteurs d'écran |
+| [docs/testing.md](docs/testing.md) | Tests Jest `.mjs`, schéma JSON |
+| [docs/performance.md](docs/performance.md) | Images, lazy load, Lighthouse, perf perçue |
+
+## 🎨 Philosophie produit — User-friendly & moderne
+
+Cette application doit **toujours** être pensée comme un produit grand public :
+
+- **Inspiration directe** : Instagram, Facebook, Reddit, TikTok, X, LinkedIn. Le visiteur doit reconnaître des patterns familiers (cartes "post", feeds verticaux, dots de galerie, micro-interactions snappy, header sticky compact).
+- **Moderne et propre** : typographie généreuse, espacement maîtrisé, micro-animations subtiles (≤300 ms), états hover/focus/active visibles, mobile-first.
+- **User-friendly avant tout** : aucune friction inutile, feedback immédiat sur chaque action, jamais d'`alert()`, jamais de jargon technique côté UI.
+- **Éviter le "design AI générique"** : pas de dégradés violet/bleu standards partout, pas de glassmorphism gratuit, pas d'emojis décoratifs en pagaille.
+
+Détails opérationnels (tokens, patterns) dans [docs/ui-design.md](docs/ui-design.md).
+
+## 📌 Source d'information produit
+
+- [README.md](README.md) — présentation publique du portfolio (positionnement de Hamza Elyoubi, public cible, features visibles, ton). À consulter avant de rédiger du nouveau contenu visiteur ou de modifier le ton du site, afin de rester cohérent avec la vitrine GitHub.
+
 ## Commands
 
 ### Development

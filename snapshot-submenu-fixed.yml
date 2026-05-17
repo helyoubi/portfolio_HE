@@ -1,0 +1,27 @@
+- navigation "Menu principal" [ref=e7]:
+  - list [ref=e8]:
+    - listitem [ref=e9]:
+      - link "Accueil" [ref=e10] [cursor=pointer]:
+        - /url: index.html#home
+    - listitem [ref=e11]:
+      - link "Expérience" [ref=e12] [cursor=pointer]:
+        - /url: index.html#experience
+    - listitem [ref=e13]:
+      - link "Compétences" [ref=e14] [cursor=pointer]:
+        - /url: index.html#skills
+    - listitem [ref=e15]:
+      - link "Projets & Formations " [ref=e16] [cursor=pointer]:
+        - /url: "#"
+    - listitem [ref=e17]:
+      - link "Ressources " [expanded] [ref=e18] [cursor=pointer]:
+        - /url: "#"
+      - list [ref=e323]:
+        - listitem [ref=e324]:
+          - link "GenAI pour le SDLC" [ref=e325] [cursor=pointer]:
+            - /url: howto.html
+        - listitem [ref=e326]:
+          - link "Veille tech" [ref=e327] [cursor=pointer]:
+            - /url: veille.html
+    - listitem [ref=e19]:
+      - link "Contact" [ref=e20] [cursor=pointer]:
+        - /url: index.html#contact
