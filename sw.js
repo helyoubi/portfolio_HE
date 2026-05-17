@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v20260517T164';
+const CACHE_NAME = 'portfolio-cache-v20260517T180';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -28,11 +28,35 @@ const ASSETS_TO_CACHE = [
     'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];
 
+// Some static hosts (e.g. `serve`) issue 301/308 from /index.html → /.
+// A redirected Response cannot be served back from a SW (spec rejects it),
+// so we re-wrap it into a non-redirected Response before caching.
+async function cachePut(cache, url) {
+    try {
+        const response = await fetch(url, { cache: 'reload' });
+        if (!response.ok) return;
+        if (response.redirected) {
+            const body = await response.blob();
+            const clean = new Response(body, {
+                status: response.status,
+                statusText: response.statusText,
+                headers: response.headers
+            });
+            await cache.put(url, clean);
+        } else {
+            await cache.put(url, response);
+        }
+    } catch (err) {
+        console.warn('[sw] skip caching', url, err);
+    }
+}
+
 // Install event
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return cache.addAll(ASSETS_TO_CACHE);
+        caches.open(CACHE_NAME).then(async cache => {
+            await Promise.all(ASSETS_TO_CACHE.map(url => cachePut(cache, url)));
+            await self.skipWaiting();
         })
     );
 });
@@ -40,29 +64,31 @@ self.addEventListener('install', event => {
 // Activate event
 self.addEventListener('activate', event => {
     event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cache => {
-                    if (cache !== CACHE_NAME) {
-                        return caches.delete(cache);
-                    }
-                })
-            );
-        })
+        Promise.all([
+            caches.keys().then(names => Promise.all(
+                names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n))
+            )),
+            self.clients.claim()
+        ])
     );
 });
 
 // Fetch event
 self.addEventListener('fetch', event => {
+    // Only intercept GETs — leave POST (Formspree, etc.) to the network.
+    if (event.request.method !== 'GET') return;
+
     const url = event.request.url;
-    
-    // Use network-first strategy for CSS and JS files to ensure updates
-    if (url.includes('.css') || url.includes('.js')) {
+    const isNavigation = event.request.mode === 'navigate';
+    const isHtml = url.endsWith('.html') || (isNavigation && !url.match(/\.[a-z0-9]+$/i));
+
+    // Network-first for navigations, HTML pages, CSS, and JS — keep them fresh,
+    // and never serve a redirected cached response (browsers reject those).
+    if (isNavigation || isHtml || url.includes('.css') || url.includes('.js')) {
         event.respondWith(
             fetch(event.request)
                 .then(response => {
-                    // If fetch succeeds, update cache and return response
-                    if (response.status === 200) {
+                    if (response.status === 200 && !response.redirected) {
                         const responseClone = response.clone();
                         caches.open(CACHE_NAME).then(cache => {
                             cache.put(event.request, responseClone);
@@ -70,10 +96,7 @@ self.addEventListener('fetch', event => {
                     }
                     return response;
                 })
-                .catch(() => {
-                    // If network fails, fall back to cache
-                    return caches.match(event.request);
-                })
+                .catch(() => caches.match(event.request))
         );
     } else {
         // Use cache-first strategy for other assets
