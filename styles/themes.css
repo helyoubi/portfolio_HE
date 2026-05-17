@@ -6,6 +6,12 @@
     /* Indigo 600 */
     --primary-light: rgba(99, 102, 241, 0.1);
 
+    /* Accent Colors - Violet (complements indigo primary) */
+    --accent-color: #8b5cf6;
+    /* Violet 500 */
+    --accent-color-hover: #7c3aed;
+    /* Violet 600 */
+
     /* Dark Theme (Default) - Sleek Material Dark */
     --bg-color: #0f1115;
     /* Very dark grayish blue */
@@ -56,6 +62,12 @@
     --primary-hover: #4338ca;
     /* Indigo 700 */
     --primary-light: rgba(79, 70, 229, 0.1);
+
+    /* Accent Colors - Slightly darker for light mode contrast */
+    --accent-color: #7c3aed;
+    /* Violet 600 */
+    --accent-color-hover: #6d28d9;
+    /* Violet 700 */
 
     /* Light Theme */
     --bg-color: #f8fafc;

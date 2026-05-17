@@ -5,9 +5,13 @@ export function getCurrentLanguage() {
 
 export function setCurrentLanguage(language) {
     localStorage.setItem('language', language);
+    document.documentElement.lang = language;
 }
 
 export function initializeLanguageSwitcher(onLanguageChange) {
+    // Sync <html lang> with persisted language on every page load
+    document.documentElement.lang = getCurrentLanguage();
+
     const languageSwitcher = document.getElementById('languageSwitcher');
     if (!languageSwitcher) return;
 

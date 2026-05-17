@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helyoubi.github.io/portfolio_HE/sitemap.xml
