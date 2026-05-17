@@ -225,52 +225,57 @@ button[id*="close"],
     transform: translateX(5px);
 }
 
-/* Sub-menu for items that have children (HowTo) */
-.nav-links .has-children {
-    position: relative;
+/* Sub-menu for items that have children (Projets & Formations, Ressources) */
+.nav-links .has-children > a::after {
+    content: '\f078'; /* fa-chevron-down */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    opacity: 0.6;
+    transition: transform var(--transition-fast);
+    display: inline-block;
+}
+
+.nav-links .has-children.open > a::after {
+    transform: rotate(-180deg);
 }
 
 .nav-links .sub-menu {
     display: none;
     list-style: none;
-    margin: 0;
+    margin: 0.25rem 0 0.5rem;
     padding: 0;
+    border-left: 2px solid var(--border-color);
+    margin-left: 1.25rem;
 }
 
-/* Desktop: show sub-menu on hover */
-@media (min-width: 769px) {
-    .nav-links .has-children:hover>.sub-menu {
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        background: var(--nav-bg);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-md);
-        min-width: 220px;
-        box-shadow: var(--shadow-lg);
-        z-index: 1600;
-        overflow: hidden;
-    }
-
-    .nav-links .sub-menu li a {
-        padding: 12px 20px;
-        display: block;
-        color: rgba(237, 237, 237, 0.95);
-        font-size: 0.95rem;
-        white-space: nowrap;
-    }
-
-    .nav-links .sub-menu li a:hover {
-        background: var(--primary-light);
-        color: var(--primary-color);
-        transform: none;
-        /* remove hover shift for submenu */
-    }
+.nav-links .sub-menu li a {
+    padding: 10px 18px;
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
 }
 
-/* Mobile / burger: show sub-menu when parent has .open class */
-.nav-links .has-children.open>.sub-menu {
+.nav-links .sub-menu li a:hover,
+.nav-links .sub-menu li a.active {
+    color: var(--primary-color);
+    background: var(--primary-light);
+    border-left-color: var(--primary-color);
+    /* No translate on sub-items — keeps them aligned with the indentation guide */
+    transform: none;
+    padding-left: 18px;
+}
+
+.nav-links .sub-menu li a:hover::before,
+.nav-links .sub-menu li a.active::before {
+    width: 0;
+    /* don't draw the giant primary-light pill on sub-items */
+}
+
+/* Show sub-menu when parent has the .open class (burger pattern, all viewports) */
+.nav-links .has-children.open > .sub-menu {
     display: block;
 }
 
