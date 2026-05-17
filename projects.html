@@ -57,21 +57,25 @@
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="nav-menu" id="navMenu">
+    <nav class="nav-menu" id="navMenu" aria-label="Menu principal">
         <ul class="nav-links">
             <li><a href="index.html#home" data-section="home">Accueil</a></li>
-            <li><a href="index.html#certifications" data-section="certifications">Certifications</a></li>
-            <li><a href="index.html#experience" data-section="experience">Expérience Professionnelle</a></li>
-            <li><a href="index.html#education" data-section="education">Éducation</a></li>
-            <li><a href="trainings.html" data-section="trainings">Formations</a></li>
-            <li><a href="index.html#skills" data-section="skills">Compétences Techniques</a></li>
-            <li><a href="index.html#frameworks" data-section="frameworks">Frameworks</a></li>
-            <li><a href="index.html#tools" data-section="tools">Outils</a></li>
-            <li><a href="index.html#architectures" data-section="architectures">Architectures</a></li>
-            <li><a href="index.html#softSkills" data-section="softSkills">Compétences Transversales</a></li>
-            <li><a href="projects.html" data-section="projects" class="active">Projets</a></li>
-            <li><a href="index.html#languages" data-section="languages">Langues</a></li>
-            <li><a href="howto.html" data-section="howto">HowTo</a></li>
+            <li><a href="index.html#experience" data-section="experience">Expérience</a></li>
+            <li><a href="index.html#skills" data-section="skills">Compétences</a></li>
+            <li class="has-children open">
+                <a href="#" data-section="worksParent" aria-haspopup="true" aria-expanded="true">Projets & Formations</a>
+                <ul class="sub-menu">
+                    <li><a href="projects.html" data-section="projects" class="active">Projets</a></li>
+                    <li><a href="trainings.html" data-section="trainings">Formations</a></li>
+                </ul>
+            </li>
+            <li class="has-children">
+                <a href="#" data-section="resourcesParent" aria-haspopup="true" aria-expanded="false">Ressources</a>
+                <ul class="sub-menu">
+                    <li><a href="howto.html" data-section="howto-genai">GenAI for SDLC</a></li>
+                    <li><a href="veille.html" data-section="howto-veille">Veille tech</a></li>
+                </ul>
+            </li>
             <li><a href="index.html#contact" data-section="contact">Contact</a></li>
         </ul>
     </nav>
