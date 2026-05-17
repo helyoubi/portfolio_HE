@@ -1,9 +1,12 @@
-const CACHE_NAME = 'portfolio-cache-v20250909T174';
+const CACHE_NAME = 'portfolio-cache-v20260517T01';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
     './trainings.html',
     './projects.html',
+    './howto.html',
+    './veille.html',
+    './manifest.json',
     './styles/main.css',
     './styles/themes.css',
     './styles/layout.css',
@@ -12,15 +15,17 @@ const ASSETS_TO_CACHE = [
     './scripts/dataLoader.js',
     './scripts/formHandler.js',
     './scripts/hamburgerMenu.js',
+    './scripts/languageManager.js',
     './scripts/pageLoader.js',
     './data/portfolioData.json',
     './assets/images/profile.jpg',
-    './assets/resumes/Hamza_Elyoubi_CV.pdf',
+    './assets/icons/favicon.svg',
     './assets/icons/en.png',
     './assets/icons/fr.png',
     './assets/icons/githubcopilot_icon.png',
+    './assets/icons/claude_code_icon.png',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
-    'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];
 
 // Install event

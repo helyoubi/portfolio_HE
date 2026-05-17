@@ -1,13 +1,36 @@
 @import url('themes.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('layout.css');
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
+}
+
+/* Accessibility: visible keyboard focus everywhere (WCAG 2.1 AA) */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Hide the outline only when focus comes from mouse/touch, not keyboard */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 body {
@@ -283,7 +306,7 @@ button[id*="close"],
 }
 
 .hero-content h1 {
-    font-size: 3.8rem;
+    font-size: clamp(2.5rem, 7vw, 3.8rem);
     margin-bottom: 1rem;
     line-height: 1.15;
     font-weight: 700;
@@ -336,6 +359,34 @@ button[id*="close"],
     background: transparent !important;
     box-shadow: 0 0 0 8px var(--primary-light), var(--shadow-glow);
     /* Glowing circular effect */
+}
+
+/* Hero CTA group — social links + resume */
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.hero-cta .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-cta .cta-btn.cta-secondary {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+.hero-cta .cta-btn.cta-secondary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* Button Styles */

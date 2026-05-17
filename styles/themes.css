@@ -18,8 +18,8 @@
     --secondary-bg: #1c1f26;
     /* Slightly lighter surface */
     --card-bg: #1c1f26;
-    --nav-bg: rgba(15, 17, 21, 0.85);
-    /* For glassmorphism */
+    --nav-bg: rgba(15, 17, 21, 0.92);
+    /* Opaque-leaning fallback for browsers without backdrop-filter */
     --section-bg: #15181e;
 
     /* Text Colors */
@@ -75,8 +75,8 @@
     --secondary-bg: #ffffff;
     /* Surface */
     --card-bg: #ffffff;
-    --nav-bg: rgba(248, 250, 252, 0.85);
-    /* For glassmorphism */
+    --nav-bg: rgba(248, 250, 252, 0.92);
+    /* Opaque-leaning fallback for browsers without backdrop-filter */
     --section-bg: #f1f5f9;
     /* Slate 100 */
 

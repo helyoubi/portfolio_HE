@@ -34,13 +34,27 @@ export async function initializePortfolio(language) {
     document.getElementById('main-content').innerHTML = `
         <section id="home" class="hero">
             <div class="hero-content">
-                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Hamza Elyoubi">
                     <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <h3>${personalInfo.title[language]}</h3>
                 ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
                 <p>${personalInfo.bio[language]}</p>
+                <div class="hero-cta">
+                    <a class="cta-btn cta-primary" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    ${personalInfo.resume ? `<a class="cta-btn cta-secondary" href="${personalInfo.resume}" target="_blank" rel="noopener noreferrer" download>
+                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                        <span>${language === 'fr' ? 'Télécharger le CV' : 'Download CV'}</span>
+                    </a>` : ''}
+                    <a class="cta-btn cta-secondary" href="#contact">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>${language === 'fr' ? 'Me contacter' : 'Contact me'}</span>
+                    </a>
+                </div>
             </div>
         </section>
 
