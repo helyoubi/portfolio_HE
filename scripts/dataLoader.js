@@ -46,10 +46,6 @@ export async function initializePortfolio(language) {
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
-                    ${personalInfo.resume ? `<a class="cta-btn cta-secondary" href="${personalInfo.resume}" target="_blank" rel="noopener noreferrer" download>
-                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
-                        <span>${language === 'fr' ? 'Télécharger le CV' : 'Download CV'}</span>
-                    </a>` : ''}
                     <a class="cta-btn cta-secondary" href="#contact">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span>${language === 'fr' ? 'Me contacter' : 'Contact me'}</span>
