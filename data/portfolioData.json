@@ -550,6 +550,40 @@
     "projects": {
         "en": [
             {
+                "title": "GitHub Showcase",
+                "description": "Web app that turns a GitHub profile into an elegant, shareable showcase. Enter a username and the app fetches the repositories via the public GitHub API, then lets you pick from 13 card templates and customize everything live (layout, accent colors, typography, backgrounds, CSS effects, theme extracted from an image). The result exports as an HTML snippet, a full HTML document or a PNG image, and publishes to a magazine-style public page (/u/:user) — all with no backend, no sign-up, 100% in the browser. Mobile-first, with a modern dark theme and polished animations.",
+                "technologies": ["React 18", "TypeScript", "Vite", "React Router 7", "Tailwind CSS", "Framer Motion", "html-to-image (PNG export)", "Puppeteer / Chromium (PDF rendering)", "GitHub API", "Biome", "localStorage (state persistence)"],
+                "AIAssistant": ["Claude Code (Claude Opus 4.8 — Anthropic)"],
+                "image": "data/projects/gh-showcase/01-landing.png",
+                "link": "https://gh-showcase.vercel.app",
+                "gallery": [
+                    "data/projects/gh-showcase/01-landing.png",
+                    "data/projects/gh-showcase/02-onboard-live-preview.png",
+                    "data/projects/gh-showcase/03-select-repos.png",
+                    "data/projects/gh-showcase/04-studio-customizer.png",
+                    "data/projects/gh-showcase/05-public-page.png",
+                    "data/projects/gh-showcase/06-public-page-full.png"
+                ]
+            },
+            {
+                "title": "Fakerni",
+                "description": "Mobile-first progressive web app (PWA) to create caring reminders and send them to your loved ones. More than a calendar, Fakerni is built around social connection: you link once to a relative (WhatsApp-style), then push reminders that land directly on their device. Designed authentication-free — each device is identified by a local UUID — it is fully multilingual (French, English, Arabic with automatic RTL) and wrapped in a polished Hilal-inspired identity (arches, crescent moons, gold & night palette). Key features: bidirectional linked contacts with invitation links (WhatsApp / Telegram / Messenger); real-time reminder delivery and change sync (Supabase Realtime); a server-side anti-spam layer (PostgreSQL RLS: block list, quotas, mutual trust); native Web notifications with a scheduler, installable as a PWA and packaged for Android via Capacitor; complete FR / EN / AR internationalization (automatic RTL); and smooth animations and micro-interactions (Framer Motion).",
+                "technologies": ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "shadcn/ui (Radix UI)", "Framer Motion", "TanStack Query v5", "React Router v6", "react-hook-form + Zod", "Supabase (PostgreSQL, Realtime, Row-Level Security)", "vite-plugin-pwa", "Capacitor (Android)", "Vitest + Testing Library"],
+                "AIAssistant": ["Claude Code (Claude Opus 4.x — Anthropic)"],
+                "image": "data/projects/Fakerni/fakerni-02-home.png",
+                "link": "https://github.com/helyoubi/Fakerni",
+                "gallery": [
+                    "data/projects/Fakerni/fakerni-01-onboarding.png",
+                    "data/projects/Fakerni/fakerni-02-home.png",
+                    "data/projects/Fakerni/fakerni-03-reminders.png",
+                    "data/projects/Fakerni/fakerni-04-create.png",
+                    "data/projects/Fakerni/fakerni-05-contact-picker.png",
+                    "data/projects/Fakerni/fakerni-06-create-filled.png",
+                    "data/projects/Fakerni/fakerni-07-connect.png",
+                    "data/projects/Fakerni/fakerni-08-settings.png"
+                ]
+            },
+            {
                 "title": "Jebna",
                 "description": "Cross-platform mobile app (iOS/Android) built solo end-to-end. Flutter front-end on top of a Supabase backend (Auth, Row-Level Security, Postgres, Storage). Client-side state, offline-first sync, and push notifications. Closed-source — architecture walk-through available on request.",
                 "technologies": ["Flutter (Dart)", "Supabase", "Postgres", "Row-Level Security"],
@@ -586,6 +620,40 @@
             }
         ],
         "fr": [
+            {
+                "title": "GitHub Showcase",
+                "description": "Application web qui transforme un profil GitHub en une vitrine élégante et partageable. L'utilisateur entre un nom d'utilisateur, l'app récupère ses dépôts via l'API publique GitHub, puis lui permet de choisir parmi 13 templates de cartes et de tout personnaliser en direct (mise en page, couleurs d'accent, typographie, arrière-plans, effets CSS, thème extrait d'une image). Le résultat s'exporte en snippet HTML, document HTML complet ou image PNG, et se publie sur une page publique style magazine (/u/:user) — le tout sans backend, sans inscription, 100 % côté navigateur. Pensée mobile-first avec un thème sombre moderne et des animations soignées.",
+                "technologies": ["React 18", "TypeScript", "Vite", "React Router 7", "Tailwind CSS", "Framer Motion", "html-to-image (PNG export)", "Puppeteer / Chromium (PDF rendering)", "GitHub API", "Biome", "localStorage (state persistence)"],
+                "AIAssistant": ["Claude Code (Claude Opus 4.8 — Anthropic)"],
+                "image": "data/projects/gh-showcase/01-landing.png",
+                "link": "https://gh-showcase.vercel.app",
+                "gallery": [
+                    "data/projects/gh-showcase/01-landing.png",
+                    "data/projects/gh-showcase/02-onboard-live-preview.png",
+                    "data/projects/gh-showcase/03-select-repos.png",
+                    "data/projects/gh-showcase/04-studio-customizer.png",
+                    "data/projects/gh-showcase/05-public-page.png",
+                    "data/projects/gh-showcase/06-public-page-full.png"
+                ]
+            },
+            {
+                "title": "Fakerni",
+                "description": "Application web progressive (PWA) mobile-first qui permet de créer des rappels attentionnés et de les envoyer à ses proches. Plutôt qu'un simple agenda, l'app mise sur le lien social : on se connecte une fois à un proche (façon WhatsApp), puis on lui envoie des rappels qui arrivent directement sur son appareil. Pensée sans authentification (chaque appareil est identifié par un UUID local), elle est multilingue (français, anglais, arabe avec support RTL) et habillée d'une identité visuelle soignée d'inspiration Hilal (arches, croissants de lune, palette or & nuit). Fonctionnalités clés : système de contacts liés bidirectionnels avec invitation par lien (WhatsApp / Telegram / Messenger) ; envoi direct et temps réel des rappels (Supabase Realtime) et synchronisation des modifications ; couche anti-spam côté serveur (RLS PostgreSQL : liste de blocage, quotas, confiance mutuelle) ; notifications natives Web avec planificateur, installable en PWA et packagée Android via Capacitor ; internationalisation complète FR / EN / AR (RTL automatique) ; et animations fluides et micro-interactions (Framer Motion).",
+                "technologies": ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "shadcn/ui (Radix UI)", "Framer Motion", "TanStack Query v5", "React Router v6", "react-hook-form + Zod", "Supabase (PostgreSQL, Realtime, Row-Level Security)", "vite-plugin-pwa", "Capacitor (Android)", "Vitest + Testing Library"],
+                "AIAssistant": ["Claude Code (Claude Opus 4.x — Anthropic)"],
+                "image": "data/projects/Fakerni/fakerni-02-home.png",
+                "link": "https://github.com/helyoubi/Fakerni",
+                "gallery": [
+                    "data/projects/Fakerni/fakerni-01-onboarding.png",
+                    "data/projects/Fakerni/fakerni-02-home.png",
+                    "data/projects/Fakerni/fakerni-03-reminders.png",
+                    "data/projects/Fakerni/fakerni-04-create.png",
+                    "data/projects/Fakerni/fakerni-05-contact-picker.png",
+                    "data/projects/Fakerni/fakerni-06-create-filled.png",
+                    "data/projects/Fakerni/fakerni-07-connect.png",
+                    "data/projects/Fakerni/fakerni-08-settings.png"
+                ]
+            },
             {
                 "title": "Jebna",
                 "description": "App mobile cross-plateforme (iOS/Android) construite en solo de bout en bout. Front Flutter sur backend Supabase (Auth, Row-Level Security, Postgres, Storage). State management côté client, sync offline-first et notifications push. Code fermé — walk-through architectural sur demande.",
