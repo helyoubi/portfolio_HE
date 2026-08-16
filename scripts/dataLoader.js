@@ -77,11 +77,28 @@ export async function initializePortfolio(language) {
                         <span class="career-highlight__hint">${careerHighlightContent.hint}</span>
                         <span class="career-highlight__message">“${careerHighlightContent.quote}”</span>
                     </blockquote>
-                    <button class="career-highlight__toggle" type="button" aria-controls="career-postcard">
-                        <i class="fas fa-rotate" aria-hidden="true"></i>
-                        <span>${careerHighlightContent.revealLabel}</span>
-                    </button>
+                    <div class="career-highlight__actions">
+                        <button class="career-highlight__toggle" type="button" aria-controls="career-postcard">
+                            <i class="fas fa-rotate" aria-hidden="true"></i>
+                            <span>${careerHighlightContent.revealLabel}</span>
+                        </button>
+                        <button class="career-highlight__expand" type="button" aria-controls="career-lightbox" aria-expanded="false">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                            <span>${careerHighlightContent.expandLabel}</span>
+                        </button>
+                    </div>
                 </aside>
+                <div id="career-lightbox" class="career-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="career-lightbox-title" style="display: none;">
+                        <div class="career-lightbox__content">
+                            <div class="career-lightbox__header">
+                                <h2 id="career-lightbox-title">${careerHighlightContent.frontDialogTitle}</h2>
+                                <button class="career-lightbox__dismiss" type="button" aria-label="${careerHighlightContent.closeLabel}">
+                                    <i class="fas fa-xmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <img class="career-lightbox__image" src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
+                        </div>
+                </div>
             ` : ''}
         </section>
 
@@ -313,8 +330,14 @@ export async function initializePortfolio(language) {
 
     const postcard = document.querySelector('.career-postcard');
     const postcardToggle = document.querySelector('.career-highlight__toggle');
-    if (postcard && postcardToggle && careerHighlightContent) {
+    const postcardExpand = document.querySelector('.career-highlight__expand');
+    const careerLightbox = document.getElementById('career-lightbox');
+    const careerLightboxDismiss = document.querySelector('.career-lightbox__dismiss');
+    const careerLightboxImage = document.querySelector('.career-lightbox__image');
+    const careerLightboxTitle = document.getElementById('career-lightbox-title');
+    if (postcard && postcardToggle && postcardExpand && careerLightbox && careerLightboxDismiss && careerLightboxImage && careerLightboxTitle && careerHighlightContent) {
         const toggleLabel = postcardToggle.querySelector('span');
+        let lightboxTrigger = null;
         const setPostcardState = (isRevealed) => {
             postcard.classList.toggle('is-revealed', isRevealed);
             postcard.setAttribute('aria-pressed', String(isRevealed));
@@ -322,8 +345,46 @@ export async function initializePortfolio(language) {
             toggleLabel.textContent = isRevealed ? careerHighlightContent.hideLabel : careerHighlightContent.revealLabel;
         };
         const togglePostcard = () => setPostcardState(!postcard.classList.contains('is-revealed'));
+        const openCareerLightbox = () => {
+            const isRevealed = postcard.classList.contains('is-revealed');
+            lightboxTrigger = document.activeElement;
+            careerLightboxImage.src = isRevealed ? careerHighlight.images.message : careerHighlight.images.front;
+            careerLightboxImage.alt = isRevealed ? careerHighlightContent.messageAlt : careerHighlightContent.frontAlt;
+            careerLightboxImage.width = isRevealed ? 1190 : 1200;
+            careerLightboxImage.height = isRevealed ? 850 : 828;
+            careerLightboxTitle.textContent = isRevealed ? careerHighlightContent.messageDialogTitle : careerHighlightContent.frontDialogTitle;
+            careerLightbox.style.display = 'flex';
+            careerLightbox.setAttribute('aria-hidden', 'false');
+            postcardExpand.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('career-lightbox-open');
+            window.setTimeout(() => careerLightboxDismiss.focus(), 0);
+        };
+        const closeCareerLightbox = () => {
+            careerLightbox.style.display = 'none';
+            careerLightbox.setAttribute('aria-hidden', 'true');
+            postcardExpand.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('career-lightbox-open');
+            if (lightboxTrigger instanceof HTMLElement && document.contains(lightboxTrigger)) {
+                window.setTimeout(() => lightboxTrigger.focus(), 0);
+            }
+        };
         postcard.addEventListener('click', togglePostcard);
         postcardToggle.addEventListener('click', togglePostcard);
+        postcardExpand.addEventListener('click', openCareerLightbox);
+        careerLightboxDismiss.addEventListener('click', closeCareerLightbox);
+        careerLightbox.addEventListener('click', (event) => {
+            if (event.target === careerLightbox) closeCareerLightbox();
+        });
+        careerLightbox.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                event.stopPropagation();
+                closeCareerLightbox();
+            } else if (event.key === 'Tab') {
+                event.preventDefault();
+                careerLightboxDismiss.focus();
+            }
+        });
 
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             window.setTimeout(() => setPostcardState(true), 1400);

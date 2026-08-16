@@ -23,24 +23,32 @@
             "en": {
                 "eyebrow": "Career milestone",
                 "title": "Promoted to Grade C — Senior Software Engineer",
-                "summary": "An internal recognition of my impact, talent and contribution to the team's success at Capgemini.",
+                "summary": "Recognition from the leadership of my Capgemini entity, highlighting my impact and contribution to the team's success.",
                 "hint": "A personal note from the team is waiting on the back.",
                 "quote": "Congratulations on your promotion! A wonderful recognition of your talent and your contribution to the team's success. Wishing you all the best for what's next.",
                 "frontAlt": "Front of the Capgemini Make it real postcard received for the promotion",
                 "messageAlt": "Handwritten congratulations from the Capgemini team for Hamza Elyoubi's promotion",
                 "revealLabel": "Read the message",
-                "hideLabel": "See the front"
+                "hideLabel": "See the front",
+                "expandLabel": "View full size",
+                "closeLabel": "Close enlarged postcard",
+                "frontDialogTitle": "Promotion postcard — front",
+                "messageDialogTitle": "Promotion postcard — team message"
             },
             "fr": {
                 "eyebrow": "Étape de carrière",
                 "title": "Promotion au grade C — Senior Software Engineer",
-                "summary": "Une reconnaissance interne de mon impact, de mon talent et de ma contribution au succès de l'équipe chez Capgemini.",
+                "summary": "Une reconnaissance adressée par les dirigeants de mon entité chez Capgemini, saluant mon impact et ma contribution au succès de l'équipe.",
                 "hint": "Un mot personnel de l'équipe m'attend au verso.",
                 "quote": "Toutes mes félicitations pour ta promotion ! Une belle reconnaissance de ton talent et de ta contribution au succès de l'équipe. Je te souhaite le meilleur pour la suite.",
                 "frontAlt": "Recto de la carte Capgemini Make it real reçue pour la promotion",
                 "messageAlt": "Message manuscrit de félicitations de l'équipe Capgemini pour la promotion de Hamza Elyoubi",
                 "revealLabel": "Lire le message",
-                "hideLabel": "Voir le recto"
+                "hideLabel": "Voir le recto",
+                "expandLabel": "Afficher en grand",
+                "closeLabel": "Fermer la carte agrandie",
+                "frontDialogTitle": "Carte de promotion — recto",
+                "messageDialogTitle": "Carte de promotion — mot de l'équipe"
             }
         },
         "certifications": {

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Generate new version timestamp
-const newVersion = new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').substring(0, 12);
+const newVersion = new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').substring(0, 13);
 
 console.log(`Updating cache version to: ${newVersion}`);
 

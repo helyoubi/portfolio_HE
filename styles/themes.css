@@ -14,6 +14,7 @@
     --career-accent: #67e8f9;
     --career-accent-soft: rgba(103, 232, 249, 0.12);
     --career-accent-border: rgba(103, 232, 249, 0.35);
+    --career-lightbox-backdrop: rgba(3, 7, 18, 0.94);
 
     /* Dark Theme (Default) - Sleek Material Dark */
     --bg-color: #0f1115;
@@ -74,6 +75,7 @@
     --career-accent: #0e7490;
     --career-accent-soft: rgba(14, 116, 144, 0.08);
     --career-accent-border: rgba(14, 116, 144, 0.3);
+    --career-lightbox-backdrop: rgba(15, 23, 42, 0.9);
 
     /* Light Theme */
     --bg-color: #f8fafc;
