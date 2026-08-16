@@ -15,6 +15,34 @@
         },
         "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
         "profileImage": "assets/images/profile.jpg",
+        "careerHighlight": {
+            "images": {
+                "front": "assets/images/career-milestone/grade-c-front.webp",
+                "message": "assets/images/career-milestone/grade-c-message.webp"
+            },
+            "en": {
+                "eyebrow": "Career milestone",
+                "title": "Promoted to Grade C — Senior Software Engineer",
+                "summary": "An internal recognition of my impact, talent and contribution to the team's success at Capgemini.",
+                "hint": "A personal note from the team is waiting on the back.",
+                "quote": "Congratulations on your promotion! A wonderful recognition of your talent and your contribution to the team's success. Wishing you all the best for what's next.",
+                "frontAlt": "Front of the Capgemini Make it real postcard received for the promotion",
+                "messageAlt": "Handwritten congratulations from the Capgemini team for Hamza Elyoubi's promotion",
+                "revealLabel": "Read the message",
+                "hideLabel": "See the front"
+            },
+            "fr": {
+                "eyebrow": "Étape de carrière",
+                "title": "Promotion au grade C — Senior Software Engineer",
+                "summary": "Une reconnaissance interne de mon impact, de mon talent et de ma contribution au succès de l'équipe chez Capgemini.",
+                "hint": "Un mot personnel de l'équipe m'attend au verso.",
+                "quote": "Toutes mes félicitations pour ta promotion ! Une belle reconnaissance de ton talent et de ta contribution au succès de l'équipe. Je te souhaite le meilleur pour la suite.",
+                "frontAlt": "Recto de la carte Capgemini Make it real reçue pour la promotion",
+                "messageAlt": "Message manuscrit de félicitations de l'équipe Capgemini pour la promotion de Hamza Elyoubi",
+                "revealLabel": "Lire le message",
+                "hideLabel": "Voir le recto"
+            }
+        },
         "certifications": {
             "en": [
                 "GitHub Copilot Certification (2024)",
@@ -170,7 +198,7 @@
             {
                 "company": "BMA Biarritz School",
                 "position": "Développeur Web FullStack (Stage)",
-                "duration": "October 2016 - June 2017",
+                "duration": "Octobre 2016 - Juin 2017",
                 "achievements": [
                     "- Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
                     "- Intégration du paiement en ligne et système de classement en temps réel"
@@ -390,7 +418,7 @@
             {
                 "institution": "Capgemini Institut",
                 "title": "Urbanization of IS and Digital Architectures, Digital Architecture",
-                "date": "June 2022",
+                "date": "May 2022",
                 "badgeUrl": "https://www.institut.capgemini.fr/formation/urbanisation-du-si-et-architectures-techniques-reussir-sa-transformation/",
                 "badgeImg": "assets/e-learning/capgemini/cap.png"
             },
@@ -812,7 +840,7 @@
                     },
                     {
                         "heading": "Automatisation du pipeline CI/CD",
-                        "content": "Lorsque approprié, j'exploite l'intégration GitHub Actions :\n\n- **Tests automatisés** : Configurer des pipelines d'exécution de tests avec l'assistance de Copilot\n- **Workflows de déploiement** : Créer l'automatisation de déploiement suivant les principes d'infrastructure-as-code\n- **Quality Gates** : Implémenter des vérifications automatiques de qualité de code et de scan de sécurité"
+                        "content": "Le cas échéant, j'exploite l'intégration GitHub Actions :\n\n- **Tests automatisés** : Configurer des pipelines d'exécution de tests avec l'assistance de Copilot\n- **Workflows de déploiement** : Créer l'automatisation de déploiement suivant les principes d'infrastructure-as-code\n- **Quality Gates** : Implémenter des vérifications automatiques de qualité de code et de scan de sécurité"
                     },
                     {
                         "heading": "Principes clés",

@@ -29,6 +29,8 @@ export async function initializePortfolio(language) {
     const projects = data.projects[language];
     const softSkills = data.softSkills[language];
     const achievements = data.achievements[language];
+    const careerHighlight = personalInfo.careerHighlight;
+    const careerHighlightContent = careerHighlight?.[language];
 
     // Main Content
     document.getElementById('main-content').innerHTML = `
@@ -39,6 +41,8 @@ export async function initializePortfolio(language) {
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <h3>${personalInfo.title[language]}</h3>
+            </div>
+            <div class="hero-details">
                 ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
                 <p>${personalInfo.bio[language]}</p>
                 <div class="hero-cta">
@@ -52,6 +56,33 @@ export async function initializePortfolio(language) {
                     </a>
                 </div>
             </div>
+            ${careerHighlight && careerHighlightContent ? `
+                <aside class="career-highlight" aria-labelledby="career-highlight-title">
+                    <div class="career-highlight__copy">
+                        <span class="career-highlight__eyebrow">${careerHighlightContent.eyebrow}</span>
+                        <h2 id="career-highlight-title">${careerHighlightContent.title}</h2>
+                        <p>${careerHighlightContent.summary}</p>
+                    </div>
+                    <button id="career-postcard" class="career-postcard" type="button" aria-pressed="false" aria-label="${careerHighlightContent.revealLabel}">
+                        <span class="career-postcard__inner">
+                            <span class="career-postcard__face career-postcard__front">
+                                <img src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
+                            </span>
+                            <span class="career-postcard__face career-postcard__back">
+                                <img src="${careerHighlight.images.message}" alt="${careerHighlightContent.messageAlt}" width="1190" height="850" decoding="async">
+                            </span>
+                        </span>
+                    </button>
+                    <blockquote class="career-highlight__quote">
+                        <span class="career-highlight__hint">${careerHighlightContent.hint}</span>
+                        <span class="career-highlight__message">“${careerHighlightContent.quote}”</span>
+                    </blockquote>
+                    <button class="career-highlight__toggle" type="button" aria-controls="career-postcard">
+                        <i class="fas fa-rotate" aria-hidden="true"></i>
+                        <span>${careerHighlightContent.revealLabel}</span>
+                    </button>
+                </aside>
+            ` : ''}
         </section>
 
         <section id="certifications" class="section visible">
@@ -278,6 +309,25 @@ export async function initializePortfolio(language) {
         const lastUpdateDate = new Date(document.lastModified);
         const text = language === 'fr' ? 'Dernière mise à jour:' : 'Last updated:';
         lastUpdateElement.innerHTML = `${text} ${lastUpdateDate.toLocaleDateString()} ${lastUpdateDate.toLocaleTimeString()}`;
+    }
+
+    const postcard = document.querySelector('.career-postcard');
+    const postcardToggle = document.querySelector('.career-highlight__toggle');
+    if (postcard && postcardToggle && careerHighlightContent) {
+        const toggleLabel = postcardToggle.querySelector('span');
+        const setPostcardState = (isRevealed) => {
+            postcard.classList.toggle('is-revealed', isRevealed);
+            postcard.setAttribute('aria-pressed', String(isRevealed));
+            postcard.setAttribute('aria-label', isRevealed ? careerHighlightContent.hideLabel : careerHighlightContent.revealLabel);
+            toggleLabel.textContent = isRevealed ? careerHighlightContent.hideLabel : careerHighlightContent.revealLabel;
+        };
+        const togglePostcard = () => setPostcardState(!postcard.classList.contains('is-revealed'));
+        postcard.addEventListener('click', togglePostcard);
+        postcardToggle.addEventListener('click', togglePostcard);
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.setTimeout(() => setPostcardState(true), 1400);
+        }
     }
 
     // Language switcher functionality - use the new language manager

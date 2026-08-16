@@ -130,4 +130,11 @@ export function updateNavigationLanguage(language) {
             ? 'Développé avec l\'aide de GitHub Copilot & Claude Code'
             : 'Developed with the help of GitHub Copilot & Claude Code';
     }
+
+    const copyright = document.querySelector('.copyright p');
+    if (copyright) {
+        copyright.innerHTML = language === 'fr'
+            ? '&copy; 2026 Hamza Elyoubi. Tous droits réservés.'
+            : '&copy; 2026 Hamza Elyoubi. All rights reserved.';
+    }
 }

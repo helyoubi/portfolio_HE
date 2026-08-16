@@ -11,6 +11,9 @@
     /* Violet 500 */
     --accent-color-hover: #7c3aed;
     /* Violet 600 */
+    --career-accent: #67e8f9;
+    --career-accent-soft: rgba(103, 232, 249, 0.12);
+    --career-accent-border: rgba(103, 232, 249, 0.35);
 
     /* Dark Theme (Default) - Sleek Material Dark */
     --bg-color: #0f1115;
@@ -68,6 +71,9 @@
     /* Violet 600 */
     --accent-color-hover: #6d28d9;
     /* Violet 700 */
+    --career-accent: #0e7490;
+    --career-accent-soft: rgba(14, 116, 144, 0.08);
+    --career-accent-border: rgba(14, 116, 144, 0.3);
 
     /* Light Theme */
     --bg-color: #f8fafc;

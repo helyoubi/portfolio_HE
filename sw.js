@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v20260517T180';
+const CACHE_NAME = 'portfolio-cache-v20260816T075';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -19,6 +19,8 @@ const ASSETS_TO_CACHE = [
     './scripts/pageLoader.js',
     './data/portfolioData.json',
     './assets/images/profile.jpg',
+    './assets/images/career-milestone/grade-c-front.webp',
+    './assets/images/career-milestone/grade-c-message.webp',
     './assets/icons/favicon.svg',
     './assets/icons/en.png',
     './assets/icons/fr.png',
@@ -109,7 +111,7 @@ self.addEventListener('fetch', event => {
                 return fetch(event.request).catch(error => {
                     console.warn('Failed to fetch resource:', event.request.url, error);
                     // For image resources, return a fallback or just let it fail gracefully
-                    if (event.request.url.includes('.png') || event.request.url.includes('.jpg') || event.request.url.includes('.jpeg')) {
+                    if (event.request.url.includes('.png') || event.request.url.includes('.jpg') || event.request.url.includes('.jpeg') || event.request.url.includes('.webp')) {
                         // Return a simple transparent 1x1 PNG as fallback
                         return new Response(
                             new Uint8Array([

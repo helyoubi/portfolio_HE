@@ -5,7 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(form);
-            
+
+            const lang = localStorage.getItem('language') || 'fr';
+            const messages = {
+                fr: {
+                    success: 'Message envoyé avec succès !',
+                    error: 'Oups ! Un problème est survenu lors de l\'envoi de votre message.'
+                },
+                en: {
+                    success: 'Message sent successfully!',
+                    error: 'Oops! There was a problem sending your message.'
+                }
+            };
+            const t = messages[lang] || messages.fr;
+
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -14,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
-                    alert('Message sent successfully!');
+                    alert(t.success);
                     form.reset();
                 } else {
-                    alert('Oops! There was a problem sending your message.');
+                    alert(t.error);
                 }
             } catch (error) {
-                alert('Oops! There was a problem sending your message.');
+                alert(t.error);
             }
         });
     }

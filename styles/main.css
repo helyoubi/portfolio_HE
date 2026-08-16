@@ -302,16 +302,29 @@ button[id*="close"],
     min-height: 100vh;
     padding: 80px 7% 100px;
     /* Reduced top padding since no fixed navbar */
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(380px, 0.9fr);
+    grid-template-areas:
+        "intro milestone"
+        "details milestone";
     align-items: center;
     background: radial-gradient(circle at top right, var(--primary-light) 0%, transparent 60%), var(--bg-color);
     position: relative;
     overflow: hidden;
+    column-gap: clamp(3rem, 7vw, 6rem);
+    row-gap: 1.25rem;
+    justify-content: space-between;
 }
 
 .hero-content {
+    grid-area: intro;
     max-width: 600px;
     position: relative;
+}
+
+.hero-details {
+    grid-area: details;
+    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -328,7 +341,7 @@ button[id*="close"],
     margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero-details > p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
@@ -396,6 +409,175 @@ button[id*="close"],
     background: var(--primary-light);
     border-color: var(--primary-color);
     color: var(--primary-color);
+}
+
+/* Career milestone — one editorial reveal built around the physical postcard. */
+.career-highlight {
+    grid-area: milestone;
+    width: min(100%, 480px);
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--career-accent-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    isolation: isolate;
+}
+
+.career-highlight::before {
+    content: '';
+    position: absolute;
+    inset: 0.75rem auto 0.75rem 0;
+    width: 3px;
+    background: var(--career-accent);
+    border-radius: var(--radius-full);
+}
+
+.career-highlight__copy {
+    margin-bottom: 1rem;
+}
+
+.career-highlight__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    color: var(--career-accent);
+    background: var(--career-accent-soft);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.career-highlight h2 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    line-height: 1.2;
+}
+
+.career-highlight__copy p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.career-postcard {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-md);
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.career-postcard__inner {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.44;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 400ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.career-postcard.is-revealed .career-postcard__inner {
+    transform: rotateY(180deg);
+}
+
+.career-postcard__face {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.career-postcard__back {
+    transform: rotateY(180deg);
+    background: var(--secondary-bg);
+}
+
+.career-postcard img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.career-highlight__quote {
+    min-height: 3.9rem;
+    margin: 0.75rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    position: relative;
+}
+
+.career-highlight__hint,
+.career-highlight__message {
+    position: absolute;
+    inset: 0;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.career-highlight__hint {
+    display: flex;
+    align-items: center;
+    color: var(--career-accent);
+    font-weight: 600;
+}
+
+.career-highlight__message {
+    font-style: italic;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.career-postcard:not(.is-revealed) + .career-highlight__quote .career-highlight__message {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.career-postcard.is-revealed + .career-highlight__quote .career-highlight__hint {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.career-highlight__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    margin-top: 0.5rem;
+    padding: 0.625rem 1rem;
+    color: var(--career-accent);
+    background: var(--career-accent-soft);
+    border: 1px solid var(--career-accent-border);
+    border-radius: var(--radius-full);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.career-highlight__toggle:hover {
+    transform: translateY(-2px);
+    background: var(--primary-light);
+}
+
+.career-highlight__toggle:active {
+    transform: translateY(0) scale(0.98);
 }
 
 /* Button Styles */
@@ -874,44 +1056,7 @@ button[id*="close"],
 /* Mobile responsive adjustments for GitHub Copilot popup */
 @media (max-width: 768px) {
     .copilot-credit {
-        position: fixed;
-        top: 50%;
-        right: 0;
-        left: auto;
-        transform: translateY(-50%);
-        padding: 0.8rem 0.4rem;
-        font-size: 0.75rem;
-        z-index: 1900;
-        width: auto;
-        height: max-content;
-        max-height: 80vh;
-        overflow: hidden;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        border-radius: 8px 0 0 8px;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        transition: transform 0.3s ease;
-        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
-        border-right: none;
-    }
-
-    .copilot-credit:hover {
-        transform: translateY(-50%) translateX(-5px);
-    }
-
-    .copilot-credit span {
-        display: inline-block;
-        white-space: normal;
-        font-weight: 500;
-        text-align: center;
-    }
-
-    .copilot-icon {
-        width: 20px !important;
-        height: 20px !important;
-        flex-shrink: 0;
+        display: none;
     }
 }
 
@@ -1513,6 +1658,47 @@ body {
 
     .hero {
         padding: 100px 5% 50px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "intro"
+            "milestone"
+            "details";
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .hero-details {
+        max-width: none;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .career-highlight {
+        align-self: center;
+        padding: 1rem;
+    }
+
+    .career-highlight__quote {
+        min-height: 5rem;
+    }
+
+    .career-highlight__toggle {
+        width: 100%;
     }
 
 
