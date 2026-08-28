@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="cache-bust" content="20260816T0906">
+    <meta name="cache-bust" content="20260828T0928">
     <title>Veille tech — Hamza Elyoubi</title>
     <meta name="description" content="Veille technologique et ressources de Hamza Elyoubi — GenAI, Java, DevOps.">
     <meta name="keywords" content="Veille, Tech Watch, Hamza Elyoubi, Generative AI, Java, DevOps">
@@ -41,26 +41,27 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css?v=20260816T0906">
-    <link rel="stylesheet" href="styles/themes.css?v=20260816T0906">
+    <link rel="stylesheet" href="styles/main.css?v=20260828T0928">
+    <link rel="stylesheet" href="styles/themes.css?v=20260828T0928">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Hamburger Menu -->
-    <div class="hamburger-menu" id="hamburgerMenu">
+    <button class="hamburger-menu" id="hamburgerMenu" type="button" aria-label="Ouvrir le menu" aria-controls="navMenu" aria-expanded="false">
         <div class="hamburger-icon">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </div>
+    </button>
 
     <!-- Navigation Menu -->
     <nav class="nav-menu" id="navMenu" aria-label="Menu principal">
         <ul class="nav-links">
             <li><a href="index.html#home" data-section="home">Accueil</a></li>
             <li><a href="index.html#experience" data-section="experience">Expérience</a></li>
+            <li><a href="index.html#ai-expertise" data-section="ai">Expertise IA</a></li>
             <li><a href="index.html#skills" data-section="skills">Compétences</a></li>
             <li class="has-children">
                 <a href="#" data-section="worksParent" aria-haspopup="true" aria-expanded="false">Projets & Formations</a>
@@ -121,7 +122,7 @@
 
     <!-- Scripts -->
     <script type="module">
-        import { initializeVeillePage } from './scripts/veilleLoader.js?v=20260816T0906';
+        import { initializeVeillePage } from './scripts/veilleLoader.js?v=20260828T0928';
         document.addEventListener('DOMContentLoaded', () => {
             initializeVeillePage();
         });

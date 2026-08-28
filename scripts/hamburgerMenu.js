@@ -19,6 +19,8 @@ export function initializeHamburgerMenu() {
     function openMenu() {
         hamburgerMenu.classList.add('active');
         navMenu.classList.add('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'true');
+        hamburgerMenu.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Fermer le menu' : 'Close menu');
         document.body.style.overflow = 'hidden';
     }
 
@@ -26,6 +28,8 @@ export function initializeHamburgerMenu() {
     function closeMenuAction() {
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
+        hamburgerMenu.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Ouvrir le menu' : 'Open menu');
         document.body.style.overflow = '';
     }
 
@@ -51,6 +55,7 @@ export function initializeHamburgerMenu() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenuAction();
+            hamburgerMenu.focus();
         }
     });
 
@@ -93,6 +98,7 @@ export function updateNavigationLanguage(language) {
         'fr': {
             'home': 'Accueil',
             'experience': 'Expérience',
+            'ai': 'Expertise IA',
             'skills': 'Compétences',
             'worksParent': 'Projets & Formations',
             'projects': 'Projets',
@@ -105,6 +111,7 @@ export function updateNavigationLanguage(language) {
         'en': {
             'home': 'Home',
             'experience': 'Experience',
+            'ai': 'AI Expertise',
             'skills': 'Skills',
             'worksParent': 'Projects & Trainings',
             'projects': 'Projects',
@@ -123,6 +130,19 @@ export function updateNavigationLanguage(language) {
             link.textContent = translations[language][section];
         }
     });
+
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+        navMenu.setAttribute('aria-label', language === 'fr' ? 'Navigation principale' : 'Main navigation');
+    }
+
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    if (hamburgerMenu) {
+        const isOpen = hamburgerMenu.getAttribute('aria-expanded') === 'true';
+        hamburgerMenu.setAttribute('aria-label', language === 'fr'
+            ? (isOpen ? 'Fermer le menu' : 'Ouvrir le menu')
+            : (isOpen ? 'Close menu' : 'Open menu'));
+    }
 
     const creditSpan = document.querySelector('#copilot-credit span');
     if (creditSpan) {

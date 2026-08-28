@@ -15,6 +15,10 @@
     --career-accent-soft: rgba(103, 232, 249, 0.12);
     --career-accent-border: rgba(103, 232, 249, 0.35);
     --career-lightbox-backdrop: rgba(3, 7, 18, 0.94);
+    --ai-accent: #fbbf24;
+    --ai-accent-strong: #f59e0b;
+    --ai-accent-soft: rgba(251, 191, 36, 0.1);
+    --ai-accent-border: rgba(251, 191, 36, 0.32);
 
     /* Dark Theme (Default) - Sleek Material Dark */
     --bg-color: #0f1115;
@@ -76,6 +80,10 @@
     --career-accent-soft: rgba(14, 116, 144, 0.08);
     --career-accent-border: rgba(14, 116, 144, 0.3);
     --career-lightbox-backdrop: rgba(15, 23, 42, 0.9);
+    --ai-accent: #a16207;
+    --ai-accent-strong: #854d0e;
+    --ai-accent-soft: rgba(161, 98, 7, 0.08);
+    --ai-accent-border: rgba(161, 98, 7, 0.28);
 
     /* Light Theme */
     --bg-color: #f8fafc;

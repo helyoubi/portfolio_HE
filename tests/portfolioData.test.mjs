@@ -22,6 +22,7 @@ describe('portfolioData.json — multilingual integrity', () => {
     ['experience'],
     ['education'],
     ['projects'],
+    ['languages'],
     ['softSkills'],
     ['achievements']
   ])('%s has identical en/fr array lengths', (section) => {
@@ -33,6 +34,18 @@ describe('portfolioData.json — multilingual integrity', () => {
   test('personalInfo.certifications has en and fr with matching length', () => {
     expect(data.personalInfo.certifications.en.length)
       .toBe(data.personalInfo.certifications.fr.length);
+  });
+
+  test('AI expertise is complete and aligned in both languages', () => {
+    const en = data.aiExpertise.en;
+    const fr = data.aiExpertise.fr;
+
+    expect(en.title).toBeTruthy();
+    expect(fr.title).toBeTruthy();
+    expect(en.tools.map(({ name }) => name)).toEqual(fr.tools.map(({ name }) => name));
+    expect(en.evidence.length).toBe(fr.evidence.length);
+    expect(en.workflow.length).toBe(fr.workflow.length);
+    expect(en.principles.length).toBe(fr.principles.length);
   });
 
   test('every project keeps required fields and matching title across en/fr', () => {

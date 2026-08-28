@@ -26,9 +26,9 @@ export async function initializePortfolio(language) {
     const personalInfo = data.personalInfo;
     const experience = data.experience[language];
     const education = data.education[language];
-    const projects = data.projects[language];
+    const aiExpertise = data.aiExpertise[language];
+    const spokenLanguages = data.languages[language];
     const softSkills = data.softSkills[language];
-    const achievements = data.achievements[language];
     const careerHighlight = personalInfo.careerHighlight;
     const careerHighlightContent = careerHighlight?.[language];
 
@@ -40,7 +40,7 @@ export async function initializePortfolio(language) {
                     <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
-                <h3>${personalInfo.title[language]}</h3>
+                <p class="hero-role">${personalInfo.title[language]}</p>
             </div>
             <div class="hero-details">
                 ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
@@ -139,6 +139,75 @@ export async function initializePortfolio(language) {
             </div>
         </section>
 
+        <section id="ai-expertise" class="ai-expertise" aria-labelledby="ai-expertise-title">
+            <header class="ai-expertise__header">
+                <span class="ai-expertise__eyebrow">${aiExpertise.eyebrow}</span>
+                <h2 id="ai-expertise-title" class="section-title">${aiExpertise.title}</h2>
+                <p>${aiExpertise.intro}</p>
+            </header>
+
+            <div class="ai-evidence" aria-label="${aiExpertise.eyebrow}">
+                ${aiExpertise.evidence.map((item, index) => `
+                    <article class="ai-evidence__item">
+                        <span class="ai-evidence__index" aria-hidden="true">0${index + 1}</span>
+                        <div>
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    </article>
+                `).join('')}
+            </div>
+
+            <div class="ai-expertise__content">
+                <div class="ai-tools">
+                    <h3 class="ai-expertise__subheading">${aiExpertise.toolsTitle}</h3>
+                    <div class="ai-tools__grid">
+                        ${aiExpertise.tools.map(tool => `
+                            <article class="ai-tool-card">
+                                <div class="ai-tool-card__heading">
+                                    <span class="ai-tool-card__mark" aria-hidden="true">${tool.name.slice(0, 2).toUpperCase()}</span>
+                                    <div>
+                                        <h4>${tool.name}</h4>
+                                        <p class="ai-tool-card__role">${tool.role}</p>
+                                    </div>
+                                </div>
+                                <p>${tool.description}</p>
+                            </article>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <aside class="ai-guardrails">
+                    <h3 class="ai-expertise__subheading">${aiExpertise.principlesTitle}</h3>
+                    <ul>
+                        ${aiExpertise.principles.map(principle => `
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>${principle}</span></li>
+                        `).join('')}
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="ai-workflow">
+                <h3 class="ai-expertise__subheading">${aiExpertise.workflowTitle}</h3>
+                <ol class="ai-workflow__steps">
+                    ${aiExpertise.workflow.map((step, index) => `
+                        <li>
+                            <span class="ai-workflow__number" aria-hidden="true">${index + 1}</span>
+                            <div>
+                                <h4>${step.title}</h4>
+                                <p>${step.description}</p>
+                            </div>
+                        </li>
+                    `).join('')}
+                </ol>
+            </div>
+
+            <a class="ai-expertise__link" href="howto.html">
+                <span>${aiExpertise.resourceLabel}</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </section>
+
         <section id="education">
             <h2 class="section-title">${language === 'fr' ? 'Éducation' : 'Education'}</h2>
             <div class="education-container">
@@ -235,10 +304,10 @@ export async function initializePortfolio(language) {
         <section id="languages">
             <h2 class="section-title">${language === 'fr' ? 'Langues' : 'Languages'}</h2>
             <div class="languages-container">
-                ${data.languages.map(language => `
+                ${spokenLanguages.map(spokenLanguage => `
                     <div class="language-card">
-                        <h3>${language.name}</h3>
-                        <p>${language.level}</p>
+                        <h3>${spokenLanguage.name}</h3>
+                        <p>${spokenLanguage.level}</p>
                     </div>
                 `).join('')}
             </div>
@@ -273,52 +342,6 @@ export async function initializePortfolio(language) {
             </form>
         </section>
     `;
-
-    // Helper for pagination
-    function renderTrainings(trainings, page = 1, perPage = 3) {
-        const total = trainings.length;
-        const totalPages = Math.ceil(total / perPage);
-        const start = (page - 1) * perPage;
-        const end = start + perPage;
-        const currentTrainings = trainings.slice(start, end);
-        const isFr = language === 'fr';
-
-        let html = currentTrainings.map(training => `
-            <div class="education-card training-card">
-                <h3>${training.institution}</h3>
-                <p>${training.title}</p>
-                <span style='font-size:0.95em;opacity:0.8;'>${training.date || ''}</span>
-                ${training.badgeUrl && training.badgeImg ? `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer"><img src="${training.badgeImg}" alt="Training Badge" style="width:70px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;"></a>` : ''}
-            </div>
-        `).join('');
-
-        // Pagination controls
-        html += `
-            <div class="pagination-controls">
-                <button id="prevTrainings" ${page === 1 ? 'disabled' : ''}>&laquo; ${isFr ? 'Préc.' : 'Prev'}</button>
-                <span>${isFr ? `Page ${page} sur ${totalPages}` : `Page ${page} of ${totalPages}`}</span>
-                <button id="nextTrainings" ${page === totalPages ? 'disabled' : ''}>${isFr ? 'Suiv.' : 'Next'} &raquo;</button>
-            </div>
-        `;
-        return html;
-    }
-
-    // Add this after setting innerHTML to enable pagination
-    setTimeout(() => {
-        const trainingsContainer = document.getElementById('trainings-container');
-        let currentPage = 1;
-        const updateTrainings = (page) => {
-            trainingsContainer.innerHTML = renderTrainings(data.trainings[language], page, 3);
-            addPaginationListeners();
-        };
-        function addPaginationListeners() {
-            const prevBtn = document.getElementById('prevTrainings');
-            const nextBtn = document.getElementById('nextTrainings');
-            if (prevBtn) prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; updateTrainings(currentPage); } };
-            if (nextBtn) nextBtn.onclick = () => { if (currentPage < Math.ceil(data.trainings[language].length / 3)) { currentPage++; updateTrainings(currentPage); } };
-        }
-        addPaginationListeners();
-    }, 0);
 
     // Set last update date and time
     const lastUpdateElement = document.getElementById('last-update');

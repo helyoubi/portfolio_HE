@@ -167,7 +167,7 @@
                 "duration": "Août 2025 - Mai 2026",
                 "achievements": [
                     "- Prise de décisions d'architecture, coordination avec les architectes client et garantie de la continuité de service",
-                    "- Conception technique et développement complet de la refonte du portail de connexion backend/frontend développée from scratch",
+                    "- Conception technique et développement de bout en bout de la refonte du portail de connexion backend/frontend",
                     "- Implémentation full-stack avec des patterns d'architecture modernes",
                     "- Stack : Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
                 ]
@@ -583,6 +583,144 @@
         "architectures": ["Microservices", "Event-Driven Architecture", "REST APIs", "SOAP", "Clean Architecture", "DDD"],
         "methodologies": ["Agile Scrum", "Software Craftsmanship", "TDD", "BDD", "UML"]
     },
+    "aiExpertise": {
+        "en": {
+            "eyebrow": "Generative AI expertise",
+            "title": "AI-assisted software engineering",
+            "intro": "I integrate generative AI throughout the software delivery lifecycle to accelerate analysis, implementation and documentation while keeping architecture, security and quality under human control.",
+            "evidence": [
+                {
+                    "title": "Team adoption",
+                    "description": "GenAI champion and facilitator of GitHub Copilot training sessions for development teams."
+                },
+                {
+                    "title": "End-to-end delivery",
+                    "description": "Hands-on use from codebase exploration and technical design through coding, testing, review and documentation."
+                },
+                {
+                    "title": "Responsible practice",
+                    "description": "Every generated change is reviewed, tested and checked against project standards before integration."
+                }
+            ],
+            "toolsTitle": "Tools I use professionally",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "role": "Daily development & team adoption",
+                    "description": "Context-aware coding, test generation, refactoring, pull-request support and developer enablement."
+                },
+                {
+                    "name": "Codex",
+                    "role": "Repository-scale execution",
+                    "description": "Codebase exploration, scoped implementation, parallelizable engineering tasks and evidence-based verification."
+                },
+                {
+                    "name": "Claude Code",
+                    "role": "Deep analysis & complex changes",
+                    "description": "Architecture analysis, multi-file evolution, debugging, review and workflow automation on existing codebases."
+                },
+                {
+                    "name": "Cursor",
+                    "role": "Fast contextual iteration",
+                    "description": "Rapid prototyping, targeted edits and multi-file refactoring with repository context."
+                }
+            ],
+            "workflowTitle": "A controlled AI delivery loop",
+            "workflow": [
+                {
+                    "title": "Frame",
+                    "description": "Define the goal, constraints, architecture and relevant context."
+                },
+                {
+                    "title": "Pair",
+                    "description": "Select the right assistant and work in small, traceable increments."
+                },
+                {
+                    "title": "Verify",
+                    "description": "Review the diff, run tests and validate security, performance and maintainability."
+                },
+                {
+                    "title": "Share",
+                    "description": "Document decisions and help the team reuse proven practices."
+                }
+            ],
+            "principlesTitle": "Engineering guardrails",
+            "principles": [
+                "Human ownership of architectural and product decisions",
+                "No sensitive context shared outside approved environments",
+                "Tests, code review and CI quality gates remain mandatory"
+            ],
+            "resourceLabel": "Explore my GenAI workflow for the SDLC"
+        },
+        "fr": {
+            "eyebrow": "Expertise en IA générative",
+            "title": "Ingénierie logicielle augmentée par l’IA",
+            "intro": "J’intègre l’IA générative à l’ensemble du cycle de livraison logicielle pour accélérer l’analyse, l’implémentation et la documentation, tout en maintenant l’architecture, la sécurité et la qualité sous contrôle humain.",
+            "evidence": [
+                {
+                    "title": "Adoption en équipe",
+                    "description": "Référent GenAI et animateur de sessions de formation GitHub Copilot auprès d’équipes de développement."
+                },
+                {
+                    "title": "Livraison de bout en bout",
+                    "description": "Usage concret de l’exploration du code et de la conception technique jusqu’au développement, aux tests, à la revue et à la documentation."
+                },
+                {
+                    "title": "Pratique responsable",
+                    "description": "Chaque changement généré est relu, testé et confronté aux standards du projet avant intégration."
+                }
+            ],
+            "toolsTitle": "Outils utilisés professionnellement",
+            "tools": [
+                {
+                    "name": "GitHub Copilot",
+                    "role": "Développement quotidien & adoption en équipe",
+                    "description": "Développement contextualisé, génération de tests, refactoring, assistance aux pull requests et accompagnement des développeurs."
+                },
+                {
+                    "name": "Codex",
+                    "role": "Exécution à l’échelle du dépôt",
+                    "description": "Exploration de codebases, implémentation cadrée, tâches d’ingénierie parallélisables et vérification fondée sur des preuves."
+                },
+                {
+                    "name": "Claude Code",
+                    "role": "Analyse approfondie & changements complexes",
+                    "description": "Analyse d’architecture, évolutions multi-fichiers, diagnostic, revue et automatisation de workflows sur des bases de code existantes."
+                },
+                {
+                    "name": "Cursor",
+                    "role": "Itération contextuelle rapide",
+                    "description": "Prototypage rapide, modifications ciblées et refactoring multi-fichiers avec le contexte du dépôt."
+                }
+            ],
+            "workflowTitle": "Une boucle de livraison IA maîtrisée",
+            "workflow": [
+                {
+                    "title": "Cadrer",
+                    "description": "Définir l’objectif, les contraintes, l’architecture et le contexte utile."
+                },
+                {
+                    "title": "Collaborer",
+                    "description": "Choisir l’assistant adapté et avancer par incréments courts et traçables."
+                },
+                {
+                    "title": "Vérifier",
+                    "description": "Relire le diff, exécuter les tests et valider sécurité, performance et maintenabilité."
+                },
+                {
+                    "title": "Transmettre",
+                    "description": "Documenter les décisions et aider l’équipe à réutiliser les pratiques éprouvées."
+                }
+            ],
+            "principlesTitle": "Garde-fous d’ingénierie",
+            "principles": [
+                "Responsabilité humaine sur les décisions d’architecture et de produit",
+                "Aucun contexte sensible partagé hors des environnements approuvés",
+                "Tests, revue de code et quality gates CI restent obligatoires"
+            ],
+            "resourceLabel": "Découvrir mon workflow GenAI pour le SDLC"
+        }
+    },
     "projects": {
         "en": [
             {
@@ -727,11 +865,18 @@
             }
         ]
     },
-    "languages": [
-        {"name": "French", "level": "Native"},
-        {"name": "Arabic", "level": "Native"},
-        {"name": "English", "level": "Professional"}
-    ],
+    "languages": {
+        "en": [
+            {"name": "French", "level": "Native"},
+            {"name": "Arabic", "level": "Native"},
+            {"name": "English", "level": "Professional proficiency"}
+        ],
+        "fr": [
+            {"name": "Français", "level": "Langue maternelle"},
+            {"name": "Arabe", "level": "Langue maternelle"},
+            {"name": "Anglais", "level": "Compétence professionnelle"}
+        ]
+    },
     "softSkills": {
         "en": [
             "Technical Leadership",
@@ -804,11 +949,23 @@
             },
             "claude-code": {
                 "title": "Claude Code in Development",
-                "subtitle": "Coming Soon",
+                "subtitle": "Deep codebase analysis and controlled multi-file delivery",
                 "sections": [
                     {
-                        "heading": "Overview",
-                        "content": "Documentation for Claude Code usage is coming soon. Stay tuned for insights on how I leverage Claude Code in my development workflow."
+                        "heading": "Repository-First Analysis",
+                        "content": "I use Claude Code to build an evidence-based understanding of an existing repository before changing it: architecture, conventions, dependencies, tests and current constraints. This is particularly effective for legacy modernization, complex debugging and changes that cross several modules."
+                    },
+                    {
+                        "heading": "Controlled Implementation",
+                        "content": "I break work into scoped, verifiable increments. Each task starts with explicit acceptance criteria and relevant project instructions, then finishes with a diff review and the appropriate lint, test and build commands."
+                    },
+                    {
+                        "heading": "Automation and Reuse",
+                        "content": "I create reusable project instructions, specialized commands and tool integrations for recurring engineering tasks. The objective is consistent team execution—not a one-off prompt that cannot be audited or reproduced."
+                    },
+                    {
+                        "heading": "Human Quality Gate",
+                        "content": "Claude Code accelerates analysis and execution, but architectural decisions and final accountability remain human. Generated changes must satisfy the same security, maintainability, performance and CI requirements as manually written code."
                     }
                 ]
             }
@@ -858,11 +1015,23 @@
             },
             "claude-code": {
                 "title": "Claude Code en Développement",
-                "subtitle": "À venir prochainement",
+                "subtitle": "Analyse approfondie du code et livraison multi-fichiers maîtrisée",
                 "sections": [
                     {
-                        "heading": "Aperçu",
-                        "content": "La documentation sur l'utilisation de Claude Code arrive bientôt. Restez à l'écoute pour découvrir comment j'exploite Claude Code dans mon flux de travail de développement."
+                        "heading": "Analyse centrée sur le dépôt",
+                        "content": "J’utilise Claude Code pour construire une compréhension factuelle d’un dépôt existant avant toute modification : architecture, conventions, dépendances, tests et contraintes en place. Cette approche est particulièrement efficace pour la modernisation de legacy, les diagnostics complexes et les évolutions transverses à plusieurs modules."
+                    },
+                    {
+                        "heading": "Implémentation maîtrisée",
+                        "content": "Je découpe le travail en incréments cadrés et vérifiables. Chaque tâche commence par des critères d’acceptation explicites et les instructions utiles du projet, puis se termine par la revue du diff et l’exécution des commandes de lint, de test et de build adaptées."
+                    },
+                    {
+                        "heading": "Automatisation et réutilisation",
+                        "content": "Je conçois des instructions projet réutilisables, des commandes spécialisées et des intégrations d’outils pour les tâches d’ingénierie récurrentes. L’objectif est une exécution cohérente en équipe, et non un prompt ponctuel impossible à auditer ou reproduire."
+                    },
+                    {
+                        "heading": "Validation humaine",
+                        "content": "Claude Code accélère l’analyse et l’exécution, mais les décisions d’architecture et la responsabilité finale restent humaines. Les changements générés doivent respecter les mêmes exigences de sécurité, maintenabilité, performance et CI que du code écrit manuellement."
                     }
                 ]
             }

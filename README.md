@@ -1,6 +1,6 @@
 # Hamza Elyoubi - Portfolio
 
-Welcome to my professional portfolio! This project showcases my skills and experience as a Github copilot user . The portfolio is built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages.
+Welcome to my professional portfolio. It presents my experience as a Senior Java Software Engineer and Tech Lead, including my expertise in AI-assisted software engineering with GitHub Copilot, Codex, Claude Code, and Cursor. The portfolio is built with HTML, CSS, and JavaScript and hosted on GitHub Pages.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Welcome to my professional portfolio! This project showcases my skills and exper
 
 ## About
 
-I am Hamza Elyoubi, a Technical Leader with over 7 years of experience in full-stack development. I am a Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-driven solutions. Currently, I lead technical teams at Capgemini while maintaining active involvement in code development.
+I am Hamza Elyoubi, a Technical Leader with over 8 years of experience in software development. I am a Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-assisted engineering. Currently, I lead technical teams at Capgemini while remaining actively involved in software delivery.
 
 ## Features
 
@@ -29,6 +29,7 @@ I am Hamza Elyoubi, a Technical Leader with over 7 years of experience in full-s
 - **Badge & Menu Styling**: Modern, responsive badge and menu styles for both themes.
 - **Professional Experience**: Timeline of positions and achievements.
 - **Technical Skills & Projects**: Overview of skills, frameworks, and project showcases.
+- **Generative AI Expertise**: Professional practices, tools, delivery workflow, and engineering guardrails for AI-assisted development.
 - **Contact Form**: Contact via Formspree integration.
 
 ## Technologies Used

@@ -19,4 +19,21 @@ describe('hamburgerMenu.js', () => {
     const hamburgerMenuModule = await import('../scripts/hamburgerMenu.js');
     expect(typeof hamburgerMenuModule.updateNavigationLanguage).toBe('function');
   });
+
+  test('keeps aria-expanded in sync when the menu opens and closes', async () => {
+    document.documentElement.lang = 'fr';
+    document.body.innerHTML = `
+      <button id="hamburgerMenu" aria-expanded="false"></button>
+      <nav id="navMenu"><a href="index.html#home">Accueil</a></nav>
+    `;
+    const { initializeHamburgerMenu } = await import('../scripts/hamburgerMenu.js');
+
+    initializeHamburgerMenu();
+    const button = document.getElementById('hamburgerMenu');
+    button.click();
+    expect(button.getAttribute('aria-expanded')).toBe('true');
+
+    button.click();
+    expect(button.getAttribute('aria-expanded')).toBe('false');
+  });
 });

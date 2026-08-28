@@ -57,6 +57,8 @@ body {
     transition: var(--transition-normal);
     display: block !important;
     opacity: 1 !important;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Mobile responsive adjustments for hamburger menu */
@@ -335,10 +337,12 @@ button[id*="close"],
     letter-spacing: -0.02em;
 }
 
-.hero-content h3 {
+.hero-role {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 .hero-details > p {
@@ -900,6 +904,277 @@ body.career-lightbox-open {
     /* Adjust icon size to fit smaller card */
     color: var(--primary-color);
     margin-top: 0.5rem;
+}
+
+/* Generative AI expertise — an evidence-led workflow, not a logo wall. */
+.ai-expertise {
+    margin: 4rem 0;
+    padding: 2rem 1rem;
+    scroll-margin-top: 80px;
+    background: var(--section-bg);
+    border: 1px solid var(--ai-accent-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.ai-expertise__header {
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.ai-expertise__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    color: var(--ai-accent);
+    background: var(--ai-accent-soft);
+    border: 1px solid var(--ai-accent-border);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ai-expertise .section-title {
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    text-align: left;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.12;
+}
+
+.ai-expertise__header > p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.ai-evidence {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.ai-evidence__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.ai-evidence__index {
+    color: var(--ai-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.ai-evidence__item h3,
+.ai-tool-card h4,
+.ai-workflow h4 {
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+}
+
+.ai-evidence__item p,
+.ai-tool-card > p,
+.ai-workflow p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.ai-expertise__content {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ai-expertise__subheading {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.ai-tools__grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.ai-tool-card {
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.ai-tool-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--ai-accent-border);
+}
+
+.ai-tool-card__heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.ai-tool-card__mark {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    color: var(--ai-accent);
+    background: var(--ai-accent-soft);
+    border: 1px solid var(--ai-accent-border);
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.ai-tool-card__role {
+    color: var(--ai-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ai-guardrails {
+    align-self: start;
+    padding: 1.25rem;
+    background: var(--ai-accent-soft);
+    border: 1px solid var(--ai-accent-border);
+    border-radius: var(--radius-md);
+}
+
+.ai-guardrails ul {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.ai-guardrails li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.ai-guardrails i {
+    margin-top: 0.3rem;
+    color: var(--ai-accent);
+}
+
+.ai-workflow {
+    margin-bottom: 1.5rem;
+}
+
+.ai-workflow__steps {
+    display: grid;
+    gap: 0;
+    list-style: none;
+}
+
+.ai-workflow__steps li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 0.75rem;
+    min-height: 96px;
+    position: relative;
+}
+
+.ai-workflow__steps li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 21px;
+    width: 2px;
+    background: var(--ai-accent-border);
+}
+
+.ai-workflow__number {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    color: var(--bg-color);
+    background: var(--ai-accent);
+    border-radius: var(--radius-full);
+    font-weight: 800;
+}
+
+.ai-workflow__steps li > div {
+    padding: 0.4rem 0 1rem;
+}
+
+.ai-expertise__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    color: var(--ai-accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ai-expertise__link i {
+    transition: transform var(--transition-fast);
+}
+
+.ai-expertise__link:hover {
+    color: var(--ai-accent-strong);
+}
+
+.ai-expertise__link:hover i {
+    transform: translateX(4px);
+}
+
+@media (min-width: 720px) {
+    .ai-expertise {
+        padding: 3rem;
+    }
+
+    .ai-evidence {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .ai-tools__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-workflow__steps {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .ai-workflow__steps li {
+        grid-template-columns: 1fr;
+        grid-template-rows: 44px auto;
+        min-height: 0;
+    }
+
+    .ai-workflow__steps li:not(:last-child)::before {
+        inset: 21px 0 auto 44px;
+        width: auto;
+        height: 2px;
+    }
+
+    .ai-workflow__steps li > div {
+        padding: 0.75rem 1rem 0 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .ai-expertise__content {
+        grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr);
+    }
 }
 
 /* Projects Section */
@@ -1758,7 +2033,7 @@ body {
         font-size: 2.25rem;
     }
 
-    .hero-content h3 {
+    .hero-role {
         font-size: 1.4rem;
     }
 
