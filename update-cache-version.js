@@ -18,6 +18,8 @@ const filesToUpdate = [
     'trainings.html',
     'howto.html',
     'veille.html',
+    'scripts/main.js',
+    'scripts/dataLoader.js',
     'sw.js'
 ];
 

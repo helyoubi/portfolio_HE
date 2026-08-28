@@ -1,6 +1,6 @@
 // main.js
-import { initializeThemeToggle } from './themeToggle.js?v=20251013T1119';
-import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20251013T1119';
+import { initializeThemeToggle } from './themeToggle.js?v=20260828T1035';
+import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260828T1035';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         copilotCredit.innerHTML = `
             <img src="assets/icons/githubcopilot_icon.png" alt="GitHub Copilot" class="copilot-icon">
             <img src="assets/icons/claude_code_icon.png" alt="Claude Code" class="copilot-icon">
-            <span>Developed with the help of GitHub Copilot & Claude Code</span>
+            <span>Personal portfolio built with AI assistance</span>
         `;
     }
 });

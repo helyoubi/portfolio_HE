@@ -1,6 +1,6 @@
 # Hamza Elyoubi - Portfolio
 
-Welcome to my professional portfolio. It presents my experience as a Senior Java Software Engineer and Tech Lead, including my expertise in AI-assisted software engineering with GitHub Copilot, Codex, Claude Code, and Cursor. The portfolio is built with HTML, CSS, and JavaScript and hosted on GitHub Pages.
+Welcome to my professional portfolio. It presents my experience as a Senior Java Software Engineer and Tech Lead, including professional AI-assisted engineering with GitHub Copilot and Capgemini's internal SovBox solution, plus personal project practice with Codex, Claude Code, and Cursor. The portfolio is built with HTML, CSS, and JavaScript and hosted on GitHub Pages.
 
 ## Table of Contents
 

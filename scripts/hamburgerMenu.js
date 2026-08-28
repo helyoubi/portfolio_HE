@@ -147,8 +147,8 @@ export function updateNavigationLanguage(language) {
     const creditSpan = document.querySelector('#copilot-credit span');
     if (creditSpan) {
         creditSpan.textContent = language === 'fr'
-            ? 'Développé avec l\'aide de GitHub Copilot & Claude Code'
-            : 'Developed with the help of GitHub Copilot & Claude Code';
+            ? 'Portfolio personnel développé avec l\'assistance de l\'IA'
+            : 'Personal portfolio built with AI assistance';
     }
 
     const copyright = document.querySelector('.copyright p');

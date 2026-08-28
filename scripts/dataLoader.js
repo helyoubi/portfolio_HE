@@ -1,5 +1,5 @@
 // dataLoader.js
-import { updateNavigationLanguage } from './hamburgerMenu.js?v=20251013T1119';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260828T1035';
 
 export async function loadPortfolioData() {
     try {
@@ -31,6 +31,18 @@ export async function initializePortfolio(language) {
     const softSkills = data.softSkills[language];
     const careerHighlight = personalInfo.careerHighlight;
     const careerHighlightContent = careerHighlight?.[language];
+    const renderAiTools = (tools) => tools.map(tool => `
+        <article class="ai-tool-card">
+            <div class="ai-tool-card__heading">
+                <span class="ai-tool-card__mark" aria-hidden="true">${tool.name.slice(0, 2).toUpperCase()}</span>
+                <div>
+                    <h4>${tool.name}</h4>
+                    <p class="ai-tool-card__role">${tool.role}</p>
+                </div>
+            </div>
+            <p>${tool.description}</p>
+        </article>
+    `).join('');
 
     // Main Content
     document.getElementById('main-content').innerHTML = `
@@ -159,22 +171,30 @@ export async function initializePortfolio(language) {
             </div>
 
             <div class="ai-expertise__content">
-                <div class="ai-tools">
-                    <h3 class="ai-expertise__subheading">${aiExpertise.toolsTitle}</h3>
-                    <div class="ai-tools__grid">
-                        ${aiExpertise.tools.map(tool => `
-                            <article class="ai-tool-card">
-                                <div class="ai-tool-card__heading">
-                                    <span class="ai-tool-card__mark" aria-hidden="true">${tool.name.slice(0, 2).toUpperCase()}</span>
-                                    <div>
-                                        <h4>${tool.name}</h4>
-                                        <p class="ai-tool-card__role">${tool.role}</p>
-                                    </div>
-                                </div>
-                                <p>${tool.description}</p>
-                            </article>
-                        `).join('')}
-                    </div>
+                <div class="ai-tool-groups">
+                    <section class="ai-tool-group ai-tool-group--professional" aria-labelledby="ai-professional-tools-title">
+                        <h3 id="ai-professional-tools-title" class="ai-expertise__subheading">${aiExpertise.professionalToolsTitle}</h3>
+                        <p class="ai-tool-group__note">${aiExpertise.professionalToolsNote}</p>
+                        <div class="ai-tools__grid">
+                            ${renderAiTools(aiExpertise.professionalTools)}
+                        </div>
+                    </section>
+
+                    <section class="ai-tool-group ai-tool-group--personal" aria-labelledby="ai-personal-tools-title">
+                        <h3 id="ai-personal-tools-title" class="ai-expertise__subheading">${aiExpertise.personalToolsTitle}</h3>
+                        <p class="ai-tool-group__note">${aiExpertise.personalToolsNote}</p>
+                        <div class="ai-tools__grid">
+                            ${renderAiTools(aiExpertise.personalTools)}
+                        </div>
+                        <a class="ai-projects-link" href="projects.html">
+                            <span class="ai-projects-link__icon" aria-hidden="true"><i class="fas fa-folder-open"></i></span>
+                            <span>
+                                <strong>${aiExpertise.projectsLinkLabel}</strong>
+                                <small>${aiExpertise.projectsLinkHint}</small>
+                            </span>
+                            <i class="fas fa-arrow-right ai-projects-link__arrow" aria-hidden="true"></i>
+                        </a>
+                    </section>
                 </div>
 
                 <aside class="ai-guardrails">
@@ -342,6 +362,28 @@ export async function initializePortfolio(language) {
             </form>
         </section>
     `;
+
+    const aiMotionItems = document.querySelectorAll(
+        '.ai-evidence__item, .ai-tool-group, .ai-tool-card, .ai-guardrails, .ai-workflow__steps li, .ai-projects-link'
+    );
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        aiMotionItems.forEach(item => item.classList.add('is-visible'));
+    } else {
+        const aiMotionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -32px' });
+
+        aiMotionItems.forEach((item, index) => {
+            item.classList.add('ai-motion-item');
+            item.style.setProperty('--ai-motion-delay', `${Math.min(index % 5, 4) * 45}ms`);
+            aiMotionObserver.observe(item);
+        });
+    }
 
     // Set last update date and time
     const lastUpdateElement = document.getElementById('last-update');

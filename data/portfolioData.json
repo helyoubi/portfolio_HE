@@ -587,28 +587,38 @@
         "en": {
             "eyebrow": "Generative AI expertise",
             "title": "AI-assisted software engineering",
-            "intro": "I integrate generative AI throughout the software delivery lifecycle to accelerate analysis, implementation and documentation while keeping architecture, security and quality under human control.",
+            "intro": "I use generative AI as an engineering accelerator across the software delivery lifecycle, with a clear boundary between approved professional environments and the tools I explore on personal projects. Architecture, security and final quality remain under human control.",
             "evidence": [
                 {
                     "title": "Team adoption",
                     "description": "GenAI champion and facilitator of GitHub Copilot training sessions for development teams."
                 },
                 {
-                    "title": "End-to-end delivery",
-                    "description": "Hands-on use from codebase exploration and technical design through coding, testing, review and documentation."
+                    "title": "Context-aware practice",
+                    "description": "I select tools according to the usage context: approved solutions at work and a separate toolkit for personal projects."
                 },
                 {
                     "title": "Responsible practice",
                     "description": "Every generated change is reviewed, tested and checked against project standards before integration."
                 }
             ],
-            "toolsTitle": "Tools I use professionally",
-            "tools": [
+            "professionalToolsTitle": "Tools used professionally",
+            "professionalToolsNote": "Within Capgemini, I work with the solutions approved for the professional environment.",
+            "professionalTools": [
                 {
                     "name": "GitHub Copilot",
                     "role": "Daily development & team adoption",
                     "description": "Context-aware coding, test generation, refactoring, pull-request support and developer enablement."
                 },
+                {
+                    "name": "SovBox",
+                    "role": "Capgemini internal solution",
+                    "description": "Internal development assistant based on Mistral AI’s Devstral 2 model, used within the company’s approved environment."
+                }
+            ],
+            "personalToolsTitle": "Tools used on personal projects",
+            "personalToolsNote": "Outside my professional environment, I test complementary assistants on my own applications to compare workflows, strengths and limits.",
+            "personalTools": [
                 {
                     "name": "Codex",
                     "role": "Repository-scale execution",
@@ -625,6 +635,8 @@
                     "description": "Rapid prototyping, targeted edits and multi-file refactoring with repository context."
                 }
             ],
+            "projectsLinkLabel": "See the personal projects built with these tools",
+            "projectsLinkHint": "Concrete applications, technical choices and AI assistants used",
             "workflowTitle": "A controlled AI delivery loop",
             "workflow": [
                 {
@@ -633,7 +645,7 @@
                 },
                 {
                     "title": "Pair",
-                    "description": "Select the right assistant and work in small, traceable increments."
+                    "description": "Select an assistant approved for the context and work in small, traceable increments."
                 },
                 {
                     "title": "Verify",
@@ -655,28 +667,38 @@
         "fr": {
             "eyebrow": "Expertise en IA générative",
             "title": "Ingénierie logicielle augmentée par l’IA",
-            "intro": "J’intègre l’IA générative à l’ensemble du cycle de livraison logicielle pour accélérer l’analyse, l’implémentation et la documentation, tout en maintenant l’architecture, la sécurité et la qualité sous contrôle humain.",
+            "intro": "J’utilise l’IA générative comme accélérateur d’ingénierie sur l’ensemble du cycle de livraison logicielle, avec une frontière claire entre les environnements professionnels approuvés et les outils que j’explore sur mes projets personnels. L’architecture, la sécurité et la qualité finale restent sous contrôle humain.",
             "evidence": [
                 {
                     "title": "Adoption en équipe",
                     "description": "Référent GenAI et animateur de sessions de formation GitHub Copilot auprès d’équipes de développement."
                 },
                 {
-                    "title": "Livraison de bout en bout",
-                    "description": "Usage concret de l’exploration du code et de la conception technique jusqu’au développement, aux tests, à la revue et à la documentation."
+                    "title": "Pratique adaptée au contexte",
+                    "description": "Je sélectionne les outils selon le cadre d’usage : solutions approuvées au travail et environnement distinct pour mes projets personnels."
                 },
                 {
                     "title": "Pratique responsable",
                     "description": "Chaque changement généré est relu, testé et confronté aux standards du projet avant intégration."
                 }
             ],
-            "toolsTitle": "Outils utilisés professionnellement",
-            "tools": [
+            "professionalToolsTitle": "Outils utilisés professionnellement",
+            "professionalToolsNote": "Chez Capgemini, je travaille avec les solutions approuvées pour l’environnement professionnel.",
+            "professionalTools": [
                 {
                     "name": "GitHub Copilot",
                     "role": "Développement quotidien & adoption en équipe",
                     "description": "Développement contextualisé, génération de tests, refactoring, assistance aux pull requests et accompagnement des développeurs."
                 },
+                {
+                    "name": "SovBox",
+                    "role": "Solution interne Capgemini",
+                    "description": "Assistant de développement interne basé sur le modèle Devstral 2 de Mistral AI, utilisé dans l’environnement approuvé de l’entreprise."
+                }
+            ],
+            "personalToolsTitle": "Outils utilisés sur mes projets personnels",
+            "personalToolsNote": "En dehors de mon environnement professionnel, j’expérimente des assistants complémentaires sur mes propres applications afin de comparer leurs workflows, leurs forces et leurs limites.",
+            "personalTools": [
                 {
                     "name": "Codex",
                     "role": "Exécution à l’échelle du dépôt",
@@ -693,6 +715,8 @@
                     "description": "Prototypage rapide, modifications ciblées et refactoring multi-fichiers avec le contexte du dépôt."
                 }
             ],
+            "projectsLinkLabel": "Voir les projets personnels réalisés avec ces outils",
+            "projectsLinkHint": "Applications concrètes, choix techniques et assistants IA utilisés",
             "workflowTitle": "Une boucle de livraison IA maîtrisée",
             "workflow": [
                 {
@@ -701,7 +725,7 @@
                 },
                 {
                     "title": "Collaborer",
-                    "description": "Choisir l’assistant adapté et avancer par incréments courts et traçables."
+                    "description": "Choisir un assistant approuvé pour le contexte et avancer par incréments courts et traçables."
                 },
                 {
                     "title": "Vérifier",

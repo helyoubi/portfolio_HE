@@ -42,7 +42,12 @@ describe('portfolioData.json — multilingual integrity', () => {
 
     expect(en.title).toBeTruthy();
     expect(fr.title).toBeTruthy();
-    expect(en.tools.map(({ name }) => name)).toEqual(fr.tools.map(({ name }) => name));
+    expect(en.professionalTools.map(({ name }) => name))
+      .toEqual(fr.professionalTools.map(({ name }) => name));
+    expect(en.personalTools.map(({ name }) => name))
+      .toEqual(fr.personalTools.map(({ name }) => name));
+    expect(en.professionalTools.map(({ name }) => name)).toEqual(['GitHub Copilot', 'SovBox']);
+    expect(en.personalTools.map(({ name }) => name)).toEqual(['Codex', 'Claude Code', 'Cursor']);
     expect(en.evidence.length).toBe(fr.evidence.length);
     expect(en.workflow.length).toBe(fr.workflow.length);
     expect(en.principles.length).toBe(fr.principles.length);
