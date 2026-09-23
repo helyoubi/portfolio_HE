@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v20260828T1035';
+const CACHE_NAME = 'portfolio-cache-v20260920T1347';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -17,6 +17,9 @@ const ASSETS_TO_CACHE = [
     './scripts/hamburgerMenu.js',
     './scripts/languageManager.js',
     './scripts/pageLoader.js',
+    './scripts/modalManager.js',
+    './scripts/howtoLoader.js',
+    './scripts/veilleLoader.js',
     './data/portfolioData.json',
     './assets/images/profile.jpg',
     './assets/images/career-milestone/grade-c-front.webp',
@@ -68,7 +71,7 @@ self.addEventListener('activate', event => {
     event.waitUntil(
         Promise.all([
             caches.keys().then(names => Promise.all(
-                names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n))
+                names.filter(n => n.startsWith('portfolio-cache-') && n !== CACHE_NAME).map(n => caches.delete(n))
             )),
             self.clients.claim()
         ])

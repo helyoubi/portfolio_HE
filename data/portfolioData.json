@@ -1,19 +1,19 @@
 {
     "personalInfo": {
         "name": {
-            "en" : "Hi, I'm Hamza Elyoubi",
-            "fr" : "Salut, je suis Hamza Elyoubi"
+            "fr": "Hamza Elyoubi",
+            "en": "Hamza Elyoubi"
         },
         "title": {
-            "en": "Senior Java Software Engineer | Tech Lead | GenAI Champion",
-            "fr": "Ingénieur Logiciel Senior Java | Tech Lead | GenAI Champion"
+            "fr": "Ingénieur Java senior & Tech Lead",
+            "en": "Senior Java Software Engineer & Tech Lead"
         },
         "location": "Nantes, France",
         "bio": {
-            "en": "Senior Software Engineer with 8+ years of experience in Java and Spring Boot, including 3+ years as a Tech Lead on critical, high-volume applications. Experienced in designing robust backend solutions, driving architectural transformation and re-platforming projects, and ensuring software quality in production. Passionate about modern software architecture (DDD, Clean Architecture, TDD), the Java ecosystem, and leveraging AI-powered tools to boost productivity and code quality.",
-            "fr": "Ingénieur logiciel senior avec plus de 8 ans d'expérience en Java et Spring Boot, dont plus de 3 ans en tant que Lead Technique sur des applications critiques à fort volume. Expérimenté dans la conception et le développement de solutions backend robustes, la conduite de projets de transformation et de refonte architecturale, ainsi que dans la garantie de la qualité logicielle en production. Passionné par les architectures logicielles modernes (DDD, Clean Architecture, TDD), l'écosystème Java et l'adoption des outils d'IA générative pour améliorer la productivité et la qualité logicielle."
+            "fr": "Plus de 8 ans en développement logiciel, dont plus de 3 ans en leadership technique. Chez Capgemini, j’accompagne 6 développeurs tout en concevant et développant des applications Java, Spring Boot et Quarkus. Je privilégie une architecture maintenable, la qualité du code et des livraisons fiables.",
+            "en": "Over 8 years in software development, including more than 3 years in technical leadership. At Capgemini, I support 6 developers while designing and building Java, Spring Boot and Quarkus applications. I focus on maintainable architecture, code quality and reliable delivery."
         },
-        "resume": "assets/resumes/2026-02-26 HE - Main Version - VALIDATED.pdf",
+        "resume": "assets/resumes/Hamza-Elyoubi-Tech-Lead-Java-2026.pdf",
         "profileImage": "assets/images/profile.jpg",
         "careerHighlight": {
             "images": {
@@ -53,18 +53,18 @@
         },
         "certifications": {
             "en": [
-                "GitHub Copilot Certification (2024)",
-                "Claude Code in Action (2025)",
-                "Professional Scrum Master I (PSM1) (2023)",
+                "GitHub Copilot Certification",
+                "Claude Code in Action",
+                "Professional Scrum Master I (PSM1)",
                 "Software Engineer L1 Certification",
                 "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
                 "Connecting Things (IoT - Cisco)"
             ],
             "fr": [
-                "Certification GitHub Copilot (2024)",
-                "Claude Code in Action (2025)",
-                "Scrum Master Professionnel I (PSM1) (2023)",
+                "Certification GitHub Copilot",
+                "Claude Code in Action",
+                "Scrum Master Professionnel I (PSM1)",
                 "Certification Ingénieur Logiciel L1",
                 "Green IT & Numérique Responsable",
                 "Big Data & Analytics (Cisco)",
@@ -79,11 +79,11 @@
                 "position": "Tech Lead Java",
                 "duration": "May 2026 - Present",
                 "achievements": [
-                    "- Technical lead for the MASA SINEMA large-scale animal traceability modernization program",
-                    "- Led transition to event-driven architecture to improve system scalability and resilience",
-                    "- Code reviews, technical specifications writing, and CI/CD supervision (Jenkins, SonarQube)",
-                    "- Conducted GitHub Copilot training and adoption sessions with development teams",
-                    "- Stack: Java 21, Quarkus, Kafka, Kubernetes"
+                    "Technical lead for 6 developers on the MASA SINEMA program, contributing directly to design, development and code reviews.",
+                    "Led transition to event-driven architecture to improve system scalability and resilience",
+                    "Contributed to delivery and CI/CD with Jenkins, Argo CD, Rancher and SonarQube.",
+                    "Conducted GitHub Copilot training and adoption sessions with development teams",
+                    "Stack: Java 21, Quarkus, Kafka, Kubernetes"
                 ]
             },
             {
@@ -91,32 +91,41 @@
                 "position": "Tech Lead Java",
                 "duration": "August 2025 - May 2026",
                 "achievements": [
-                    "- Architectural decisions, coordination with client architects, and service continuity assurance",
-                    "- Complete technical design and development of backend/frontend portal redesign (from scratch)",
-                    "- Full-stack implementation with modern architecture patterns",
-                    "- Stack: Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
+                    "Architectural decisions, coordination with client architects, and service continuity assurance",
+                    "Complete technical design and development of backend/frontend portal redesign (from scratch)",
+                    "Full-stack implementation with modern architecture patterns",
+                    "Stack: Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Tech Lead Java / Software Engineer",
+                "position": "Java Tech Lead",
                 "duration": "January 2022 - July 2025",
                 "achievements": [
-                    "- Technical leadership contributing to the evolution and modernization of mission-critical high-volume applications",
-                    "- Team coaching and mentoring of junior developers as technical tutor",
-                    "- GenAI champion for the department, responsible for adoption of development assistance tools (GitHub Copilot, Codestral)",
-                    "- Code reviews, technical specifications, and CI/CD pipeline supervision",
-                    "- Stack: Java 8, Hibernate, HTML/JS, Jenkins, Oracle, GIS"
+                    "Technical leadership contributing to the evolution and modernization of mission-critical high-volume applications",
+                    "Mentored 5 junior developers through code reviews, technical coaching and shared engineering practices.",
+                    "GenAI champion for the department, responsible for adoption of development assistance tools (GitHub Copilot, Codestral)",
+                    "Code reviews, technical specifications, and CI/CD pipeline supervision",
+                    "Stack: Java 8, Hibernate, HTML/JS, Jenkins, Oracle, GIS"
                 ]
             },
-
+            {
+                "company": "Capgemini",
+                "position": "Java Software Engineer",
+                "duration": "October 2019 - December 2021",
+                "achievements": [
+                    "Development and maintenance of business applications for the Agence de Services et de Paiement (ASP).",
+                    "Contributed to technical design, requirements analysis and component reliability.",
+                    "Stack: Java 8/11, Hibernate, Oracle, Jenkins, GIS."
+                ]
+            },
             {
                 "company": "DATA SYSCOM",
                 "position": "Java Developer (Apprenticeship)",
                 "duration": "September 2018 - September 2019",
                 "achievements": [
-                    "- Dynamic interface development for SCOPIOM software using JavaFX",
-                    "- Migration of client/server API from EJB3.0 to REST architecture using Jersey"
+                    "Dynamic interface development for SCOPIOM software using JavaFX",
+                    "Migration of client/server API from EJB3.0 to REST architecture using Jersey"
                 ]
             },
             {
@@ -124,8 +133,8 @@
                 "position": "FullStack Java Developer (Apprenticeship)",
                 "duration": "October 2017 - September 2018",
                 "achievements": [
-                    "- Development of a dynamic JavaEE/PrimeFaces platform for regional sampling data analysis",
-                    "- Central database management for the Nouvelle-Aquitaine region"
+                    "Development of a dynamic JavaEE/PrimeFaces platform for regional sampling data analysis",
+                    "Central database management for the Nouvelle-Aquitaine region"
                 ]
             },
             {
@@ -133,8 +142,8 @@
                 "position": "FullStack Web Developer (Internship)",
                 "duration": "October 2016 - June 2017",
                 "achievements": [
-                    "- Joomla-based triathlon online registration system development",
-                    "- Online payment integration and real-time ranking system"
+                    "Joomla-based triathlon online registration system development",
+                    "Online payment integration and real-time ranking system"
                 ]
             },
             {
@@ -142,9 +151,9 @@
                 "position": "IT Technician",
                 "duration": "2011 - 2013",
                 "achievements": [
-                    "- System maintenance, troubleshooting, and technical support",
-                    "- Hardware and software installation and configuration",
-                    "- Data security management and backup procedures"
+                    "System maintenance, troubleshooting, and technical support",
+                    "Hardware and software installation and configuration",
+                    "Data security management and backup procedures"
                 ]
             }
         ],
@@ -154,11 +163,11 @@
                 "position": "Tech Lead Java",
                 "duration": "Mai 2026 - Présent",
                 "achievements": [
-                    "- Référent technique du programme MASA SINEMA de modernisation de la traçabilité animale à grande échelle",
-                    "- Conduite de la transition vers une architecture événementielle pour améliorer la scalabilité et la résilience du système",
-                    "- Revues de code, rédaction des spécifications techniques et supervision CI/CD (Jenkins, SonarQube)",
-                    "- Animation de sessions de présentation et de formation autour de GitHub Copilot auprès des développeurs",
-                    "- Stack : Java 21, Quarkus, Kafka, Kubernetes"
+                    "Référent technique de 6 développeurs sur le programme MASA SINEMA, avec contribution directe à la conception, au développement et aux revues de code.",
+                    "Conduite de la transition vers une architecture événementielle pour améliorer la scalabilité et la résilience du système",
+                    "Contribution aux livraisons et à la chaîne CI/CD : Jenkins, Argo CD, Rancher et SonarQube.",
+                    "Animation de sessions de présentation et de formation autour de GitHub Copilot auprès des développeurs",
+                    "Stack : Java 21, Quarkus, Kafka, Kubernetes"
                 ]
             },
             {
@@ -166,32 +175,41 @@
                 "position": "Tech Lead Java",
                 "duration": "Août 2025 - Mai 2026",
                 "achievements": [
-                    "- Prise de décisions d'architecture, coordination avec les architectes client et garantie de la continuité de service",
-                    "- Conception technique et développement de bout en bout de la refonte du portail de connexion backend/frontend",
-                    "- Implémentation full-stack avec des patterns d'architecture modernes",
-                    "- Stack : Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
+                    "Prise de décisions d'architecture, coordination avec les architectes client et garantie de la continuité de service",
+                    "Conception technique et développement de bout en bout de la refonte du portail de connexion backend/frontend",
+                    "Implémentation full-stack avec des patterns d'architecture modernes",
+                    "Stack : Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
-                "position": "Tech Lead Java / Ingénieur Logiciel",
+                "position": "Tech Lead Java",
                 "duration": "Janvier 2022 - Juillet 2025",
                 "achievements": [
-                    "- Contribution à l'évolution et à la modernisation d'applications critiques à forte volumétrie dans un environnement à fortes contraintes métier",
-                    "- Accompagnement et montée en compétences des développeurs de l'équipe en tant que tuteur technique",
-                    "- Référent GenAI du pôle, responsable de l'adoption des outils d'assistance au développement (GitHub Copilot, Codestral)",
-                    "- Réalisation de revues de code, rédaction des spécifications techniques et supervision des pipelines CI/CD",
-                    "- Stack : Java 8, Hibernate, HTML/JS, Jenkins, Oracle, SIG"
+                    "Contribution à l'évolution et à la modernisation d'applications critiques à forte volumétrie dans un environnement à fortes contraintes métier",
+                    "Accompagnement et montée en compétences de 5 développeurs juniors, revues de code et partage des bonnes pratiques.",
+                    "Référent GenAI du pôle, responsable de l'adoption des outils d'assistance au développement (GitHub Copilot, Codestral)",
+                    "Réalisation de revues de code, rédaction des spécifications techniques et supervision des pipelines CI/CD",
+                    "Stack : Java 8, Hibernate, HTML/JS, Jenkins, Oracle, SIG"
                 ]
             },
-
+            {
+                "company": "Capgemini",
+                "position": "Ingénieur logiciel Java",
+                "duration": "Octobre 2019 - Décembre 2021",
+                "achievements": [
+                    "Développement et maintenance d’applications métier pour l’Agence de Services et de Paiement (ASP).",
+                    "Participation à la conception technique, à l’analyse des besoins et à la fiabilisation des composants.",
+                    "Stack : Java 8/11, Hibernate, Oracle, Jenkins, SIG."
+                ]
+            },
             {
                 "company": "DATA SYSCOM",
                 "position": "Développeur Java (Alternance)",
                 "duration": "Septembre 2018 - Septembre 2019",
                 "achievements": [
-                    "- Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
-                    "- Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
+                    "Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
+                    "Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
                 ]
             },
             {
@@ -199,8 +217,8 @@
                 "position": "Développeur FullStack Java (Alternance)",
                 "duration": "Octobre 2017 - Septembre 2018",
                 "achievements": [
-                    "- Développement d'une plateforme dynamique en JavaEE/PrimeFaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
-                    "- Gestion d'une base de données centrale pour la région"
+                    "Développement d'une plateforme dynamique en JavaEE/PrimeFaces pour l'analyse des données de prélèvements en Nouvelle-Aquitaine",
+                    "Gestion d'une base de données centrale pour la région"
                 ]
             },
             {
@@ -208,8 +226,8 @@
                 "position": "Développeur Web FullStack (Stage)",
                 "duration": "Octobre 2016 - Juin 2017",
                 "achievements": [
-                    "- Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
-                    "- Intégration du paiement en ligne et système de classement en temps réel"
+                    "Développement d'un système d'inscription en ligne au triathlon basé sur Joomla",
+                    "Intégration du paiement en ligne et système de classement en temps réel"
                 ]
             },
             {
@@ -217,9 +235,9 @@
                 "position": "Technicien Informatique",
                 "duration": "2011 - 2013",
                 "achievements": [
-                    "- Maintenance et dépannage des systèmes informatiques",
-                    "- Installation et configuration de matériels et logiciels",
-                    "- Gestion de la sécurité des données et des sauvegardes"
+                    "Maintenance et dépannage des systèmes informatiques",
+                    "Installation et configuration de matériels et logiciels",
+                    "Gestion de la sécurité des données et des sauvegardes"
                 ]
             }
         ]
@@ -575,13 +593,59 @@
         ]
     },
     "technicalExpertise": {
-        "languages": ["Java", "JavaScript", "SQL", "HTML/CSS"],
-        "frameworks": ["Spring Boot", "Quarkus", "Hibernate", "Angular", "PrimeFaces", "Jakarta EE"],
-        "tools": ["Git", "Maven", "GitLab", "Jenkins", "SonarQube", "Jira", "Confluence", "IntelliJ", "Eclipse", "Docker", "Kubernetes"],
-        "databases": ["PostgreSQL", "Oracle", "SQL"],
-        "messaging": ["Kafka"],
-        "architectures": ["Microservices", "Event-Driven Architecture", "REST APIs", "SOAP", "Clean Architecture", "DDD"],
-        "methodologies": ["Agile Scrum", "Software Craftsmanship", "TDD", "BDD", "UML"]
+        "languages": [
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "SQL",
+            "HTML/CSS"
+        ],
+        "frameworks": [
+            "Spring Boot",
+            "Quarkus",
+            "Hibernate",
+            "Angular",
+            "PrimeFaces",
+            "Jakarta EE"
+        ],
+        "tools": [
+            "Git",
+            "Maven",
+            "GitLab",
+            "Jenkins",
+            "SonarQube",
+            "Jira",
+            "Confluence",
+            "IntelliJ",
+            "Eclipse",
+            "Docker",
+            "Kubernetes",
+            "Argo CD",
+            "Rancher"
+        ],
+        "databases": [
+            "PostgreSQL",
+            "Oracle",
+            "SQL"
+        ],
+        "messaging": [
+            "Kafka"
+        ],
+        "architectures": [
+            "Microservices",
+            "Event-Driven Architecture",
+            "REST APIs",
+            "SOAP",
+            "Clean Architecture",
+            "DDD"
+        ],
+        "methodologies": [
+            "Agile Scrum",
+            "Software Craftsmanship",
+            "TDD",
+            "BDD",
+            "UML"
+        ]
     },
     "aiExpertise": {
         "en": {
@@ -749,11 +813,22 @@
         "en": [
             {
                 "title": "GitHub Showcase",
-                "description": "Web app that turns any GitHub profile into an elegant, shareable showcase. Fetch a user's repositories via the public GitHub API, pick from 13 card templates and customize everything live (layout, colors, typography, backgrounds, CSS effects), then export as HTML or PNG or publish to a magazine-style public page — no backend, no sign-up, 100% in the browser.",
-                "technologies": ["React 18", "TypeScript", "Vite", "React Router 7", "Tailwind CSS", "Framer Motion", "html-to-image (PNG export)", "Puppeteer / Chromium (PDF rendering)", "GitHub API", "Biome", "localStorage (state persistence)"],
-                "AIAssistant": ["Claude Code (Claude Opus 4.8 — Anthropic)"],
+                "description": "A visual studio to select GitHub repositories, customize 13 card templates and export HTML, JSX or PNG. Public pages and design links support account-free sharing. The project combines a React/TypeScript interface, local GitHub response caching, pre-rendered pages and server functions for sharing previews.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Tailwind CSS",
+                    "GitHub API",
+                    "Framer Motion",
+                    "html-to-image",
+                    "Puppeteer"
+                ],
+                "AIAssistant": [
+                    "Claude Code"
+                ],
                 "image": "data/projects/gh-showcase/01-landing.png",
-                "link": "https://gh-showcase.vercel.app",
+                "link": "https://gh-showcase.is-a.dev",
                 "gallery": [
                     "data/projects/gh-showcase/01-landing.png",
                     "data/projects/gh-showcase/02-onboard-live-preview.png",
@@ -761,15 +836,30 @@
                     "data/projects/gh-showcase/04-studio-customizer.png",
                     "data/projects/gh-showcase/05-public-page.png",
                     "data/projects/gh-showcase/06-public-page-full.png"
-                ]
+                ],
+                "category": "Developer tool",
+                "summary": "Turn GitHub repositories into a customizable, shareable showcase.",
+                "availability": "Public website"
             },
             {
                 "title": "Fakerni",
-                "description": "Mobile-first progressive web app (PWA) to create caring reminders and send them to your loved ones. More than a calendar, Fakerni is built around social connection: you link once to a relative (WhatsApp-style), then push reminders delivered in real time (Supabase Realtime) straight to their device. Authentication-free (each device identified by a local UUID), with a server-side anti-spam layer (PostgreSQL RLS), native Web notifications, full FR / EN / AR support (automatic RTL) and a polished Hilal-inspired identity. Packaged for Android via Capacitor.",
-                "technologies": ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "shadcn/ui (Radix UI)", "Framer Motion", "TanStack Query v5", "React Router v6", "react-hook-form + Zod", "Supabase (PostgreSQL, Realtime, Row-Level Security)", "vite-plugin-pwa", "Capacitor (Android)", "Vitest + Testing Library"],
-                "AIAssistant": ["Claude Code (Claude Opus 4.x — Anthropic)"],
+                "description": "A caring reminder app with connections between loved ones, notifications and French, English and Arabic interfaces. Account-free identity uses a device identifier and secret verified by a dedicated API. The repository includes a PWA, native Capacitor Android/iOS projects and mobile journey tests. Store distribution requires release preparation.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Supabase",
+                    "PostgreSQL",
+                    "Capacitor",
+                    "Firebase Cloud Messaging",
+                    "Vitest",
+                    "Playwright"
+                ],
+                "AIAssistant": [
+                    "Claude Code"
+                ],
                 "image": "data/projects/Fakerni/fakerni-02-home.png",
-                "link": "https://github.com/helyoubi/Fakerni",
+                "link": "",
                 "gallery": [
                     "data/projects/Fakerni/fakerni-01-onboarding.png",
                     "data/projects/Fakerni/fakerni-02-home.png",
@@ -779,52 +869,116 @@
                     "data/projects/Fakerni/fakerni-06-create-filled.png",
                     "data/projects/Fakerni/fakerni-07-connect.png",
                     "data/projects/Fakerni/fakerni-08-settings.png"
-                ]
+                ],
+                "category": "Reminders & social connection",
+                "summary": "Create reminders and share them with loved ones on web and mobile.",
+                "availability": "Walkthrough on request"
             },
             {
                 "title": "Jebna",
-                "description": "Cross-platform mobile app (iOS/Android) built solo end-to-end. Flutter front-end on top of a Supabase backend (Auth, Row-Level Security, Postgres, Storage). Client-side state, offline-first sync, and push notifications. Closed-source — architecture walk-through available on request.",
-                "technologies": ["Flutter (Dart)", "Supabase", "Postgres", "Row-Level Security"],
-                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/Jebna/jebna_app_icon.png",
-                "link": "https://jebna-app.com",
+                "description": "A Flutter mobile app for discovering deals in Morocco: community feed, search, city and category filters, voting and comments. The project includes authentication, a Supabase backend, Firebase notifications and French and Arabic interfaces. Riverpod manages application state and GoRouter handles navigation. The public website introduces the product; source code remains private.",
+                "technologies": [
+                    "Flutter",
+                    "Dart",
+                    "Riverpod",
+                    "Supabase",
+                    "PostgreSQL",
+                    "Firebase Cloud Messaging",
+                    "GoRouter"
+                ],
+                "AIAssistant": [
+                    "rocket.new",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
+                "image": "data/projects/Jebna/feed.webp",
+                "link": "https://jebna.ma",
                 "gallery": [
-                    "data/projects/Jebna/jebna_app_icon.png"
-                ]
+                    "data/projects/Jebna/feed.webp",
+                    "data/projects/Jebna/categories.webp",
+                    "data/projects/Jebna/filters.webp"
+                ],
+                "category": "Community app",
+                "summary": "Discover, share and discuss deals from stores across Morocco.",
+                "availability": "Public website"
             },
             {
                 "title": "Absence Tracker",
-                "description": "Web app to manage employee absences across teams — real-time tracking, calendar view, reporting dashboards, and automated email notifications. Built solo with a typed React/TypeScript front-end and a typed API contract end-to-end.",
-                "technologies": ["React (TypeScript)", "Tailwind CSS", "Vite"],
-                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "description": "A web prototype for tracking absences, with a calendar, team management and dashboards. The JavaScript React frontend communicates with a Node.js/Express API. A Microsoft Graph integration connects the service to Excel files on SharePoint, with Socket.IO for updates. Using this integration requires a configured Microsoft environment.",
+                "technologies": [
+                    "React",
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "Microsoft Graph",
+                    "SharePoint",
+                    "Socket.IO",
+                    "Tailwind CSS"
+                ],
+                "AIAssistant": [
+                    "rocket.new",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
                 "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
                 "link": "",
                 "gallery": [
                     "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
-                ]
+                ],
+                "category": "Team management tool",
+                "summary": "View team absences in a calendar and reporting dashboards.",
+                "availability": "Walkthrough on request"
             },
             {
                 "title": "RiftSword",
-                "description": "React web application that generates random challenges for League of Legends players. The app supports both single-player and duo mode challenges across different categories (Fun, Tryhard, Troll)",
-                "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
-                "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/RiftSword/app_RR_icon.png",
+                "description": "A challenge generator for League of Legends players, with solo and duo modes and several play categories. The React/TypeScript interface lets players draw a challenge and bring variety to their sessions. The repository also includes Capacitor configuration for preparing mobile versions.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Tailwind CSS",
+                    "Radix UI",
+                    "Capacitor"
+                ],
+                "AIAssistant": [
+                    "lovable.dev",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
+                "image": "data/projects/RiftSword/capture_rs1.png",
                 "link": "https://riftsword.vercel.app",
                 "gallery": [
                     "data/projects/RiftSword/app_RR_icon.png",
                     "data/projects/RiftSword/capture_rs1.png",
                     "data/projects/RiftSword/capture_rs2.png"
-                ]
+                ],
+                "category": "Gaming experience",
+                "summary": "Bring variety to League of Legends matches with random solo or duo challenges.",
+                "availability": "Public website"
             }
         ],
         "fr": [
             {
                 "title": "GitHub Showcase",
-                "description": "Application web qui transforme un profil GitHub en une vitrine élégante et partageable. Elle récupère les dépôts via l'API publique GitHub, propose 13 templates de cartes à personnaliser en direct (mise en page, couleurs, typographie, arrière-plans, effets CSS), puis exporte le résultat en HTML ou PNG ou le publie sur une page publique style magazine — sans backend, sans inscription, 100 % côté navigateur.",
-                "technologies": ["React 18", "TypeScript", "Vite", "React Router 7", "Tailwind CSS", "Framer Motion", "html-to-image (PNG export)", "Puppeteer / Chromium (PDF rendering)", "GitHub API", "Biome", "localStorage (state persistence)"],
-                "AIAssistant": ["Claude Code (Claude Opus 4.8 — Anthropic)"],
+                "description": "Un studio visuel pour sélectionner ses dépôts GitHub, personnaliser 13 modèles de cartes et exporter le résultat en HTML, JSX ou PNG. Les pages publiques et les liens de design facilitent le partage sans compte. Le projet combine une interface React/TypeScript, un cache local des réponses GitHub, des pages pré-rendues et des fonctions serveur pour les aperçus de partage.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Tailwind CSS",
+                    "GitHub API",
+                    "Framer Motion",
+                    "html-to-image",
+                    "Puppeteer"
+                ],
+                "AIAssistant": [
+                    "Claude Code"
+                ],
                 "image": "data/projects/gh-showcase/01-landing.png",
-                "link": "https://gh-showcase.vercel.app",
+                "link": "https://gh-showcase.is-a.dev",
                 "gallery": [
                     "data/projects/gh-showcase/01-landing.png",
                     "data/projects/gh-showcase/02-onboard-live-preview.png",
@@ -832,15 +986,30 @@
                     "data/projects/gh-showcase/04-studio-customizer.png",
                     "data/projects/gh-showcase/05-public-page.png",
                     "data/projects/gh-showcase/06-public-page-full.png"
-                ]
+                ],
+                "category": "Outil pour développeurs",
+                "summary": "Transformer ses dépôts GitHub en une vitrine personnalisable et partageable.",
+                "availability": "Site public"
             },
             {
                 "title": "Fakerni",
-                "description": "Application web progressive (PWA) mobile-first pour créer des rappels attentionnés et les envoyer à ses proches. Plutôt qu'un simple agenda, l'app mise sur le lien social : on se connecte une fois à un proche (façon WhatsApp), puis on lui envoie des rappels qui arrivent en temps réel (Supabase Realtime) directement sur son appareil. Sans authentification (chaque appareil identifié par un UUID local), avec une couche anti-spam côté serveur (RLS PostgreSQL), des notifications natives Web, un support complet FR / EN / AR (RTL automatique) et une identité visuelle soignée d'inspiration Hilal. Packagée Android via Capacitor.",
-                "technologies": ["React 18", "TypeScript", "Vite 5", "Tailwind CSS", "shadcn/ui (Radix UI)", "Framer Motion", "TanStack Query v5", "React Router v6", "react-hook-form + Zod", "Supabase (PostgreSQL, Realtime, Row-Level Security)", "vite-plugin-pwa", "Capacitor (Android)", "Vitest + Testing Library"],
-                "AIAssistant": ["Claude Code (Claude Opus 4.x — Anthropic)"],
+                "description": "Application de rappels bienveillants avec connexion entre proches, notifications et interfaces en français, anglais et arabe. L’identité sans création de compte utilise un identifiant et un secret appareil, vérifiés par une API dédiée. Le dépôt comprend une PWA, les projets natifs Capacitor Android/iOS et des tests de parcours mobile. La distribution sur les stores nécessite une préparation de release.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Supabase",
+                    "PostgreSQL",
+                    "Capacitor",
+                    "Firebase Cloud Messaging",
+                    "Vitest",
+                    "Playwright"
+                ],
+                "AIAssistant": [
+                    "Claude Code"
+                ],
                 "image": "data/projects/Fakerni/fakerni-02-home.png",
-                "link": "https://github.com/helyoubi/Fakerni",
+                "link": "",
                 "gallery": [
                     "data/projects/Fakerni/fakerni-01-onboarding.png",
                     "data/projects/Fakerni/fakerni-02-home.png",
@@ -850,55 +1019,126 @@
                     "data/projects/Fakerni/fakerni-06-create-filled.png",
                     "data/projects/Fakerni/fakerni-07-connect.png",
                     "data/projects/Fakerni/fakerni-08-settings.png"
-                ]
+                ],
+                "category": "Rappels & lien social",
+                "summary": "Créer des rappels et les partager avec ses proches, sur le web et sur mobile.",
+                "availability": "Présentation sur demande"
             },
             {
                 "title": "Jebna",
-                "description": "App mobile cross-plateforme (iOS/Android) construite en solo de bout en bout. Front Flutter sur backend Supabase (Auth, Row-Level Security, Postgres, Storage). State management côté client, sync offline-first et notifications push. Code fermé — walk-through architectural sur demande.",
-                "technologies": ["Flutter (Dart)", "Supabase", "Postgres", "Row-Level Security"],
-                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/Jebna/jebna_app_icon.png",
-                "link": "https://jebna-app.com",
+                "description": "Application mobile Flutter de découverte de bons plans au Maroc : fil communautaire, recherche, filtres par ville et catégorie, votes et commentaires. Le projet comprend une authentification, un backend Supabase, des notifications Firebase et des interfaces en français et en arabe. Riverpod gère l’état de l’application et GoRouter la navigation. Le site public présente le produit ; le code source reste privé.",
+                "technologies": [
+                    "Flutter",
+                    "Dart",
+                    "Riverpod",
+                    "Supabase",
+                    "PostgreSQL",
+                    "Firebase Cloud Messaging",
+                    "GoRouter"
+                ],
+                "AIAssistant": [
+                    "rocket.new",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
+                "image": "data/projects/Jebna/feed.webp",
+                "link": "https://jebna.ma",
                 "gallery": [
-                    "data/projects/Jebna/jebna_app_icon.png"
-                ]
+                    "data/projects/Jebna/feed.webp",
+                    "data/projects/Jebna/categories.webp",
+                    "data/projects/Jebna/filters.webp"
+                ],
+                "category": "Application communautaire",
+                "summary": "Découvrir, partager et commenter les bons plans des enseignes au Maroc.",
+                "availability": "Site public"
             },
             {
                 "title": "Absence Tracker",
-                "description": "Application web de gestion des absences d'employés — suivi en temps réel, vue calendrier, dashboards de reporting et notifications email automatisées. Réalisé en solo avec un front typé React/TypeScript et un contrat d'API typé de bout en bout.",
-                "technologies": ["React (TypeScript)", "Tailwind CSS", "Vite"],
-                "AIAssistant": ["rocket.new", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
+                "description": "Prototype web de suivi des absences avec calendrier, gestion d’équipe et tableaux de bord. Le frontend React en JavaScript communique avec une API Node.js/Express. Une intégration Microsoft Graph relie le service aux fichiers Excel sur SharePoint, avec Socket.IO pour les mises à jour. L’utilisation de cette intégration nécessite la configuration d’un environnement Microsoft.",
+                "technologies": [
+                    "React",
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "Microsoft Graph",
+                    "SharePoint",
+                    "Socket.IO",
+                    "Tailwind CSS"
+                ],
+                "AIAssistant": [
+                    "rocket.new",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
                 "image": "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png",
                 "link": "",
                 "gallery": [
                     "data/projects/absence_tracker/dd61a636-a19a-4a19-814b-8c1451edfb44.png"
-                ]
+                ],
+                "category": "Outil de gestion d’équipe",
+                "summary": "Visualiser les absences d’une équipe dans un calendrier et des tableaux de bord.",
+                "availability": "Présentation sur demande"
             },
             {
                 "title": "RiftSword",
-                "description": "Application web React qui génère des défis aléatoires pour les joueurs de League of Legends. L'application prend en charge les défis en mode solo et duo dans différentes catégories (Fun, Tryhard, Troll)",
-                "technologies": ["React 18 (TypeScript)", "CSS", "Vite", "Radix UI primitives", "Tailwind CSS"],
-                "AIAssistant": ["lovable.dev", "Claude Code (Claude Sonnet 4)", "Sora", "ChatGPT"],
-                "image": "data/projects/RiftSword/app_RR_icon.png",
+                "description": "Générateur de défis pour les joueurs de League of Legends, avec modes solo et duo et plusieurs catégories de jeu. L’interface React/TypeScript permet de tirer un défi et de renouveler ses sessions. Le dépôt comprend également une configuration Capacitor pour préparer des versions mobiles.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Tailwind CSS",
+                    "Radix UI",
+                    "Capacitor"
+                ],
+                "AIAssistant": [
+                    "lovable.dev",
+                    "Claude Code",
+                    "Sora",
+                    "ChatGPT"
+                ],
+                "image": "data/projects/RiftSword/capture_rs1.png",
                 "link": "https://riftsword.vercel.app",
                 "gallery": [
                     "data/projects/RiftSword/app_RR_icon.png",
                     "data/projects/RiftSword/capture_rs1.png",
                     "data/projects/RiftSword/capture_rs2.png"
-                ]
+                ],
+                "category": "Expérience ludique",
+                "summary": "Renouveler ses parties de League of Legends avec des défis aléatoires, seul ou en duo.",
+                "availability": "Site public"
             }
         ]
     },
     "languages": {
         "en": [
-            {"name": "French", "level": "Native"},
-            {"name": "Arabic", "level": "Native"},
-            {"name": "English", "level": "Professional proficiency"}
+            {
+                "name": "French",
+                "level": "Native"
+            },
+            {
+                "name": "Arabic",
+                "level": "Native"
+            },
+            {
+                "name": "English",
+                "level": "Professional proficiency"
+            }
         ],
         "fr": [
-            {"name": "Français", "level": "Langue maternelle"},
-            {"name": "Arabe", "level": "Langue maternelle"},
-            {"name": "Anglais", "level": "Compétence professionnelle"}
+            {
+                "name": "Français",
+                "level": "Langue maternelle"
+            },
+            {
+                "name": "Arabe",
+                "level": "Langue maternelle"
+            },
+            {
+                "name": "Anglais",
+                "level": "Compétence professionnelle"
+            }
         ]
     },
     "softSkills": {
@@ -1072,7 +1312,7 @@
                 },
                 {
                     "heading": "Watch Tools",
-                    "content": "Feedly is the core of my daily monitoring. I aggregate primary sources around software development, AI, cloud, and best practices.\n\nI follow publications such as TechCrunch, The Verge, Medium (AI & Software Engineering), Dev.to and InfoQ.\n\nI also use YouTube to complement my watch with more practical video formats and follow channels like Fireship, Traversy Media, Micode, Unchained AI and Matt Wolfe for GenAI and modern frameworks."
+                    "content": "Feedly is the core of my daily monitoring. I aggregate sources around software development, AI, cloud, and best practices.\n\nI follow publications such as TechCrunch, The Verge, Medium (AI & Software Engineering), Dev.to and InfoQ.\n\nI also use YouTube to complement my watch with more practical video formats and follow channels like Fireship, Traversy Media, Micode, Unchained AI and Matt Wolfe for GenAI and modern frameworks."
                 },
                 {
                     "heading": "Main Themes",
@@ -1105,6 +1345,18 @@
                     "content": "J'organise mes notes de la manière suivante :\n\n1. Lire/Scanner : capturer l'idée principale et le lien source.\n2. Résumer : un paragraphe synthétique et pourquoi c'est important.\n3. Action : si pertinent, ajouter une action personnelle (expérimenter, partager, intégrer).\n4. Archiver : déplacer dans les notes long terme (Notion ou Gist GitHub)."
                 }
             ]
+        }
+    },
+    "projectPage": {
+        "fr": {
+            "title": "Projets personnels",
+            "intro": "Des produits web et mobiles pour explorer un besoin concret, concevoir une interface et construire les services qui la font fonctionner.",
+            "note": "Les captures illustrent les interfaces développées. La disponibilité publique est indiquée pour chaque projet."
+        },
+        "en": {
+            "title": "Personal projects",
+            "intro": "Web and mobile products built around a concrete need, from interface design to the services behind it.",
+            "note": "Screenshots show the interfaces developed. Public availability is indicated for each project."
         }
     }
 }

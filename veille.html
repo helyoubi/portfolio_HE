@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="cache-bust" content="20260828T1035">
+    <meta name="cache-bust" content="20260920T1347">
     <title>Veille tech — Hamza Elyoubi</title>
     <meta name="description" content="Veille technologique et ressources de Hamza Elyoubi — GenAI, Java, DevOps.">
     <meta name="keywords" content="Veille, Tech Watch, Hamza Elyoubi, Generative AI, Java, DevOps">
@@ -18,7 +18,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#6366f1">
+    <meta name="theme-color" content="#0e7490">
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
@@ -26,14 +26,14 @@
     <meta property="og:title" content="Veille tech — Hamza Elyoubi">
     <meta property="og:description" content="Veille technologique et ressources de Hamza Elyoubi — GenAI, Java, DevOps.">
     <meta property="og:url" content="https://helyoubi.github.io/portfolio_HE/veille.html">
-    <meta property="og:image" content="https://helyoubi.github.io/portfolio_HE/assets/icons/favicon.svg">
+    <meta property="og:image" content="https://helyoubi.github.io/portfolio_HE/assets/images/profile.jpg">
     <meta property="og:locale" content="fr_FR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Veille tech — Hamza Elyoubi">
     <meta name="twitter:description" content="Veille technologique et ressources de Hamza Elyoubi — GenAI, Java, DevOps.">
-    <meta name="twitter:image" content="https://helyoubi.github.io/portfolio_HE/assets/icons/favicon.svg">
+    <meta name="twitter:image" content="https://helyoubi.github.io/portfolio_HE/assets/images/profile.jpg">
 
     <!-- Performance: preconnect to CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,12 +41,14 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css?v=20260828T1035">
-    <link rel="stylesheet" href="styles/themes.css?v=20260828T1035">
+    <link rel="stylesheet" href="styles/main.css?v=20260920T1347">
+    <link rel="stylesheet" href="styles/themes.css?v=20260920T1347">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <nav class="quick-nav" aria-label="Accès rapide"><a href="index.html">Hamza Elyoubi</a><a href="projects.html">Projets</a><a href="index.html#contact">Contact</a></nav>
     <!-- Hamburger Menu -->
     <button class="hamburger-menu" id="hamburgerMenu" type="button" aria-label="Ouvrir le menu" aria-controls="navMenu" aria-expanded="false">
         <div class="hamburger-icon">
@@ -96,7 +98,7 @@
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" class="container howto-container">
+    <main tabindex="-1" id="main-content" class="container howto-container">
         <section class="howto-header">
             <h1 id="veille-main-title">Veille tech</h1>
             <p id="veille-main-subtitle">Notes and curated resources</p>
@@ -121,8 +123,8 @@
     </button>
 
     <!-- Scripts -->
-    <script type="module">
-        import { initializeVeillePage } from './scripts/veilleLoader.js?v=20260828T1035';
+        <script type="module">
+        import { initializeVeillePage } from './scripts/veilleLoader.js?v=20260920T1347';
         document.addEventListener('DOMContentLoaded', () => {
             initializeVeillePage();
         });

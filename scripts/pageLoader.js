@@ -11,47 +11,38 @@ export async function loadTrainingsPage(language) {
         language = getCurrentLanguage();
     }
     const data = await loadPortfolioData();
-    if (!data) return;
+    if (!data) {
+        const container = document.getElementById('trainings-container') || document.getElementById('projects-container');
+        if (container) container.innerHTML = language === 'fr'
+            ? '<p role="alert">Le contenu n’a pas pu être chargé. Rechargez la page ou utilisez le lien Contact.</p>'
+            : '<p role="alert">Content could not be loaded. Reload the page or use the Contact link.</p>';
+        return;
+    }
 
-    const personalInfo = data.personalInfo;
-    
     // Update page title and meta
     updatePageMeta(language, 'trainings');
-    
-    // Update personal info in hero section
-    updatePersonalInfo(personalInfo, language);
-    
+
     // Load trainings content
     const trainingsContainer = document.getElementById('trainings-container');
     const trainings = data.trainings[language];
-    
+
     if (trainingsContainer && trainings) {
         trainingsContainer.innerHTML = renderAllTrainings(trainings);
     }
-    
+
     // Set last update date
     updateLastModified(language);
-    
+
     // Clear footer content (to remove any CTA buttons)
     const footer = document.getElementById('main-footer');
     if (footer) footer.innerHTML = '';
-    
-    // Remove any CTA buttons from the entire page
-    removeAllCTAButtons();
-    
+
     // Update navigation language
     updateNavigationLanguage(language);
-    
+
     // Setup language switcher
     setupLanguageSwitcher(language, 'trainings');
-    
-    // Auto-scroll to trainings section
-    setTimeout(() => {
-        const trainingsSection = document.getElementById('trainings');
-        if (trainingsSection) {
-            trainingsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, 100);
+
 }
 
 // Load projects page
@@ -62,114 +53,81 @@ export async function loadProjectsPage(language) {
         language = getCurrentLanguage();
     }
     const data = await loadPortfolioData();
-    if (!data) return;
+    if (!data) {
+        const container = document.getElementById('trainings-container') || document.getElementById('projects-container');
+        if (container) container.innerHTML = language === 'fr'
+            ? '<p role="alert">Le contenu n’a pas pu être chargé. Rechargez la page ou utilisez le lien Contact.</p>'
+            : '<p role="alert">Content could not be loaded. Reload the page or use the Contact link.</p>';
+        return;
+    }
 
-    const personalInfo = data.personalInfo;
-    
     // Update page title and meta
     updatePageMeta(language, 'projects');
-    
-    // Update personal info in hero section
-    updatePersonalInfo(personalInfo, language);
-    
+
     // Load projects content
     const projectsContainer = document.getElementById('projects-container');
     const projects = data.projects[language];
-    
+
     if (projectsContainer && projects) {
         projectsContainer.innerHTML = renderAllProjects(projects, language);
+        const page = data.projectPage[language];
+        document.getElementById('projectsTitle').textContent = page.title;
+        document.getElementById('projects-intro').textContent = page.intro;
+        document.getElementById('projects-note').textContent = page.note;
     }
-    
+
     // Set last update date
     updateLastModified(language);
-    
+
     // Clear footer content (to remove any CTA buttons)
     const footer = document.getElementById('main-footer');
     if (footer) footer.innerHTML = '';
-    
-    // Remove any CTA buttons from the entire page
-    removeAllCTAButtons();
-    
+
     // Update navigation language
     updateNavigationLanguage(language);
-    
+
     // Setup language switcher
     setupLanguageSwitcher(language, 'projects');
-    
-    // Auto-scroll to projects section
-    setTimeout(() => {
-        const projectsSection = document.getElementById('projects');
-        if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, 100);
-}
 
-// Update personal information in hero section
-function updatePersonalInfo(personalInfo, language) {
-    const profileImage = document.getElementById('profileImage');
-    const personalName = document.getElementById('personalName');
-    const personalTitle = document.getElementById('personalTitle');
-    const titleNote = document.getElementById('titleNote');
-    const personalBio = document.getElementById('personalBio');
-    
-    if (profileImage) profileImage.src = personalInfo.profileImage;
-    if (personalName) personalName.textContent = personalInfo.name[language];
-    if (personalTitle) personalTitle.textContent = personalInfo.title[language];
-    if (titleNote && personalInfo.titleNote) titleNote.textContent = personalInfo.titleNote[language];
-    if (personalBio) personalBio.textContent = personalInfo.bio[language];
-    
-    // Remove any CTA buttons that might exist
-    const ctaButtons = document.querySelectorAll('.cta-btn, .contact-btn, .download-btn');
-    ctaButtons.forEach(button => button.remove());
 }
 
 // Render all trainings without pagination
-function renderAllTrainings(trainings) {
+function renderAllTrainings(trainings, language) {
     return trainings.map(training => `
         <div class="education-card training-card">
-            <h3>${training.institution}</h3>
+            <h2>${training.institution}</h2>
             <p>${training.title}</p>
             <span style='font-size:0.95em;opacity:0.8;'>${training.date || ''}</span>
             ${training.badgeUrl && training.badgeImg ? 
                 `<a href="${training.badgeUrl}" target="_blank" rel="noopener noreferrer">
-                    <img src="${training.badgeImg}" alt="Training Badge" style="width:70px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;">
+                    <img src="${training.badgeImg}" alt="${training.title}" loading="lazy" decoding="async" style="width:70px;height:auto;margin-top:0.5rem;display:block;margin-left:auto;margin-right:auto;">
                 </a>` : ''}
         </div>
     `).join('');
 }
 
-// Render all projects
+// Make the purpose, stack and available next steps visible without opening a modal.
 function renderAllProjects(projects, language = 'fr') {
-    const translations = {
-        'fr': {
-            technologies: 'Technologies:',
-            aiAssistant: 'Assistant IA:',
-            viewProject: 'Voir le projet',
-            viewDetails: 'Voir détails'
-        },
-        'en': {
-            technologies: 'Technologies:',
-            aiAssistant: 'AI Assistant:',
-            viewProject: 'View project',
-            viewDetails: 'View Details'
-        }
-    };
-    
-    const t = translations[language];
-    
+    const t = language === 'fr'
+        ? { details: 'Explorer le projet', site: 'Ouvrir le site', contact: 'En discuter', technologies: 'Technologies' }
+        : { details: 'Explore project', site: 'Open website', contact: 'Discuss this project', technologies: 'Technologies' };
     return projects.map((project, index) => `
-        <div class="project-card">
-            <h3>${project.title}</h3>
-            ${project.image ? `<img src="${project.image}" alt="${project.title} Logo" class="project-image">` : ''}
-            <p>${project.description}</p>
-            <button class="view-details-btn" 
-                    data-project-index="${index}" 
-                    data-language="${language}"
-                    onclick="window.openProjectModal(${index}, '${language}')">
-                ${t.viewDetails}
-            </button>
-        </div>
+        <article class="project-card">
+            <img src="${project.image}" alt="${project.title}" class="project-image" width="640" height="360" loading="lazy" decoding="async">
+            <div class="project-card__body">
+                <p class="project-category">${project.category}</p>
+                <h2>${project.title}</h2>
+                <p class="project-summary">${project.summary}</p>
+                <ul class="project-stack" aria-label="${t.technologies}">
+                    ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+                </ul>
+                <p class="project-availability">${project.availability}</p>
+                <div class="project-actions">
+                    <button type="button" class="view-details-btn" data-project-index="${index}" data-language="${language}" aria-label="${t.details} : ${project.title}" onclick="window.openProjectModal(${index}, '${language}')">${t.details}</button>
+                    ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer">${t.site}<span class="sr-only"> — ${project.title}</span></a>` : `<a href="index.html#contact">${t.contact}<span class="sr-only"> — ${project.title}</span></a>`}
+                </div>
+            </div>
+        </article>
     `).join('');
 }
 
@@ -196,55 +154,6 @@ function setupLanguageSwitcher(currentLanguage, pageType) {
     });
 }
 
-// Function to remove all CTA buttons from the page
-function removeAllCTAButtons() {
-    // List of possible selectors for CTA buttons
-    const ctaSelectors = [
-        '.cta-btn',
-        '.contact-btn', 
-        '.download-btn',
-        'button[href*="contact"]',
-        'a[href*="contact"]',
-        'button[href*="cv"]',
-        'a[href*="cv"]',
-        'a[href*="resume"]',
-        'button[href*="resume"]',
-        'a[download]',
-        'button[download]'
-    ];
-    
-    ctaSelectors.forEach(selector => {
-        const buttons = document.querySelectorAll(selector);
-        buttons.forEach(button => {
-            // Check if the button text contains common CTA phrases
-            const text = button.textContent.toLowerCase();
-            if (text.includes('get in touch') || 
-                text.includes('contact') || 
-                text.includes('download') || 
-                text.includes('cv') || 
-                text.includes('resume')) {
-                button.remove();
-            }
-        });
-    });
-    
-    // Also check for any buttons in the hero section specifically
-    const heroSection = document.querySelector('.hero, #home');
-    if (heroSection) {
-        const heroButtons = heroSection.querySelectorAll('button, a.btn, .cta-btn');
-        heroButtons.forEach(button => {
-            const text = button.textContent.toLowerCase();
-            if (text.includes('get in touch') || 
-                text.includes('contact') || 
-                text.includes('download') || 
-                text.includes('cv') || 
-                text.includes('resume')) {
-                button.remove();
-            }
-        });
-    }
-}
-
 // Update page metadata and section titles
 function updatePageMeta(language, pageType) {
     const translations = {
@@ -256,10 +165,10 @@ function updatePageMeta(language, pageType) {
                 sectionTitle: 'Formations & e-learning'
             },
             'en': {
-                title: 'Trainings & e-learning - Hamza Elyoubi',
+                title: 'Courses & learning - Hamza Elyoubi',
                 description: 'Professional trainings and e-learning of Hamza Elyoubi',
                 keywords: 'Hamza Elyoubi, Trainings, e-learning, Certifications, Professional development',
-                sectionTitle: 'Trainings & e-learning'
+                sectionTitle: 'Courses & learning'
             }
         },
         'projects': {
@@ -279,22 +188,22 @@ function updatePageMeta(language, pageType) {
     };
 
     const pageTranslations = translations[pageType][language];
-    
+
     // Update page title
     document.title = pageTranslations.title;
-    
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', pageTranslations.description);
     }
-    
+
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
         metaKeywords.setAttribute('content', pageTranslations.keywords);
     }
-    
+
     // Update section title
     const sectionTitle = document.getElementById(pageType === 'trainings' ? 'trainingsTitle' : 'projectsTitle');
     if (sectionTitle) {
@@ -304,7 +213,7 @@ function updatePageMeta(language, pageType) {
 
 // Global function to open project modal
 window.openProjectModal = async function(projectIndex, language) {
-    console.log('Opening modal for project', projectIndex, 'language', language);
+
     try {
         const data = await loadPortfolioData();
         if (!data || !data.projects || !data.projects[language]) {
@@ -318,7 +227,6 @@ window.openProjectModal = async function(projectIndex, language) {
             return;
         }
 
-        console.log('Project data:', project);
         modalManager.openModal(project, language);
     } catch (error) {
         console.error('Error opening project modal:', error);

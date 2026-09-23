@@ -1,4 +1,5 @@
 // modalManager.js
+import { getCurrentLanguage } from './languageManager.js';
 export class ModalManager {
     constructor() {
         this.modal = null;
@@ -70,11 +71,9 @@ export class ModalManager {
 
         // Handle escape key globally
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.activeModal) {
-                this.closeModal();
-            }
-            if (e.key === 'Escape' && this.lightbox && this.lightbox.style.display === 'flex') {
-                this.closeLightbox();
+            if (e.key === 'Escape') {
+                if (this.lightbox?.style.display === 'flex') this.closeLightbox();
+                else if (this.activeModal) this.closeModal();
             }
         });
 
@@ -92,14 +91,8 @@ export class ModalManager {
         this.setupFocusTrap();
     }
 
-    async getCurrentLanguage() {
-        try {
-            const { getCurrentLanguage } = await import('./languageManager.js');
-            this.currentLanguage = getCurrentLanguage();
-        } catch (error) {
-            console.warn('Could not import language manager, defaulting to French');
-            this.currentLanguage = 'fr';
-        }
+    getCurrentLanguage() {
+        this.currentLanguage = getCurrentLanguage();
     }
 
     openModal(projectData, language = null) {
@@ -128,6 +121,11 @@ export class ModalManager {
         this.modal.style.display = 'flex';
         this.activeModal = 'project-modal';
 
+        this.backgroundElements = [...document.body.children]
+            .filter(element => element !== this.modal && element !== this.lightbox && !['SCRIPT', 'STYLE'].includes(element.tagName))
+            .map(element => ({ element, inert: element.inert }));
+        this.backgroundElements.forEach(({ element }) => { element.inert = true; });
+
         // Simple body scroll prevention
         document.body.classList.add('modal-open');
 
@@ -141,14 +139,14 @@ export class ModalManager {
     closeModal() {
         if (!this.activeModal) return;
 
-        // Ultra simple approach - hide div modal
+        if (this.lightbox?.style.display === 'flex') this.closeLightbox();
+        this.backgroundElements?.forEach(({ element, inert }) => { element.inert = inert; });
+        // Hide the project modal
         this.modal.style.display = 'none';
         this.activeModal = null;
         
         // Restore body immediately
-        document.body.className = document.body.className.replace('modal-open', '');
-        document.body.removeAttribute('style');
-        document.documentElement.removeAttribute('style');
+        document.body.classList.remove('modal-open');
         
         // Restore scroll position
         if (this.scrollPosition !== undefined) {
@@ -164,6 +162,14 @@ export class ModalManager {
 
     populateModal(projectData) {
         const t = this.translations[this.currentLanguage];
+        const fr = this.currentLanguage === 'fr';
+        this.lightbox?.setAttribute('aria-label', fr ? 'Galerie du projet' : 'Project gallery');
+        for (const id of ['lightbox-prev', 'lightbox-next', 'lightbox-close']) {
+            const labels = { 'lightbox-prev': fr ? 'Image précédente' : 'Previous image', 'lightbox-next': fr ? 'Image suivante' : 'Next image', 'lightbox-close': fr ? 'Fermer la galerie' : 'Close gallery' };
+            document.getElementById(id)?.setAttribute('aria-label', labels[id]);
+        }
+        this.modal.querySelector('.gallery-prev')?.setAttribute('aria-label', fr ? 'Image précédente' : 'Previous image');
+        this.modal.querySelector('.gallery-next')?.setAttribute('aria-label', fr ? 'Image suivante' : 'Next image');
 
         // Update modal title
         const modalTitle = this.modal.querySelector('#modal-title');
@@ -259,16 +265,7 @@ export class ModalManager {
             if (linkElement) {
                 linkElement.href = projectData.link;
 
-                // Remove any existing click listener
-                const newLinkElement = linkElement.cloneNode(true);
-                linkElement.parentNode.replaceChild(newLinkElement, linkElement);
 
-                // Add explicit click handler to force opening in new tab
-                newLinkElement.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(projectData.link, '_blank', 'noopener,noreferrer');
-                });
             }
             if (linkTextElement) linkTextElement.textContent = translations.visitProject;
         } else {
@@ -277,6 +274,10 @@ export class ModalManager {
     }
 
     updateGallery(projectData, translations) {
+        this.currentGalleryIndex = 0;
+        this.currentImages = [];
+        const controls = this.modal.querySelector('#gallery-controls');
+        if (controls) controls.style.display = 'none';
         const galleryContainer = this.modal.querySelector('#modal-project-gallery-container');
         const titleElement = this.modal.querySelector('#modal-gallery-title');
         const galleryElement = this.modal.querySelector('#modal-gallery');
@@ -287,16 +288,16 @@ export class ModalManager {
             
             if (galleryElement) {
                 galleryElement.innerHTML = projectData.gallery.map((image, index) => `
-                    <div class="gallery-item" data-index="${index}">
-                        <img src="${image}" alt="${projectData.title} - Image ${index + 1}" class="gallery-image" data-lightbox-index="${index}">
-                    </div>
+                    <button type="button" class="gallery-item" data-index="${index}" aria-label="${this.currentLanguage === 'fr' ? 'Agrandir' : 'Enlarge'} : ${projectData.title}, ${index + 1}">
+                        <img src="${image}" alt="${projectData.title} - Image ${index + 1}" class="gallery-image" loading="lazy" decoding="async" data-lightbox-index="${index}">
+                    </button>
                 `).join('');
 
                 // Store images for lightbox
                 this.currentImages = projectData.gallery;
 
                 // Add event listeners to images
-                const galleryImages = galleryElement.querySelectorAll('.gallery-image');
+                const galleryImages = galleryElement.querySelectorAll('.gallery-item');
                 galleryImages.forEach((img, index) => {
                     img.addEventListener('click', () => {
                         this.openLightbox(index, projectData.title);
@@ -326,25 +327,25 @@ export class ModalManager {
             dotsContainer.innerHTML = Array.from({ length: imageCount }, (_, index) => `
                 <button class="gallery-dot ${index === 0 ? 'active' : ''}" 
                         data-index="${index}" 
-                        aria-label="Go to image ${index + 1}">
+                        aria-label="${this.currentLanguage === 'fr' ? 'Voir l’image' : 'Go to image'} ${index + 1}">
                 </button>
             `).join('');
 
             // Add click handlers to dots
-            dotsContainer.addEventListener('click', (e) => {
+            dotsContainer.onclick = (e) => {
                 if (e.target.classList.contains('gallery-dot')) {
                     const index = parseInt(e.target.dataset.index);
                     this.goToGallerySlide(index);
                 }
-            });
+            };
         }
 
         // Add navigation button handlers
         if (prevBtn) {
-            prevBtn.addEventListener('click', () => this.prevGallerySlide());
+            prevBtn.onclick = () => this.prevGallerySlide();
         }
         if (nextBtn) {
-            nextBtn.addEventListener('click', () => this.nextGallerySlide());
+            nextBtn.onclick = () => this.nextGallerySlide();
         }
 
         this.currentGalleryIndex = 0;
@@ -386,7 +387,7 @@ export class ModalManager {
             if (e.key === 'Tab' && this.activeModal) {
                 const focusableElements = Array.from(this.modal.querySelectorAll(
                     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-                ));
+                )).filter(element => element.getClientRects().length > 0);
 
                 if (focusableElements.length === 0) return;
 
@@ -446,6 +447,13 @@ export class ModalManager {
             }
         });
 
+        this.lightbox.addEventListener('keydown', (e) => {
+            if (e.key !== 'Tab') return;
+            const buttons = [...this.lightbox.querySelectorAll('button')].filter(button => button.getClientRects().length);
+            const first = buttons[0], last = buttons[buttons.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        });
         // Handle arrow keys
         document.addEventListener('keydown', (e) => {
             if (this.lightbox && this.lightbox.style.display === 'flex') {
@@ -464,12 +472,14 @@ export class ModalManager {
             return;
         }
 
+        this.lightboxTrigger = document.activeElement;
         this.currentImageIndex = imageIndex;
         this.displayLightboxImage();
         
         // Show lightbox div
         this.lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        this.modal.inert = true;
+        document.getElementById('lightbox-close')?.focus();
     }
 
     closeLightbox() {
@@ -477,16 +487,8 @@ export class ModalManager {
         
         this.lightbox.style.display = 'none';
         
-        // Force body scroll restoration on mobile
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.height = '';
-        document.body.style.width = '';
-        
-        // Force scroll restoration on mobile
-        if (window.scrollY !== undefined) {
-            window.scrollTo(0, window.scrollY);
-        }
+        this.modal.inert = false;
+        this.lightboxTrigger?.focus();
     }
 
     displayLightboxImage() {

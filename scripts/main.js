@@ -1,6 +1,6 @@
 // main.js
-import { initializeThemeToggle } from './themeToggle.js?v=20260828T1035';
-import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260828T1035';
+import { initializeThemeToggle } from './themeToggle.js?v=20260920T1347';
+import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260920T1347';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
@@ -18,21 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(setViewportHeight, 100);
     });
 
-    // Smooth scroll - only for anchor links that are not navigation menu links
-    document.querySelectorAll('a[href^="#"]:not(.nav-links a)').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            // Only process internal anchor links (starting with #)
-            if (href && href.startsWith('#')) {
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
+    // Delegation includes links rendered after data loading and language changes.
+    document.addEventListener('click', (event) => {
+        const anchor = event.target.closest('a[href^="#"]');
+        if (!anchor || anchor.closest('.nav-links')) return;
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.getElementById(decodeURIComponent(href.slice(1)));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        if (anchor.classList.contains('skip-link')) target.focus({ preventScroll: true });
     });
 
     // Scroll-to-Top Button

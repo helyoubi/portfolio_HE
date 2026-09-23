@@ -1,12 +1,12 @@
 {
   "name": "Hamza Elyoubi — Portfolio",
   "short_name": "HE Portfolio",
-  "description": "Tech Lead Java & GenAI Champion — portfolio of Hamza Elyoubi.",
+  "description": "Hamza Elyoubi — Ingénieur Java senior & Tech Lead à Nantes.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f1115",
-  "theme_color": "#6366f1",
+  "theme_color": "#0e7490",
   "lang": "fr",
   "icons": [
     {

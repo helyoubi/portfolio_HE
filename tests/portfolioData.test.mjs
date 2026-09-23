@@ -1,7 +1,7 @@
 // portfolioData.test.mjs
 // Structural validation of data/portfolioData.json — catches FR/EN drift before deploy.
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -59,10 +59,21 @@ describe('portfolioData.json — multilingual integrity', () => {
       expect(project.description).toBeTruthy();
       expect(Array.isArray(project.technologies)).toBe(true);
       expect(data.projects.fr[i].title).toBe(project.title);
+      expect(data.projects.fr[i].technologies).toEqual(project.technologies);
+      expect(data.projects.fr[i].link).toBe(project.link);
+      for (const localized of [project, data.projects.fr[i]]) {
+        expect(localized.summary).toBeTruthy();
+        expect(localized.category).toBeTruthy();
+        expect(localized.availability).toBeTruthy();
+        for (const image of [localized.image, ...localized.gallery]) {
+          expect(existsSync(resolve(__dirname, '..', image))).toBe(true);
+        }
+      }
     });
   });
 
   test('resume path is set and points to a pdf', () => {
     expect(data.personalInfo.resume).toMatch(/\.pdf$/);
+    expect(existsSync(resolve(__dirname, '..', data.personalInfo.resume))).toBe(true);
   });
 });

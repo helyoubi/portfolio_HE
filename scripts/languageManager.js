@@ -1,6 +1,6 @@
 // languageManager.js - Gestionnaire simple de langue avec localStorage
 export function getCurrentLanguage() {
-    return localStorage.getItem('language') || 'fr';
+    return localStorage.getItem('language') === 'en' ? 'en' : 'fr';
 }
 
 export function setCurrentLanguage(language) {
@@ -18,6 +18,7 @@ export function initializeLanguageSwitcher(onLanguageChange) {
     // Fonction pour mettre à jour l'icône
     const updateIcon = () => {
         const lang = getCurrentLanguage();
+        languageSwitcher.setAttribute('aria-label', lang === 'fr' ? 'Switch to English' : 'Passer en français');
         languageSwitcher.innerHTML = `<img src="assets/icons/${lang === 'fr' ? 'en' : 'fr'}.png" alt="${lang === 'fr' ? 'English' : 'French'} Flag">`;
     };
 

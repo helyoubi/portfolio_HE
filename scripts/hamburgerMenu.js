@@ -10,6 +10,10 @@ export function initializeHamburgerMenu() {
         return;
     }
 
+    if (hamburgerMenu.dataset.initialized) return;
+    hamburgerMenu.dataset.initialized = 'true';
+    navMenu.inert = true;
+
     // Nettoyer l'état au chargement (au cas où il resterait des classes active)
     hamburgerMenu.classList.remove('active');
     navMenu.classList.remove('active');
@@ -19,15 +23,18 @@ export function initializeHamburgerMenu() {
     function openMenu() {
         hamburgerMenu.classList.add('active');
         navMenu.classList.add('active');
+        navMenu.inert = false;
         hamburgerMenu.setAttribute('aria-expanded', 'true');
         hamburgerMenu.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Fermer le menu' : 'Close menu');
         document.body.style.overflow = 'hidden';
+        navMenu.querySelector('a')?.focus();
     }
 
     // Fermer le menu
     function closeMenuAction() {
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
+        navMenu.inert = true;
         hamburgerMenu.setAttribute('aria-expanded', 'false');
         hamburgerMenu.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Ouvrir le menu' : 'Open menu');
         document.body.style.overflow = '';
@@ -53,6 +60,11 @@ export function initializeHamburgerMenu() {
 
     // Fermer avec Escape
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab' && navMenu.classList.contains('active')) {
+            const controls = [hamburgerMenu, ...navMenu.querySelectorAll('a, button')].filter(element => element.getClientRects().length);
+            if (e.shiftKey && document.activeElement === controls[0]) { e.preventDefault(); controls.at(-1).focus(); }
+            else if (!e.shiftKey && document.activeElement === controls.at(-1)) { e.preventDefault(); controls[0].focus(); }
+        }
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenuAction();
             hamburgerMenu.focus();
@@ -94,6 +106,34 @@ export function initializeHamburgerMenu() {
 
 // Fonction pour mettre à jour les textes de navigation (simplifiée)
 export function updateNavigationLanguage(language) {
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const titles = {
+        'index.html': { fr: 'Hamza Elyoubi — Ingénieur Java senior & Tech Lead', en: 'Hamza Elyoubi — Senior Java Software Engineer & Tech Lead' },
+        'howto.html': { fr: 'Pratiques IA — Hamza Elyoubi', en: 'AI engineering practices — Hamza Elyoubi' },
+        'veille.html': { fr: 'Veille technologique — Hamza Elyoubi', en: 'Technology watch — Hamza Elyoubi' }
+    };
+    if (titles[page]) document.title = titles[page][language];
+    if (page === 'index.html') {
+        document.querySelector('meta[name="description"]')?.setAttribute('content', language === 'fr'
+            ? 'Hamza Elyoubi, ingénieur Java senior et Tech Lead à Nantes. Java, Spring Boot, Quarkus : expérience, projets web et mobiles, contact.'
+            : 'Hamza Elyoubi, Senior Java Software Engineer and Tech Lead in Nantes. Java, Spring Boot, Quarkus: experience, web and mobile projects, contact.');
+    }
+    const skip = document.querySelector('.skip-link');
+    if (skip) skip.textContent = language === 'fr' ? 'Aller au contenu' : 'Skip to content';
+    const quickLinks = document.querySelector('.quick-nav');
+    if (quickLinks) {
+        quickLinks.setAttribute('aria-label', language === 'fr' ? 'Accès rapide' : 'Quick navigation');
+        quickLinks.innerHTML = language === 'fr'
+            ? '<a href="index.html">Hamza Elyoubi</a><a href="projects.html">Projets</a><a href="index.html#contact">Contact</a>'
+            : '<a href="index.html">Hamza Elyoubi</a><a href="projects.html">Projects</a><a href="index.html#contact">Contact</a>';
+    }
+    const theme = document.getElementById('themeToggle');
+    if (theme) theme.setAttribute('aria-label', language === 'fr'
+        ? (document.body.dataset.theme === 'dark' ? 'Activer le thème clair' : 'Activer le thème sombre')
+        : (document.body.dataset.theme === 'dark' ? 'Use light theme' : 'Use dark theme'));
+    const top = document.getElementById('scrollToTop');
+    if (top) top.setAttribute('aria-label', language === 'fr' ? 'Retour en haut' : 'Back to top');
+
     const translations = {
         'fr': {
             'home': 'Accueil',
@@ -104,7 +144,7 @@ export function updateNavigationLanguage(language) {
             'projects': 'Projets',
             'trainings': 'Formations',
             'resourcesParent': 'Ressources',
-            'howto-genai': 'GenAI pour le SDLC',
+            'howto-genai': 'Pratiques IA',
             'howto-veille': 'Veille tech',
             'contact': 'Contact'
         },
@@ -113,11 +153,11 @@ export function updateNavigationLanguage(language) {
             'experience': 'Experience',
             'ai': 'AI Expertise',
             'skills': 'Skills',
-            'worksParent': 'Projects & Trainings',
+            'worksParent': 'Projects & Learning',
             'projects': 'Projects',
-            'trainings': 'Trainings',
+            'trainings': 'Courses',
             'resourcesParent': 'Resources',
-            'howto-genai': 'GenAI for SDLC',
+            'howto-genai': 'AI practices',
             'howto-veille': 'Tech Watch',
             'contact': 'Contact'
         }

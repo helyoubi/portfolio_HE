@@ -1,5 +1,5 @@
 // dataLoader.js
-import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260828T1035';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260920T1347';
 
 export async function loadPortfolioData() {
     try {
@@ -21,7 +21,12 @@ export async function initializePortfolio(language) {
         language = getCurrentLanguage();
     }
     const data = await loadPortfolioData();
-    if (!data) return;
+    if (!data) {
+        document.getElementById('main-content').innerHTML = language === 'fr'
+            ? '<p role="alert">Le contenu n’a pas pu être chargé. Rechargez la page ou <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">contactez-moi sur LinkedIn</a>.</p>'
+            : '<p role="alert">Content could not be loaded. Reload the page or <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">contact me on LinkedIn</a>.</p>';
+        return;
+    }
 
     const personalInfo = data.personalInfo;
     const experience = data.experience[language];
@@ -49,7 +54,7 @@ export async function initializePortfolio(language) {
         <section id="home" class="hero">
             <div class="hero-content">
                 <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Hamza Elyoubi">
-                    <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img">
+                    <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img" width="200" height="200" fetchpriority="high">
                 </a>
                 <h1><span>${personalInfo.name[language]}</span></h1>
                 <p class="hero-role">${personalInfo.title[language]}</p>
@@ -57,7 +62,10 @@ export async function initializePortfolio(language) {
             <div class="hero-details">
                 ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
                 <p>${personalInfo.bio[language]}</p>
+                <p class="hero-location">${personalInfo.location}</p>
                 <div class="hero-cta">
+                    <a class="cta-btn cta-primary" href="projects.html">${language === 'fr' ? 'Voir mes projets' : 'View my projects'}</a>
+                    <a class="cta-btn cta-secondary" href="${personalInfo.resume}" target="_blank" rel="noopener noreferrer">${language === 'fr' ? 'Consulter le CV (PDF, français)' : 'Read résumé (PDF, French)'}</a>
                     <a class="cta-btn cta-primary" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
@@ -291,6 +299,11 @@ export async function initializePortfolio(language) {
             </div>
         </section>
 
+        <section id="data-platforms">
+            <h2 class="section-title">${language === 'fr' ? 'Données & messagerie' : 'Data & messaging'}</h2>
+            <ul class="project-stack expertise-tags">${[...data.technicalExpertise.databases, ...data.technicalExpertise.messaging].map(item => `<li>${item}</li>`).join('')}</ul>
+        </section>
+
         <section id="architectures">
             <h2 class="section-title">${language === 'fr' ? 'Architectures' : 'Architectures'}</h2>
             <div class="skills-container">
@@ -348,17 +361,18 @@ export async function initializePortfolio(language) {
             <form id="contactForm" action="https://formspree.io/f/mpwqdrdd" method="POST">
                 <div class="form-group">
                     <label for="name">${language === 'fr' ? 'Nom' : 'Name'}</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" maxlength="120" required>
                 </div>
                 <div class="form-group">
                     <label for="email">${language === 'fr' ? 'Email' : 'Email'}</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
                 </div>
                 <div class="form-group">
                     <label for="message">${language === 'fr' ? 'Message' : 'Message'}</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" minlength="10" maxlength="5000" required></textarea>
                 </div>
                 <button type="submit" class="cta-btn">${language === 'fr' ? 'Envoyer le message' : 'Send Message'}</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     `;
@@ -473,7 +487,7 @@ export async function initializePortfolio(language) {
     // Handle URL hash after content is loaded
     setTimeout(() => {
         if (window.location.hash) {
-            const targetElement = document.querySelector(window.location.hash);
+            const targetElement = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
             if (targetElement) {
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;

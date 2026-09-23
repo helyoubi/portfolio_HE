@@ -51,7 +51,7 @@ function renderVeillePage(language) {
     veilleData.sections.forEach((section, index) => {
         sectionsHTML += `
             <section class="howto-section" data-section-index="${index}">
-                <h3 class="howto-section-heading">${section.heading}</h3>
+                <h2 class="howto-section-heading">${section.heading}</h2>
                 <div class="howto-section-content">${formatContent(section.content)}</div>
             </section>
         `;
@@ -86,7 +86,7 @@ function loadLastUpdate(language) {
         'fr': 'Dernière mise à jour le'
     };
 
-    const now = new Date();
+    const now = new Date(document.lastModified);
     const formattedDate = language === 'fr'
         ? now.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })
         : now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });

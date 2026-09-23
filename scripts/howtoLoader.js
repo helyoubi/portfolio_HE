@@ -69,12 +69,12 @@ function renderHowToPage(language) {
 function updatePageHeader(language) {
     const translations = {
         'en': {
-            mainTitle: 'HowTo: AI in Development',
-            mainSubtitle: 'Discover how I leverage AI tools to enhance my development workflow'
+            mainTitle: 'My AI engineering practice',
+            mainSubtitle: 'How I use AI tools to support design, development and review'
         },
         'fr': {
-            mainTitle: 'HowTo : IA en Développement',
-            mainSubtitle: 'Découvrez comment j\'exploite les outils IA pour améliorer mon flux de développement'
+            mainTitle: 'Ma pratique de l’IA',
+            mainSubtitle: 'Comment j’utilise les outils d’IA pour concevoir, développer et relire le code'
         }
     };
 
@@ -90,14 +90,16 @@ function setupTabNavigation() {
     const tabs = document.querySelectorAll('.howto-tab');
 
     tabs.forEach(tab => {
+        tab.setAttribute('aria-pressed', String(tab.classList.contains('active')));
         tab.addEventListener('click', () => {
             const tabName = tab.getAttribute('data-tab');
 
             // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
+            tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
 
             // Add active class to clicked tab
             tab.classList.add('active');
+            tab.setAttribute('aria-pressed', 'true');
 
             // Update current tab
             currentTab = tabName;
@@ -146,7 +148,7 @@ function renderTabContent(tabName, language) {
     `;
 
     // Scroll to top of content
-    contentContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
 }
 
 // Format content with markdown-like syntax
@@ -178,7 +180,7 @@ function loadLastUpdate(language) {
         'fr': 'Dernière mise à jour le'
     };
 
-    const now = new Date();
+    const now = new Date(document.lastModified);
     const formattedDate = language === 'fr'
         ? now.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })
         : now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
