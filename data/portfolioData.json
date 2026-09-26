@@ -10,10 +10,10 @@
         },
         "location": "Nantes, France",
         "bio": {
-            "fr": "Plus de 8 ans en développement logiciel, dont plus de 3 ans en leadership technique. Chez Capgemini, j’accompagne 6 développeurs tout en concevant et développant des applications Java, Spring Boot et Quarkus. Je privilégie une architecture maintenable, la qualité du code et des livraisons fiables.",
-            "en": "Over 8 years in software development, including more than 3 years in technical leadership. At Capgemini, I support 6 developers while designing and building Java, Spring Boot and Quarkus applications. I focus on maintainable architecture, code quality and reliable delivery."
+            "fr": "Plus de 9 ans en développement logiciel depuis octobre 2016, avec un rôle de Tech Lead depuis octobre 2022. Chez Capgemini, j’accompagne 6 développeurs tout en concevant et développant des applications Java, Spring Boot et Quarkus, avec Kafka, Kubernetes et Angular selon les missions. Je privilégie une architecture maintenable, la qualité du code et des livraisons fiables.",
+            "en": "Over 9 years in software development since October 2016, with a Tech Lead role since October 2022. At Capgemini, I support 6 developers while designing and building Java, Spring Boot and Quarkus applications, with Kafka, Kubernetes and Angular depending on the assignment. I focus on maintainable architecture, code quality and reliable delivery."
         },
-        "resume": "assets/resumes/Hamza-Elyoubi-Tech-Lead-Java-2026.pdf",
+        "resume": "assets/resumes/Hamza-Elyoubi-Tech-Lead-Java-2026.pdf?v=20260926",
         "profileImage": "assets/images/profile.jpg",
         "careerHighlight": {
             "images": {
@@ -80,10 +80,10 @@
                 "duration": "May 2026 - Present",
                 "achievements": [
                     "Technical lead for 6 developers on the MASA SINEMA program, contributing directly to design, development and code reviews.",
-                    "Led transition to event-driven architecture to improve system scalability and resilience",
+                    "Contributed to technical design and client workshops on technology and solution choices for Build projects.",
                     "Contributed to delivery and CI/CD with Jenkins, Argo CD, Rancher and SonarQube.",
                     "Conducted GitHub Copilot training and adoption sessions with development teams",
-                    "Stack: Java 21, Quarkus, Kafka, Kubernetes"
+                    "Stack: Java 21, Quarkus, Kafka, Kubernetes, Jenkins, Argo CD, Rancher, SonarQube"
                 ]
             },
             {
@@ -94,25 +94,25 @@
                     "Architectural decisions, coordination with client architects, and service continuity assurance",
                     "Complete technical design and development of backend/frontend portal redesign (from scratch)",
                     "Full-stack implementation with modern architecture patterns",
-                    "Stack: Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
+                    "Stack: Java 17, Spring Boot 3.3, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
                 "position": "Java Tech Lead",
-                "duration": "January 2022 - July 2025",
+                "duration": "October 2022 - July 2025",
                 "achievements": [
                     "Technical leadership contributing to the evolution and modernization of mission-critical high-volume applications",
                     "Mentored 5 junior developers through code reviews, technical coaching and shared engineering practices.",
                     "GenAI champion for the department, responsible for adoption of development assistance tools (GitHub Copilot, Codestral)",
                     "Code reviews, technical specifications, and CI/CD pipeline supervision",
-                    "Stack: Java 8, Hibernate, HTML/JS, Jenkins, Oracle, GIS"
+                    "Stack: Java 8/11, Hibernate, Oracle, Jenkins, GIS"
                 ]
             },
             {
                 "company": "Capgemini",
                 "position": "Java Software Engineer",
-                "duration": "October 2019 - December 2021",
+                "duration": "October 2019 - September 2022",
                 "achievements": [
                     "Development and maintenance of business applications for the Agence de Services et de Paiement (ASP).",
                     "Contributed to technical design, requirements analysis and component reliability.",
@@ -125,7 +125,8 @@
                 "duration": "September 2018 - September 2019",
                 "achievements": [
                     "Dynamic interface development for SCOPIOM software using JavaFX",
-                    "Migration of client/server API from EJB3.0 to REST architecture using Jersey"
+                    "Migration of client/server API from EJB3.0 to REST architecture using Jersey",
+                    "Stack: Java 7, EJB 3.0, REST, Jersey, JavaFX, Maven, Git"
                 ]
             },
             {
@@ -164,10 +165,10 @@
                 "duration": "Mai 2026 - Présent",
                 "achievements": [
                     "Référent technique de 6 développeurs sur le programme MASA SINEMA, avec contribution directe à la conception, au développement et aux revues de code.",
-                    "Conduite de la transition vers une architecture événementielle pour améliorer la scalabilité et la résilience du système",
+                    "Participation à la conception technique et aux ateliers client pour les choix de technologies et de solutions sur les projets Build.",
                     "Contribution aux livraisons et à la chaîne CI/CD : Jenkins, Argo CD, Rancher et SonarQube.",
                     "Animation de sessions de présentation et de formation autour de GitHub Copilot auprès des développeurs",
-                    "Stack : Java 21, Quarkus, Kafka, Kubernetes"
+                    "Stack : Java 21, Quarkus, Kafka, Kubernetes, Jenkins, Argo CD, Rancher, SonarQube"
                 ]
             },
             {
@@ -178,25 +179,25 @@
                     "Prise de décisions d'architecture, coordination avec les architectes client et garantie de la continuité de service",
                     "Conception technique et développement de bout en bout de la refonte du portail de connexion backend/frontend",
                     "Implémentation full-stack avec des patterns d'architecture modernes",
-                    "Stack : Java 17, Spring Boot 3.3.2, Angular 17, GitLab, Jenkins"
+                    "Stack : Java 17, Spring Boot 3.3, Angular 17, GitLab, Jenkins"
                 ]
             },
             {
                 "company": "Capgemini",
                 "position": "Tech Lead Java",
-                "duration": "Janvier 2022 - Juillet 2025",
+                "duration": "Octobre 2022 - Juillet 2025",
                 "achievements": [
                     "Contribution à l'évolution et à la modernisation d'applications critiques à forte volumétrie dans un environnement à fortes contraintes métier",
                     "Accompagnement et montée en compétences de 5 développeurs juniors, revues de code et partage des bonnes pratiques.",
                     "Référent GenAI du pôle, responsable de l'adoption des outils d'assistance au développement (GitHub Copilot, Codestral)",
                     "Réalisation de revues de code, rédaction des spécifications techniques et supervision des pipelines CI/CD",
-                    "Stack : Java 8, Hibernate, HTML/JS, Jenkins, Oracle, SIG"
+                    "Stack : Java 8/11, Hibernate, Oracle, Jenkins, SIG"
                 ]
             },
             {
                 "company": "Capgemini",
                 "position": "Ingénieur logiciel Java",
-                "duration": "Octobre 2019 - Décembre 2021",
+                "duration": "Octobre 2019 - Septembre 2022",
                 "achievements": [
                     "Développement et maintenance d’applications métier pour l’Agence de Services et de Paiement (ASP).",
                     "Participation à la conception technique, à l’analyse des besoins et à la fiabilisation des composants.",
@@ -209,7 +210,8 @@
                 "duration": "Septembre 2018 - Septembre 2019",
                 "achievements": [
                     "Développement d'interfaces dynamiques pour le logiciel SCOPIOM en JavaFX",
-                    "Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey"
+                    "Migration de l'API client/serveur d'EJB3.0 vers une architecture REST avec Jersey",
+                    "Stack : Java 7, EJB 3.0, REST, Jersey, JavaFX, Maven, Git"
                 ]
             },
             {
@@ -594,19 +596,23 @@
     },
     "technicalExpertise": {
         "languages": [
-            "Java",
+            "Java 21",
             "JavaScript",
             "TypeScript",
             "SQL",
+            "PL/SQL",
             "HTML/CSS"
         ],
         "frameworks": [
             "Spring Boot",
+            "Spring",
             "Quarkus",
             "Hibernate",
-            "Angular",
+            "Angular 17–20",
+            "Java EE",
             "PrimeFaces",
-            "Jakarta EE"
+            "Jersey",
+            "JavaFX"
         ],
         "tools": [
             "Git",
@@ -642,8 +648,12 @@
         "methodologies": [
             "Agile Scrum",
             "Software Craftsmanship",
+            "Clean Code",
             "TDD",
             "BDD",
+            "Code reviews",
+            "CI/CD",
+            "GitOps",
             "UML"
         ]
     },
@@ -677,7 +687,12 @@
                 {
                     "name": "SovBox",
                     "role": "Capgemini internal solution",
-                    "description": "Internal development assistant based on Mistral AI’s Devstral 2 model, used within the company’s approved environment."
+                    "description": "Internal development assistant used within the company’s approved environment."
+                },
+                {
+                    "name": "Codestral (Mistral AI)",
+                    "role": "Team adoption",
+                    "description": "Supported the adoption of Codestral across development teams as part of the GenAI champion role."
                 }
             ],
             "personalToolsTitle": "Tools used on personal projects",
@@ -757,7 +772,12 @@
                 {
                     "name": "SovBox",
                     "role": "Solution interne Capgemini",
-                    "description": "Assistant de développement interne basé sur le modèle Devstral 2 de Mistral AI, utilisé dans l’environnement approuvé de l’entreprise."
+                    "description": "Assistant de développement interne utilisé dans l’environnement approuvé de l’entreprise."
+                },
+                {
+                    "name": "Codestral (Mistral AI)",
+                    "role": "Adoption en équipe",
+                    "description": "Accompagnement de l’adoption de Codestral auprès des équipes de développement dans le cadre du rôle de référent GenAI."
                 }
             ],
             "personalToolsTitle": "Outils utilisés sur mes projets personnels",
@@ -1156,15 +1176,15 @@
     "achievements": {
         "en": [
             "PSM1 Certified Scrum Master",
-            "Led migration of 3 major legacy systems to modern architectures",
-            "Mentored 15+ junior developers to senior roles",
-            "Implemented CI/CD pipelines reducing deployment time by 40%"
+            "Contributed to the modernization of mission-critical business applications",
+            "Mentored 5 junior developers through code reviews and shared engineering practices",
+            "Contributed to reliable delivery through CI/CD and code quality practices"
         ],
         "fr": [
             "Scrum Master Certifié PSM1",
-            "Dirigé la migration de 3 systèmes hérités majeurs vers des architectures modernes",
-            "Mentoré plus de 15 développeurs juniors dans leur progression vers des postes seniors",
-            "Mise en place de pipelines CI/CD réduisant le temps de déploiement de 40%"
+            "Contribution à la modernisation d’applications métier critiques",
+            "Accompagnement de 5 développeurs juniors par les revues de code et le partage de bonnes pratiques",
+            "Contribution à la fiabilité des livraisons grâce aux pratiques CI/CD et de qualité du code"
         ]
     },
     "howto": {
@@ -1357,6 +1377,68 @@
             "title": "Personal projects",
             "intro": "Web and mobile products built around a concrete need, from interface design to the services behind it.",
             "note": "Screenshots show the interfaces developed. Public availability is indicated for each project."
+        }
+    },
+    "homepage": {
+        "fr": {
+            "stats": [
+                {
+                    "value": "9+",
+                    "label": "ans de développement logiciel"
+                },
+                {
+                    "value": "2022",
+                    "label": "Tech Lead depuis octobre"
+                },
+                {
+                    "value": "6",
+                    "label": "développeurs accompagnés"
+                }
+            ],
+            "title": "Projets à la une",
+            "intro": "Des projets personnels, du besoin à une interface concrète.",
+            "allProjects": "Tous mes projets",
+            "viewProject": "Découvrir",
+            "projects": [
+                {
+                    "title": "GitHub Showcase",
+                    "detail": "13 modèles de cartes, export HTML, JSX ou PNG et partage sans compte."
+                },
+                {
+                    "title": "Jebna",
+                    "detail": "Fil communautaire, recherche par ville et catégorie, votes et commentaires. Interfaces en français et en arabe."
+                }
+            ]
+        },
+        "en": {
+            "stats": [
+                {
+                    "value": "9+",
+                    "label": "years in software development"
+                },
+                {
+                    "value": "2022",
+                    "label": "Tech Lead since October"
+                },
+                {
+                    "value": "6",
+                    "label": "developers supported"
+                }
+            ],
+            "title": "Featured projects",
+            "intro": "Personal projects, from a concrete need to a working interface.",
+            "allProjects": "All my projects",
+            "viewProject": "Explore",
+            "projects": [
+                {
+                    "title": "GitHub Showcase",
+                    "detail": "13 card templates, HTML, JSX or PNG export and account-free sharing."
+                },
+                {
+                    "title": "Jebna",
+                    "detail": "Community feed, city and category filters, voting and comments. French and Arabic interfaces."
+                }
+            ]
         }
     }
 }

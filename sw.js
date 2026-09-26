@@ -1,7 +1,8 @@
-const CACHE_NAME = 'portfolio-cache-v20260920T1347';
+const CACHE_NAME = 'portfolio-cache-v20260926T1328';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
+    './ai.html',
     './trainings.html',
     './projects.html',
     './howto.html',
@@ -13,6 +14,7 @@ const ASSETS_TO_CACHE = [
     './scripts/main.js',
     './scripts/themeToggle.js',
     './scripts/dataLoader.js',
+    './scripts/homeHighlights.js',
     './scripts/formHandler.js',
     './scripts/hamburgerMenu.js',
     './scripts/languageManager.js',
@@ -25,6 +27,7 @@ const ASSETS_TO_CACHE = [
     './assets/images/career-milestone/grade-c-front.webp',
     './assets/images/career-milestone/grade-c-message.webp',
     './assets/icons/favicon.svg',
+    './assets/icons/signature.svg',
     './assets/icons/en.png',
     './assets/icons/fr.png',
     './assets/icons/githubcopilot_icon.png',

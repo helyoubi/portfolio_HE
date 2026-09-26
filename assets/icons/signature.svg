@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="signature" viewBox="0 0 64 64">
+    <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 48 30 12M25 53 49 6M8 39C23 28 41 19 55 27"/>
+      <path d="m25 59 28-6" style="stroke:var(--career-accent,currentColor)"/>
+    </g>
+  </symbol>
+</svg>

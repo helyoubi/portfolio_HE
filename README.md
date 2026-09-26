@@ -17,7 +17,7 @@ Welcome to my professional portfolio. It presents my experience as a Senior Java
 
 ## About
 
-I am Hamza Elyoubi, a Technical Leader with over 8 years of experience in software development. I am a Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-assisted engineering. Currently, I lead technical teams at Capgemini while remaining actively involved in software delivery.
+I am Hamza Elyoubi, a Technical Leader with over 9 years of experience in software development. I am a Certified Scrum Master (PSM1) specializing in Java ecosystems, team leadership, and AI-assisted engineering. Currently, I lead technical teams at Capgemini while remaining actively involved in software delivery.
 
 ## Features
 

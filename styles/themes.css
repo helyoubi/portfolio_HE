@@ -22,6 +22,10 @@
 
     /* Dark Theme (Default) - Sleek Material Dark */
     --bg-color: #0f1115;
+    --hero-glow: rgba(103, 232, 249, 0.13);
+    --hero-grid: rgba(103, 232, 249, 0.035);
+    --hero-action: #67e8f9;
+    --hero-action-text: #0f1115;
     /* Very dark grayish blue */
     --secondary-bg: #1c1f26;
     /* Slightly lighter surface */
@@ -87,6 +91,10 @@
 
     /* Light Theme */
     --bg-color: #f8fafc;
+    --hero-glow: rgba(14, 116, 144, 0.09);
+    --hero-grid: rgba(14, 116, 144, 0.045);
+    --hero-action: #155e75;
+    --hero-action-text: #ffffff;
     /* Slate 50 */
     --secondary-bg: #ffffff;
     /* Surface */

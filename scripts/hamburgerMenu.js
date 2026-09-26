@@ -108,6 +108,7 @@ export function initializeHamburgerMenu() {
 export function updateNavigationLanguage(language) {
     const page = window.location.pathname.split('/').pop() || 'index.html';
     const titles = {
+        'ai.html': { fr: 'Expertise IA — Hamza Elyoubi', en: 'AI Expertise — Hamza Elyoubi' },
         'index.html': { fr: 'Hamza Elyoubi — Ingénieur Java senior & Tech Lead', en: 'Hamza Elyoubi — Senior Java Software Engineer & Tech Lead' },
         'howto.html': { fr: 'Pratiques IA — Hamza Elyoubi', en: 'AI engineering practices — Hamza Elyoubi' },
         'veille.html': { fr: 'Veille technologique — Hamza Elyoubi', en: 'Technology watch — Hamza Elyoubi' }
@@ -123,9 +124,14 @@ export function updateNavigationLanguage(language) {
     const quickLinks = document.querySelector('.quick-nav');
     if (quickLinks) {
         quickLinks.setAttribute('aria-label', language === 'fr' ? 'Accès rapide' : 'Quick navigation');
-        quickLinks.innerHTML = language === 'fr'
-            ? '<a href="index.html">Hamza Elyoubi</a><a href="projects.html">Projets</a><a href="index.html#contact">Contact</a>'
-            : '<a href="index.html">Hamza Elyoubi</a><a href="projects.html">Projects</a><a href="index.html#contact">Contact</a>';
+        quickLinks.innerHTML = `
+            <a class="quick-nav__brand" href="index.html"><svg class="quick-nav__mark" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true" focusable="false"><use href="assets/icons/signature.svg#signature"></use></svg><span>Hamza Elyoubi</span></a>
+            <div class="quick-nav__links">
+                <a class="quick-nav__experience" href="index.html#experience">${language === 'fr' ? 'Expérience' : 'Experience'}</a>
+                <a href="projects.html"${page === 'projects.html' ? ' aria-current="page"' : ''}>${language === 'fr' ? 'Projets' : 'Projects'}</a>
+                <a href="assets/resumes/Hamza-Elyoubi-Tech-Lead-Java-2026.pdf" target="_blank" rel="noopener noreferrer" aria-label="${language === 'fr' ? 'Consulter le CV (PDF, français)' : 'Read résumé (PDF, French)'}">${language === 'fr' ? 'CV' : 'Résumé'}</a>
+                <a class="quick-nav__contact" href="index.html#contact">Contact</a>
+            </div>`;
     }
     const theme = document.getElementById('themeToggle');
     if (theme) theme.setAttribute('aria-label', language === 'fr'

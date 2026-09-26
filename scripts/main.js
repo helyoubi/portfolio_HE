@@ -1,6 +1,6 @@
 // main.js
-import { initializeThemeToggle } from './themeToggle.js?v=20260920T1347';
-import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260920T1347';
+import { initializeThemeToggle } from './themeToggle.js?v=20260926T1328';
+import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260926T1328';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();

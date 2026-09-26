@@ -2012,14 +2012,13 @@ body.career-lightbox-open {
 .modal-project-gallery .gallery-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .modal-project-gallery .gallery-image:hover {
-    transform: scale(1.05);
+    transform: none;
 }
 
 /* Gallery Controls - scoped to modal only */
@@ -2320,7 +2319,7 @@ body {
     .modal-project-gallery .gallery-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
 
@@ -2799,3 +2798,146 @@ section[id] { scroll-margin-top: 92px; }
 .training-card h2 { font-size: 1.25rem; }
 
 .hero-cta { justify-content: flex-start; }
+
+/* Fit the complete capture inside a definite viewport-sized frame. */
+.lightbox-content {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 160px);
+    height: calc(100dvh - 160px);
+    max-width: 1200px;
+    max-height: none;
+    padding: 0;
+}
+.lightbox-image {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.lightbox-nav { position: fixed; width: 48px; height: 48px; padding: 0; }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-counter { position: fixed; bottom: 16px; }
+@media (min-width: 769px) {
+    .lightbox-content { width: calc(100vw - 160px); }
+}
+
+/* Quiet depth for the recruiter landing page; motion ends after the entrance. */
+.recruiter-hero {
+    isolation: isolate;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "details" "proof" "milestone";
+    padding: 112px 0 40px;
+    gap: 24px;
+    background: var(--bg-color, #0f1115);
+}
+.recruiter-hero::before {
+    content: '';
+    position: absolute;
+    inset: 76px 0 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 18% 18%, var(--hero-glow, transparent), transparent 65%),
+        linear-gradient(var(--hero-grid, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hero-grid, transparent) 1px, transparent 1px);
+    background-size: auto, 64px 64px, 64px 64px;
+    mask-image: linear-gradient(to bottom, var(--text-color, #fff), transparent);
+}
+.recruiter-hero .hero-content h1 { margin: 20px 0 12px; letter-spacing: -.035em; }
+.recruiter-hero .hero-content .profile-img { width: 128px; height: 128px; box-shadow: 0 0 0 6px var(--hero-glow, transparent); }
+.recruiter-hero .hero-content a:hover { transform: scale(1.02); }
+.recruiter-hero .hero-details > p { margin-bottom: 8px; opacity: 1; }
+.recruiter-hero .hero-cta { margin-top: 8px; }
+.recruiter-hero .hero-resume { order: -1; background: var(--hero-action, #67e8f9); color: var(--hero-action-text, #0f1115); box-shadow: none; }
+.recruiter-hero .hero-resume:hover { background: var(--hero-action, #67e8f9); color: var(--hero-action-text, #0f1115); transform: translateY(-2px); }
+.hero-proof { grid-area: proof; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 24px 0; border-top: 1px solid var(--border-color, currentColor); border-bottom: 1px solid var(--border-color, currentColor); }
+.hero-proof > div { display: flex; flex-direction: column; gap: 8px; }
+.hero-proof dt { color: var(--text-secondary, inherit); font-size: .85rem; line-height: 1.5; }
+.hero-proof dd { order: -1; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -.04em; }
+.featured-work { padding: 32px 0 56px; }
+.featured-work__header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.featured-work__header h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.025em; margin-bottom: 8px; }
+.featured-work__header p { color: var(--text-secondary, inherit); max-width: 65ch; }
+.featured-work a { color: var(--career-accent, inherit); display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 4px; }
+.featured-work a:hover { text-decoration: underline; }
+.featured-work__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.featured-work__card { overflow: hidden; border: 1px solid var(--border-color, currentColor); border-radius: 12px; background: var(--card-bg, transparent); display: flex; flex-direction: column; }
+.featured-work__image { width: 100%; height: 240px; object-fit: contain; background: var(--section-bg, transparent); border-bottom: 1px solid var(--border-color, currentColor); }
+.featured-work__body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.featured-work__body h3 { font-size: 1.4rem; line-height: 1.25; }
+.featured-work__category, .featured-work__detail { color: var(--text-secondary, inherit); }
+.featured-work__category { font-size: .9rem; }
+.featured-work__body > a { margin-top: auto; font-weight: 600; }
+@media (min-width: 768px) {
+    .featured-work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .featured-work__image { height: 300px; }
+    .hero-proof { gap: 32px; }
+    .hero-proof dt { font-size: .95rem; }
+}
+@media (min-width: 1024px) {
+    .recruiter-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); grid-template-areas: "intro milestone" "details milestone" "proof proof"; padding: 128px 32px 48px; column-gap: 48px; }
+    .recruiter-hero .career-highlight { width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .recruiter-hero .hero-content { animation: recruiter-intro 280ms ease-out; }
+    @keyframes recruiter-intro { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+/* A continuous, quiet atmosphere and a bounded navigation bar. */
+body {
+    background-image: radial-gradient(ellipse at 0% 15%, var(--hero-glow, transparent), transparent 48%), radial-gradient(ellipse at 100% 80%, var(--hero-glow, transparent), transparent 48%);
+    background-attachment: fixed;
+}
+.recruiter-hero { background: transparent; padding-top: 152px; }
+.recruiter-hero::before { inset: 112px 0 0; background-image: linear-gradient(var(--hero-grid, transparent) 1px, transparent 1px), linear-gradient(90deg, var(--hero-grid, transparent) 1px, transparent 1px); background-size: 64px 64px; }
+.quick-nav {
+    inset: 12px 16px auto;
+    max-width: 1280px;
+    margin-inline: auto;
+    min-height: 112px;
+    padding: 12px 12px 8px 68px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    background: var(--nav-bg, var(--bg-color));
+    border: 1px solid var(--border-color, currentColor);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm, none);
+    backdrop-filter: blur(12px);
+}
+.quick-nav a.quick-nav__brand { display: inline-flex; margin: 0; gap: 10px; font-size: .85rem; width: fit-content; }
+.quick-nav__mark { display: none; width: 36px; height: 36px; flex-shrink: 0; color: var(--text-color, inherit); }
+.quick-nav__links { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-left: -56px; }
+.quick-nav__links a, .quick-nav__links a:first-child { display: inline-flex; justify-content: center; margin: 0; padding: 0 16px; border-radius: 8px; font-size: .9rem; transition: background 150ms ease-out, color 150ms ease-out; }
+.quick-nav__links a.quick-nav__experience { display: none; }
+.quick-nav a:hover { text-decoration: none; }
+.quick-nav__links a:hover, .quick-nav__links a[aria-current="page"] { background: var(--primary-light, transparent); color: var(--career-accent, inherit); }
+.quick-nav__links .quick-nav__contact { background: var(--hero-action, var(--primary-color)); color: var(--hero-action-text, var(--text-color)); }
+.quick-nav__links .quick-nav__contact:hover { background: var(--hero-action, var(--primary-color)); color: var(--hero-action-text, var(--text-color)); text-decoration: underline; text-underline-offset: 4px; }
+.hamburger-menu { top: 24px; left: max(28px, calc((100vw - 1280px) / 2 + 12px)); padding: 12px; min-width: 44px; min-height: 44px; border-radius: 10px; box-shadow: none; }
+.top-right-buttons { top: 24px; right: max(28px, calc((100vw - 1280px) / 2 + 12px)); gap: 4px; }
+.theme-toggle, .language-switcher { background: transparent; border: 1px solid var(--border-color, currentColor); border-radius: 10px; transition: background 150ms ease-out; }
+.theme-toggle i, [data-theme="light"] .theme-toggle i { color: var(--text-color, inherit); font-size: 1.1rem; }
+.theme-toggle:hover, .language-switcher:hover { background: var(--primary-light, transparent); }
+main section[id], .project-card { scroll-margin-top: 140px; }
+.project-page { padding-top: 152px; }
+.page-hero { padding-top: 152px; }
+@media (min-width: 768px) {
+    .quick-nav { min-height: 72px; padding: 12px 116px 12px 76px; display: flex; gap: 24px; }
+    .quick-nav a.quick-nav__brand { margin-right: auto; font-size: .95rem; }
+    .quick-nav__mark { display: inline-flex; }
+    .quick-nav__links { margin: 0; justify-content: flex-end; gap: 8px; }
+    .quick-nav__links a, .quick-nav__links a:first-child { padding-inline: 12px; }
+    .recruiter-hero { padding-top: 128px; }
+    .recruiter-hero::before { inset-block-start: 96px; }
+    .project-page { padding-top: 128px; }
+    .page-hero { padding-top: 128px; }
+    main section[id], .project-card { scroll-margin-top: 108px; }
+}
+@media (min-width: 1024px) {
+    .quick-nav__links a.quick-nav__experience { display: inline-flex; }
+    .quick-nav__links { gap: 12px; }
+}

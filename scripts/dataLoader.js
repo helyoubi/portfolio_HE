@@ -1,5 +1,6 @@
 // dataLoader.js
-import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260920T1347';
+import { renderHomeHighlights } from './homeHighlights.js';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260926T1328';
 
 export async function loadPortfolioData() {
     try {
@@ -29,6 +30,7 @@ export async function initializePortfolio(language) {
     }
 
     const personalInfo = data.personalInfo;
+    const highlights = document.body.dataset.page === "ai-expertise" ? null : renderHomeHighlights(data, language);
     const experience = data.experience[language];
     const education = data.education[language];
     const aiExpertise = data.aiExpertise[language];
@@ -49,120 +51,12 @@ export async function initializePortfolio(language) {
         </article>
     `).join('');
 
-    // Main Content
-    document.getElementById('main-content').innerHTML = `
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Hamza Elyoubi">
-                    <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img" width="200" height="200" fetchpriority="high">
-                </a>
-                <h1><span>${personalInfo.name[language]}</span></h1>
-                <p class="hero-role">${personalInfo.title[language]}</p>
-            </div>
-            <div class="hero-details">
-                ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
-                <p>${personalInfo.bio[language]}</p>
-                <p class="hero-location">${personalInfo.location}</p>
-                <div class="hero-cta">
-                    <a class="cta-btn cta-primary" href="projects.html">${language === 'fr' ? 'Voir mes projets' : 'View my projects'}</a>
-                    <a class="cta-btn cta-secondary" href="${personalInfo.resume}" target="_blank" rel="noopener noreferrer">${language === 'fr' ? 'Consulter le CV (PDF, français)' : 'Read résumé (PDF, French)'}</a>
-                    <a class="cta-btn cta-primary" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a class="cta-btn cta-secondary" href="#contact">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>${language === 'fr' ? 'Me contacter' : 'Contact me'}</span>
-                    </a>
-                </div>
-            </div>
-            ${careerHighlight && careerHighlightContent ? `
-                <aside class="career-highlight" aria-labelledby="career-highlight-title">
-                    <div class="career-highlight__copy">
-                        <span class="career-highlight__eyebrow">${careerHighlightContent.eyebrow}</span>
-                        <h2 id="career-highlight-title">${careerHighlightContent.title}</h2>
-                        <p>${careerHighlightContent.summary}</p>
-                    </div>
-                    <button id="career-postcard" class="career-postcard" type="button" aria-pressed="false" aria-label="${careerHighlightContent.revealLabel}">
-                        <span class="career-postcard__inner">
-                            <span class="career-postcard__face career-postcard__front">
-                                <img src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
-                            </span>
-                            <span class="career-postcard__face career-postcard__back">
-                                <img src="${careerHighlight.images.message}" alt="${careerHighlightContent.messageAlt}" width="1190" height="850" decoding="async">
-                            </span>
-                        </span>
-                    </button>
-                    <blockquote class="career-highlight__quote">
-                        <span class="career-highlight__hint">${careerHighlightContent.hint}</span>
-                        <span class="career-highlight__message">“${careerHighlightContent.quote}”</span>
-                    </blockquote>
-                    <div class="career-highlight__actions">
-                        <button class="career-highlight__toggle" type="button" aria-controls="career-postcard">
-                            <i class="fas fa-rotate" aria-hidden="true"></i>
-                            <span>${careerHighlightContent.revealLabel}</span>
-                        </button>
-                        <button class="career-highlight__expand" type="button" aria-controls="career-lightbox" aria-expanded="false">
-                            <i class="fas fa-expand" aria-hidden="true"></i>
-                            <span>${careerHighlightContent.expandLabel}</span>
-                        </button>
-                    </div>
-                </aside>
-                <div id="career-lightbox" class="career-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="career-lightbox-title" style="display: none;">
-                        <div class="career-lightbox__content">
-                            <div class="career-lightbox__header">
-                                <h2 id="career-lightbox-title">${careerHighlightContent.frontDialogTitle}</h2>
-                                <button class="career-lightbox__dismiss" type="button" aria-label="${careerHighlightContent.closeLabel}">
-                                    <i class="fas fa-xmark" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                            <img class="career-lightbox__image" src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
-                        </div>
-                </div>
-            ` : ''}
-        </section>
-
-        <section id="certifications" class="section visible">
-            <h2 class="section-title">${language === 'fr' ? 'Certifications' : 'Certifications'}</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <img src="assets/icons/github-copilot.png" alt="GitHub Copilot Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/githubcopilot_icon.png';">
-                    <h3>${language === 'fr' ? 'Certification GitHub Copilot' : 'GitHub Copilot Certification'}</h3>
-                    <p>${language === 'fr' ? 'Certifié par le programme de certification GitHub Copilot.' : 'Certified by GitHub Copilot Certification Program.'}</p>
-                </div>
-                <div class="skill-card">
-                    <img src="assets/icons/l1_sofo.png" alt="SE L1 Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
-                    <h3>${language === 'fr' ? 'SE L1' : 'SE L1'}</h3>
-                    <p>${language === 'fr' ? 'Certifié Ingénierie Logicielle Niveau 1.' : 'Software Engineering Level 1 Certified.'}</p>
-                </div>
-                <div class="skill-card">
-                    <img src="assets/icons/psm1.png" alt="PSM I Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
-                    <h3>${language === 'fr' ? 'PSM I' : 'PSM I'}</h3>
-                    <p>${language === 'fr' ? 'Professional Scrum Master I (PSM I) certifié par Scrum.org.' : 'Professional Scrum Master I (PSM I) Certified by Scrum.org.'}</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">${language === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience'}</h2>
-            <div class="timeline">
-                ${experience.map((exp, index) => `
-                    <div class="timeline-item ${index % 2 === 0 ? 'left' : 'right'}">
-                        <h3>${exp.positions ? exp.positions.map(pos => pos.title).join(', ') : exp.position}</h3>
-                        <h4>${exp.company}</h4>
-                        <p class="duration">${exp.positions ? exp.positions.map(pos => pos.duration).join(', ') : exp.duration}</p>
-                        <div class="description">
-                            ${exp.positions ? exp.positions.map(pos => pos.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')).join('') : exp.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')}
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        </section>
-
+    const isAiPage = document.body.dataset.page === "ai-expertise";
+    const aiContent = isAiPage ? `
         <section id="ai-expertise" class="ai-expertise" aria-labelledby="ai-expertise-title">
             <header class="ai-expertise__header">
                 <span class="ai-expertise__eyebrow">${aiExpertise.eyebrow}</span>
-                <h2 id="ai-expertise-title" class="section-title">${aiExpertise.title}</h2>
+                <h1 id="ai-expertise-title" class="section-title">${aiExpertise.title}</h1>
                 <p>${aiExpertise.intro}</p>
             </header>
 
@@ -180,7 +74,7 @@ export async function initializePortfolio(language) {
 
             <div class="ai-expertise__content">
                 <div class="ai-tool-groups">
-                    <section class="ai-tool-group ai-tool-group--professional" aria-labelledby="ai-professional-tools-title">
+        <section class="ai-tool-group ai-tool-group--professional" aria-labelledby="ai-professional-tools-title">
                         <h3 id="ai-professional-tools-title" class="ai-expertise__subheading">${aiExpertise.professionalToolsTitle}</h3>
                         <p class="ai-tool-group__note">${aiExpertise.professionalToolsNote}</p>
                         <div class="ai-tools__grid">
@@ -234,6 +128,121 @@ export async function initializePortfolio(language) {
                 <span>${aiExpertise.resourceLabel}</span>
                 <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
+        </section>
+
+    ` : "";
+
+    // Main Content
+    document.getElementById('main-content').innerHTML = isAiPage ? aiContent : `
+        <section id="home" class="hero recruiter-hero">
+            <div class="hero-content">
+                <a href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Hamza Elyoubi">
+                    <img src="${personalInfo.profileImage}" alt="${personalInfo.name[language]}" class="profile-img" width="200" height="200" fetchpriority="high">
+                </a>
+                <h1><span>${personalInfo.name[language]}</span></h1>
+                <p class="hero-role">${personalInfo.title[language]}</p>
+            </div>
+            <div class="hero-details">
+                ${personalInfo.titleNote ? `<p class="title-note" style="font-size:0.95em;opacity:0.8;margin-bottom:1rem;">${personalInfo.titleNote[language]}</p>` : ''}
+                <p>${personalInfo.bio[language]}</p>
+                <p class="hero-location">${personalInfo.location}</p>
+                <div class="hero-cta">
+                    <a class="cta-btn cta-secondary" href="projects.html">${language === 'fr' ? 'Voir mes projets' : 'View my projects'}</a>
+                    <a class="cta-btn cta-primary hero-resume" href="${personalInfo.resume}" target="_blank" rel="noopener noreferrer">${language === 'fr' ? 'Consulter le CV (PDF, français)' : 'Read résumé (PDF, French)'}</a>
+                    <a class="cta-btn cta-secondary" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="cta-btn cta-secondary" href="#contact">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>${language === 'fr' ? 'Me contacter' : 'Contact me'}</span>
+                    </a>
+                </div>
+            </div>
+            ${highlights.stats}
+            ${careerHighlight && careerHighlightContent ? `
+                <aside class="career-highlight" aria-labelledby="career-highlight-title">
+                    <div class="career-highlight__copy">
+                        <span class="career-highlight__eyebrow">${careerHighlightContent.eyebrow}</span>
+                        <h2 id="career-highlight-title">${careerHighlightContent.title}</h2>
+                        <p>${careerHighlightContent.summary}</p>
+                    </div>
+                    <button id="career-postcard" class="career-postcard" type="button" aria-pressed="false" aria-label="${careerHighlightContent.revealLabel}">
+                        <span class="career-postcard__inner">
+                            <span class="career-postcard__face career-postcard__front">
+                                <img src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
+                            </span>
+                            <span class="career-postcard__face career-postcard__back">
+                                <img src="${careerHighlight.images.message}" alt="${careerHighlightContent.messageAlt}" width="1190" height="850" decoding="async">
+                            </span>
+                        </span>
+                    </button>
+                    <blockquote class="career-highlight__quote">
+                        <span class="career-highlight__hint">${careerHighlightContent.hint}</span>
+                        <span class="career-highlight__message">“${careerHighlightContent.quote}”</span>
+                    </blockquote>
+                    <div class="career-highlight__actions">
+                        <button class="career-highlight__toggle" type="button" aria-controls="career-postcard">
+                            <i class="fas fa-rotate" aria-hidden="true"></i>
+                            <span>${careerHighlightContent.revealLabel}</span>
+                        </button>
+                        <button class="career-highlight__expand" type="button" aria-controls="career-lightbox" aria-expanded="false">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                            <span>${careerHighlightContent.expandLabel}</span>
+                        </button>
+                    </div>
+                </aside>
+                <div id="career-lightbox" class="career-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="career-lightbox-title" style="display: none;">
+                        <div class="career-lightbox__content">
+                            <div class="career-lightbox__header">
+                                <h2 id="career-lightbox-title">${careerHighlightContent.frontDialogTitle}</h2>
+                                <button class="career-lightbox__dismiss" type="button" aria-label="${careerHighlightContent.closeLabel}">
+                                    <i class="fas fa-xmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <img class="career-lightbox__image" src="${careerHighlight.images.front}" alt="${careerHighlightContent.frontAlt}" width="1200" height="828" decoding="async">
+                        </div>
+                </div>
+            ` : ''}
+        </section>
+
+        ${highlights.projects}
+
+        <section id="certifications" class="section visible">
+            <h2 class="section-title">${language === 'fr' ? 'Certifications' : 'Certifications'}</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="assets/icons/github-copilot.png" alt="GitHub Copilot Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/githubcopilot_icon.png';">
+                    <h3>${language === 'fr' ? 'Certification GitHub Copilot' : 'GitHub Copilot Certification'}</h3>
+                    <p>${language === 'fr' ? 'Certifié par le programme de certification GitHub Copilot.' : 'Certified by GitHub Copilot Certification Program.'}</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/l1_sofo.png" alt="SE L1 Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
+                    <h3>${language === 'fr' ? 'SE L1' : 'SE L1'}</h3>
+                    <p>${language === 'fr' ? 'Certifié Ingénierie Logicielle Niveau 1.' : 'Software Engineering Level 1 Certified.'}</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/psm1.png" alt="PSM I Certification" style="width:100px;height:auto;display:block;margin:0 auto 1rem;" onerror="this.onerror=null;this.src='assets/icons/placeholder.png';">
+                    <h3>${language === 'fr' ? 'PSM I' : 'PSM I'}</h3>
+                    <p>${language === 'fr' ? 'Professional Scrum Master I (PSM I) certifié par Scrum.org.' : 'Professional Scrum Master I (PSM I) Certified by Scrum.org.'}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">${language === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience'}</h2>
+            <div class="timeline">
+                ${experience.map((exp, index) => `
+                    <div class="timeline-item ${index % 2 === 0 ? 'left' : 'right'}">
+                        <h3>${exp.positions ? exp.positions.map(pos => pos.title).join(', ') : exp.position}</h3>
+                        <h4>${exp.company}</h4>
+                        <p class="duration">${exp.positions ? exp.positions.map(pos => pos.duration).join(', ') : exp.duration}</p>
+                        <div class="description">
+                            ${exp.positions ? exp.positions.map(pos => pos.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')).join('') : exp.achievements.map(ach => `<div class="achievement">${ach}</div>`).join('')}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
         </section>
 
         <section id="education">
@@ -489,7 +498,7 @@ export async function initializePortfolio(language) {
         if (window.location.hash) {
             const targetElement = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
             if (targetElement) {
-                const headerOffset = 80;
+                const headerOffset = (document.querySelector('.quick-nav')?.getBoundingClientRect().bottom || 80) + 16;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 

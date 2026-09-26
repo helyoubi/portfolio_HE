@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import { renderHomeHighlights } from './scripts/homeHighlights.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,8 +14,9 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 }[char]));
 const profile = data.personalInfo;
+const highlights = renderHomeHighlights(data, 'fr');
 const homePreview = `<!-- portfolio-preview:start -->
-        <section class="hero" id="home">
+        <section class="hero recruiter-hero" id="home">
             <div class="hero-content">
                 <img src="${escapeHtml(profile.profileImage)}" alt="${escapeHtml(profile.name.fr)}" class="profile-img" width="200" height="200" fetchpriority="high">
                 <h1>${escapeHtml(profile.name.fr)}</h1>
@@ -24,13 +26,15 @@ const homePreview = `<!-- portfolio-preview:start -->
                 <p>${escapeHtml(profile.bio.fr)}</p>
                 <p>${escapeHtml(profile.location)}</p>
                 <div class="hero-cta">
-                    <a class="cta-btn" href="projects.html">Voir mes projets</a>
-                    <a class="cta-btn cta-secondary" href="${escapeHtml(profile.resume)}" target="_blank" rel="noopener noreferrer">Consulter le CV (PDF, français)</a>
+                    <a class="cta-btn cta-secondary" href="projects.html">Voir mes projets</a>
+                    <a class="cta-btn cta-primary hero-resume" href="${escapeHtml(profile.resume)}" target="_blank" rel="noopener noreferrer">Consulter le CV (PDF, français)</a>
                     <a class="cta-btn cta-secondary" href="https://www.linkedin.com/in/hamza-elyoubi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
+            ${highlights.stats}
         </section>
-        <!-- portfolio-preview:end -->`;
+        ${highlights.projects}
+        <!-- portfolio-preview:end -->`.replace(/^[ \t]+$/gm, '');
 
 // Generate new version timestamp
 const newVersion = new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').substring(0, 13);
@@ -40,6 +44,7 @@ console.log(`Updating cache version to: ${newVersion}`);
 // Files to update
 const filesToUpdate = [
     'index.html',
+    'ai.html',
     'projects.html',
     'trainings.html',
     'howto.html',

@@ -9,6 +9,22 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(readFileSync(resolve(__dirname, '../data/portfolioData.json'), 'utf-8'));
 
 describe('portfolioData.json — multilingual integrity', () => {
+  test('homepage highlights reference real projects and keep both languages aligned', () => {
+    const { en, fr } = data.homepage;
+    expect(en.stats.map(item => item.value)).toEqual(fr.stats.map(item => item.value));
+    expect(en.projects.map(item => item.title)).toEqual(fr.projects.map(item => item.title));
+    for (const language of ['en', 'fr']) {
+      const copy = data.homepage[language];
+      for (const label of ['title', 'intro', 'allProjects', 'viewProject']) {
+        expect(copy[label]).toBeTruthy();
+      }
+      copy.stats.forEach(item => expect(item.label).toBeTruthy());
+      copy.projects.forEach(item => {
+        expect(data.projects[language].some(project => project.title === item.title)).toBe(true);
+        expect(item.detail).toBeTruthy();
+      });
+    }
+  });
   test('personalInfo has both en and fr for name, title, bio', () => {
     expect(data.personalInfo.name.en).toBeTruthy();
     expect(data.personalInfo.name.fr).toBeTruthy();
@@ -46,7 +62,7 @@ describe('portfolioData.json — multilingual integrity', () => {
       .toEqual(fr.professionalTools.map(({ name }) => name));
     expect(en.personalTools.map(({ name }) => name))
       .toEqual(fr.personalTools.map(({ name }) => name));
-    expect(en.professionalTools.map(({ name }) => name)).toEqual(['GitHub Copilot', 'SovBox']);
+    expect(en.professionalTools.map(({ name }) => name)).toEqual(['GitHub Copilot', 'SovBox', 'Codestral (Mistral AI)']);
     expect(en.personalTools.map(({ name }) => name)).toEqual(['Codex', 'Claude Code', 'Cursor']);
     expect(en.evidence.length).toBe(fr.evidence.length);
     expect(en.workflow.length).toBe(fr.workflow.length);
@@ -73,7 +89,8 @@ describe('portfolioData.json — multilingual integrity', () => {
   });
 
   test('resume path is set and points to a pdf', () => {
-    expect(data.personalInfo.resume).toMatch(/\.pdf$/);
-    expect(existsSync(resolve(__dirname, '..', data.personalInfo.resume))).toBe(true);
+    const resumePath = data.personalInfo.resume.split('?')[0];
+    expect(resumePath).toMatch(/\.pdf$/);
+    expect(existsSync(resolve(__dirname, '..', resumePath))).toBe(true);
   });
 });
