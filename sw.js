@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v20260926T1328';
+const CACHE_NAME = 'portfolio-cache-v20261002T0646';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -32,6 +32,7 @@ const ASSETS_TO_CACHE = [
     './assets/icons/fr.png',
     './assets/icons/githubcopilot_icon.png',
     './assets/icons/claude_code_icon.png',
+    './assets/icons/codex_icon.png',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
     'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];

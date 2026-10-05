@@ -2723,7 +2723,7 @@ body {
 .skip-link:focus { top: 12px; }
 :focus-visible { outline: 3px solid var(--career-accent); outline-offset: 4px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.copilot-credit { position: static; margin: 24px auto; width: fit-content; max-width: calc(100% - 32px); font-size: .8rem; box-shadow: none; }
+.copilot-credit { position: static; display: flex; flex-wrap: wrap; justify-content: center; margin: 24px auto; width: fit-content; max-width: calc(100% - 32px); font-size: .8rem; box-shadow: none; }
 .hero { min-height: auto; padding-top: 112px; padding-bottom: 56px; background: var(--bg-color); }
 .hero-role { color: var(--text-color); font-size: clamp(1.35rem, 3vw, 1.9rem); }
 .hero-content .profile-img { width: 112px; height: 112px; box-shadow: none; }

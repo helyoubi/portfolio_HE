@@ -1,6 +1,6 @@
 // dataLoader.js
 import { renderHomeHighlights } from './homeHighlights.js';
-import { updateNavigationLanguage } from './hamburgerMenu.js?v=20260926T1328';
+import { updateNavigationLanguage } from './hamburgerMenu.js?v=20261002T0646';
 
 export async function loadPortfolioData() {
     try {

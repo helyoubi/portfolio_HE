@@ -1,6 +1,6 @@
 // main.js
-import { initializeThemeToggle } from './themeToggle.js?v=20260926T1328';
-import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20260926T1328';
+import { initializeThemeToggle } from './themeToggle.js?v=20261002T0646';
+import { initializeHamburgerMenu } from './hamburgerMenu.js?v=20261002T0646';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
@@ -61,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealSections);
     revealSections(); // Trigger on load
 
-    // Load GitHub Copilot & Claude Code credit
+    // Keep the AI-assistance credit consistent with the static HTML.
     const copilotCredit = document.getElementById('copilot-credit');
     if (copilotCredit) {
         copilotCredit.innerHTML = `
             <img src="assets/icons/githubcopilot_icon.png" alt="GitHub Copilot" class="copilot-icon">
             <img src="assets/icons/claude_code_icon.png" alt="Claude Code" class="copilot-icon">
+            <img src="assets/icons/codex_icon.png" alt="Codex" class="copilot-icon" width="32" height="32" loading="lazy" decoding="async">
             <span>Personal portfolio built with AI assistance</span>
         `;
     }
